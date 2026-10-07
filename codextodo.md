@@ -465,3 +465,22 @@ sidecar; the private verification report also records the result. No remote publ
   returned a GitHub OAuth server-error page and produced no authorization code. Started the installed credential
   manager's normal browser sign-in instead and requested the user's sign-in status. No password/token is requested
   in chat. The login helper remains pending; authentication is the only current blocker to fetch/push.
+
+### 2026-10-07 — End-of-day shutdown and successful GitHub synchronization
+
+- User reported browser sign-in failed with error 500 and supplied the GitHub error-page screenshot. The earlier
+  login attempts ended without usable CLI credentials. Installed system Git/GCM and existing SSH checks did not
+  provide authenticated access; no passwords, stored tokens or private keys were read or printed.
+- User requested closing work for the day. Stopped the verified Ollama tray/server processes and confirmed no
+  listener remained on port 11434. No Python/demo process was running. Closed Chrome, GitHub Desktop and the
+  Settings/audio windows; sign-in activity reopened some work windows, which were closed again. The user
+  interrupted before the entire desktop shutdown was finalized; ChatGPT and the gaming overlay remained open.
+- User then explicitly resumed the push and reported completing GitHub Desktop login. CLI Git still needed its
+  own credential-manager connection. The installed GCM browser flow succeeded with the signed-in browser,
+  without another user question, credential extraction, dependency installation or global Git identity changes.
+- Authenticated fetch succeeded. Both local HEAD and origin/main already pointed to
+  6acdf78cd025e88479f89c428778f455c48c9a21. Normal push of HEAD to refs/heads/main succeeded with
+  "Everything up-to-date"; an authenticated ls-remote independently confirmed that exact remote commit.
+  The project code, frozen evaluation evidence, launchers and all four presentation artifacts are on GitHub.
+- Recording this checkpoint in a local automation-authored commit, then synchronizing it to the same main branch
+  and verifying the final remote hash. No force push, new repository, model restart, inference or training is needed.
