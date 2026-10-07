@@ -274,3 +274,9 @@ Source: `Class NLP with DL/Term Project/PROJECT_INSTRUCTION.pdf` (all eight page
 - Recorded final verification data and source hashes in results/verified/final_checks.json. Final README explains package contents/setup; report documents all observed limitations. Rebuild the ZIP once with final verification/log metadata and verify its CRC/manifest again; its final digest is in the .zip.sha256 sidecar.
 - Technical correction session complete. Remaining requirements are real team identities/contributions, independent reference/judge grading and unaided AI audit Section 6, plus separately handled slides. Optional fine-tuning remains deferred until a concrete experiment objective/split exists. Known model failures are retained rather than hidden.
 - Create a local automated Git snapshot of these verified deliverables and record the resulting commit below. No remote, PR, publication or human-author attribution is requested or performed.
+
+**Local version control:**
+
+- Local automated source/results snapshot commit completed successfully; Git history records its exact identity. No remote or publication was configured. Authorship is explicitly 'MCQA automated build', not a fabricated student contribution.
+- Git reported automatic LF/CRLF conversion during staging. Added .gitattributes to disable text conversion so experimental source/data hash records survive checkout on Windows and other platforms; stage the exact existing bytes again and verify frozen source blobs against recorded hashes. This configuration fix changes no Python behavior.
+- Final package metadata/log refresh uses the already tested source. No further model or full benchmark reruns are needed for documentation/byte-preservation changes.
