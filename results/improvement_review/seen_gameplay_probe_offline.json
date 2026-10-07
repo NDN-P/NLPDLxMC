@@ -1,0 +1,72 @@
+{
+  "question": "How do I repair damaged elytra using an anvil?",
+  "source_sha256": "b5ae6351ba2b0c5b88a0f9acd1953b624589aadc2090ffd0b40b29110a70449d",
+  "hf_offline": true,
+  "cached_revisions": {
+    "BAAI/bge-small-en-v1.5": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "cross-encoder/ms-marco-MiniLM-L6-v2": "233902d25c440f23af6f7d6e94d2946bac0bee0a"
+  },
+  "provenance": "Offline targeted diagnostic of an already inspected history-conflict failure; not untouched test accuracy.",
+  "seconds_including_index_and_cpu_model_loading": 10.264,
+  "answer": "Elytra can be repaired using an anvil by using phantom membranes as the repair material, as phantom membranes are the correct material for repairing elytra [1]. Each unit of phantom membrane restores 1⁄4 of the elytra's maximum durability [1]. However, the anvil has a 12% chance to degrade each time it is used for repair, and repeated use may eventually damage or destroy the anvil [4].",
+  "answer_mode": "llm",
+  "tool_calls": [],
+  "passages": "[1] Anvil > Usage > Repairing and renaming items > Repairing\nRepairing with materials works for the most part, but not with all items: in general, repairing works for items with their material in the default name. For example, an anvil can repair an iron pickaxe with materials (iron in this case) while an anvil cannot repair bows or shears except with other bows or shears. Special cases: chain armor can be repaired with iron ingots, turtle shells can be repaired with turtle scutes, maces can be repaired with breeze rods, and elytra can be repaired with phantom membranes. The repair does not need to be complete; one material repairs 1⁄4 of the item's maximum durability. Repair of an unenchanted item can cost more material than simply crafting a new item or combining damaged items. The exception is armor, which consumes less material at the cost of experience levels.\nRepairing with a matching item works for any item with durability including bows, shears and so on. The items must be a matching tool and of a matching material. For example, a golden pickaxe cannot combine with a golden sword or iron pickaxe.\n\n[2] Tutorial:Defeating the ender dragon > Equipment checklist > Optional items\nIf you are going to explore the outer islands in search for End cities, bring some firework rockets. Once you find an elytra, you can fly back home without having to take a gateway portal. You can also bring an anvil, a Mending book and an Unbreaking III book to instantly enchant your elytra, giving you extended flight time and an option to repair them by killing endermen.\n\n[3] Pickaxe > Usage > Repairing > Anvil repair\nPickaxes can be repaired in an anvil by adding units of the tier's repair material, with each repair material restoring 25% of the pickaxe's maximum durability, rounded down.\n\n[4] Anvil mechanics\nCombining two tools, weapons, or armor pieces of the same kind. Durabilities combine similarly to item repair in a crafting table, but the enchantments are combined following rules detailed below.\nCombining a tool, weapon, or armor piece with an enchanted book to add the book's enchantments to the tool. This allows usage of treasure enchantments which are not available at an enchanting table.\nDamaging living entities. This causes the anvil to sometimes degrade by one level and deal 2HP HP damage for each block fallen after the first block to the mob/player who were crushed. A maximum of 40HP × 20 HP damage can be dealt by a falling anvil, no matter how high the anvil falls.\nEach time something is repaired, enchanted, or renamed using an anvil, the anvil has a 12% chance to degrade. There are three degradation levels: Anvil, Chipped Anvil, and Damaged Anvil. Degrading further destroys the anvil.\n\n[5] Tutorial:Combat > Fighting styles > Elytra sniping\nStart flying and use fireworks to speed up the elytra. Fly to a place where the player can safely fire at the target.\nFire repeatedly, until your target is defeated or gets too close.\nIf the target gets too close, repeat steps 2 and 3.\nThis strategy is best used in environments that have high vantage points available such as mountains, jungles with high trees, amplified worlds, etc., with a lot of places where the player can safely use the bow from.\nCons:\nYou need an elytra, which is a late-game item. A risk of dying and losing the elytra is always present.\nPros:\nAllows you to mostly avoid melee combat and dangerous melee mobs, and grants you force and engagement at longer ranges on your premises\nIf you need time to regenerate, drink potions, and rearrange your inventory, or even place an anvil to repair the elytra, you can easily fly to a place far away where you can do just that.\nIf you are about to lose the battle, it is relatively easy to escape, and the target will likely have a hard time following you.",
+  "sources": [
+    {
+      "n": 1,
+      "title": "Anvil",
+      "section": "Usage > Repairing and renaming items > Repairing",
+      "chunk_id": 3484,
+      "source_scope": "current-Java heuristic passage view",
+      "passage_filtered": false,
+      "revid": 3822941,
+      "timestamp": "2026-10-06T09:04:26Z",
+      "url": "https://minecraft.wiki/?oldid=3822941"
+    },
+    {
+      "n": 2,
+      "title": "Tutorial:Defeating the ender dragon",
+      "section": "Equipment checklist > Optional items",
+      "chunk_id": 9036,
+      "source_scope": "current-Java heuristic passage view",
+      "passage_filtered": false,
+      "revid": 3808547,
+      "timestamp": "2026-10-01T01:49:27Z",
+      "url": "https://minecraft.wiki/?oldid=3808547"
+    },
+    {
+      "n": 3,
+      "title": "Pickaxe",
+      "section": "Usage > Repairing > Anvil repair",
+      "chunk_id": 5753,
+      "source_scope": "current-Java heuristic passage view",
+      "passage_filtered": false,
+      "revid": 3804141,
+      "timestamp": "2026-09-29T18:42:56Z",
+      "url": "https://minecraft.wiki/?oldid=3804141"
+    },
+    {
+      "n": 4,
+      "title": "Anvil mechanics",
+      "section": "",
+      "chunk_id": 4246,
+      "source_scope": "current-Java heuristic passage view",
+      "passage_filtered": false,
+      "revid": 3804134,
+      "timestamp": "2026-09-29T18:39:45Z",
+      "url": "https://minecraft.wiki/?oldid=3804134"
+    },
+    {
+      "n": 5,
+      "title": "Tutorial:Combat",
+      "section": "Fighting styles > Elytra sniping",
+      "chunk_id": 1273,
+      "source_scope": "current-Java heuristic passage view",
+      "passage_filtered": false,
+      "revid": 3820357,
+      "timestamp": "2026-10-04T21:43:24Z",
+      "url": "https://minecraft.wiki/?oldid=3820357"
+    }
+  ]
+}
