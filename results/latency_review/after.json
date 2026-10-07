@@ -1,0 +1,136 @@
+{
+  "mcqa_sha256": "007ffde3b2bc1ba35365ee23c90938c112118fe4e09de0dcce8bc5d0614e4f76",
+  "initial_local_models": {
+    "models": [
+      {
+        "name": "qwen3:4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "size": 3178149969,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-07T16:36:45.7631083+07:00",
+        "size_vram": 3178149969,
+        "context_length": 4096
+      }
+    ]
+  },
+  "index_init_seconds": 0.351,
+  "rows": [
+    {
+      "case": "craft-first",
+      "question": "How many Iron Ingots do I need to craft 3 Hoppers? Reply with the number only.",
+      "use_tool": true,
+      "total_seconds": 2.592,
+      "planning_seconds": 2.586,
+      "llm_calls": [
+        {
+          "phase": "planning",
+          "seconds": 2.544,
+          "tool_calls": 1
+        }
+      ],
+      "answer": "15 [tool]",
+      "mode": "calculator_exact",
+      "source_count": 0
+    },
+    {
+      "case": "first-gameplay",
+      "question": "What food breeds cows?",
+      "use_tool": true,
+      "total_seconds": 15.291,
+      "planning_seconds": 4.437,
+      "retrieval_seconds": 8.411,
+      "llm_calls": [
+        {
+          "phase": "planning",
+          "seconds": 2.129,
+          "tool_calls": 0
+        },
+        {
+          "phase": "routing",
+          "seconds": 2.271,
+          "tool_calls": 0
+        },
+        {
+          "phase": "answer",
+          "seconds": 2.443,
+          "tool_calls": 0
+        }
+      ],
+      "answer": "Wheat breeds cows [3].",
+      "mode": "llm",
+      "source_count": 5
+    },
+    {
+      "case": "warm-gameplay",
+      "question": "What food breeds cows?",
+      "use_tool": true,
+      "total_seconds": 7.016,
+      "planning_seconds": 4.491,
+      "retrieval_seconds": 0.285,
+      "llm_calls": [
+        {
+          "phase": "planning",
+          "seconds": 2.135,
+          "tool_calls": 0
+        },
+        {
+          "phase": "routing",
+          "seconds": 2.318,
+          "tool_calls": 0
+        },
+        {
+          "phase": "answer",
+          "seconds": 2.239,
+          "tool_calls": 0
+        }
+      ],
+      "answer": "Wheat breeds cows [3].",
+      "mode": "llm",
+      "source_count": 5
+    },
+    {
+      "case": "warm-gameplay-no-tool",
+      "question": "What food breeds cows?",
+      "use_tool": false,
+      "total_seconds": 2.781,
+      "retrieval_seconds": 0.296,
+      "llm_calls": [
+        {
+          "phase": "answer",
+          "seconds": 2.485,
+          "tool_calls": 0
+        }
+      ],
+      "answer": "Cows breed with wheat [3].",
+      "mode": "llm",
+      "source_count": 5
+    },
+    {
+      "case": "warm-crafting",
+      "question": "How many Iron Ingots do I need to craft 3 Hoppers? Reply with the number only.",
+      "use_tool": true,
+      "total_seconds": 2.573,
+      "planning_seconds": 2.57,
+      "llm_calls": [
+        {
+          "phase": "planning",
+          "seconds": 2.526,
+          "tool_calls": 1
+        }
+      ],
+      "answer": "15 [tool]",
+      "mode": "calculator_exact",
+      "source_count": 0
+    }
+  ]
+}

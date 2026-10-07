@@ -520,6 +520,16 @@ def constrained_args(question, args):
     return args
 
 
+def exact_quantity(question, calls):
+    """A validated direct ingredient amount fully answers a standalone explicit quantity request."""
+    request = quantity_request(question)
+    if not request or not re.fullmatch(r"\s*(?:Reply with the number only\.?\s*)?", question.partition("?")[2], re.I):
+        return None
+    return next((c["result"]["ingredient_ids"][request[0]] for c in calls
+                 if c["result"].get("item_id") == request[1] and c["result"].get("count") == request[2]
+                 and request[0] in c["result"].get("ingredient_ids", {})), None)
+
+
 def plan_tools(question, rounds=3):
     """Step 1: the model sees the question plus matching one-craft recipes and may call the tool up to `rounds` times
     (a second round lets it look up an ingredient's own recipe); if it calls nothing, ROUTE asks once more.
@@ -547,6 +557,8 @@ def plan_tools(question, rounds=3):
             messages.append({"role": "tool", "content": json.dumps(result)})
             if result.get("error_code") == "ambiguous_item":
                 return calls  # only the user can choose a variant; the planner must not invent one
+            if exact_quantity(question, calls) is not None:
+                return calls  # the standalone request is satisfied; another planning round cannot improve the amount
     if not calls:  # no native tool call: ask for a forced yes/no decision with the arguments
         try:
             j = json.loads(chat([{"role": "system", "content": ROUTE}, {"role": "user", "content": request}],
@@ -569,10 +581,16 @@ def answer(question, retriever=None, variant="rerank", k=5, use_tool=True):
     if request and (not isinstance(request[2], int) or request[2] < 1):
         return {"answer": "Please request a positive whole number of crafted items.",
                 "answer_mode": "clarification", "tool_calls": [], "passages": "", "sources": []}
-    ids = retriever.search(question, variant, k) if retriever else []
-    passages = "\n\n".join(f"[{n}] {retriever.chunks[i]['text']}" for n, i in enumerate(ids, 1)) or "(none)"
     calls = plan_tools(question) if use_tool else []
     ambiguous = next((c["result"] for c in calls if c["result"].get("error_code") == "ambiguous_item"), None)
+    amount = exact_quantity(question, calls) if use_tool else None
+    if ambiguous or amount is not None:
+        text = ("Which specific item do you mean? Choices include " + ", ".join(ambiguous["options"][:5])
+                + ". Please give its full name or Minecraft item ID. [tool]") if ambiguous else f"{amount} [tool]"
+        return {"answer": text, "answer_mode": "clarification" if ambiguous else "calculator_exact",
+                "tool_calls": calls, "passages": "", "sources": []}
+    ids = retriever.search(question, variant, k) if retriever else []
+    passages = "\n\n".join(f"[{n}] {retriever.chunks[i]['text']}" for n, i in enumerate(ids, 1)) or "(none)"
     tools = "\n".join(json.dumps(c["result"], ensure_ascii=False) for c in calls) or "(no tool was called)"
     if retriever:
         system = SYSTEM_TOOL if use_tool else SYSTEM
@@ -581,31 +599,14 @@ def answer(question, retriever=None, variant="rerank", k=5, use_tool=True):
         system = CLOSED_BOOK_TOOL if use_tool else CLOSED_BOOK
         user = f"Craft tool results:\n{tools}\n\n" if use_tool else ""
     prompt = user + f"Question: {question}" if user else question  # closed book, no tool: the bare question
-    if ambiguous:
-        answer_mode = "clarification"
-        text = ("Which specific item do you mean? Choices include " + ", ".join(ambiguous["options"][:5])
-                + ". Please give its full name or Minecraft item ID. [tool]")
-    else:
-        exact = next((c["result"] for c in calls if request and c["result"].get("item_id") == request[1]
-                      and c["result"].get("count") == request[2]
-                      and request[0] in c["result"].get("ingredient_ids", {})), None)
-        # A second request after '?' still needs a complete generated answer.
-        standalone = re.fullmatch(r"\s*(?:Reply with the number only\.?\s*)?", question.partition("?")[2], re.I)
-        if exact and standalone:
-            amount = exact["ingredient_ids"][request[0]]
-            return {"answer": f"{amount} [tool]", "answer_mode": "calculator_exact", "tool_calls": calls,
-                    "passages": passages if ids else "", "sources": [
-                        {"n": n, "title": retriever.chunks[i]["title"], "section": retriever.chunks[i]["section"]}
-                        for n, i in enumerate(ids, 1)]}
-        answer_mode = "llm"
-        msg = chat([{"role": "system", "content": system}, {"role": "user", "content": prompt}])
-        text = msg.get("content", "").strip()
-        summaries = [c["result"]["answer"] for c in calls if "answer" in c["result"]]
-        if summaries and re.fullmatch(r"\s*I (?:do not|don't) know[.!]?\s*", text, re.I):
-            # A validated calculator result must survive a generator's unsupported refusal. This presents the
-            # calculator's entire recipe; selecting an ingredient/doing language interpretation stays with the model.
-            text = " ".join(summary + " [tool]" for summary in summaries)
-            answer_mode = "calculator_fallback"
+    answer_mode = "llm"
+    msg = chat([{"role": "system", "content": system}, {"role": "user", "content": prompt}])
+    text = msg.get("content", "").strip()
+    summaries = [c["result"]["answer"] for c in calls if "answer" in c["result"]]
+    if summaries and re.fullmatch(r"\s*I (?:do not|don't) know[.!]?\s*", text, re.I):
+        # Present the validated full recipe when generation refuses despite a successful calculator result.
+        text = " ".join(summary + " [tool]" for summary in summaries)
+        answer_mode = "calculator_fallback"
     return {"answer": text, "answer_mode": answer_mode, "tool_calls": calls, "passages": passages if ids else "",
             "sources": [{"n": n, "title": retriever.chunks[i]["title"], "section": retriever.chunks[i]["section"]}
                         for n, i in enumerate(ids, 1)]}

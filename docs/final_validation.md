@@ -94,6 +94,19 @@ benchmark references, code, saved results, source snapshots and logs; rebuildabl
 recipe data are excluded. Build local data/index before inference. A clean-copy check validates the packaged code
 and benchmark; it is not a new internet installation on a second machine.
 
+## Demo response time
+
+**Later demo latency correction (2026-10-07):** a small local profile measured 16.3 seconds for first gameplay,
+6.9 seconds for warm gameplay, and 4.9 seconds for a canonical recipe quantity. Ordinary default questions use
+native planning, fallback routing and answer generation. The planner now stops once a standalone direct quantity
+is validated, and that answer bypasses Wiki retrieval; the same recipe probe took 2.6 seconds with one model call.
+Compound/multistep requests keep the full pipeline. Demo status/timing is visible immediately; `--no-tool` reuses the
+existing no-tool gameplay path and measured 2.8 seconds warm versus 7.0 seconds in default mode in the post-fix run.
+First gameplay still loads CPU models (15.3 seconds in that run). Keep an interactive session open and ask a
+gameplay question before the presentation. These are diagnostic timings, not population speed guarantees.
+All 23 regressions pass, including the one-call/no-retrieval quantity shortcut. Raw probes and pre-change source
+are in `results/latency_review/`; previous quality scores retain their frozen source labels and were not rerun.
+
 ## Remaining team work
 
 1. Supply real team names and actual contributions in `AI_AUDIT.md`.

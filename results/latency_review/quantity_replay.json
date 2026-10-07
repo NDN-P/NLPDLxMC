@@ -1,0 +1,247 @@
+{
+  "kind": "saved tool-trace replay, not new model generation",
+  "matched_exact_cases": 37,
+  "no_tool_cases": 3,
+  "rows": [
+    {
+      "item": "minecraft:smooth_quartz_slab",
+      "gold": 9,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 9
+    },
+    {
+      "item": "minecraft:brewing_stand",
+      "gold": 14,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 14
+    },
+    {
+      "item": "minecraft:magenta_banner",
+      "gold": 10,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 10
+    },
+    {
+      "item": "minecraft:stripped_pale_oak_wood",
+      "gold": 20,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 20
+    },
+    {
+      "item": "minecraft:sulfur_slab",
+      "gold": 9,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 9
+    },
+    {
+      "item": "minecraft:iron_chain",
+      "gold": 22,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 22
+    },
+    {
+      "item": "minecraft:brown_terracotta",
+      "gold": 8,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 8
+    },
+    {
+      "item": "minecraft:red_concrete_slab",
+      "gold": 9,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 9
+    },
+    {
+      "item": "minecraft:loom",
+      "gold": 30,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 30
+    },
+    {
+      "item": "minecraft:oak_fence_gate",
+      "gold": 12,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 12
+    },
+    {
+      "item": "minecraft:pale_oak_fence",
+      "gold": 20,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 20
+    },
+    {
+      "item": "minecraft:andesite_wall",
+      "gold": 18,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 18
+    },
+    {
+      "item": "minecraft:bamboo_shelf",
+      "gold": 12,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 12
+    },
+    {
+      "item": "minecraft:cherry_sign",
+      "gold": 2,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 2
+    },
+    {
+      "item": "minecraft:polished_blackstone_wall",
+      "gold": 12,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 12
+    },
+    {
+      "item": "minecraft:waxed_oxidized_copper_golem_statue",
+      "gold": 9,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 9
+    },
+    {
+      "item": "minecraft:end_crystal",
+      "gold": 16,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 16
+    },
+    {
+      "item": "minecraft:magenta_stained_glass",
+      "gold": 8,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 8
+    },
+    {
+      "item": "minecraft:brown_dye",
+      "gold": 12,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 12
+    },
+    {
+      "item": "minecraft:quartz_pillar",
+      "gold": 2,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 2
+    },
+    {
+      "item": "minecraft:light_gray_concrete_slab",
+      "gold": 6,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 6
+    },
+    {
+      "item": "minecraft:sulfur_wall",
+      "gold": 18,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 18
+    },
+    {
+      "item": "minecraft:silence_armor_trim_smithing_template",
+      "gold": 2,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 2
+    },
+    {
+      "item": "minecraft:pale_oak_shelf",
+      "gold": 6,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 6
+    },
+    {
+      "item": "minecraft:deepslate_tile_stairs",
+      "gold": 24,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 24
+    },
+    {
+      "item": "minecraft:polished_cinnabar_slab",
+      "gold": 9,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 9
+    },
+    {
+      "item": "minecraft:cut_red_sandstone_slab",
+      "gold": 9,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 9
+    },
+    {
+      "item": "minecraft:dried_kelp_block",
+      "gold": 126,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 126
+    },
+    {
+      "item": "minecraft:polished_andesite_stairs",
+      "gold": 6,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 6
+    },
+    {
+      "item": "minecraft:packed_ice",
+      "gold": 108,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 108
+    },
+    {
+      "item": "minecraft:wild_armor_trim_smithing_template",
+      "gold": 8,
+      "saved_answer_mode": "llm",
+      "validated_amount": null
+    },
+    {
+      "item": "minecraft:yellow_concrete_powder",
+      "gold": 4,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 4
+    },
+    {
+      "item": "minecraft:spruce_button",
+      "gold": 4,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 4
+    },
+    {
+      "item": "minecraft:resin_block",
+      "gold": 117,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 117
+    },
+    {
+      "item": "minecraft:deepslate_brick_wall",
+      "gold": 12,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 12
+    },
+    {
+      "item": "minecraft:skull_banner_pattern",
+      "gold": 3,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 3
+    },
+    {
+      "item": "minecraft:pale_oak_stairs",
+      "gold": 24,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 24
+    },
+    {
+      "item": "minecraft:item_frame",
+      "gold": 6,
+      "saved_answer_mode": "llm",
+      "validated_amount": null
+    },
+    {
+      "item": "minecraft:green_wool",
+      "gold": 2,
+      "saved_answer_mode": "llm",
+      "validated_amount": null
+    },
+    {
+      "item": "minecraft:red_nether_brick_slab",
+      "gold": 3,
+      "saved_answer_mode": "calculator_exact",
+      "validated_amount": 3
+    }
+  ]
+}

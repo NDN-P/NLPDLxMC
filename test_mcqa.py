@@ -21,11 +21,19 @@ class TestMcqa(unittest.TestCase):
             args = mcqa.constrained_args(q, {"item": "hopper", "count": 15})
             self.assertEqual(args["count"], 3)
             result = mcqa.craft(**args)
+            retriever = mock.Mock()
+            retriever.search.side_effect = AssertionError("exact quantity needs no Wiki lookup")
             with mock.patch.object(mcqa, "plan_tools", return_value=[{"args": args, "result": result}]), \
                     mock.patch.object(mcqa, "chat", side_effect=AssertionError("calculator quantity must not be rewritten")):
-                out = mcqa.answer(q)
+                out = mcqa.answer(q, retriever)
             self.assertEqual((out["answer"], out["answer_mode"]), ("15 [tool]", "calculator_exact"))
+            self.assertEqual((out["sources"], out["passages"]), ([], ""))
             self.assertEqual(mcqa.constrained_args(q, {"item": "chest", "count": 2})["count"], 2)
+            native = {"tool_calls": [{"function": {"name": "craft", "arguments": {"item": "hopper", "count": 15}}}]}
+            with mock.patch.object(mcqa, "chat", return_value=native) as chat:
+                planned = mcqa.plan_tools(q)
+            chat.assert_called_once()  # stop after the validated amount, instead of an unnecessary follow-up round
+            self.assertEqual(mcqa.exact_quantity(q, planned), 15)
 
     def test_compound_quantity_question_keeps_the_other_request(self):
         q = "How many Iron Ingots do I need to craft 3 Hopper? How does a hopper transport items?"

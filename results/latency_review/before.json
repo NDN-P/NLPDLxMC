@@ -1,0 +1,90 @@
+{
+  "mcqa_sha256": "9eea81c00c9aed677c005e263aa039fdd4bf5aa6b61159ab1edd8fa7c1afa6be",
+  "initial_local_models": {
+    "models": []
+  },
+  "index_init_seconds": 0.351,
+  "rows": [
+    {
+      "case": "first-gameplay",
+      "question": "What food breeds cows?",
+      "total_seconds": 16.333,
+      "retrieval_seconds": 6.889,
+      "planning_seconds": 7.152,
+      "llm_calls": [
+        {
+          "phase": "planning",
+          "seconds": 4.831,
+          "tool_calls": 0,
+          "chars": 7
+        },
+        {
+          "phase": "routing",
+          "seconds": 2.257,
+          "tool_calls": 0,
+          "chars": 35
+        },
+        {
+          "phase": "answer",
+          "seconds": 2.291,
+          "tool_calls": 0,
+          "chars": 22
+        }
+      ],
+      "answer": "Wheat breeds cows [3].",
+      "mode": "llm"
+    },
+    {
+      "case": "warm-gameplay",
+      "question": "What food breeds cows?",
+      "total_seconds": 6.946,
+      "retrieval_seconds": 0.306,
+      "planning_seconds": 4.424,
+      "llm_calls": [
+        {
+          "phase": "planning",
+          "seconds": 2.153,
+          "tool_calls": 0,
+          "chars": 7
+        },
+        {
+          "phase": "routing",
+          "seconds": 2.229,
+          "tool_calls": 0,
+          "chars": 35
+        },
+        {
+          "phase": "answer",
+          "seconds": 2.215,
+          "tool_calls": 0,
+          "chars": 22
+        }
+      ],
+      "answer": "Wheat breeds cows [3].",
+      "mode": "llm"
+    },
+    {
+      "case": "warm-crafting",
+      "question": "How many Iron Ingots do I need to craft 3 Hoppers? Reply with the number only.",
+      "total_seconds": 4.949,
+      "retrieval_seconds": 0.357,
+      "planning_seconds": 4.59,
+      "llm_calls": [
+        {
+          "phase": "planning",
+          "seconds": 2.411,
+          "tool_calls": 1,
+          "chars": 0
+        },
+        {
+          "phase": "planning",
+          "seconds": 2.122,
+          "tool_calls": 0,
+          "chars": 2
+        }
+      ],
+      "answer": "15 [tool]",
+      "mode": "calculator_exact"
+    }
+  ]
+}

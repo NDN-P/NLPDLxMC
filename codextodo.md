@@ -303,3 +303,39 @@ Source: `Class NLP with DL/Term Project/PROJECT_INSTRUCTION.pdf` (all eight page
 - Required full submission is not complete: AI_AUDIT still has unknown team names/contribution placeholders and three unaided Section 6 answers; presentation slides and live individual Q&A are separate human deliverables. Confirm the actual group contains 3–4 students. PDF pages 5–6 explicitly require no final placeholders and Section 6 without AI; page 7 requires individual unaided Q&A.
 - Distinguished extra quality work from literal requirements: independent human answer grading is strongly recommended for evaluation rigor but not an explicitly named mandatory deliverable in the PDF. Fine-tuning is optional; no minimum answer-accuracy percentage or unprecedented domain is specified. Minecraft is not excluded from the permitted domain choice.
 - Conclusion: mandatory technical components are implemented, but neither 100% submission completeness nor a 100% rubric score can be claimed. This compliance note updates the live work log after the delivered ZIP; no source/results/package was changed by this read-only check.
+
+### 2026-10-07 — Optional extension coverage
+
+**User question:** whether this project covers the assignment's listed optional extensions.
+
+- Checked current mcqa.py retrieval, rrf/CrossEncoder and plan_tools/craft implementations against the five extension descriptions supplied by the user. No source edits, training or model calls.
+- Confirmed three implemented extensions: BM25+dense hybrid with RRF; cross-encoder reranking; model-selected crafting tool calls with up to three native planning rounds plus structured routing fallback. The direct quantity renderer is calculator output, not model training.
+- LoRA fine-tuning and GraphRAG/multi-hop retrieval are not implemented. Multi-round recipe tool calls must not be described as GraphRAG or multi-hop retrieval.
+- Existing comparisons measure retrieval variants and tool/no-tool outcomes. Current source-grounded test does not establish a reranker advantage over dense; extension presence alone does not guarantee a higher grade. The project goes beyond the mandatory stack without needing all five extensions; presentation must explain actual mechanisms, evidence and limitations.
+
+### 2026-10-07 — Demo latency investigation and correction
+
+**User report:** 'i did try demo.It kinda slow on output.Is it need to be fix? or is it ok'
+
+- Applied the existing ponytail workflow: measured the real cached local pipeline before changing its behavior. A read-only agent inspected redundant work; root owns code/log edits. No model downloads, paid calls or training.
+- Profile saved in results/latency_review/before.json: first gameplay 16.333 s (retrieval/model initialization 6.889 s, planning 7.152 s), warm gameplay 6.946 s (retrieval .306 s, native+fallback planning 4.424 s, final answer 2.215 s), warm canonical crafting 4.949 s (retrieval .357 s, two planning calls 4.590 s). Initial Ollama /api/ps was empty, so first inference also loaded the local generator. Timings exclude process/index startup (.351 s) and use Hugging Face offline caches. This is a small diagnostic, not a latency population benchmark.
+- Ordinary questions pay native planning, fallback routing and final generation. Removing the fallback could lose valid recipe routing, so preserve it in default mode. Recipe-context matching costs only tens of milliseconds; not a useful optimization target.
+- Reused explicit quantity parsing and extracted one shared validated-quantity helper. Standalone successful recipe requests now stop after the matching tool call and return before Wiki retrieval/reranking; compound/raw-material requests retain full planning+retrieval. Clarification also needs no Wiki retrieval. Original model arguments and official recipe trace remain available; no arithmetic or retrieval-model changes.
+- Demo now immediately prints loading/working status and elapsed query time. Added --no-tool to reuse the existing evaluated no-tool pathway for faster general gameplay; default still includes crafting planning. Interactive use keeps CPU models cached rather than reloading for each separate command.
+- Extended the existing quantity regression: one planning call, correct amount despite wrong model count, zero Wiki search for exact output. All 23 tests pass; compilation and --help passed. Measuring post-fix latency and live CLI behavior next; prior saved quality scores retain their actual source versions.
+
+**Post-fix measurement and observed limits:**
+
+- results/latency_review/after.json records current source hash, local model/GPU residency and five actual responses. Canonical crafting: 2.592 s first, 2.573 s warm, one native model call, no Wiki lookup, correct 15 [tool]. Pre-change warm case was 4.949 s with two planning calls plus retrieval. No context-dependent source citation is fabricated for a calculator answer.
+- Default gameplay remains 7.016 s warm and uses all three model calls. Optional --no-tool gameplay took 2.781 s and returned the same cow/wheat fact with a real passage citation. Post-fix first gameplay took 15.291 s including 8.411 s CPU model initialization; first-run slowness still exists. These small measurements are not a broad latency benchmark, and before/after cold residency differed.
+- Ollama /api/ps confirms the 4B Q4_K_M model is fully GPU-resident (size_vram equals size: 3,178,149,969 bytes). GPU availability is not the problem here. Preserved pre-change mcqa.py from the exact Git blob; its SHA matches before.json.
+- Actual updated one-question CLI printed Loading saved index, Working, the tool trace and 15 [tool], finishing in 2.6 s. Added a visible gameplay-mode notice for --no-tool so users know the calculator is disabled. README and final validation explain mode, warm interactive use and source/version limits. Running one interactive no-tool session for two real questions verifies model reuse; save observed output below.
+- Keep prior benchmark configs/answers untouched; no claim that the faster source itself has been independently re-evaluated for all gameplay/tool questions. No training, dependency/model changes, streaming protocol or speculative caching infrastructure added.
+
+**Latency work completed:**
+
+- Verified the actual --no-tool interactive CLI: first gameplay question 9.1 s, repeated question 2.5 s, with visible working status and normal blank-line exit. The repeated timing was corrected from the separate 2.8 s instrumented probe to the actual CLI output. This demonstrates process-local model reuse; cold start still takes longer.
+- Replayed the new shared quantity validator over all 40 saved final tool traces without generating answers: all 37 calculator_exact cases reproduce their recipe gold; the 3 no-call cases remain without calculator amounts. Saved quantity_replay.json. This checks transformation consistency, not a new end-to-end accuracy estimate.
+- Current tests: 23 passed; Python files compile; new CLI flag/help/default calculator and interactive gameplay mode run successfully. Earlier benchmark files remain unchanged and measured under their recorded source snapshots.
+- Updating the local Git snapshot and existing submission ZIP with the validated latency changes, actual timing/replay evidence and latest work log. Preserve exact file bytes and required benchmark artifacts; verify ZIP hashes/CRC. No new model, dependency, fine-tuning or publication.
+- Outcome: startup delay is expected, but redundant exact-recipe work was removed and status feedback added. The fast gameplay option disables crafting planning explicitly; default mode keeps agentic recipe routing and compound/multistep behavior. Timings are hardware/session-specific small probes.

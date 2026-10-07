@@ -112,6 +112,21 @@ Ollama must be running (open the Ollama app, or run `ollama serve`).
 Without a question, `demo.py` asks for questions until you enter an empty line. It prints the retrieved passages
 (page > section), any craft-tool calls with their results, and the answer.
 
+The first gameplay answer loads the cached embedding/reranker and may also load Ollama's generator. Keep one
+interactive session open during the presentation to reuse those models. The demo immediately shows loading/working
+status and elapsed query time. Standalone validated quantity answers skip further planning and Wiki retrieval;
+they cite `[tool]` and keep the actual calculator trace. Compound/multistep questions retain the full pipeline.
+
+For faster general gameplay Q&A without the crafting calculator:
+
+```bash
+.venv\Scripts\python demo.py --no-tool
+```
+
+This uses the existing evaluated no-tool answer path, so it also bypasses crafting planning. Run the default demo
+when demonstrating recipe tools. Small latency probes are saved separately in `results/latency_review/`; earlier
+quality metrics keep their original source-version labels.
+
 ## Run the evaluation
 
 | Command | What it does | Needs | Time here |
