@@ -11,7 +11,7 @@ Recorded AI work is filled from the actual chat and files. No student implementa
 | AI Tool | Primary Use in This Project |
 |---|---|
 | Claude Code | Source/topic research; initial corpus extraction, chunking, retrieval, crafting tool, evaluations, documentation and fixes recorded in `docs/ai_prompt_history.md`. |
-| Codex | Requirements/topic research, independent review and metric reproduction, further fixes/tests, source-grounded benchmark, evaluation tooling and technical completion; recorded in `codextodo.md`. |
+| Codex | Requirements/topic research, independent review and metric reproduction, further fixes/tests, source-grounded benchmark, evaluation tooling, technical completion and the English pitch deck/Thai speaker notes; recorded in `codextodo.md`. |
 | Local qwen3:4b-instruct | Application answers, recipe tool planning, automatic correctness and faithfulness judgments. Same-model judging can favour its own answers. |
 
 ---
@@ -91,6 +91,22 @@ explicit quantities and remaining unsupported explanations; it does not claim ge
 **What you changed or rejected:**
 The user authorized Codex to continue after Claude became unavailable and requested an easy demo launcher.
 No independent student implementation or human validation is demonstrated by this instruction.
+
+---
+
+### Entry 7 — Requirements and pitch deck
+
+**Prompt sent:**
+> does this match all the instruction provided in term project? If yes can you render me a slide that is easy to pitch
+
+**What AI generated:**
+Rechecked all eight brief pages and generated ten English slides in the required order, with Thai speaker notes,
+editable pipeline/result tables, a rendered PDF and timed demo guidance. The user selected "English slides with
+Thai speaker notes". Historical and current experiments are labelled separately; universal accuracy is not claimed.
+
+**What you changed or rejected:**
+The user specified the presentation language. Names, actual contributions, rehearsal, individual explanations and
+the explicitly unaided Section 6 remain the real team's responsibility. The deck and notes are AI-authored assistance.
 
 ---
 

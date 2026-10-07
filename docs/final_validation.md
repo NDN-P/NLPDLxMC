@@ -166,7 +166,16 @@ same-model judge bias or certify population behavior.
 2. Write Section 6 unaided. The brief explicitly says **“Answer WITHOUT using AI”**; AI must not invent these answers.
 3. Check benchmark references and grade `results/verified/test/human_check.csv` independently, particularly conflicting
    judge labels and examples in `failure_analysis.md`. Keep human judgments separate from original automatic outputs.
-4. Prepare the presentation and individual technical explanations. Slides were outside this work's scope.
+4. Add authentic names to the supplied ten-slide deck and rehearse the live demo/individual technical explanations.
+   `presentation/MCQA_pitch_ready.pptx` has English slides, Thai speaker notes, editable architecture/results and the
+   instructor's exact slide order. `presentation/MCQA_pitch.pdf` is the shareable rendered copy; the companion Thai
+   notes include the 4–7-minute demo break. The notes are AI-authored, not unaided Section 6 responses.
+
+The deck uses historical frozen v1 gameplay, frozen v2 tool and current small-study results separately. It does not
+claim a consistent reranker benefit, human-certified accuracy or general accuracy improvement. All ten final
+PowerPoint renders and all ten PDF pages were visually inspected. Package/layout/font/import checks pass with
+zero final warnings; five native result/model tables and the pipeline remain editable in the PowerPoint. Native
+PowerPoint execution was not tested. The team-name field is the only intentional cover placeholder.
 
 Fine-tuning is optional under the course brief. This session first corrected and measured pretrained RAG; no training
 experiment, improvement or student-authored decision is claimed. Any later adaptation needs its own objective,

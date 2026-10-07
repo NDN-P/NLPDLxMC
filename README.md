@@ -357,6 +357,13 @@ planner skipped one of them. Answers are scored by the number given for the aske
 
 ## Files
 
+The pitch deck is in [presentation/MCQA_pitch_ready.pptx](presentation/MCQA_pitch_ready.pptx):
+10 English slides in the instructor's required order, with Thai speaker notes and editable results/pipeline.
+[PDF copy](presentation/MCQA_pitch.pdf) and [Thai presenter notes/demo timing](presentation/Thai_presenter_notes.md)
+are included. Add authentic team names on the cover before submission. The planned live demo follows slide 5
+at minute 4–7; use demo.bat after setup and wait for its ready prompt. Team contributions and AI_AUDIT Section 6
+remain human work; the notes are AI-authored presentation assistance.
+
 | File | What it is |
 |---|---|
 | `mcqa.py` | the system: fetching, chunking, the four retrievers, the craft tool, answering with the tool loop |
