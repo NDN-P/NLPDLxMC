@@ -1,0 +1,38 @@
+Loading saved index...
+Preparing local models for the demo. First startup may take a little while...
+Ready (11.0 seconds to prepare).
+
+Minecraft Java 26.3 assistant. Enter an empty line to finish.
+Try: How many iron ingots do I need to craft 3 hoppers?
+     What food is used to breed cows?
+
+Ask> Working...
+  tool: craft({'item': 'hoppers', 'count': 3}) -> To craft 3 Hopper you need 15 Iron Ingot, 3 Chest in total (3 crafts, each makes 1).
+
+15 [tool]
+
+Finished in 0.0 seconds.
+
+Ask> Working...
+  [1] Pumpkin Seeds > Usage > Breeding
+      https://minecraft.wiki/?oldid=3801119
+  [2] Melon Seeds > Usage > Breeding
+      https://minecraft.wiki/?oldid=3801118
+  [3] Tutorial:Achievement guide > Repopulation > Breed two cows with wheat
+      https://minecraft.wiki/?oldid=3800377
+  [4] Tutorial:Crop farming > Starting out
+      https://minecraft.wiki/?oldid=3822534
+  [5] Tutorial:Shelters > Expansions > Indoor animal farm
+      https://minecraft.wiki/?oldid=3789824
+
+Wheat is used to breed cows. [3]
+
+Finished in 6.9 seconds.
+
+Ask> Working...
+
+I do not know.
+
+Finished in 0.0 seconds.
+
+Ask> 

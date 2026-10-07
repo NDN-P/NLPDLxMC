@@ -1,7 +1,10 @@
 # Demo session
 
-This is the preserved earlier session. Current traces, including exact calculator output, compound requests and
+This is the preserved earlier session. Later traces, including exact calculator output, compound requests and
 known failed explanations, are in `results/verified/demo_final.json` and discussed in `docs/failure_analysis.md`.
+The newest real launcher sessions are `results/improvement_review/launcher_windows.txt` and `launcher_bash.txt`;
+they demonstrate warmup, deterministic recipes, saved-revision citations and scope refusals. Source versions and
+the separately frozen before/after comparison are documented in `docs/final_validation.md`.
 
 Recorded 2026-10-07 with `demo.py` (chunk size 256, qwen3:4b-instruct, hybrid + reranker, craft tool on). Each block is the exact output for one question: the five retrieved passages (page > section), any craft-tool calls, then the answer.
 

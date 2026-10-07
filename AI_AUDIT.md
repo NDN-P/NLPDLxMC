@@ -78,6 +78,22 @@ The user confirmed Claude had finished editing, enabling safe continuation. Team
 
 ---
 
+### Entry 6 — Continue after Claude's limit
+
+**Prompt sent:**
+> claude code hit limit for too long so i need you to continue. You can do everything to make improvement . and create demo bash for me i am lazy
+
+**What AI generated:**
+Windows/Bash demo launchers, startup/preflight guidance, conservative Java evidence filtering, direct validated
+recipe routing, regression checks and a separate frozen before/after evaluation. The evaluation records faster
+explicit quantities and remaining unsupported explanations; it does not claim general accuracy improved.
+
+**What you changed or rejected:**
+The user authorized Codex to continue after Claude became unavailable and requested an easy demo launcher.
+No independent student implementation or human validation is demonstrated by this instruction.
+
+---
+
 ## 3. Decision Journal (minimum 5 decisions)
 
 | # | Decision | Owner | Reason (in your own words) |
@@ -87,6 +103,8 @@ The user confirmed Claude had finished editing, enabling safe continuation. Team
 | 3 | Dense/BM25 RRF, optional cross-encoder reranking | [AI-decided] Claude | Compare semantic and exact-name retrieval; measure jointly scored passage ranking rather than assuming a gain. |
 | 4 | BERTScore, decomposed correctness judge, separate faithfulness/coverage/refusal counts | [AI-decided] Claude and Codex | Similarity is not truth; claims, refusals and failed judgments need correct denominators. Same-model judging remains a limitation. |
 | 5 | Same-question answer variants and separate tool ablation; new page-disjoint dev/test benchmark | [AI-decided] Claude and Codex | Preserve old experiments, replace unverified-reference assumptions with inspectable source quotes, and keep test references out of retrieval/training. AI-curated references still need independent team review. |
+| 6 | Direct routing for explicitly parsed recipes; retain the model tool loop for other requests | [AI-decided] Codex | The validated calculator can answer unambiguous quantities without model latency or changed totals. Deterministic traces are labelled separately from model-selected calls. |
+| 7 | Conservative current-Java passage views with unchanged raw sources/indexes | [AI-decided] Codex | Historical/other-edition passages caused conflicting answers. Filtering keeps source provenance, but can remove valid mixed-paragraph evidence; surviving facts are not all game-verified. |
 
 These are AI-owned reasons, not statements that a student independently made the algorithm choices. The fully local/no-paid-API requirement came directly from the user.
 

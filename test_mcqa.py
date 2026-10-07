@@ -29,11 +29,100 @@ class TestMcqa(unittest.TestCase):
             self.assertEqual((out["answer"], out["answer_mode"]), ("15 [tool]", "calculator_exact"))
             self.assertEqual((out["sources"], out["passages"]), ([], ""))
             self.assertEqual(mcqa.constrained_args(q, {"item": "chest", "count": 2})["count"], 2)
+            self.assertEqual(mcqa.constrained_args("How much iron do 3 hoppers need?",
+                                                  {"item": "hopper", "count": 15})["count"], 3)
             native = {"tool_calls": [{"function": {"name": "craft", "arguments": {"item": "hopper", "count": 15}}}]}
             with mock.patch.object(mcqa, "chat", return_value=native) as chat:
                 planned = mcqa.plan_tools(q)
-            chat.assert_called_once()  # stop after the validated amount, instead of an unnecessary follow-up round
+            chat.assert_not_called()  # explicit input can route directly to the existing validated calculator
+            self.assertEqual(planned[0]["via"], "deterministic")
+            self.assertNotIn("model_args", planned[0])
             self.assertEqual(mcqa.exact_quantity(q, planned), 15)
+
+    def test_explicit_recipe_wording_is_deterministic_and_batch_aware(self):
+        with mock.patch.object(mcqa, "crafting_data", return_value=FAKE), \
+                mock.patch.object(mcqa, "chat", side_effect=AssertionError("explicit recipe needs no model")):
+            for question in ("How many Iron Ingots for 3 hoppers?",
+                             "How many Iron Ingots do 3 hoppers need?",
+                             "How many Iron Ingots do I need to make 3 hoppers"):
+                self.assertEqual(mcqa.answer(question)["answer"], "15 [tool]")
+            recipe = mcqa.answer("What materials do I need to craft 10 torches?")
+            self.assertEqual(recipe["answer_mode"], "calculator_recipe")
+            self.assertEqual(recipe["tool_calls"][0]["result"]["crafts"], 3)
+            self.assertIn("3 Stick", recipe["answer"])
+            self.assertIsNone(mcqa.recipe_request("How many feathers does a chicken drop?"))
+            self.assertIsNone(mcqa.recipe_request("What food breeds cows?"))
+            self.assertIsNone(mcqa.recipe_request("Craft 3 hoppers and explain how they move items."))
+
+    def test_two_clause_recipe_quantity_keeps_batch_rounding_and_extra_requests(self):
+        with mock.patch.object(mcqa, "crafting_data", return_value=FAKE):
+            with mock.patch.object(mcqa, "chat", side_effect=AssertionError("explicit recipe needs no model")):
+                for question in ("I want 9 torches. How many sticks does the crafting recipe require? Reply with the number only.",
+                                 "I need 9 torches. How many sticks do I need?"):
+                    out = mcqa.answer(question)
+                    self.assertEqual((out["answer"], out["answer_mode"]), ("3 [tool]", "calculator_exact"))
+                    self.assertEqual(out["tool_calls"][0]["result"]["crafts"], 3)
+            q = "I want 9 torches. How many sticks does the crafting recipe require? How do torches emit light?"
+            self.assertIsNone(mcqa.recipe_request(q))
+            native = {"tool_calls": [{"function": {"name": "craft", "arguments": {"item": "torch", "count": 99}}}]}
+            with mock.patch.object(mcqa, "chat", side_effect=[native, {"content": "NO_TOOL"},
+                                                             {"content": "3 sticks [tool]; torches emit light."}]) as chat:
+                compound = mcqa.answer(q)
+            self.assertEqual(chat.call_count, 3)
+            self.assertEqual(compound["answer_mode"], "llm")
+            self.assertIn("emit light", compound["answer"])
+            self.assertEqual(compound["tool_calls"][0]["args"]["count"], 9)
+            self.assertNotIn("via", compound["tool_calls"][0])  # this is an actual native model request
+
+    def test_scope_filter_and_every_retrieval_stage_preserve_current_java(self):
+        chunks = [
+            {"title": "Java Edition 1.9/Development versions", "section": "Changes", "text": "Elytra uses leather"},
+            {"title": "Anvil", "section": "History > Java Edition", "text": "Old repairs"},
+            {"title": "Anvil", "section": "Usage > Repairing", "text": "Elytra uses phantom membranes"},
+            {"title": "Grass Block", "section": "Usage", "text": "Grass can sit on bedrock blocks"},
+            {"title": "Anvil", "section": "Usage", "text": "In Bedrock Edition: a different rule"},
+            {"title": "Anvil", "section": "Usage", "text": "A rule [BE  only]"},
+            {"title": "Chunk", "section": "Bedrock Edition > Loading", "text": "Different loading rules"},
+        ]
+        self.assertEqual([mcqa.scope_reason(c) for c in chunks],
+                         ["historical", "historical", None, None, "mixed_edition", "mixed_edition", "other_edition"])
+        mixed = {"title": "Item Frame", "section": "Usage", "text":
+                 "Item Frame > Usage\nIn Java Edition, item frames are entities. In Bedrock Edition, they behave like signs. "
+                 "They can be waterlogged.\nSneak to place a frame on a chest."}
+        self.assertIsNone(mcqa.scope_reason(mixed))
+        view = mcqa.current_text(mixed)
+        self.assertIn("frames are entities", view)
+        self.assertIn("Sneak to place", view)
+        self.assertNotIn("Bedrock Edition", view)
+        self.assertNotIn("waterlogged", view)  # do not detach another edition's follow-up sentence from its context
+        r = object.__new__(mcqa.Retriever)
+        r.chunks = chunks
+        r.eligible = mcqa.np.array([2, 3])
+        r.emb = mcqa.np.array([[10], [9], [4], [3], [8], [7], [6]], dtype=float)
+        r.bm25 = mock.Mock()
+        r.bm25.get_scores.return_value = r.emb[:, 0]
+        model, reranker = mock.Mock(), mock.Mock()
+        model.encode.return_value = mcqa.np.array([1.0])
+        reranker.predict.return_value = mcqa.np.array([1.0, 2.0])
+        with mock.patch.object(mcqa, "embedder", return_value=model), \
+                mock.patch.object(mcqa, "reranker", return_value=reranker):
+            for variant in ("dense", "bm25", "hybrid", "rerank"):
+                ids = r.search("repair elytra", variant, 2)
+                self.assertEqual(set(ids), {2, 3})  # filter before top-k; fill from eligible evidence
+            self.assertEqual(r.search("repair elytra", "rerank", 2), [3, 2])
+
+    def test_source_citation_points_to_the_saved_revision(self):
+        retriever = mock.Mock()
+        retriever.search.return_value = [0]
+        retriever.chunks = [{"title": "Anvil", "section": "Usage", "text": "A current Java fact."}]
+        mcqa.source_metadata.cache_clear()
+        page = {"title": "Anvil", "revid": 123, "timestamp": "test"}
+        with mock.patch.object(mcqa, "load_pages", return_value=[page]), \
+                mock.patch.object(mcqa, "chat", return_value={"content": "A current Java fact [1]."}):
+            out = mcqa.answer("A gameplay question?", retriever, use_tool=False)
+        mcqa.source_metadata.cache_clear()
+        self.assertEqual(out["sources"][0]["url"], "https://minecraft.wiki/?oldid=123")
+        self.assertEqual(out["sources"][0]["revid"], 123)
 
     def test_compound_quantity_question_keeps_the_other_request(self):
         q = "How many Iron Ingots do I need to craft 3 Hopper? How does a hopper transport items?"
@@ -124,7 +213,7 @@ class TestMcqa(unittest.TestCase):
         with mock.patch.object(mcqa, "chat", return_value=native) as chat, \
                 mock.patch.object(mcqa, "run_tool", return_value=ambiguous):
             result = mcqa.answer("What do I need for 2 smithing templates?")
-        self.assertEqual(chat.call_count, 1)  # no second call lets the model invent Coast or Wild
+        self.assertEqual(chat.call_count, 0)  # ambiguous explicit recipe is clarified without a model guessing
         self.assertEqual(len(result["tool_calls"]), 1)
         self.assertIn("Which specific item", result["answer"])
         self.assertIn("Coast Armor Trim", result["answer"])
@@ -149,6 +238,13 @@ class TestMcqa(unittest.TestCase):
         self.assertTrue(mcqa.other_edition("What is this recipe in Minecraft Bedrock?"))
         self.assertFalse(mcqa.other_edition("Can I place grass on bedrock?"))
         self.assertFalse(mcqa.other_edition("What materials do I need for bedrock breaking?"))
+        with mock.patch.object(mcqa, "chat") as chat:
+            self.assertEqual(mcqa.answer("How do I repair elytra in Java Edition 1.9?")["answer_mode"], "scope_refusal")
+            self.assertEqual(mcqa.plan_tools("Craft a hopper in Minecraft Java 1.21"), [])
+            chat.assert_not_called()
+        self.assertFalse(mcqa.other_version("What does an anvil do in Java Edition 26.3?"))
+        self.assertTrue(mcqa.other_version("Repair in Minecraft 1.9."))
+        self.assertTrue(mcqa.other_version("Repair in Java Edition 23w14a?"))
 
     def test_tool_answer_scoring(self):
         import eval as ev

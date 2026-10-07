@@ -1,7 +1,7 @@
 # MCQA: Minecraft Wiki Q&A
 
 A local question-answering system targeting Minecraft Java 26.3 gameplay. It retrieves from 312 real Minecraft Wiki pages (816,730 words,
-including several editions and the game's history), cites the passages it used, and calls a crafting calculator built
+including several editions and the game's history), filters obvious historical/other-edition evidence, cites saved source revisions, and uses a crafting calculator built
 from Mojang's official **Java Edition 26.3** recipe files when a question asks how many items a craft needs.
 
 Term project for *Natural Language Processing with Deep Learning*. Everything runs locally on one laptop: retrieval on
@@ -12,6 +12,8 @@ file manifest. It includes this README, source, tests, pinned pages, benchmark d
 Models and rebuildable runtime data are excluded; follow setup below before running inference on another machine.
 
 ```
+explicit standalone recipe ─► validated craft(item, count) ─► calculator answer [tool], no model call
+otherwise:
                 ┌─► dense: bge-small-en-v1.5, cosine (top 50) ─┐
 question ───────┤                                              ├─► RRF, k=60 ─► top 20 ─► cross-encoder ─► top 5 passages ─┐
    │            └─► sparse: BM25 (top 50) ─────────────────────┘                          (ms-marco-MiniLM-L6-v2)         │
@@ -31,21 +33,29 @@ question ───────┤                                              �
    embedding model's own tokenizer (including `[CLS]`/`[SEP]`), each starting with `Page > Section` so the chunk says
    where it is from. A paragraph over the budget is cut into word windows; a "word" over the budget is halved.
    No overlap. Normal paragraphs are preserved; oversized paragraphs or commands can split sentences.
-3. **Retrieval.** Dense (bge-small-en-v1.5 with its query instruction, cosine similarity on normalized vectors) and
+3. **Retrieval.** A current-Java heuristic excludes history/other-edition headings and removes explicitly other-edition
+   sentences with their unresolved follow-up context. The original files/index IDs stay intact. Dense embeddings
+   still represent original text; BM25, reranking and the final prompt use the filtered passage views. This scope
+   control can remove valid evidence from mixed paragraphs and does not verify every fact against Java 26.3.
+   Dense (bge-small-en-v1.5 with its query instruction, cosine similarity on normalized vectors) and
    BM25 (lower-cased alphanumeric tokens, no stemming or stop words) each return 50 chunks; reciprocal rank fusion
    (k = 60) merges them; a cross-encoder reads (question, chunk) pairs for the top 20 and keeps the best 5.
-4. **Crafting tool (agentic step).** Step 1: the LLM sees the question and matching one-craft recipes and may call `craft(item, count)`, which
+4. **Crafting tool.** Clearly parsed standalone ingredient quantities or recipe requests route directly to
+   `craft(item, count)` without a model call. Traces label this `via="deterministic"`; it is calculator arithmetic.
+   For other requests, step 1: the LLM sees the question and matching one-craft recipes and may call `craft(item, count)`, which
    computes the ingredients from Mojang's official Java 26.3 recipe files; it may call it again (up to 3 rounds), for
    example for an ingredient's own recipe. If it makes no call, a second prompt forces a yes/no decision as JSON
    constrained by a schema. Step 2: a standalone explicit quantity query receives the matching calculator quantity
    directly; other questions use the LLM with passages and tool results. Facts cite their source
    (`[1]`–`[5]` for passages, `[tool]` for the craft tool).
 5. **Model.** qwen3:4b-instruct (4B parameters, Q4_K_M) through Ollama, temperature 0 and a fixed seed. Prompts target
-   current Java gameplay; explicit other-edition requests are rejected before retrieval or recipe calls.
+   current Java gameplay; explicit other-edition or different-version requests are rejected before retrieval or recipe calls.
 
-The planner also receives matching official one-craft recipes to ground item knowledge; it still selects the product
-through native or structured model output. Explicit "How many X do I need to craft N Y?" requests constrain matching
-tool calls to the user's N, preserving the original model arguments in the trace. A successful matching direct
+For requests that use the planner, matching official one-craft recipes ground item knowledge; product selection
+uses native or structured model output. Parsed product/count requests constrain matching tool calls to the user's
+N, preserving original model arguments for model calls. Explicit forms include "How many X do I need to craft N Y?",
+"How many X for N Y?", "What materials do I need for N Y?", and "I want N Y. How much X do I need?".
+A successful matching direct
 ingredient amount is returned as `calculator_exact` for standalone quantity queries. Ambiguity asks for clarification. If a successful
 calculator result is followed by a bare model refusal, the calculator's complete validated recipe is displayed with
 `[tool]`; `answer_mode=calculator_fallback` records this distinction. This is deterministic arithmetic, not trained
@@ -79,8 +89,9 @@ python -m venv .venv
 ollama pull qwen3:4b-instruct
 ```
 
-(On macOS/Linux use `.venv/bin/...` instead of `.venv\Scripts\...`.) The embedding, reranker and BERTScore models
-download from Hugging Face on first use (about 0.5 GB in total).
+(On macOS/Linux use `.venv/bin/...` instead of `.venv\Scripts\...`.) Initial setup downloads the embedding,
+reranker and optional evaluation BERTScore models from Hugging Face (about 0.5 GB in total). Demo inference uses
+the local caches only.
 
 ## Build the data and the index
 
@@ -101,9 +112,33 @@ current wiki instead.
 Chunks the pages and embeds the chunks (a few minutes on a CPU). The retrieval ablation also needs `index 128` and
 `index 512`.
 
+Cache both demo retrieval models once during initial setup (internet is needed if their caches are missing):
+
+```powershell
+.venv\Scripts\python.exe -c "import mcqa; mcqa.embedder(); mcqa.reranker()"
+```
+
+After that, the demo stays offline for Hugging Face models and reports a missing cache instead of downloading.
+
 ## Run the demo
 
-Ollama must be running (open the Ollama app, or run `ollama serve`).
+After the initial setup, **double-click `demo.bat` on Windows**. It opens an interactive session and prepares the
+cached models before your first question. Enter an empty line to finish. The demo starts the installed Ollama
+service if necessary; it never downloads a missing model automatically.
+
+For Bash (Git Bash on Windows, or macOS/Linux):
+
+```bash
+bash demo.sh
+```
+
+The launchers find their own project folder and virtual environment, so they also work when launched elsewhere.
+For a double-click faster gameplay session, use **`demo-fast.bat`** (crafting calculator disabled).
+Pass `--no-tool` for gameplay without calculator planning, or `--variant dense` to demonstrate dense retrieval.
+For example, `demo.bat --no-tool` or `bash demo.sh --variant dense`. The default keeps crafting tools and reranking.
+
+Check demo setup with `.venv\Scripts\python.exe scripts\preflight.py --demo`; the default preflight also checks
+the evaluation-only BERTScore dependency/cache. To ask a question directly:
 
 ```bash
 .venv\Scripts\python demo.py "How many iron ingots do I need to craft 3 hoppers?"
@@ -159,10 +194,20 @@ answers or verdicts. Self-checks for the chunker, RRF and the craft tool:
 
 Run all regression checks with `.venv\Scripts\python.exe -m unittest discover -v`.
 
+**Latest continuation:** the new `results/improvement_review/RESULTS.md` compares frozen before/after code on
+28 cases selected before generation (12 facts, 4 negatives, 12 recipes; separate dev/test splits). New test
+recipe quantities changed from 5/6 to 6/6. Across dev/test, canonical queries averaged 3.687 → 0.008 seconds and
+the tested two-clause wording 7.601 → 0.005 seconds; these small timing samples exclude process startup and judges.
+Compound queries remained around 11 seconds and their explanatory claims can still be unsupported.
+Automatic test facts were dense 7/8 → 6/8 and rerank 7/8 → 7/8, so this study does not establish a factual accuracy
+gain. References/judgments are AI-curated/automatic; see the saved analysis notes and human-check sheet. Final
+source snapshots, hashes and supplemental cached-model revisions are included. All 34 integrated tests pass.
+The larger results below remain labelled with their original frozen source versions.
+
 The current source-grounded benchmark is in `data/java_benchmark.jsonl`: 60 new questions, including 50 answerable
 facts across 25 pinned pages and 10 expected refusals. Exact reference quotes and revision links are included.
 Development (20) and test (40) questions use disjoint answerable source pages. The dataset is AI-curated and
-source-checked, with `human_reviewed=false`; independent team checking remains required. Test references are never
+source-checked, with `human_reviewed=false`; independent team checking is recommended for evaluation rigor. Test references are never
 added to retrieval or training. See `docs/benchmark_sources.md`.
 
 ```powershell
@@ -178,7 +223,7 @@ Reuse the same `--output` directory to resume an unchanged run; choose a new dir
 Report generation preserves an existing human-check CSV. Gameplay dev/test used the frozen `source_v1` code;
 the later tool corrections and usability fixes have their own versions. `scripts/resume_gameplay.py --split test`
 loads the saved v1 modules and verifies their original configuration to resume that specific experiment.
-It uses cached models only. Indexing and the first demo populate the embedding/reranker caches. Before the first
+It uses cached models only. Indexing and the explicit setup command above populate the embedding/reranker caches. Before the first
 benchmark run, cache its BERTScore model once:
 
 ```powershell
@@ -292,7 +337,10 @@ planner skipped one of them. Answers are scored by the number given for the aske
 - **A small generator refuses often** (31% with the reranker), sometimes when the passage does contain the answer.
 - **Scope.** Recipe files are pinned to Java 26.3. General answer prompts target current Java gameplay and reject
   explicitly different-edition questions, but the underlying Wiki corpus remains mixed-edition and historical.
-  The new source-grounded benchmark checks selected current gameplay facts, not every version-specific mechanic.
+  Current retrieval excludes obvious historical/other-edition headings and applies a conservative Java passage view.
+  It is a heuristic: surviving claims are not automatically verified for 26.3, and mixed paragraphs can lose valid
+  Java evidence. Dense embeddings still use original text. The source-grounded benchmark checks selected gameplay
+  facts, not every version-specific mechanic.
 - **Hand labels overlap:** the two correctness label sets share 12 question texts, and run 1 was used to pick the
   judge.
 - **Corpus coverage:** the 312 pages were chosen by how often the question pool asks about them, so common pages
@@ -303,8 +351,9 @@ planner skipped one of them. Answers are scored by the number given for the aske
   alternatives is shown as its first item only (e.g. "White Wool" where any wool colour would do). A name shared by
   several items ("smithing template", "music disc", "banner pattern") requires clarification; the planner stops
   rather than guessing a variant. Quantity inputs must be positive integers.
-- **Question wording.** Tool use was tuned on "How many X do I need to craft N Y?" questions; other wordings
-  ("How much iron does a hopper need?") sometimes get no tool call (`docs/failure_analysis.md`).
+- **Question wording.** Explicit parsed recipe forms now route directly; unresolved aliases, raw-material chains
+  and compound requests still use model planning and may miss a tool call. Earlier wording failures are preserved
+  in `docs/failure_analysis.md`; they describe their recorded source versions.
 
 ## Files
 
@@ -313,6 +362,7 @@ planner skipped one of them. Answers are scored by the number given for the aske
 | `mcqa.py` | the system: fetching, chunking, the four retrievers, the craft tool, answering with the tool loop |
 | `eval.py` | retrieval ablation, answer evaluation (BERTScore + LLM-as-Judge), tool ablation, report |
 | `demo.py` | command-line demo |
+| `demo.bat`, `demo-fast.bat`, `demo.sh` | easy local launchers; fast Windows mode disables crafting planning |
 | `test_mcqa.py` | unit tests |
 | `scripts/judge_selection.py` | how the LLM judge was chosen: five judge set-ups against hand labels → `results/judge_selection.json` |
 | `results/RESULTS.md` | every result table, generated by `eval.py report` |
@@ -330,6 +380,7 @@ planner skipped one of them. Answers are scored by the number given for the aske
 | `data/java_benchmark.jsonl`, `docs/benchmark_sources.md` | new question set, exact evidence/revisions, split and provenance |
 | `scripts/benchmark_eval.py`, `results/verified/` | source-grounded evaluations with resumable raw rows, two course metrics and human-check sheets |
 | `scripts/preflight.py`, `test_eval.py` | local readiness check and evaluation regressions |
+| `scripts/improvement_eval.py`, `data/improvement_benchmark.jsonl`, `results/improvement_review/` | separately frozen before/after evaluation on new source pages and recipe products |
 | `docs/final_validation.md` | final observed metrics, fixes, source versions, remaining failures and submission requirements |
 | `AI_AUDIT.md` | authentic AI activity; team names/contributions and explicitly unaided responses remain for the team |
 | `docs/AI_AUDIT_skeleton.md` | preserved original output of the standardized skeleton prompt |

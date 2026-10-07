@@ -99,10 +99,11 @@ def fetch(n_pages=400):
 def load_pages():
     """Fetched pages, one per wiki title (several question-pool titles can redirect to the same page)."""
     pages = {}
-    for line in (DATA / "pages.jsonl").open(encoding="utf-8"):
-        p = json.loads(line)
-        if not p.get("missing"):
-            pages.setdefault(p["title"], p)
+    with (DATA / "pages.jsonl").open(encoding="utf-8") as stream:
+        for line in stream:
+            p = json.loads(line)
+            if not p.get("missing"):
+                pages.setdefault(p["title"], p)
     return list(pages.values())
 
 
@@ -216,25 +217,88 @@ def rrf(rankings, k=60):
     return [doc for doc, _ in score.most_common()]
 
 
+OTHER_EDITION_TEXT = re.compile(r"\b(?:bedrock|pocket|legacy console|education) edition\b|"
+                               r"\bMinecraft(?:Edu| Education)\b|\[\s*BE\s+only\s*\]", re.I)
+
+
+def current_text(chunk):
+    """A conservative Java passage view; original files and embedding rows remain untouched."""
+    header, newline, body = chunk["text"].partition("\n")
+    if not newline:
+        header, body = "", header
+    lines = []
+    for line in body.splitlines():
+        kept, other_context = [], False
+        for sentence in re.split(r"(?<=[.!?])\s+(?=[A-Z])", line):
+            if OTHER_EDITION_TEXT.search(sentence):
+                other_context = True
+                continue
+            if re.search(r"\bJava Edition\b|\[\s*JE\s+only\s*\]", sentence, re.I):
+                other_context = False
+            if not other_context:
+                kept.append(sentence)
+        if kept:
+            lines.append(" ".join(kept))
+    return (header + newline if lines and newline else "") + "\n".join(lines)
+
+
+def scope_reason(chunk, view=None):
+    """Why a stored passage cannot establish current Java behavior, or None when eligible.
+
+    This is a conservative metadata/text filter, not verification that every surviving claim applies to 26.3.
+    Mixed-edition chunks are excluded only when their filtered passage view contains no eligible body text.
+    """
+    title, section = chunk["title"], chunk.get("section", "")
+    heading = title + " > " + section
+    if OTHER_EDITION_TEXT.search(heading):
+        return "other_edition"
+    if (re.search(r"\b(?:version history|removed features|unused features|pre-flattening|before \d|"
+                  r"development versions|April Fools|Indev|mentioned features|unused textures)\b|\(old\)",
+                  title, re.I) or
+            re.search(r"(?:^| > )(?:History\b|Legacy\b|Removed\b|Temporary features\b|Old\b|Before \d|April Fools\b)",
+                      section, re.I)):
+        return "historical"
+    version = re.search(r"\bJava Edition (\d[\w.]*)", heading, re.I)
+    if version and version[1].rstrip(".") != MC_VERSION:
+        return "other_version"
+    if not (current_text(chunk) if view is None else view).strip():
+        return "mixed_edition"
+    return None
+
+
 class Retriever:
     def __init__(self, size=256):
         from rank_bm25 import BM25Okapi
-        self.chunks = [json.loads(line) for line in (DATA / f"chunks_{size}.jsonl").open(encoding="utf-8")]
+        with (DATA / f"chunks_{size}.jsonl").open(encoding="utf-8") as stream:
+            stored = [json.loads(line) for line in stream]
+        self.chunks = []
+        for c in stored:
+            view = current_text(c)
+            self.chunks.append({**c, "text": view, "text_filtered": view != c["text"]})
         self.emb = np.load(DATA / f"emb_{size}.npy")
         self.bm25 = BM25Okapi([words(c["text"]) for c in self.chunks])
+        reasons = [scope_reason(c, view["text"]) for c, view in zip(stored, self.chunks)]
+        self.eligible = np.array([i for i, reason in enumerate(reasons) if reason is None], dtype=int)
+        self.scope_exclusions = dict(Counter(reason for reason in reasons if reason))
+        self.scope_trimmed = sum(c["text"] != view["text"] for c, view in zip(stored, self.chunks))
+        # ponytail: existing dense rows include removed edition clauses; rebuild only if measured retrieval suffers.
 
     def dense(self, q, k=10):
         v = embedder().encode(QUERY_PREFIX + q, normalize_embeddings=True)
-        return np.argsort(-(self.emb @ v))[:k].tolist()  # cosine similarity: vectors are normalized
+        scores = self.emb @ v  # cosine similarity: vectors are normalized
+        return self.eligible[np.argsort(-scores[self.eligible])[:k]].tolist()
 
     def sparse(self, q, k=10):
-        return np.argsort(-self.bm25.get_scores(words(q)))[:k].tolist()
+        scores = self.bm25.get_scores(words(q))
+        return self.eligible[np.argsort(-scores[self.eligible])[:k]].tolist()
 
     def hybrid(self, q, k=10, pool=50):
         return rrf([self.dense(q, pool), self.sparse(q, pool)])[:k]
 
     def rerank(self, q, k=10, pool=20):
         ids = self.hybrid(q, pool)
+        if not ids:
+            return []
         scores = reranker().predict([(q, self.chunks[i]["text"]) for i in ids])
         return [ids[j] for j in np.argsort(-scores)[:k]]
 
@@ -502,28 +566,71 @@ def other_edition(question):
                           question, re.I))
 
 
+def other_version(question):
+    """An explicitly requested different Java release is outside the pinned assistant's scope."""
+    versions = re.findall(r"\b(?:Java(?: Edition)?|Minecraft(?: Java(?: Edition)?)?|version)\s+"
+                          r"(\d+(?:\.\d+)+(?:[-_][\w-]+)?|\d{2}w\d{2}[a-z])\b", question, re.I)
+    return any(version != MC_VERSION for version in versions)
+
+
+def recipe_request(question, standalone=True):
+    """Parse a few explicit recipe forms; unresolved wording stays with the model's planner.
+
+    Return raw names so ambiguous products are clarified rather than arbitrarily resolved.
+    Compound questions may constrain an explicit first quantity, but never take the direct-answer shortcut.
+    """
+    first, mark, rest = question.strip().partition("?")
+    if standalone and mark and not re.fullmatch(r"\s*(?:Reply with the number only\.?\s*)?", rest, re.I):
+        return None
+    first = first.rstrip(". ")
+    patterns = (
+        r"i (?:want|need) (?P<product>.+?)\.\s*how (?:many|much) (?P<ingredient>.+?) "
+        r"(?:do i need|does the (?:crafting )?recipe (?:require|need|take))",
+        r"how (?:many|much) (?P<ingredient>.+?) do i need to (?:craft|make) (?P<product>.+)",
+        r"how (?:many|much) (?P<ingredient>.+?) (?:do|does) (?P<product>.+?) (?:need|require|take)(?: to (?:craft|make))?",
+        r"how (?:many|much) (?P<ingredient>.+?) (?:for|to (?:craft|make)) (?P<product>.+)",
+        r"what (?:ingredients|materials) do i need (?:to (?:craft|make)|for) (?P<product>.+)",
+        r"what do i need (?:to (?:craft|make)|for) (?P<product>.+)",
+        r"(?:how do i |how to )?(?:craft|make) (?P<product>.+)",
+    )
+    match = next((m for pattern in patterns if (m := re.fullmatch(pattern, first, re.I))), None)
+    if not match:
+        return None
+    product = match["product"]
+    quantity = re.fullmatch(r"([+-]?\d+(?:\.\d+)?)\s+(.+)", product)
+    count = quantity[1] if quantity else "1"
+    product = quantity[2] if quantity else re.sub(r"^(?:a|an)\s+", "", product, flags=re.I)
+    names = crafting_data()["names"]
+    shared = crafting_data().get("ambiguous", {})
+    if not find_item(product, names) and not any(key in shared for key in item_keys(product)):
+        return None  # includes raw-material chains and extra requests joined with "and"
+    count = int(count) if re.fullmatch(r"[+-]?\d+", count) else count
+    return {"item": product, "count": count, "ingredient": match.groupdict().get("ingredient")}
+
+
 def quantity_request(question):
     """Explicit quantity requests are input constraints, not amounts the model may silently change."""
-    m = re.match(r"\s*how many (.+?) do i need to craft ([+-]?\d+(?:\.\d+)?) (.+?)\?", question, re.I)
-    if not m:
+    request = recipe_request(question, standalone=False)
+    if not request or not request["ingredient"]:
         return None
     names = crafting_data()["names"]
-    ingredient, product = find_item(m[1], names), find_item(m[3], names)
-    count = int(m[2]) if re.fullmatch(r"[+-]?\d+", m[2]) else m[2]
-    return (ingredient, product, count) if ingredient and product else None
+    ingredient, product = find_item(request["ingredient"], names), find_item(request["item"], names)
+    return (ingredient, product, request["count"]) if ingredient and product else None
 
 
 def constrained_args(question, args):
-    request = quantity_request(question)
-    if request and isinstance(args, dict) and find_item(str(args.get("item", "")), crafting_data()["names"]) == request[1]:
-        return {**args, "count": request[2]}
+    request = recipe_request(question, standalone=False)
+    names = crafting_data()["names"]
+    product = find_item(request["item"], names) if request else None
+    if product and isinstance(args, dict) and find_item(str(args.get("item", "")), names) == product:
+        return {**args, "count": request["count"]}
     return args
 
 
 def exact_quantity(question, calls):
     """A validated direct ingredient amount fully answers a standalone explicit quantity request."""
     request = quantity_request(question)
-    if not request or not re.fullmatch(r"\s*(?:Reply with the number only\.?\s*)?", question.partition("?")[2], re.I):
+    if not request or not recipe_request(question):
         return None
     return next((c["result"]["ingredient_ids"][request[0]] for c in calls
                  if c["result"].get("item_id") == request[1] and c["result"].get("count") == request[2]
@@ -531,11 +638,19 @@ def exact_quantity(question, calls):
 
 
 def plan_tools(question, rounds=3):
-    """Step 1: the model sees the question plus matching one-craft recipes and may call the tool up to `rounds` times
-    (a second round lets it look up an ingredient's own recipe); if it calls nothing, ROUTE asks once more.
-    Returns the calls with their results."""
-    if other_edition(question):
+    """Explicit standalone recipe forms route deterministically to the validated calculator.
+    Otherwise the model sees matching one-craft recipes and may call the tool up to `rounds` times;
+    a second round can look up an ingredient's recipe, and ROUTE retries if there were no native calls.
+    Returns calls/results with deterministic/structured routes labelled honestly."""
+    if other_edition(question) or other_version(question):
         return []
+    direct = recipe_request(question)
+    if direct:
+        args = {"item": direct["item"], "count": direct["count"]}
+        result = run_tool("craft", args)
+        ingredient = find_item(direct["ingredient"], crafting_data()["names"]) if direct["ingredient"] else None
+        if "error" in result or not direct["ingredient"] or ingredient in result.get("ingredient_ids", {}):
+            return [{"args": args, "result": result, "via": "deterministic"}]
     context = recipe_context(question)
     request = question + ("\n\nOfficial recipes mentioning items in the question (one craft only; call the tool for "
                           "the requested totals):\n" + context if context else "")
@@ -573,12 +688,12 @@ def plan_tools(question, rounds=3):
 
 
 def answer(question, retriever=None, variant="rerank", k=5, use_tool=True):
-    """Retrieve k passages; with use_tool, first let the model call the craft tool (plan_tools); then answer."""
-    if other_edition(question):
+    """Use direct recipe arithmetic when fully parsed; otherwise plan tools, retrieve k passages and generate."""
+    if other_edition(question) or other_version(question):
         return {"answer": "I do not know.", "answer_mode": "scope_refusal", "tool_calls": [],
                 "passages": "", "sources": []}
-    request = quantity_request(question) if use_tool else None
-    if request and (not isinstance(request[2], int) or request[2] < 1):
+    request = recipe_request(question, standalone=False) if use_tool else None
+    if request and (not isinstance(request["count"], int) or request["count"] < 1):
         return {"answer": "Please request a positive whole number of crafted items.",
                 "answer_mode": "clarification", "tool_calls": [], "passages": "", "sources": []}
     calls = plan_tools(question) if use_tool else []
@@ -588,6 +703,11 @@ def answer(question, retriever=None, variant="rerank", k=5, use_tool=True):
         text = ("Which specific item do you mean? Choices include " + ", ".join(ambiguous["options"][:5])
                 + ". Please give its full name or Minecraft item ID. [tool]") if ambiguous else f"{amount} [tool]"
         return {"answer": text, "answer_mode": "clarification" if ambiguous else "calculator_exact",
+                "tool_calls": calls, "passages": "", "sources": []}
+    if calls and calls[0].get("via") == "deterministic":
+        result = calls[0]["result"]
+        return {"answer": result.get("answer", result.get("error", "I do not know.")) + " [tool]",
+                "answer_mode": "calculator_recipe" if "answer" in result else "calculator_error",
                 "tool_calls": calls, "passages": "", "sources": []}
     ids = retriever.search(question, variant, k) if retriever else []
     passages = "\n\n".join(f"[{n}] {retriever.chunks[i]['text']}" for n, i in enumerate(ids, 1)) or "(none)"
@@ -608,8 +728,19 @@ def answer(question, retriever=None, variant="rerank", k=5, use_tool=True):
         text = " ".join(summary + " [tool]" for summary in summaries)
         answer_mode = "calculator_fallback"
     return {"answer": text, "answer_mode": answer_mode, "tool_calls": calls, "passages": passages if ids else "",
-            "sources": [{"n": n, "title": retriever.chunks[i]["title"], "section": retriever.chunks[i]["section"]}
+            "sources": [{"n": n, "title": retriever.chunks[i]["title"], "section": retriever.chunks[i]["section"],
+                         "chunk_id": i, "source_scope": "current-Java heuristic passage view",
+                         "passage_filtered": retriever.chunks[i].get("text_filtered", False),
+                         **source_metadata().get(retriever.chunks[i]["title"], {})}
                         for n, i in enumerate(ids, 1)]}
+
+
+@lru_cache(maxsize=1)
+def source_metadata():
+    """Citation links point at the stored revision, not today's changing Wiki page."""
+    return {p["title"]: {"revid": p["revid"], "timestamp": p["timestamp"],
+                         "url": f"https://minecraft.wiki/?oldid={p['revid']}"}
+            for p in load_pages()} if (DATA / "pages.jsonl").exists() else {}
 
 
 if __name__ == "__main__":

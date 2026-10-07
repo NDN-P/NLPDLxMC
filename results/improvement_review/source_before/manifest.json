@@ -1,0 +1,9 @@
+{
+  "commit": "a0870e1",
+  "sha256": {
+    "mcqa.py": "007ffde3b2bc1ba35365ee23c90938c112118fe4e09de0dcce8bc5d0614e4f76",
+    "eval.py": "a875711e4e4eae9ae87c2c719f69c81d292df20a19af926aa64e047224f1cfcc",
+    "scripts/benchmark_eval.py": "aa13610ba362ebe2b3c0d1c1d9704ed9099e8abe09a1935d7c0da5d0cb4f4053",
+    "scripts/tool_benchmark.py": "609b97c8650e3a6a62cab7b44807f56721134a855a6e0f308fdb0da71639b568"
+  }
+}

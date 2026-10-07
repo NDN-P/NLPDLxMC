@@ -1,0 +1,124 @@
+{
+  "provenance": "Paired aggregation of frozen answers; automatic same-model judgments, no new inference or label changes.",
+  "aggregation_eval_sha256": "a875711e4e4eae9ae87c2c719f69c81d292df20a19af926aa64e047224f1cfcc",
+  "paired_factual": {
+    "dev_dense": {
+      "after - before: score": {
+        "mean_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "after - before: bertscore_f1": {
+        "mean_difference": -0.005,
+        "ci95": [
+          -0.059,
+          0.045
+        ]
+      }
+    },
+    "dev_rerank": {
+      "after - before: score": {
+        "mean_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "after - before: bertscore_f1": {
+        "mean_difference": 0.004,
+        "ci95": [
+          -0.075,
+          0.067
+        ]
+      }
+    },
+    "test_dense": {
+      "after - before: score": {
+        "mean_difference": -0.062,
+        "ci95": [
+          -0.188,
+          0.0
+        ]
+      },
+      "after - before: bertscore_f1": {
+        "mean_difference": 0.018,
+        "ci95": [
+          -0.013,
+          0.067
+        ]
+      }
+    },
+    "test_rerank": {
+      "after - before: score": {
+        "mean_difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "after - before: bertscore_f1": {
+        "mean_difference": -0.005,
+        "ci95": [
+          -0.032,
+          0.016
+        ]
+      }
+    }
+  },
+  "recipe_test": {
+    "before": {
+      "correct": 5,
+      "n": 6,
+      "wilson_ci_percent": [
+        43.6,
+        97.0
+      ]
+    },
+    "after": {
+      "correct": 6,
+      "n": 6,
+      "wilson_ci_percent": [
+        61.0,
+        100.0
+      ]
+    }
+  },
+  "recipe_timing": {
+    "before": {
+      "canonical": {
+        "n": 4,
+        "mean_seconds": 3.687,
+        "median_seconds": 3.657
+      },
+      "varied": {
+        "n": 4,
+        "mean_seconds": 7.601,
+        "median_seconds": 7.613
+      },
+      "compound": {
+        "n": 4,
+        "mean_seconds": 11.908,
+        "median_seconds": 10.509
+      }
+    },
+    "after": {
+      "canonical": {
+        "n": 4,
+        "mean_seconds": 0.008,
+        "median_seconds": 0.006
+      },
+      "varied": {
+        "n": 4,
+        "mean_seconds": 0.005,
+        "median_seconds": 0.005
+      },
+      "compound": {
+        "n": 4,
+        "mean_seconds": 11.128,
+        "median_seconds": 11.236
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "observed_utc": "2026-10-07T13:42:51.690227+00:00",
+  "observation": "Supplemental runtime observation after baseline completion and during final after generation; not retroactively captured as generation config. All evaluation model loading used the same offline caches and no downloads.",
+  "python": "3.14.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "hf_cached_model_revisions": {
+    "BAAI/bge-small-en-v1.5": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "cross-encoder/ms-marco-MiniLM-L6-v2": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "distilroberta-base": "fb53ab8802853c8e4fbdbcd0529f21fc6f459b2b"
+  },
+  "roles": {
+    "embedding": "BAAI/bge-small-en-v1.5",
+    "reranker": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "bertscore": "distilroberta-base"
+  },
+  "package_versions": {
+    "numpy": "2.5.3",
+    "torch": "2.14.1",
+    "sentence-transformers": "6.1.0",
+    "rank-bm25": "0.2.2",
+    "transformers": "5.19.0",
+    "bert-score": "0.3.13",
+    "huggingface-hub": "1.33.0"
+  },
+  "generator": "qwen3:4b-instruct",
+  "generator_digest_record": "See before_config.json and after_config.json; observed at start of each generation run."
+}

@@ -1,0 +1,16 @@
+Loading saved index...
+Preparing local models for the demo. First startup may take a little while...
+Ready (8.7 seconds to prepare).
+
+Minecraft Java 26.3 assistant. Enter an empty line to finish.
+Try: How many iron ingots do I need to craft 3 hoppers?
+     What food is used to breed cows?
+
+Ask> Working...
+  tool: craft({'item': 'torches', 'count': 9}) -> To craft 9 Torch you need 3 Coal, 3 Stick in total (3 crafts, each makes 4).
+
+3 [tool]
+
+Finished in 0.0 seconds.
+
+Ask> 

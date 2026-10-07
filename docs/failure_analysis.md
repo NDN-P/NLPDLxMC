@@ -256,3 +256,29 @@ fix: "What is one of the items that can be crafted at a Cauldron?", which is clo
 were chosen by how often the question pool asks about them), so for "How many iron ingots do I need to craft 3
 hoppers?" the five retrieved passages are about anvils, iron farms and achievements. The answer is right only
 because the tool reads Mojang's recipe file (`docs/demo_output.md`).
+# Latest continuation — frozen before/after comparison
+
+`results/improvement_review/` preserves a separate 28-case study and 88 actual responses from the source before
+and after the latest changes. The dataset was selected before generation; only dev cases guided the generic
+two-clause recipe parser. Test recipe quantities changed from 5/6 to 6/6; explicit canonical/two-clause forms
+became direct calculator calls instead of model planning. This is direct ingredient arithmetic, not trained
+reasoning. Only six recipe test products are involved, and recipe structures can overlap across item IDs.
+
+General factual accuracy did not demonstrate an improvement: automatic test dense 7/8 → 6/8 and rerank 7/8 →
+7/8. The saved analysis notes identify apparent false partial judgments and an alternate valid Wolf passage that
+does not contain the exact gold quote. Original automatic labels remain intact. A private-world-health response
+correctly declined the exact value while adding general guidance, so the strict bare-refusal metric rejected it.
+
+Compound explanations remain a concrete failure: the Acacia Sign answer gives the correct six-plank quantity but
+claims a crafting table is not needed and that planks need one. The quantity score does not grade those claims.
+Other compound requests still pay native tool planning and generation, around 11 seconds in this small study.
+No final test failure was used to tune the implementation afterward. See `results/improvement_review/analysis_notes.md`
+and `human_check.csv` for inspectable examples and independent review.
+
+Scope filtering is a heuristic, not complete Java 26.3 verification. It preserves raw pinned sources but removes
+obvious history/other-edition evidence in a conservative passage view. In already inspected diagnostics it loses
+two useful follow-up quotes from mixed paragraphs. Dense embeddings still contain original edition clauses while
+BM25/reranking/generation see the filtered view. These limitations remain explicit rather than being hidden by
+a claim that filtering makes every answer current or correct.
+
+---

@@ -1,8 +1,8 @@
 # Final technical validation — 2026-10-07
 
 The local implementation, saved evaluations, setup instructions and technical package are complete. This is a
-tested course project, with known model failures. Independent team checking and the personal audit remain necessary
-before submission. No paid API calls, model downloads or fine-tuning occurred during this correction session.
+tested course project, with known model failures. Independent team checking is recommended; the personal audit
+and presentation remain submission work. No paid API calls, model downloads or fine-tuning occurred during this correction session.
 
 ## What changed
 
@@ -96,16 +96,69 @@ and benchmark; it is not a new internet installation on a second machine.
 
 ## Demo response time
 
-**Later demo latency correction (2026-10-07):** a small local profile measured 16.3 seconds for first gameplay,
+**Historical demo latency correction, before the later continuation (2026-10-07):** a small local profile measured 16.3 seconds for first gameplay,
 6.9 seconds for warm gameplay, and 4.9 seconds for a canonical recipe quantity. Ordinary default questions use
-native planning, fallback routing and answer generation. The planner now stops once a standalone direct quantity
-is validated, and that answer bypasses Wiki retrieval; the same recipe probe took 2.6 seconds with one model call.
+native planning, fallback routing and answer generation. The planner then stopped once a standalone direct quantity
+was validated, and that answer bypassed Wiki retrieval; the same recipe probe took 2.6 seconds with one model call.
 Compound/multistep requests keep the full pipeline. Demo status/timing is visible immediately; `--no-tool` reuses the
 existing no-tool gameplay path and measured 2.8 seconds warm versus 7.0 seconds in default mode in the post-fix run.
 First gameplay still loads CPU models (15.3 seconds in that run). Keep an interactive session open and ask a
 gameplay question before the presentation. These are diagnostic timings, not population speed guarantees.
 All 23 regressions pass, including the one-call/no-retrieval quantity shortcut. Raw probes and pre-change source
 are in `results/latency_review/`; previous quality scores retain their frozen source labels and were not rerun.
+
+## Later continuation: evidence control and easy demo launchers
+
+The later source adds conservative current-Java passage views and masks historical/other-edition headings before
+all four retrieval candidate paths. Stored pages, chunk IDs and embedding arrays are unchanged. On the 256-token
+index, 7,438 of 10,128 chunks are eligible; 1,669 passage views are trimmed. This is a scope heuristic, not proof
+that each surviving claim is valid in Java 26.3. It loses two useful quotes in an already inspected 50-fact
+diagnostic because mixed paragraphs can carry valid Java facts after other-edition context. Dense embeddings
+still encode original text; BM25/reranking/generation see the filtered text. New source citations link at the saved
+Wiki revision and expose passage-view provenance.
+
+Explicit recipe forms now use the same validated calculator directly, labelled `via="deterministic"` without
+invented model arguments. Compound/other wording retains the model tool loop. Parsed product counts constrain
+matching model calls even if ingredient aliases cannot be resolved. A generic two-clause form was added using
+only new development cases before new test generation. All 40 previously inspected canonical recipe cases now
+return their direct slot-quantity gold without a model call; this is regression evidence, not fresh accuracy.
+
+Double-click `demo.bat` for the complete demo or `demo-fast.bat` for gameplay with calculator planning disabled.
+`bash demo.sh` supports Windows Git Bash and macOS/Linux environment paths. Launchers resolve their own folder,
+prepare cached models, and reuse one interactive process. Demo can start the installed Ollama service without a
+helper window and never pulls models automatically. Initial retrieval-model caching is an explicit README setup
+step; demo inference stays offline. Preflight `--demo` excludes evaluation-only BERTScore requirements and handles
+missing packages with setup guidance.
+
+Real Windows/Bash sessions from outside the project folder are saved under `results/improvement_review/`.
+Preparation took 11.0/8.7 seconds in these two diagnostic sessions; hopper/torch quantities completed in 0.0
+rounded seconds, while default gameplay took 6.9 seconds. These few measurements are not population latency
+guarantees. The final generic Bash recipe was checked against the final parser; Windows startup began before that
+last parser addition and establishes launcher/common-path behavior. The integrated suite passes 34 tests.
+
+The new 28-case before/after study is separate from all prior reported evaluations: 12 facts on 12 pages absent
+from the earlier 60-case source-backed benchmark, 4 negatives, and 12 new recipe products. Pages are disjoint
+between new dev/test splits, but item exclusion does not imply new recipe structures. Cases/references were frozen
+before generation and are AI-curated, not independently human/game-verified. Raw outputs/configurations/source
+snapshots are in `results/improvement_review/`. Final source hash is recorded in its `source_after/manifest.json`.
+The initial unused candidate is retained separately; new test outputs did not guide tuning. See its final report
+for observed results; presence of the filter does not itself establish an accuracy gain.
+
+The completed comparison contains 88 real responses. New test recipe quantities changed from 5/6 to 6/6; dev
+quantities remained 6/6. Canonical/two-clause recipe generation means across dev/test changed from 3.687/7.601
+seconds to 0.008/0.005 seconds; compound means were 11.908/11.128 seconds. This isolates direct calculator work
+from model-driven compound requests, whose narrative claims remain unreliable. Automatic test facts were dense
+7/8 → 6/8 and rerank 7/8 → 7/8; exact-quote retrieval was dense 6/8 → 6/8 and rerank 8/8 → 7/8. Alternate valid
+passages and apparent judge false partials are documented, with original labels preserved. No general accuracy
+gain is demonstrated by this small study. Both variants refused both test negatives; the dev private-world query
+also illustrates why a helpful caveated refusal can fail a strict bare-IDK metric. Independent team review is
+recommended. Supplemental runtime metadata records observed cached HF revisions without changing the frozen
+generation configurations. No model downloads, fine-tuning or paid calls occurred.
+Paired aggregation of the frozen answers is in `paired_stats.json`: test dense automatic score difference
+−0.062, bootstrap 95% interval [−0.188, 0.000]; rerank score difference 0.000 on all eight pairs. BERTScore
+differences have intervals containing zero. The six-case tool result has a wide Wilson interval [61.0%, 100.0%],
+so 6/6 observed successes must not be presented as universal 100% accuracy. These intervals do not remove
+same-model judge bias or certify population behavior.
 
 ## Remaining team work
 

@@ -13,4 +13,10 @@ The user answered **“Fully local — no API charges”** to the question about
 
 Full process evidence is in `codextodo.md`. `docs/codex_review.md` and `results/codex_review/` preserve the earlier pre-correction review. `results/pipeline_dev/` contains development probes, including failures. New source-backed experiments are under `results/verified/`.
 
-Team members must supply authentic names/contributions, independent labels and the assignment's unaided answers. Codex has not supplied those on their behalf.
+Team members must supply authentic names/contributions and the assignment's unaided answers. Independent labels are recommended for evaluation rigor. Codex has not supplied those on their behalf.
+
+| Later prompt | Observed work |
+|---|---|
+| `i did try demo.It kinda slow on output.Is it need to be fix? or is it ok` | Measured cold/warm local timings, removed redundant exact-recipe work, added status feedback and optional fast gameplay mode. |
+| `what is the future implement plan` | Recorded a proposed roadmap without implementing it in that turn. |
+| `claude code hit limit for too long so i need you to continue. You can do everything to make improvement . and create demo bash for me i am lazy` | Authorized the current continuation: easy Windows/Bash launchers, source/evidence and crafting improvements, a separately frozen comparison and verification. See codextodo.md for actual outcomes rather than assuming every plan succeeded. |

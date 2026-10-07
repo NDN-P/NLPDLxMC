@@ -1,0 +1,298 @@
+{
+  "provenance": "AI-curated before generation; exact pinned source/official recipe checked; not independently human or game verified",
+  "dataset_sha256": "4b502dcc52ee3e91c1427e1e6b6cc73f82332d542dd78727db84bdd2eea87222",
+  "runs": {
+    "before": {
+      "complete": true,
+      "rows": 44,
+      "groups": {
+        "dev_dense": {
+          "facts_n": 4,
+          "correct": 4,
+          "partial": 0,
+          "incorrect": 0,
+          "judge_unparsed": 0,
+          "bertscore_f1": 0.457,
+          "evidence_at_5": 4,
+          "negative_n": 2,
+          "pure_negative_refusals": 2,
+          "faithfulness": {
+            "supported": 4,
+            "partly": 0,
+            "unsupported": 0,
+            "unparsed": 0
+          },
+          "recipe_n": 0,
+          "recipe_quantity_correct": 0,
+          "recipe_tool_calls": 0,
+          "recipe_by_style": {
+            "canonical": {
+              "n": 0,
+              "correct": 0
+            },
+            "varied": {
+              "n": 0,
+              "correct": 0
+            },
+            "compound": {
+              "n": 0,
+              "correct": 0
+            }
+          },
+          "warm_generation_seconds_mean": 2.493
+        },
+        "dev_rerank": {
+          "facts_n": 4,
+          "correct": 4,
+          "partial": 0,
+          "incorrect": 0,
+          "judge_unparsed": 0,
+          "bertscore_f1": 0.454,
+          "evidence_at_5": 4,
+          "negative_n": 2,
+          "pure_negative_refusals": 2,
+          "faithfulness": {
+            "supported": 4,
+            "partly": 0,
+            "unsupported": 0,
+            "unparsed": 0
+          },
+          "recipe_n": 6,
+          "recipe_quantity_correct": 6,
+          "recipe_tool_calls": 6,
+          "recipe_by_style": {
+            "canonical": {
+              "n": 2,
+              "correct": 2
+            },
+            "varied": {
+              "n": 2,
+              "correct": 2
+            },
+            "compound": {
+              "n": 2,
+              "correct": 2
+            }
+          },
+          "warm_generation_seconds_mean": 5.332
+        },
+        "test_dense": {
+          "facts_n": 8,
+          "correct": 7,
+          "partial": 1,
+          "incorrect": 0,
+          "judge_unparsed": 0,
+          "bertscore_f1": 0.636,
+          "evidence_at_5": 6,
+          "negative_n": 2,
+          "pure_negative_refusals": 2,
+          "faithfulness": {
+            "supported": 8,
+            "partly": 0,
+            "unsupported": 0,
+            "unparsed": 0
+          },
+          "recipe_n": 0,
+          "recipe_quantity_correct": 0,
+          "recipe_tool_calls": 0,
+          "recipe_by_style": {
+            "canonical": {
+              "n": 0,
+              "correct": 0
+            },
+            "varied": {
+              "n": 0,
+              "correct": 0
+            },
+            "compound": {
+              "n": 0,
+              "correct": 0
+            }
+          },
+          "warm_generation_seconds_mean": 2.548
+        },
+        "test_rerank": {
+          "facts_n": 8,
+          "correct": 7,
+          "partial": 1,
+          "incorrect": 0,
+          "judge_unparsed": 0,
+          "bertscore_f1": 0.605,
+          "evidence_at_5": 8,
+          "negative_n": 2,
+          "pure_negative_refusals": 2,
+          "faithfulness": {
+            "supported": 8,
+            "partly": 0,
+            "unsupported": 0,
+            "unparsed": 0
+          },
+          "recipe_n": 6,
+          "recipe_quantity_correct": 5,
+          "recipe_tool_calls": 6,
+          "recipe_by_style": {
+            "canonical": {
+              "n": 2,
+              "correct": 2
+            },
+            "varied": {
+              "n": 2,
+              "correct": 2
+            },
+            "compound": {
+              "n": 2,
+              "correct": 1
+            }
+          },
+          "warm_generation_seconds_mean": 4.769
+        }
+      }
+    },
+    "after": {
+      "complete": true,
+      "rows": 44,
+      "groups": {
+        "dev_dense": {
+          "facts_n": 4,
+          "correct": 4,
+          "partial": 0,
+          "incorrect": 0,
+          "judge_unparsed": 0,
+          "bertscore_f1": 0.452,
+          "evidence_at_5": 4,
+          "negative_n": 2,
+          "pure_negative_refusals": 2,
+          "faithfulness": {
+            "supported": 4,
+            "partly": 0,
+            "unsupported": 0,
+            "unparsed": 0
+          },
+          "recipe_n": 0,
+          "recipe_quantity_correct": 0,
+          "recipe_tool_calls": 0,
+          "recipe_by_style": {
+            "canonical": {
+              "n": 0,
+              "correct": 0
+            },
+            "varied": {
+              "n": 0,
+              "correct": 0
+            },
+            "compound": {
+              "n": 0,
+              "correct": 0
+            }
+          },
+          "warm_generation_seconds_mean": 2.638
+        },
+        "dev_rerank": {
+          "facts_n": 4,
+          "correct": 4,
+          "partial": 0,
+          "incorrect": 0,
+          "judge_unparsed": 0,
+          "bertscore_f1": 0.458,
+          "evidence_at_5": 4,
+          "negative_n": 2,
+          "pure_negative_refusals": 1,
+          "faithfulness": {
+            "supported": 5,
+            "partly": 0,
+            "unsupported": 0,
+            "unparsed": 0
+          },
+          "recipe_n": 6,
+          "recipe_quantity_correct": 6,
+          "recipe_tool_calls": 6,
+          "recipe_by_style": {
+            "canonical": {
+              "n": 2,
+              "correct": 2
+            },
+            "varied": {
+              "n": 2,
+              "correct": 2
+            },
+            "compound": {
+              "n": 2,
+              "correct": 2
+            }
+          },
+          "warm_generation_seconds_mean": 3.366
+        },
+        "test_dense": {
+          "facts_n": 8,
+          "correct": 6,
+          "partial": 2,
+          "incorrect": 0,
+          "judge_unparsed": 0,
+          "bertscore_f1": 0.654,
+          "evidence_at_5": 6,
+          "negative_n": 2,
+          "pure_negative_refusals": 2,
+          "faithfulness": {
+            "supported": 8,
+            "partly": 0,
+            "unsupported": 0,
+            "unparsed": 0
+          },
+          "recipe_n": 0,
+          "recipe_quantity_correct": 0,
+          "recipe_tool_calls": 0,
+          "recipe_by_style": {
+            "canonical": {
+              "n": 0,
+              "correct": 0
+            },
+            "varied": {
+              "n": 0,
+              "correct": 0
+            },
+            "compound": {
+              "n": 0,
+              "correct": 0
+            }
+          },
+          "warm_generation_seconds_mean": 2.728
+        },
+        "test_rerank": {
+          "facts_n": 8,
+          "correct": 7,
+          "partial": 1,
+          "incorrect": 0,
+          "judge_unparsed": 0,
+          "bertscore_f1": 0.6,
+          "evidence_at_5": 7,
+          "negative_n": 2,
+          "pure_negative_refusals": 2,
+          "faithfulness": {
+            "supported": 8,
+            "partly": 0,
+            "unsupported": 0,
+            "unparsed": 0
+          },
+          "recipe_n": 6,
+          "recipe_quantity_correct": 6,
+          "recipe_tool_calls": 6,
+          "recipe_by_style": {
+            "canonical": {
+              "n": 2,
+              "correct": 2
+            },
+            "varied": {
+              "n": 2,
+              "correct": 2
+            },
+            "compound": {
+              "n": 2,
+              "correct": 2
+            }
+          },
+          "warm_generation_seconds_mean": 3.241
+        }
+      }
+    }
+  }
+}

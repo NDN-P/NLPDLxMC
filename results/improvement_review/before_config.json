@@ -1,0 +1,21 @@
+{
+  "dataset_sha256": "4b502dcc52ee3e91c1427e1e6b6cc73f82332d542dd78727db84bdd2eea87222",
+  "implementation_sha256": "007ffde3b2bc1ba35365ee23c90938c112118fe4e09de0dcce8bc5d0614e4f76",
+  "evaluator_sha256": "6f47ea756a2db5f13b8040286b78434d7771ce635eba7ff8206dbeb5c9fb49a7",
+  "judge_code_sha256": "a875711e4e4eae9ae87c2c719f69c81d292df20a19af926aa64e047224f1cfcc",
+  "generator": "qwen3:4b-instruct",
+  "generator_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "judge": "qwen3:4b-instruct",
+  "shared_data_sha256": {
+    "pages.jsonl": "3fbeae9f1253c7cea7d79695e1d0f441248780af1628742d078a83f73b2bbb1c",
+    "chunks_256.jsonl": "3e69757cdd3eb231ac1f2acbcc99953ebd8e26e72e384533bb6d4fd040dfa252",
+    "emb_256.npy": "61e2a1f30dc8a4299dc6129e528aa23c0258f3daa654623f3dce3bd027576c04",
+    "crafting.json": "15df55009dc2cd184e5a9b280661b226a5cf892fa9cfe6e6c2836d56d753e6dc"
+  },
+  "factual_variants": [
+    "dense",
+    "rerank"
+  ],
+  "recipe_use_tool": true,
+  "provenance": "AI-curated before generation; exact pinned source/official recipe checked; not independently human or game verified"
+}
