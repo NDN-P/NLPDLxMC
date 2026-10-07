@@ -1,0 +1,25 @@
+{
+  "verified_utc": "2026-10-07T13:58:13.305687+00:00",
+  "verified_source_commit": "e9d74e820eabbaf2918d86d1e90c2eb823b27fbc",
+  "live_matches_final_comparison_source": true,
+  "pipeline_sha256": "b5ae6351ba2b0c5b88a0f9acd1953b624589aadc2090ffd0b40b29110a70449d",
+  "evaluator_sha256": "6f47ea756a2db5f13b8040286b78434d7771ce635eba7ff8206dbeb5c9fb49a7",
+  "unit_tests": {
+    "passed": 34,
+    "failed": 0,
+    "skipped": 0,
+    "verified_from_clean_extraction": true
+  },
+  "fresh_cases_validated": 28,
+  "actual_saved_responses": 88,
+  "report_reproduced_from_clean_extraction": true,
+  "historical_verified_and_latency_results_unchanged": true,
+  "shared_data_hashes_match_both_configs": true,
+  "package_crc_and_member_hashes_verified": true,
+  "clean_extraction_runtime": "Existing virtual environment; local crafting.json added only to check copy, not ZIP. No new inference in package tests.",
+  "missing_setup_guidance_verified": {
+    "missing_index": true,
+    "missing_environment_nonblocking": true
+  },
+  "limits": "No independent human/game validation; automatic factual gain unproven; compound narratives can be unsupported. No fine-tuning or paid model APIs."
+}
