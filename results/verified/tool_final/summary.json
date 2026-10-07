@@ -1,0 +1,33 @@
+{
+  "variants": {
+    "without_tool": {
+      "n": 40,
+      "correct": 1,
+      "accuracy": 2.5,
+      "ci": [
+        0.4,
+        12.9
+      ],
+      "called_tool": 0,
+      "called_by_fallback": 0
+    },
+    "with_tool": {
+      "n": 40,
+      "correct": 37,
+      "accuracy": 92.5,
+      "ci": [
+        80.1,
+        97.4
+      ],
+      "called_tool": 37,
+      "called_by_fallback": 24
+    }
+  },
+  "false_call_dev_n": 20,
+  "false_call_dev_count": 0,
+  "answer_modes": {
+    "calculator_exact": 37,
+    "llm": 3
+  },
+  "item_overlap_with_previous_sets": 0
+}

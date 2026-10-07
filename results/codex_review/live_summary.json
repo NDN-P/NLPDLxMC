@@ -1,0 +1,15 @@
+{
+  "scope": "Eight independent simple recipe questions, paired tool/no-tool; six qualitative demo questions. Small diagnostic set, no population accuracy claim.",
+  "summary": {
+    "False": {
+      "n": 8,
+      "first_number_correct": 1,
+      "tool_called": 0
+    },
+    "True": {
+      "n": 8,
+      "first_number_correct": 6,
+      "tool_called": 7
+    }
+  }
+}

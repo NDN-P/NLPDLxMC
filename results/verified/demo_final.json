@@ -1,0 +1,233 @@
+[
+  {
+    "question": "How many Iron Ingots do I need to craft 3 Hoppers? Reply with the number only.",
+    "answer": "15 [tool]",
+    "answer_mode": "calculator_exact",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "hopper",
+          "count": 3
+        },
+        "model_args": {
+          "item": "hopper",
+          "count": 3
+        },
+        "result": {
+          "answer": "To craft 3 Hopper you need 15 Iron Ingot, 3 Chest in total (3 crafts, each makes 1).",
+          "item": "Hopper",
+          "item_id": "minecraft:hopper",
+          "ingredient_ids": {
+            "minecraft:iron_ingot": 15,
+            "minecraft:chest": 3
+          },
+          "count": 3,
+          "crafts": 3,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Iron Ingot": 15,
+            "Chest": 3
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Achievement guide > On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started\nIt will take at least 192 iron ingots as well as 32 sticks to craft enough rails (512 or 8 stacks). Iron farms or iron veins are fast resources of iron. Craft rails like so:\nAlternatively, you can find and break them in mineshafts or woodland mansions. Then, build a continuous track so that a minecart can travel the full distance. Place the rails in relatively flat terrain and try to avoid rivers or oceans. Place some building blocks to cross water or waterlog the rails (not recommended because of the risk of drowning), and destroy or place blocks to cross steep hills.\nTo speed up the track and to pass hills, replace some rails with powered rails powered by a redstone torch. Craft powered rails with gold ingots and redstone dust, which can be mined most commonly below deepslate level, or farmed.\nCraft for each powered rail a redstone torch:\nCraft a minecart like so:\n\n[4] Tutorial:Achievement guide > Iron Man > Wear a full set of Iron Armor\nYou need 24 iron ingots to craft full set of iron armor:\nIron armor can also be obtained from chests in villages (armorer's house and blacksmiths), ancient cities, trial chambers, strongholds, and end cities, and it can also spawn on armor stands in taiga village outdoor armory. It can also be bought from armorer villagers, or dropped by vindicators or pillagers spawned in raids. Iron boots can also be obtained by bartering.\n\n[5] Tutorial:Achievement guide > Body Guard > Create an Iron Golem\nYou need 36 iron ingots and a carved pumpkin or a jack o'lantern. Iron ingots can easily be farmed. Pumpkins can be found anywhere in multiple biomes, and in some villages. Use a shears to turn it into a carved pumpkin. Craft 4 iron blocks like so:\nThen place it like this. Make sure the blocks below the 'arms' are air and the carved pumpkin is placed last.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "Iron Man > Wear a full set of Iron Armor"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Achievement guide",
+        "section": "Body Guard > Create an Iron Golem"
+      }
+    ]
+  },
+  {
+    "question": "How much iron does a hopper need?",
+    "answer": "A hopper needs 5 iron ingots to craft [tool].",
+    "answer_mode": "llm",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "hopper",
+          "count": 1
+        },
+        "model_args": {
+          "item": "hopper",
+          "count": 1
+        },
+        "result": {
+          "answer": "To craft 1 Hopper you need 5 Iron Ingot, 1 Chest in total (1 craft, each makes 1).",
+          "item": "Hopper",
+          "item_id": "minecraft:hopper",
+          "ingredient_ids": {
+            "minecraft:iron_ingot": 5,
+            "minecraft:chest": 1
+          },
+          "count": 1,
+          "crafts": 1,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Iron Ingot": 5,
+            "Chest": 1
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Tutorial:Mechanisms > Mechanisms > Vending machine\nThis is a customizable vending machine that is relatively easy to make. Unfortunately, it does require a lot of iron.\nNotes:\nThe leftmost top hopper in the side view is the \"input/output\" hopper. Put items into this hopper and get items out.\nThe droppers hold the \"purchase\" items.\nThe chest at the bottom collects the \"payment\" items.\nFill the leftmost bottom hopper with 19-<price> items in the first slot, and 1 in each remaining slot. These items are payment items.\nRepeat the upper-right 2 tall by 4 wide section upwards to add more items to the number purchased. (The number of droppers is this number.)\nDelay the signal from the redstone torch to the hopper by 4*(price)-5 ticks (if the price is 1, simply don't delay it). The repeater here is showing 1 tick as an example.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Hopper > Item sorter > Item transportation\nThere are multiple methods that can be used to carry items across the input hopper to potentially be picked up. The methods most frequently used are hopper pipes, item streams, and minecarts with chests or minecarts with hoppers.\nA hopper pipe is simply a chain of hoppers all pointing at each other in a continuous line. This requires extra iron and may cause consistent lag on large scale. Another limitation in Bedrock Edition is that hopper pipes transferring a full load at full speed (for example, continuously moving items that have been stacked in an input chest) pushes a small percentage of items past filters without allowing them to be sorted.\n\n[4] Tutorial:Furniture > Kitchen > Fridge\nNote: this looks best with counters on the sides.\nDesign 13\nMaterials\n1 hopper\n1 button\n2 blocks of iron\n1 dispenser or dropper\nWherever you want a fridge, dig a 2-block-across hole (1 block down). On the far end of the hole, put a dispenser/dropper facing you. On the inside of the hole, put a hopper that goes into the dispenser/dropper. Next, put 2 blocks of iron on top of the dispenser/dropper and put a button on the lower iron block. The finished fridge should look like this:\nTo get some food from the fridge, press the button and the dispenser/dropper will drop food at your feet.\nTo put food in your fridge, put the food in the hopper using whatever method.\nDesign 14\n1 Redstone\n2 of any block, quartz looks the best\n1 button\n1 iron door\n2 dispensers\n\n[5] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Mechanisms",
+        "section": "Mechanisms > Vending machine"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Hopper",
+        "section": "Item sorter > Item transportation"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Furniture",
+        "section": "Kitchen > Fridge"
+      },
+      {
+        "n": 5,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      }
+    ]
+  },
+  {
+    "question": "How many Iron Ingots do I need to craft 3 Hoppers? How do hoppers move items?",
+    "answer": "To craft 3 Hoppers, you need 15 Iron Ingots [tool]. Hoppers move items by searching for an item on the input side and transferring it to the output side, with a 0.4-second cooldown; if multiple items are present, only one is taken by the next hopper, while the rest continue through the chain [1].",
+    "answer_mode": "llm",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "hopper",
+          "count": 3
+        },
+        "model_args": {
+          "item": "hopper",
+          "count": 3
+        },
+        "result": {
+          "answer": "To craft 3 Hopper you need 15 Iron Ingot, 3 Chest in total (3 crafts, each makes 1).",
+          "item": "Hopper",
+          "item_id": "minecraft:hopper",
+          "ingredient_ids": {
+            "minecraft:iron_ingot": 15,
+            "minecraft:chest": 3
+          },
+          "count": 3,
+          "crafts": 3,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Iron Ingot": 15,
+            "Chest": 3
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Tutorial:Hopper > Item sorter\nThis design relies on the fact that, inside of Minecraft's code, hoppers search for an item to be taken from the input side before outputting an item to another container.  This results in the bottom hoppers taking the filtered item(s) before the items currently running through the storage system are passed over to the next hopper.  However, because hoppers have a 0.4 second cooldown after transferring an item, bear in mind that both the input and output activate should there be more than 1 item available to pass. For example, if 2 iron ingots were in the same hopper, 1 of them would get taken by the hopper beneath, while the second one would get outputted to the side and continue along the sorting chain.\nIt is also possible to have double speed hoppers. Instead of the regular 2.5 ips, it is possible to have 5 ips. To have this mechanism we need to understand that every hopper tries to take items and push items at the same time. By having two hoppers (Top one should point to the bottom) the top hopper pushes items into the bottom one and the bottom one pulls items from the top simultaneously.\n\n[2] Tutorial:Achievement guide > Freight Station > Use a Hopper to move an item from a Chest minecart to a Chest.\nYou need to craft a chest, a hopper, a rail, and a minecart with chest.\nFirst, craft 3 chests:\nChest can also be found in most generated structures.\nThen, craft a hopper, a rail, and a minecart with chest using a minecart:\nMinecart with chests and rails can also be found in mineshafts.\nFinally, place a chest, a hopper, a rail, and a minecart with chest on top of each other, and put a random item in the minecart with chest.\n\n[3] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[4] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[5] Tutorial:Hopper > Item sorter > Item transportation\nThere are multiple methods that can be used to carry items across the input hopper to potentially be picked up. The methods most frequently used are hopper pipes, item streams, and minecarts with chests or minecarts with hoppers.\nA hopper pipe is simply a chain of hoppers all pointing at each other in a continuous line. This requires extra iron and may cause consistent lag on large scale. Another limitation in Bedrock Edition is that hopper pipes transferring a full load at full speed (for example, continuously moving items that have been stacked in an input chest) pushes a small percentage of items past filters without allowing them to be sorted.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Hopper",
+        "section": "Item sorter"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Achievement guide",
+        "section": "Freight Station > Use a Hopper to move an item from a Chest minecart to a Chest."
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 4,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Hopper",
+        "section": "Item sorter > Item transportation"
+      }
+    ]
+  },
+  {
+    "question": "Can I place grass on bedrock?",
+    "answer": "No, you cannot place grass on bedrock because grass blocks can only spawn on dirt or other grass-like blocks, and bedrock is a solid, unbreakable layer that does not allow for the placement of any blocks, including grass. [3]",
+    "answer_mode": "llm",
+    "tool_calls": [],
+    "passages": "[1] Grass Block > Usage > Composting\nIn Bedrock Edition, placing grass blocks into a composter has a 30% chance of raising the compost level by 1.\n\n[2] Bedrock Edition removed features > Gameplay > Tilling grass\nIn older versions, tilling a grass block with a hoe had a small chance of dropping wheat seeds. This feature was removed in alpha v0.12.1.\n\n[3] Grass Block > Trivia\nGrass blocks and dirt blocks changing between each other is a common cause of chunk updates.\nThe grass block has become a widely used symbol of Minecraft.\nThe icons for Java Edition and Bedrock Edition apps, except Java snapshots and Bedrock previews, are based on a grass block.\nThe favicon for Minecraft.net, as well as the icon for the Minecraft Launcher, used to be a grass block.\nSnowy grass blocks can rarely spawn without snow layers on top of them.\n\n[4] Grass Block > Usage > Snowy grass block\nGrass blocks turn into a snowy grass block if snow, powder snow, or a snow block is placed on top of the block. Removing the snow layer turns the block into a normal grass block.\nIn Java Edition, the top face of snowy grass blocks is not affected by biome tinting and defaults to gray, which is not normally seen by players because of the snow layer on top. In Bedrock Edition, the top face of snowy grass blocks is affected by biome tinting and can be seen in-game when inside powder snow placed on grass blocks.\n\n[5] Flower > Obtaining > Post-generation\nWhen bone meal is applied to a grass block, flowers have a chance of generating instead of short grass on the targeted block and adjacent grass blocks in a 15×5×15 area in Java Edition, or a 7×5×7 area in Bedrock Edition. In most biomes, the generated flower is picked randomly among all possible choices depending on the biome (see § Flower biomes for a chart of flowers that can be grown in each biome). In a few biomes, however, a gradient is applied and the generated flower additionally depends on the X/Y/Z coordinates.\nDouble flowers, wither roses, and torchflowers cannot be obtained this way.\nIn Bedrock Edition, when bone meal is applied to a small flower (except wither rose, torchflower and golden dandelion), more flowers appear on adjacent grass blocks without generating any short grass. With the exception of dandelions and poppies, the flowers that form around are the same type as the original flower. In the case of dandelions, poppies occasionally appear, and vice versa for poppies. The flowers can appear up to 3 blocks away from the original, forming a 7×7 square.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Grass Block",
+        "section": "Usage > Composting"
+      },
+      {
+        "n": 2,
+        "title": "Bedrock Edition removed features",
+        "section": "Gameplay > Tilling grass"
+      },
+      {
+        "n": 3,
+        "title": "Grass Block",
+        "section": "Trivia"
+      },
+      {
+        "n": 4,
+        "title": "Grass Block",
+        "section": "Usage > Snowy grass block"
+      },
+      {
+        "n": 5,
+        "title": "Flower",
+        "section": "Obtaining > Post-generation"
+      }
+    ]
+  },
+  {
+    "question": "How many iron ingots for a hopper in Bedrock Edition?",
+    "answer": "I do not know.",
+    "answer_mode": "scope_refusal",
+    "tool_calls": [],
+    "passages": "",
+    "sources": []
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "question": "How much iron does a hopper need?",
+    "answer": "Hoppers do not require iron to be crafted. Iron is not a component of hopper recipes in Minecraft.",
+    "answer_mode": "llm",
+    "tool_calls": [],
+    "passages": "",
+    "sources": [],
+    "seconds": 6.93
+  },
+  {
+    "question": "How many milk buckets do I need for 2 cakes?",
+    "answer": "I do not know.",
+    "answer_mode": "llm",
+    "tool_calls": [],
+    "passages": "",
+    "sources": [],
+    "seconds": 6.65
+  },
+  {
+    "question": "How many iron blocks do I need to craft 2 anvils? Reply with the number only.",
+    "answer": "6",
+    "answer_mode": "llm",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "anvil",
+          "count": 2
+        },
+        "result": {
+          "answer": "To craft 2 Anvil you need 6 Block of Iron, 8 Iron Ingot in total (2 crafts, each makes 1).",
+          "item": "Anvil",
+          "count": 2,
+          "crafts": 2,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Block of Iron": 6,
+            "Iron Ingot": 8
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 7.57
+  }
+]

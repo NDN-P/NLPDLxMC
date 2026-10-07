@@ -1,0 +1,223 @@
+{
+  "scope": "12 seed-7 saved questions x 3 variants; BERTScore recomputation using cached model on CPU.",
+  "n": 36,
+  "max_abs_difference": 0.0,
+  "rows": [
+    {
+      "question": "What happens to the signal strength when a redstone comparator is in comparison mode with two equal side inputs?",
+      "variant": "none",
+      "saved": 0.5542,
+      "recomputed": 0.5542
+    },
+    {
+      "question": "What happens to the signal strength when a redstone comparator is in comparison mode with two equal side inputs?",
+      "variant": "dense",
+      "saved": 0.6561,
+      "recomputed": 0.6561
+    },
+    {
+      "question": "What happens to the signal strength when a redstone comparator is in comparison mode with two equal side inputs?",
+      "variant": "rerank",
+      "saved": 0.6795,
+      "recomputed": 0.6795
+    },
+    {
+      "question": "What is the atomic number of the transition metal that has an isotope with an atomic mass of 63.546 u?",
+      "variant": "none",
+      "saved": 0.5835,
+      "recomputed": 0.5835
+    },
+    {
+      "question": "What is the atomic number of the transition metal that has an isotope with an atomic mass of 63.546 u?",
+      "variant": "dense",
+      "saved": -0.2002,
+      "recomputed": -0.2002
+    },
+    {
+      "question": "What is the atomic number of the transition metal that has an isotope with an atomic mass of 63.546 u?",
+      "variant": "rerank",
+      "saved": -0.2002,
+      "recomputed": -0.2002
+    },
+    {
+      "question": "What biome feature was removed from Dark Forest Hills in Minecraft, which led to increased visibility and a decrease in daytime hostile mob spawning?",
+      "variant": "none",
+      "saved": 0.2646,
+      "recomputed": 0.2646
+    },
+    {
+      "question": "What biome feature was removed from Dark Forest Hills in Minecraft, which led to increased visibility and a decrease in daytime hostile mob spawning?",
+      "variant": "dense",
+      "saved": -0.0902,
+      "recomputed": -0.0902
+    },
+    {
+      "question": "What biome feature was removed from Dark Forest Hills in Minecraft, which led to increased visibility and a decrease in daytime hostile mob spawning?",
+      "variant": "rerank",
+      "saved": 0.4906,
+      "recomputed": 0.4906
+    },
+    {
+      "question": "What is the purpose of the Effect colors in Minecraft's immunity system?",
+      "variant": "none",
+      "saved": 0.4261,
+      "recomputed": 0.4261
+    },
+    {
+      "question": "What is the purpose of the Effect colors in Minecraft's immunity system?",
+      "variant": "dense",
+      "saved": -0.1661,
+      "recomputed": -0.1661
+    },
+    {
+      "question": "What is the purpose of the Effect colors in Minecraft's immunity system?",
+      "variant": "rerank",
+      "saved": -0.1661,
+      "recomputed": -0.1661
+    },
+    {
+      "question": "What is the primary difference between an analog D latch and a normal digital low-triggered D latch in terms of signal strength?",
+      "variant": "none",
+      "saved": 0.4292,
+      "recomputed": 0.4292
+    },
+    {
+      "question": "What is the primary difference between an analog D latch and a normal digital low-triggered D latch in terms of signal strength?",
+      "variant": "dense",
+      "saved": 0.4966,
+      "recomputed": 0.4966
+    },
+    {
+      "question": "What is the primary difference between an analog D latch and a normal digital low-triggered D latch in terms of signal strength?",
+      "variant": "rerank",
+      "saved": 0.4688,
+      "recomputed": 0.4688
+    },
+    {
+      "question": "What is the mechanism that triggers a raid in Bedrock Edition when a player with Bad Omen enters a certain area around a village center?",
+      "variant": "none",
+      "saved": 0.3756,
+      "recomputed": 0.3756
+    },
+    {
+      "question": "What is the mechanism that triggers a raid in Bedrock Edition when a player with Bad Omen enters a certain area around a village center?",
+      "variant": "dense",
+      "saved": 0.5644,
+      "recomputed": 0.5644
+    },
+    {
+      "question": "What is the mechanism that triggers a raid in Bedrock Edition when a player with Bad Omen enters a certain area around a village center?",
+      "variant": "rerank",
+      "saved": 0.5823,
+      "recomputed": 0.5823
+    },
+    {
+      "question": "Can a player initialize item use while rowing a boat in Minecraft?",
+      "variant": "none",
+      "saved": 0.4028,
+      "recomputed": 0.4028
+    },
+    {
+      "question": "Can a player initialize item use while rowing a boat in Minecraft?",
+      "variant": "dense",
+      "saved": 0.7496,
+      "recomputed": 0.7496
+    },
+    {
+      "question": "Can a player initialize item use while rowing a boat in Minecraft?",
+      "variant": "rerank",
+      "saved": 0.7496,
+      "recomputed": 0.7496
+    },
+    {
+      "question": "What are some common features of skin packs in Bedrock Edition?",
+      "variant": "none",
+      "saved": 0.3846,
+      "recomputed": 0.3846
+    },
+    {
+      "question": "What are some common features of skin packs in Bedrock Edition?",
+      "variant": "dense",
+      "saved": 0.6524,
+      "recomputed": 0.6524
+    },
+    {
+      "question": "What are some common features of skin packs in Bedrock Edition?",
+      "variant": "rerank",
+      "saved": 0.5765,
+      "recomputed": 0.5765
+    },
+    {
+      "question": "What is the behavior of vindicators when trying to destroy armor stands in Minecraft?",
+      "variant": "none",
+      "saved": 0.3967,
+      "recomputed": 0.3967
+    },
+    {
+      "question": "What is the behavior of vindicators when trying to destroy armor stands in Minecraft?",
+      "variant": "dense",
+      "saved": -0.0942,
+      "recomputed": -0.0942
+    },
+    {
+      "question": "What is the behavior of vindicators when trying to destroy armor stands in Minecraft?",
+      "variant": "rerank",
+      "saved": 0.2756,
+      "recomputed": 0.2756
+    },
+    {
+      "question": "What are some common issues that arise when trying to optimize husbandry practices in Minecraft?",
+      "variant": "none",
+      "saved": 0.3528,
+      "recomputed": 0.3528
+    },
+    {
+      "question": "What are some common issues that arise when trying to optimize husbandry practices in Minecraft?",
+      "variant": "dense",
+      "saved": -0.1857,
+      "recomputed": -0.1857
+    },
+    {
+      "question": "What are some common issues that arise when trying to optimize husbandry practices in Minecraft?",
+      "variant": "rerank",
+      "saved": -0.1857,
+      "recomputed": -0.1857
+    },
+    {
+      "question": "What type of biomes can generate next to the Jagged Peaks biome in Minecraft?",
+      "variant": "none",
+      "saved": 0.3094,
+      "recomputed": 0.3094
+    },
+    {
+      "question": "What type of biomes can generate next to the Jagged Peaks biome in Minecraft?",
+      "variant": "dense",
+      "saved": 0.2056,
+      "recomputed": 0.2056
+    },
+    {
+      "question": "What type of biomes can generate next to the Jagged Peaks biome in Minecraft?",
+      "variant": "rerank",
+      "saved": 0.2553,
+      "recomputed": 0.2553
+    },
+    {
+      "question": "Why do villagers cycle through their trades when a player holds an item they want?",
+      "variant": "none",
+      "saved": 0.3884,
+      "recomputed": 0.3884
+    },
+    {
+      "question": "Why do villagers cycle through their trades when a player holds an item they want?",
+      "variant": "dense",
+      "saved": 0.6593,
+      "recomputed": 0.6593
+    },
+    {
+      "question": "Why do villagers cycle through their trades when a player holds an item they want?",
+      "variant": "rerank",
+      "saved": 0.5653,
+      "recomputed": 0.5653
+    }
+  ]
+}

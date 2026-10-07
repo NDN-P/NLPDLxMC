@@ -1,0 +1,6 @@
+﻿{'prompt': 'one-step 1-5 score (first run, saved verdicts)', 'model': 'qwen3:4b-instruct', 'think': None, 'n': 36, 'exact_agreement': 14, 'correct_vs_not': 17, 'unparsed': 0, 'per_variant': {'none': 0, 'dense': 7, 'rerank': 7}, 'seconds': 0}
+{'prompt': 'reason-then-verdict', 'model': 'qwen3:4b-instruct', 'think': None, 'n': 36, 'exact_agreement': 26, 'correct_vs_not': 26, 'unparsed': 0, 'per_variant': {'none': 5, 'dense': 10, 'rerank': 11}, 'seconds': 100}
+{'prompt': 'reason-then-verdict', 'model': 'llama3.2:3b', 'think': None, 'n': 36, 'exact_agreement': 14, 'correct_vs_not': 16, 'unparsed': 0, 'per_variant': {'none': 1, 'dense': 7, 'rerank': 6}, 'seconds': 92}
+{'prompt': 'decomposed (final)', 'model': 'qwen3:4b-instruct', 'think': None, 'n': 36, 'exact_agreement': 27, 'correct_vs_not': 32, 'unparsed': 0, 'per_variant': {'none': 9, 'dense': 8, 'rerank': 10}, 'seconds': 101}
+{'prompt': 'decomposed (final)', 'model': 'qwen3:4b', 'think': False, 'n': 36, 'exact_agreement': 28, 'correct_vs_not': 31, 'unparsed': 0, 'per_variant': {'none': 7, 'dense': 10, 'rerank': 11}, 'seconds': 110}
+{'prompt': 'reason-then-verdict', 'model': 'qwen3:4b', 'think': True, 'n': 36, 'exact_agreement': 14, 'correct_vs_not': 31, 'unparsed': 21, 'per_variant': {'none': 4, 'dense': 6, 'rerank': 4}, 'seconds': 786}

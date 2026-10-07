@@ -1,0 +1,77 @@
+{
+  "scope": "100-question seed-7 subset of Claude's retrieval set, 256 tokens, all four variants; not a new held-out test.",
+  "index_checks": {
+    "128": {
+      "chunks": 15076,
+      "rebuilt_equal": true,
+      "max_tokens": 128,
+      "median_tokens": 88.0,
+      "over_budget": 0,
+      "embedding_shape": [
+        15076,
+        384
+      ],
+      "finite_embeddings": true,
+      "max_norm_error": 1.1920928955078125e-07
+    },
+    "256": {
+      "chunks": 10128,
+      "rebuilt_equal": true,
+      "max_tokens": 256,
+      "median_tokens": 96.0,
+      "over_budget": 0,
+      "embedding_shape": [
+        10128,
+        384
+      ],
+      "finite_embeddings": true,
+      "max_norm_error": 1.1920928955078125e-07
+    },
+    "512": {
+      "chunks": 8592,
+      "rebuilt_equal": true,
+      "max_tokens": 512,
+      "median_tokens": 83.0,
+      "over_budget": 0,
+      "embedding_shape": [
+        8592,
+        384
+      ],
+      "finite_embeddings": true,
+      "max_norm_error": 1.1920928955078125e-07
+    }
+  },
+  "sample_reencoded_passages": 24,
+  "embedding_max_abs_error": 1.341104507446289e-07,
+  "summary": {
+    "dense": {
+      "n": 100,
+      "source_page_hit_at_1": 64,
+      "source_page_hit_at_5": 78,
+      "source_page_hit_at_10": 80,
+      "mrr_at_10": 0.7077777777777777
+    },
+    "bm25": {
+      "n": 100,
+      "source_page_hit_at_1": 42,
+      "source_page_hit_at_5": 61,
+      "source_page_hit_at_10": 71,
+      "mrr_at_10": 0.5037420634920635
+    },
+    "hybrid": {
+      "n": 100,
+      "source_page_hit_at_1": 53,
+      "source_page_hit_at_5": 75,
+      "source_page_hit_at_10": 78,
+      "mrr_at_10": 0.6198015873015873
+    },
+    "rerank": {
+      "n": 100,
+      "source_page_hit_at_1": 65,
+      "source_page_hit_at_5": 78,
+      "source_page_hit_at_10": 81,
+      "mrr_at_10": 0.7018571428571428
+    }
+  },
+  "seconds": 109.0
+}

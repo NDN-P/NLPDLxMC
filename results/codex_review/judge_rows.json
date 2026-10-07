@@ -1,0 +1,284 @@
+[
+  {
+    "kind": "correctness_reproduction",
+    "question": "What is the primary difference between an analog D latch and a normal digital low-triggered D latch in terms of signal strength?",
+    "variant": "none",
+    "reference": "In an analog D latch, the signal strength for input D can be up to 15, whereas in a normal digital low-triggered D latch, the signal strength is limited to a digital value of 0 or 1.",
+    "answer": "Minecraft does not include or simulate electronic components like D latches or analog/digital signal strength, so there is no primary difference between an analog D latch and a digital low-triggered D latch in the game. This question pertains to real-world digital electronics, not Minecraft.",
+    "saved": {
+      "answer_claim": "Minecraft does not have electronic components like D latches, so there is no difference in signal strength between analog and digital D latches in the game.",
+      "reference_fact": "Analog D latch has up to 15 signal strength, digital has only 0 or 1.",
+      "verdict": "incorrect"
+    },
+    "recomputed": {
+      "answer_claim": "Minecraft does not have electronic components like D latches, so there is no difference in signal strength between analog and digital D latches in the game.",
+      "reference_fact": "Analog D latch has up to 15 signal strength, digital has only 0 or 1.",
+      "verdict": "incorrect"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "What is the primary difference between an analog D latch and a normal digital low-triggered D latch in terms of signal strength?",
+    "variant": "dense",
+    "reference": "In an analog D latch, the signal strength for input D can be up to 15, whereas in a normal digital low-triggered D latch, the signal strength is limited to a digital value of 0 or 1.",
+    "answer": "The primary difference is that for maximum strength (15) signals for D, the analog D latch behaves like a normal (digital) low-triggered D latch [1]. This implies that when the input D has a signal strength of 15, both the analog D latch and the digital low-triggered D latch produce the same output signal strength [1]. Otherwise, the analog D latch's output Q matches the input D when triggered, but does not specify a difference in signal strength for values below 15.",
+    "saved": {
+      "answer_claim": "The analog D latch and digital low-triggered D latch behave the same when input D has signal strength 15, implying no difference in signal strength in that case.",
+      "reference_fact": "Analog D latch has up to 15 signal strength; digital low-triggered D latch has only 0 or 1.",
+      "verdict": "incorrect"
+    },
+    "recomputed": {
+      "answer_claim": "The analog D latch and digital low-triggered D latch behave the same when input D has strength 15, and the analog latch matches input D otherwise, implying no difference in signal strength below 15.",
+      "reference_fact": "Analog D latch has up to 15 signal strength; digital low-triggered D latch has only 0 or 1.",
+      "verdict": "incorrect"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "What is the primary difference between an analog D latch and a normal digital low-triggered D latch in terms of signal strength?",
+    "variant": "rerank",
+    "reference": "In an analog D latch, the signal strength for input D can be up to 15, whereas in a normal digital low-triggered D latch, the signal strength is limited to a digital value of 0 or 1.",
+    "answer": "The primary difference is that for maximum strength (15) signals, the analog D latch behaves like a normal digital low-triggered D latch, but it can also memorize intermediate signal levels, unlike the digital version which only holds the full strength signal [1]. This means the analog D latch can store and maintain varying signal strengths, not just the maximum (15) [1].",
+    "saved": {
+      "answer_claim": "The analog D latch can memorize intermediate signal levels, while the digital version only holds full strength signals.",
+      "reference_fact": "Analog D latch has up to 15 signal strength; digital D latch has only 0 or 1.",
+      "verdict": "incorrect"
+    },
+    "recomputed": {
+      "answer_claim": "The analog D latch can memorize intermediate signal levels, while the digital version only holds full strength signals.",
+      "reference_fact": "Analog D latch has up to 15 signal strength; digital D latch has only 0 or 1.",
+      "verdict": "incorrect"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "What is the mechanism that triggers a raid in Bedrock Edition when a player with Bad Omen enters a certain area around a village center?",
+    "variant": "none",
+    "reference": "In Bedrock Edition, when a player with Bad Omen enters a 64x23x64 region around a village center (technically 1.12 blocks below the center), the effect disappears and the raid starts.",
+    "answer": "There is no official mechanism in Minecraft Bedrock Edition that triggers a raid when a player with Bad Omen enters a certain area around a village center. The Bad Omen effect is a game mechanic that causes a player to be targeted by hostile mobs, but it does not initiate raids. Raids in Minecraft are triggered by a separate, in-game event that occurs independently of Bad Omen or village proximity.",
+    "saved": {
+      "answer_claim": "nothing",
+      "reference_fact": "Bad Omen triggers a raid when entering a village area",
+      "verdict": "incorrect"
+    },
+    "recomputed": {
+      "answer_claim": "nothing",
+      "reference_fact": "Bad Omen triggers a raid when entering a village area",
+      "verdict": "incorrect"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "What is the mechanism that triggers a raid in Bedrock Edition when a player with Bad Omen enters a certain area around a village center?",
+    "variant": "dense",
+    "reference": "In Bedrock Edition, when a player with Bad Omen enters a 64x23x64 region around a village center (technically 1.12 blocks below the center), the effect disappears and the raid starts.",
+    "answer": "When a player with Bad Omen enters a 64×23×64 region around a village center in Bedrock Edition, the Bad Omen effect transforms into Raid Omen, which lasts for 30 seconds, and then a raid starts [1]. A bossbar labeled \"Raid\" appears and begins charging, visible in a 128×88×120 region around the village center [1].",
+    "saved": {
+      "answer_claim": "The Bad Omen effect transforms into Raid Omen and a raid starts after 30 seconds.",
+      "reference_fact": "The raid starts when a player with Bad Omen enters a 64x23x64 region around a village center.",
+      "verdict": "partial"
+    },
+    "recomputed": {
+      "answer_claim": "When a player with Bad Omen enters a 64×23×64 region around a village center, the Bad Omen effect transforms into Raid Omen, and a raid starts after a 30-second duration with a visible bossbar.",
+      "reference_fact": "The raid starts when a player with Bad Omen enters a 64x23x64 region around a village center.",
+      "verdict": "partial"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "What is the mechanism that triggers a raid in Bedrock Edition when a player with Bad Omen enters a certain area around a village center?",
+    "variant": "rerank",
+    "reference": "In Bedrock Edition, when a player with Bad Omen enters a 64x23x64 region around a village center (technically 1.12 blocks below the center), the effect disappears and the raid starts.",
+    "answer": "When a player with Bad Omen enters a 64×23×64 region around a village center in Bedrock Edition, the Bad Omen effect transforms into Raid Omen, which disappears after 30 seconds, and then a raid starts [1]. A bossbar labeled \"Raid\" appears and begins charging, visible in a 128×88×128 region around the village center [1].",
+    "saved": {
+      "answer_claim": "When a player with Bad Omen enters a 64×23×64 region around a village center, the Bad Omen effect transforms into Raid Omen, which disappears after 30 seconds, and then a raid starts.",
+      "reference_fact": "The raid starts when a player with Bad Omen enters a 64x23x64 region around a village center.",
+      "verdict": "partial"
+    },
+    "recomputed": {
+      "answer_claim": "When a player with Bad Omen enters a 64×23×64 region around a village center, the Bad Omen effect transforms into Raid Omen, which disappears after 30 seconds, and then a raid starts.",
+      "reference_fact": "The raid starts when a player with Bad Omen enters a 64x23x64 region around a village center.",
+      "verdict": "partial"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "What are some common features of skin packs in Bedrock Edition?",
+    "variant": "none",
+    "reference": "Skin packs in Bedrock Edition often feature characters from other video games, movies, and television shows, alongside original designs. They are available for purchase and offer a way to quickly obtain several themed skins at once.",
+    "answer": "Skin packs in Bedrock Edition typically include custom player skins that can be applied to avatars, allowing players to personalize their appearance. These packs often feature a variety of styles such as realistic, cartoonish, or themed designs, including characters, animals, or cultural motifs. Players can download and install these skins through the Minecraft Bedrock app or the Microsoft Store, and they are usually compatible across different devices like phones, tablets, and consoles.",
+    "saved": {
+      "answer_claim": "Skin packs include custom player skins with various styles and themes, available for download and compatible across devices.",
+      "reference_fact": "Skin packs feature characters from other video games, movies, and television shows, alongside original designs, and are available for purchase.",
+      "verdict": "partial"
+    },
+    "recomputed": {
+      "answer_claim": "Skin packs include custom player skins with various styles and themes, available for download and compatible across devices.",
+      "reference_fact": "Skin packs feature characters from other video games, movies, and television shows, alongside original designs, and are available for purchase.",
+      "verdict": "partial"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "What are some common features of skin packs in Bedrock Edition?",
+    "variant": "dense",
+    "reference": "Skin packs in Bedrock Edition often feature characters from other video games, movies, and television shows, alongside original designs. They are available for purchase and offer a way to quickly obtain several themed skins at once.",
+    "answer": "Skin packs in Bedrock Edition often feature characters from movies, TV shows, and other video games, along with original designs [1]. They include themed skins related to a specific movie or franchise, allowing players to quickly obtain multiple themed skins at once [1]. Some skin packs also include capes as part of their featured skins [5].",
+    "saved": {
+      "answer_claim": "Skin packs feature characters from movies, TV shows, and video games, along with original designs and include themed skins and capes.",
+      "reference_fact": "Skin packs feature characters from other video games, movies, and television shows, alongside original designs.",
+      "verdict": "partial"
+    },
+    "recomputed": {
+      "answer_claim": "Skin packs feature characters from movies, TV shows, and video games, along with original designs and include themed skins and capes.",
+      "reference_fact": "Skin packs feature characters from other video games, movies, and television shows, alongside original designs.",
+      "verdict": "partial"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "What are some common features of skin packs in Bedrock Edition?",
+    "variant": "rerank",
+    "reference": "Skin packs in Bedrock Edition often feature characters from other video games, movies, and television shows, alongside original designs. They are available for purchase and offer a way to quickly obtain several themed skins at once.",
+    "answer": "Skin packs in Bedrock Edition are collections of multiple wearable skins and are available through the Marketplace or external sources [5]. They often feature characters from other video games, movies, and television shows, and include original designs [1]. Skin packs all have skins related to one another, such as a movie skin pack featuring only characters from that movie [1].",
+    "saved": {
+      "answer_claim": "Skin packs feature characters from other video games, movies, and television shows, and include original designs.",
+      "reference_fact": "Skin packs in Bedrock Edition often feature characters from other video games, movies, and television shows, alongside original designs.",
+      "verdict": "correct"
+    },
+    "recomputed": {
+      "answer_claim": "Skin packs in Bedrock Edition often feature characters from other video games, movies, and television shows, alongside original designs.",
+      "reference_fact": "Skin packs in Bedrock Edition often feature characters from other video games, movies, and television shows, alongside original designs.",
+      "verdict": "correct"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "Why do villagers cycle through their trades when a player holds an item they want?",
+    "variant": "none",
+    "reference": "Villagers cycle through their trades because they have more than one trade for an item, and they do not want to offer the same trade repeatedly to the same player. This makes it easier for the player to find the villager who offers the trade they want, but they still need to open the trading interface to complete the trade.",
+    "answer": "Villagers cycle through their trades when a player holds an item they want because the game's trade system is designed to simulate realistic behavior—villagers will only offer trades when they see a player holding an item they can trade for. This cycling ensures that the player has a chance to get a desired item, even if they don't immediately get it, and it prevents the system from being too predictable or easy to exploit. The trade cycle is based on a random selection process that prioritizes items the player is holding, making it more dynamic and engaging.",
+    "saved": {
+      "answer_claim": "Villagers cycle trades to avoid repeating the same trade and to help players find desired trades.",
+      "reference_fact": "Villagers cycle through their trades because they have more than one trade for an item and do not want to offer the same trade repeatedly.",
+      "verdict": "correct"
+    },
+    "recomputed": {
+      "answer_claim": "Villagers cycle trades to avoid repeating the same trade and to help players find desired trades.",
+      "reference_fact": "Villagers cycle through their trades because they have more than one trade for an item and do not want to offer the same trade repeatedly.",
+      "verdict": "correct"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "Why do villagers cycle through their trades when a player holds an item they want?",
+    "variant": "dense",
+    "reference": "Villagers cycle through their trades because they have more than one trade for an item, and they do not want to offer the same trade repeatedly to the same player. This makes it easier for the player to find the villager who offers the trade they want, but they still need to open the trading interface to complete the trade.",
+    "answer": "Villagers cycle through their trades when a player holds an item they want because, if they have more than one trade for an item, they offer a different item every few seconds to make it easier for the player to find a villager who offers a particular trade [1]. This cycling helps players identify which villager offers the desired trade, even though the player must still open the trading interface to complete the trade [1].",
+    "saved": {
+      "answer_claim": "Villagers cycle through trades because they have more than one trade for an item and do not want to offer the same trade repeatedly.",
+      "reference_fact": "Villagers cycle through their trades because they have more than one trade for an item, and they do not want to offer the same trade repeatedly to the same player.",
+      "verdict": "correct"
+    },
+    "recomputed": {
+      "answer_claim": "Villagers cycle through trades because they have more than one trade for an item and do not want to offer the same trade repeatedly.",
+      "reference_fact": "Villagers cycle through their trades because they have more than one trade for an item, and they do not want to offer the same trade repeatedly to the same player.",
+      "verdict": "correct"
+    }
+  },
+  {
+    "kind": "correctness_reproduction",
+    "question": "Why do villagers cycle through their trades when a player holds an item they want?",
+    "variant": "rerank",
+    "reference": "Villagers cycle through their trades because they have more than one trade for an item, and they do not want to offer the same trade repeatedly to the same player. This makes it easier for the player to find the villager who offers the trade they want, but they still need to open the trading interface to complete the trade.",
+    "answer": "Villagers cycle through their trades when a player holds an item they want because, if they have more than one trade for an item, they cycle through the trades, offering a different item every few seconds [1]. This makes it easier to find villagers who offer a particular trade [1].",
+    "saved": {
+      "answer_claim": "Villagers cycle through trades when they have more than one trade for an item.",
+      "reference_fact": "Villagers cycle through their trades because they have more than one trade for an item, and they do not want to offer the same trade repeatedly to the same player.",
+      "verdict": "correct"
+    },
+    "recomputed": {
+      "answer_claim": "Villagers cycle through trades when they have more than one trade for an item to avoid offering the same trade repeatedly.",
+      "reference_fact": "Villagers cycle through their trades because they have more than one trade for an item, and they do not want to offer the same trade repeatedly to the same player.",
+      "verdict": "correct"
+    }
+  },
+  {
+    "kind": "omitted_claims_check",
+    "question": "What is the maximum damage reduction a player can achieve with a combination of armor and toughness, given that they have 2 pieces of diamond armor and 1 toughness?",
+    "variant": "rerank",
+    "answer": "The maximum damage reduction a player can achieve with a combination of armor and toughness depends on the incoming damage type and the total armor and armor toughness values. According to passage [1], armor does not protect in a linear fashion, and damage reduction drops off as incoming damage increases, with a minimum of 20% damage reduction. However, passage [2] states that enchantments can provide a maximum damage reduction of 80% (4/5) when the total EPF reaches 20. Since the question specifies only 1 toughness (from diamond armor), and diamond armor has armor toughness (passage [4]), but does not specify the exact value of that toughness, and no specific damage type is given, we cannot calculate a precise maximum reduction. Therefore, based on the information provided, the maximum damage reduction achievable with 2 pieces of diamond armor and 1 toughness is not explicitly defined in the passages. I do not know.",
+    "passages": "[1] Armor > Usage > Damage reduction\nWearing armor reduces incoming damage according to two values: armor, and armor toughness. Each piece of armor provides a given armor and armor toughness value, and the values from each armor piece are added together when calculating damage reduction.\nThe strength of incoming damage also determines the damage reduction of worn armor, as armor does not protect in a linear fashion, and instead drops off more and more as incoming damage increases. For example, a full set of diamond armor reduces the damage of a zombie's attack by 77%, but reduces the damage of a piglin brute's attack by only 67%. The total damage reduction of armor cannot drop off below 20% of its maximum.\nThe location of a given armor piece does not affect its damage reduction. For example, wearing leggings applies its damage reduction to the whole body, not just the player's legs.\nThe following tables represent the damage reduction of the different armor types depending on the incoming damage, accounting for armor toughness:\n\n[2] Armor > Usage > Enchantments\nWhen a player or mob wearing armor is subjected to damage, the EPFs of all applicable enchantments are added together, having a maximum of 20, and a minimum of 0 (when the game is calculating the reduced damage). The damage reduction is resultingEPF / 25, giving a minimum reduction of 0 and a maximum reduction of 4⁄5 or 80%. This means the player cannot be immune to damage from projectile or explosion in a world without cheating, even if they wear armor with the maximum level of relevant enchantments on each part.\nBecause of the caps in the calculation, it is possible to achieve maximum protection against specific types of damage with just three pieces of armor. For example, two pieces of armor with Blast Protection IV (EPF 8 each) and a single piece with Protection IV (EPF 4) would give a total EPF of 20 versus explosions. Any additional EPF would be wasted against explosions (but might be useful against other types of damage, if applicable).\nIf the damage is of a type that armor protects against normally, this reduction applies only to the damage that got through the armor.\n\n[3] Diamond Armor > Usage > Damage reduction\nWearing armor reduces incoming damage according to two values: armor, and armor toughness. Each piece of armor provides a given armor and armor toughness value, and the values from each armor piece are added together when calculating damage reduction.\nThe strength of incoming damage also determines the damage reduction of worn armor, as armor does not protect in a linear fashion.\n\n[4] Armor > Usage > Damage reduction > Armor toughness\nArmor becomes less effective for higher damage values, reducing the damage by smaller and smaller percentages until it reaches the minimum percentage. Armor toughness mitigates this behavior to a degree. The amount of damage reduced still decreases for higher damage values, but not as much. The total number of armor toughness the player has is the sum of the armor toughness of the individual pieces of armor worn. Armor toughness does not have a visual indicator like armor points. Armor increases the player's armor_toughness attribute while worn. See Damage reduction above to see how armor toughness affects damage calculation.\nOnly diamond, netherite and wolf armor have armor toughness.\nThe armor_toughness attribute is capped at 20. If commands are used to give the player armor with more than 20 armor toughness, or to set the player's armor_toughness attribute above 20, damage is calculated as if the player has 20 armor toughness.\nThe following table shows the amount of armor toughness given by armor that can be worn by the player.\n\n[5] Netherite Armor > Usage > Damage reduction\nWearing armor reduces incoming damage according to two values: armor, and armor toughness. Each piece of armor provides a given armor and armor toughness value, and the values from each armor piece are added together when calculating damage reduction.\nThe strength of incoming damage also determines the damage reduction of worn armor, as armor does not protect in a linear fashion.",
+    "saved": null,
+    "recomputed": {
+      "claims": "[1] Armor damage reduction depends on armor and armor toughness values, and is non-linear with incoming damage. Damage reduction drops off as damage increases, with a minimum of 20%. Location of armor does not affect damage reduction. [2] Enchantments can provide up to 80% damage reduction when total EPF reaches 20. This reduction applies only to damage that gets through armor. [3] Diamond armor uses armor and armor toughness, and damage reduction is non-linear. [4] Armor toughness mitigates the drop-off in damage reduction; only diamond, netherite, and wolf armor have armor toughness; toughness is capped at 20. [5] Netherite armor uses armor and armor toughness, with non-linear damage reduction. The answer states that maximum damage reduction depends on incoming damage type and total armor/toughness values, and that with only 1 toughness from diamond armor, and no specific damage type, a precise maximum reduction cannot be calculated. The answer concludes that the maximum reduction with 2 pieces of diamond armor and 1 toughness is not explicitly defined in the passages.",
+      "unsupported": "The claim that 'the maximum damage reduction achievable with 2 pieces of diamond armor and 1 toughness is not explicitly defined in the passages' is unsupported because the passages do not state that such a specific combination lacks a defined maximum. The passages do provide information about how armor and toughness work, and how damage reduction varies with incoming damage, and they do state that armor toughness mitigates the drop-off. The claim that 'no specific damage type is given' is not a claim about the maximum reduction but a condition of the scenario, and does not imply a lack of definition. The conclusion that 'I do not know' is not a factual claim derived from the passages but a meta-assessment. Therefore, the specific conclusion about the maximum reduction being undefined is not clearly supported by the passages, and the reasoning is based on an assumption not stated in the text.",
+      "verdict": "partly"
+    }
+  },
+  {
+    "kind": "omitted_claims_check",
+    "question": "What is the recommended method for reporting spawn-related issues in the Bedrock Edition of Minecraft?",
+    "variant": "rerank",
+    "answer": "Issues relating to \"Trial Spawner\" are maintained on the bug tracker. Issues should be reported and viewed there. [4] However, the passages do not specify whether the bug tracker is the recommended method for reporting spawn-related issues in Bedrock Edition specifically. I do not know.",
+    "passages": "[1] Java Edition removed features > Player features > Game management > Old issue reporting\nBefore 2012, reporting issues with Minecraft was done directly on Minecraft Wiki issues page. This method was abandoned after bug tracker was officially released by Mojang in October 2012.\n\n[2] Zombie Villager > Trivia\nWhen a zombie villager wears a carved pumpkin or jack o'lantern, its head is so tall that it pokes out the top of the pumpkin.\nIn Java Edition, zombie villagers have a glitched design when using the programmer art resource pack.\nIn Bedrock Edition, when a zombie villager holds a trident, the hand that holds the trident lowers.\nIn Bedrock Edition, if a zombie villager is summoned using the /summon command with an invalid spawn event, a generic zombie villager spawns with the following issues.\nThey are not in any family.\nThey move extremely fast.\nIn Bedrock Edition, the icon for the achievement \"Zombie Doctor\" uses the old zombie villager texture.\nCuring a zombie villager chicken jockey is the only way to get a villager riding a chicken without the use of commands.‌[Java Edition  only]\nGreen-colored zombies are also present in Minicraft, a 2D Minecraft-inspired game also created by Markus Persson.\n\n[3] Monster Spawner > Issues\nIssues relating to \"Monster Spawner\" or \"Spawner\" are maintained on the bug tracker. Issues should be reported and viewed there.\n\n[4] Trial Spawner > Issues\nIssues relating to \"Trial Spawner\" are maintained on the bug tracker. Issues should be reported and viewed there.\n\n[5] Trial Spawner > Data values > ID\nJava Edition:\nBedrock Edition:",
+    "saved": null,
+    "recomputed": {
+      "claims": "[1] Before 2012, issue reporting was done on Minecraft Wiki page and abandoned after the bug tracker release in October 2012.",
+      "unsupported": "the passages do not specify whether the bug tracker is the recommended method for reporting spawn-related issues in Bedrock Edition specifically.",
+      "verdict": "partly"
+    }
+  },
+  {
+    "kind": "omitted_claims_check",
+    "question": "What is the difference between the Bedrock and Java Editions of Minecraft when it comes to sound effects, and how does this affect the overall audio experience in the game?",
+    "variant": "dense",
+    "answer": "The passages do not specify the differences between Bedrock and Java Editions regarding sound effects or how these differences affect the overall audio experience. [1] and [2] mention sound categories but do not compare the two editions. I do not know.",
+    "passages": "[1] Head > Sounds > Generic\nJava Edition:\nBedrock Edition:\n\n[2] Head > Sounds > Unique\nJava Edition\nBedrock Edition:\n\n[3] Bedrock Edition > Gameplay\nThe objective of the game remains the same as in Java Edition, where players can build virtual realities in a sandbox-like environment. Like them, Bedrock Edition has survival elements such as hunger and brewing, and the Nether and End dimensions. The multiplayer mode is cross-platform compatible between all supported devices.\nBedrock Edition differs from Java Edition and Legacy Console Edition in a variety of ways, such as more saturated graphics, optimized performance, some exclusive items, and an official add-on system. The HUD and other elements vary for each relevant device. Players can interact with the game via a keyboard and mouse, touchscreen, or gamepad.\nDifferences from Java Edition include:\nThe game is optimized for different platforms, resulting in some user interface, visual, and gameplay differences. There are also unintended parity issues.\nIn addition to LAN worlds, Realms, or external servers, the game allows multiplayer connections through the Xbox social system.\nUnlike in Java Edition, players use their Xbox gamertag as username and profile data is synchronized online.\nA list of partnered featured servers, offering predefined multiplayer minigames in a Minecraft setting, is also provided.\n\n[4] Minecraft > Editions > Bedrock Edition\nThe Bedrock Edition (also known as the Bedrock Platform/Codebase/Engine, and officially Minecraft or Minecraft for Windows) is a multi-platform version of Minecraft developed by Mojang Studios and Xbox Game Studios. Unlike Java Edition, which runs on Java, Bedrock Edition runs on C++. Since the engine originated with Minecraft: Pocket Edition, this entire product family has often been referred to as \"Pocket Edition\", \"MCPE\" and \"Pocket/Windows 10 Edition\".\nBefore the Better Together Update, Bedrock Edition only existed as Pocket Edition (for iOS and Android) and Windows 10 Edition.\n\n[5] Dirt > Sounds > Unique\nJava Edition\nBedrock Edition:",
+    "saved": null,
+    "recomputed": {
+      "claims": "[1] and [2] mention sound categories but do not compare Bedrock and Java Editions. The passages do not specify differences in sound effects between editions. The answer states that no differences are specified regarding sound effects. The answer claims that the overall audio experience is not affected by these differences. I do not know.",
+      "unsupported": "The passages do not specify the differences between Bedrock and Java Editions regarding sound effects or how these differences affect the overall audio experience. The answer claims that I do not know, which is not stated or implied in the passages.",
+      "verdict": "partly"
+    }
+  },
+  {
+    "kind": "omitted_claims_check",
+    "question": "What is the difference between the Bedrock and Java Editions of Minecraft when it comes to sound effects, and how does this affect the overall audio experience in the game?",
+    "variant": "rerank",
+    "answer": "The provided passages do not specify differences between Bedrock and Java Editions regarding sound effects or how these differences affect the overall audio experience. While [3] mentions loops in Java Edition, it does not compare them to Bedrock Edition or discuss their impact on audio experience. Therefore, I do not know.",
+    "passages": "[1] Bedrock Edition > Gameplay\nThe objective of the game remains the same as in Java Edition, where players can build virtual realities in a sandbox-like environment. Like them, Bedrock Edition has survival elements such as hunger and brewing, and the Nether and End dimensions. The multiplayer mode is cross-platform compatible between all supported devices.\nBedrock Edition differs from Java Edition and Legacy Console Edition in a variety of ways, such as more saturated graphics, optimized performance, some exclusive items, and an official add-on system. The HUD and other elements vary for each relevant device. Players can interact with the game via a keyboard and mouse, touchscreen, or gamepad.\nDifferences from Java Edition include:\nThe game is optimized for different platforms, resulting in some user interface, visual, and gameplay differences. There are also unintended parity issues.\nIn addition to LAN worlds, Realms, or external servers, the game allows multiplayer connections through the Xbox social system.\nUnlike in Java Edition, players use their Xbox gamertag as username and profile data is synchronized online.\nA list of partnered featured servers, offering predefined multiplayer minigames in a Minecraft setting, is also provided.\n\n[2] Minecraft > Editions > Bedrock Edition\nThe Bedrock Edition (also known as the Bedrock Platform/Codebase/Engine, and officially Minecraft or Minecraft for Windows) is a multi-platform version of Minecraft developed by Mojang Studios and Xbox Game Studios. Unlike Java Edition, which runs on Java, Bedrock Edition runs on C++. Since the engine originated with Minecraft: Pocket Edition, this entire product family has often been referred to as \"Pocket Edition\", \"MCPE\" and \"Pocket/Windows 10 Edition\".\nBefore the Better Together Update, Bedrock Edition only existed as Pocket Edition (for iOS and Android) and Windows 10 Edition.\n\n[3] Java Edition removed features > Sounds > Audio loops\nLoops were unused sounds, found in the game files, and were possibly meant for when the player is in a specific type of location (i.e., in caves, forests, oceans and beside a waterfall). These sound effects only appeared in C418's June 4, 2009 Sound Test.\nThey were found in .minecraft/resources/sound/loops/, and could be converted to reveal four loops, of birds chirping, cave chimes, ocean and waterfall noises.\n\n[4] Head > Sounds > Generic\nJava Edition:\nBedrock Edition:\n\n[5] Dirt > Sounds > Generic\nJava Edition:\nBedrock Edition:",
+    "saved": null,
+    "recomputed": {
+      "claims": "[1] Bedrock Edition has cross-platform multiplayer and uses Xbox gamertag as username. [2] Bedrock Edition runs on C++ and originated from Pocket Edition. [3] Java Edition has unused sound loops in specific locations. [4] and [5] do not specify sound differences between editions. The answer states that no differences in sound effects are specified between Bedrock and Java Editions, and that the impact on audio experience is not discussed.",
+      "unsupported": "The passages do not specify differences between Bedrock and Java Editions regarding sound effects or how these differences affect the overall audio experience. While [3] mentions loops in Java Edition, it does not compare them to Bedrock Edition or discuss their impact on audio experience. Therefore, the claim that the passages do not specify sound differences is not directly supported by the text, as [3] only discusses Java Edition loops without any mention of Bedrock Edition sound effects or comparisons. Thus, the claim that 'no differences are specified' is not fully supported by the passages.",
+      "verdict": "partly"
+    }
+  },
+  {
+    "kind": "omitted_claims_check",
+    "question": "What is the maximum level number for enchantments that have multiple levels, and how can a player combine mutually exclusive enchantments in Minecraft?",
+    "variant": "rerank",
+    "answer": "The maximum level number for enchantments that have multiple levels is 30, as level 30 is the maximum for enchantments in Java Edition [3]. I do not know how a player can combine mutually exclusive enchantments in Minecraft based on the provided passages.",
+    "passages": "[1] Enchantment > Maximum effective values for enchantments\nUsing commands such as /give, items can be enchanted with levels 0–255, though the effectiveness of levels higher than the intended one varies by enchantment.\nAll enchantments have some effective range in which they scale normally, and for enchantments where that is not the entire 0–255 range, all levels outside it are treted as the closest level in the range unless otherwise specified.\n\n[2] Enchanting Table > Usage > Enchanting\nhave no effect.\nAlthough the player must have at least the level requirement to get an enchantment, the number of levels that the player is charged is the same as the lapis lazuli requirement. For example, if the third enchantment listed is a level 30 enchantment, the player must have at least 30 levels, while paying only 3 levels and 3 lapis lazuli.\nThe level requirement influences the quantity, type, and level of enchantments instilled in the item, with a higher experience level generally resulting in more and/or higher-level enchantments. Nevertheless, there is a significant random factor, and even a level 30 enchantment (the maximum) doesn't guarantee more than one enchantment, or even that enchantments are \"maximum strength\" — a level 30 enchantment can still yield Fortune II or Efficiency III alone, for example.\n\n[3] Experience > History > Other\nThe experience level costs were heavily revised in snapshot 12w22a and 12w23a, and again in version 1.8. Before these, reaching level 50 (the maximum usable on a single enchantment) required 4625 experience, corresponding to defeating 925 hostile mobs (assuming the \"common\" ones.) Afterward, considerably less experience is needed to get into higher levels. Higher levels cost more experience than lower ones, but the levels are still easier to get than in 1.2.5. Now, level 30 is the maximum for enchantments, and that cost is equivalent of 279 \"common\" enemies, less than 1/3 the old price.\nA player dropping excessive experience orbs upon death may cause performance degradation in the game.\n\n[4] Enchantment > Behavior\nEffects\nThe effects of enchantments vary significantly. Some enchantments increase protection against specific types of damage, others increase damage dealt to certain classes of mobs. Some enchantments grant unique abilities such as summoning a lightning bolt or turning water into ice blocks. See § List of enchantments.\nLevel\nMany enchantments have multiple levels. Generally, the higher the level, the more potent the enchantment's effects are. Levels are stylized as Roman numerals (I, II, III, IV, V, ...). The minimum level of any enchantment is I; the maximum level depends on the enchantment. In Java Edition, for effects that only have level I, no number is shown. Commands such as /give can be used to ignore the normal limit and obtain enchantments with levels 0–255, though the effectiveness of levels higher than the intended one varies by enchantment. See § Maximum effective values for enchantments.\nIncompatibilities\n\n[5] Armor > Usage > Enchantments\nIt is possible using /give to obtain armor with an enchantment level higher than what is normally obtainable via normal survival. Using this method, a player could give themselves, for example, a full set of diamond armor with a Protection V enchantment on every piece. Following the algorithm above, we find that, because Protection V has an EPF of 5, the armor reaches the maximum EPF of 20 for all types of damage. Any higher Protection enchantments could be used to reach the cap with just one level XX (20) enchantment, rather than having a full set of enchanted armor, but would be wasted if all pieces shared the same level enchantment.\nThe table below shows all armor enchantments at their max levels:",
+    "saved": null,
+    "recomputed": {
+      "claims": "[1] Enchantments can have levels 0–255 via commands like /give.",
+      "unsupported": "level 30 is the maximum for enchantments in Java Edition",
+      "verdict": "partly"
+    }
+  },
+  {
+    "kind": "omitted_claims_check",
+    "question": "What is the difference in terrain height between the Snowy Taiga Hills and the Snowy Taiga Mountains biomes in Minecraft?",
+    "variant": "dense",
+    "answer": "The passage does not specify the difference in terrain height between the Snowy Taiga Hills and the Snowy Taiga Mountains biomes. [4] mentions that snowy taiga mountains have much steeper terrain than snowy taiga hills, but no exact height difference is provided. Therefore, I do not know.",
+    "passages": "[1] Taiga Hills > Description > Current\nIn Bedrock Edition, taiga hills in older worlds still received updates. When generated through single biome or behavior packs, they can also generate new blocks.\nThey appear identical to the current taiga. Cold animal variants spawn here, and wolves use the pale variant. The snowfall height is increased to Y=160±8, covering tall hills in snow, where they appear identical to snowy taigas. Unlike in regular taigas, trail ruins do not generate.\nWith Vibrant Visuals, taiga hills use a coolish humid volumetric fog setting, which slightly fades the distance in an orange tint. Taiga hills have coolish color grading tints the environment with a colder blue color, and cold sunlight which appears slightly brighter at dusk and dawn.\n\n[2] Snowy Taiga Hills\nThe snowy taiga hills or cold taiga hills biome is a hills variant of the snowy taiga that no longer generates since Caves & Cliffs: Part II, and was removed in Java Edition.\n\n[3] Giant Spruce Taiga Hills > Description > Old\nThe giant spruce taiga hills was a variant intended to be a more mountainous version of the giant spruce taiga, like all other hills biomes. However, both Java Edition and Bedrock Edition had generation issues.\nIn Java Edition, due to a likely error in the way terrain height is calculated, there was no difference in the terrain between giant spruce taiga and giant spruce taiga hills. Specifically, the game used internal values known as setBaseHeight and setHeightVariation when generating hills biomes, but these values were the same for both giant spruce taiga and giant spruce taiga hills, resulting in no actual difference between the two. This was the only hills biome in the game with this issue.\n\n[4] Snowy Taiga Mountains > Description > Old\nThe very rare snowy taiga mountains featured much steeper terrain than the snowy taiga hills, but not as mountainous as the windswept hills. Similarly to the taiga mountains, this variant reached high elevations. The steep elevations made this biome difficult for survival. Structures didn't generate here. Although this was a snowy biome, rivers generated inside snowy taiga mountains were not replaced by frozen rivers.\nBecause snowy taigas were already very rare, this biome variant was the third rarest in the game, behind the modified badlands plateau and the modified jungle edge.\n\n[5] Taiga Mountains > Description > Current\nIn Bedrock Edition, taiga mountains in older worlds still received updates. When generated through single biome or behavior packs, they can also generate new blocks.\nThey appear identical to the current taiga, except that structures still don't generate. Cold animal variants spawn here, and wolves use the pale variant. The snowfall height is increased to Y=160±8, covering tall hills in snow, where they appear identical to snowy taigas.\nWith Vibrant Visuals, taiga mountains use a coolish humid volumetric fog setting, which slightly fades the distance in an orange tint. Taiga mountains have coolish color grading tints the environment with a colder blue color, and cold sunlight which appears slightly brighter at dusk and dawn.",
+    "saved": null,
+    "recomputed": {
+      "claims": "[1] Taiga hills have increased snowfall height to Y=160±8, covering tall hills in snow, appearing identical to snowy taigas. Trail ruins do not generate. Taiga hills use coolish humid volumetric fog and cold sunlight with blue color grading. [2] Snowy taiga hills no longer generate in Caves & Cliffs: Part II and were removed in Java Edition. [3] Giant spruce taiga hills had generation issues in Java Edition due to identical setBaseHeight and setHeightVariation values. [4] Snowy taiga mountains have much steeper terrain than snowy taiga hills, reach high elevations, structures don't generate, rivers are not frozen. Snowy taiga mountains are rare. [5] Taiga mountains have increased snowfall height to Y=16 in Bedrock, appear identical to current taiga, structures don't generate, wolves use pale variant, have coolish fog and color grading, cold sunlight brighter at dawn/dusk.",
+      "unsupported": "The passage does not specify the difference in terrain height between the Snowy Taiga Hills and the Snowy Taiga Mountains biomes.",
+      "verdict": "partly"
+    }
+  }
+]

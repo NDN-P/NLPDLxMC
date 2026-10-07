@@ -1,0 +1,181 @@
+[
+  {
+    "question": "How much iron does a hopper need?",
+    "answer": "A hopper needs 5 Iron Ingots to craft.",
+    "answer_mode": "llm",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "hopper",
+          "count": 1
+        },
+        "result": {
+          "answer": "To craft 1 Hopper you need 5 Iron Ingot, 1 Chest in total (1 craft, each makes 1).",
+          "item": "Hopper",
+          "count": 1,
+          "crafts": 1,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Iron Ingot": 5,
+            "Chest": 1
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 7.23
+  },
+  {
+    "question": "How many milk buckets do I need for 2 cakes?",
+    "answer": "You need 6 milk buckets for 2 cakes.",
+    "answer_mode": "llm",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "cake",
+          "count": 2
+        },
+        "result": {
+          "answer": "To craft 2 Cake you need 6 Milk Bucket, 4 Sugar, 2 any Eggs (e.g. Egg), 6 Wheat in total (2 crafts, each makes 1).",
+          "item": "Cake",
+          "count": 2,
+          "crafts": 2,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Milk Bucket": 6,
+            "Sugar": 4,
+            "any Eggs (e.g. Egg)": 2,
+            "Wheat": 6
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 7.15
+  },
+  {
+    "question": "How many iron blocks do I need to craft 2 anvils? Reply with the number only.",
+    "answer": "6",
+    "answer_mode": "llm",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "anvil",
+          "count": 2
+        },
+        "result": {
+          "answer": "To craft 2 Anvil you need 6 Block of Iron, 8 Iron Ingot in total (2 crafts, each makes 1).",
+          "item": "Anvil",
+          "count": 2,
+          "crafts": 2,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Block of Iron": 6,
+            "Iron Ingot": 8
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 6.83
+  },
+  {
+    "question": "How many diamonds does a diamond ore drop?",
+    "answer": "In Minecraft (Java Edition 26.3), a diamond ore drop has a 10% chance to drop a diamond, and the maximum number of diamonds that can be dropped from a single diamond ore block is 1. Therefore, a diamond ore block can drop up to 1 diamond.",
+    "answer_mode": "llm",
+    "tool_calls": [],
+    "passages": "",
+    "sources": [],
+    "seconds": 7.43
+  },
+  {
+    "question": "How do I breed cows?",
+    "answer": "To breed cows in Minecraft (Java Edition), you need to place two cows next to each other and feed them a bucket of milk. When both cows are within a 1-block radius of each other and have been fed milk, they will spawn an egg, which can then be collected. After collecting the egg, the cows will spawn a baby cow.",
+    "answer_mode": "llm",
+    "tool_calls": [],
+    "passages": "",
+    "sources": [],
+    "seconds": 7.52
+  },
+  {
+    "question": "What is the recipe for a smithing template?",
+    "answer": "Which specific item do you mean? Choices include Bolt Armor Trim Smithing Template, Coast Armor Trim Smithing Template, Dune Armor Trim Smithing Template, Eye Armor Trim Smithing Template, Flow Armor Trim Smithing Template. Please give its full name or Minecraft item ID. [tool]",
+    "answer_mode": "clarification",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "smithing template",
+          "count": 1
+        },
+        "result": {
+          "error": "'smithing template' is ambiguous: please specify which item you mean.",
+          "error_code": "ambiguous_item",
+          "options": [
+            "Bolt Armor Trim Smithing Template",
+            "Coast Armor Trim Smithing Template",
+            "Dune Armor Trim Smithing Template",
+            "Eye Armor Trim Smithing Template",
+            "Flow Armor Trim Smithing Template",
+            "Host Armor Trim Smithing Template",
+            "Netherite Upgrade Smithing Template",
+            "Raiser Armor Trim Smithing Template",
+            "Rib Armor Trim Smithing Template",
+            "Sentry Armor Trim Smithing Template",
+            "Shaper Armor Trim Smithing Template",
+            "Silence Armor Trim Smithing Template",
+            "Smithing Template",
+            "Snout Armor Trim Smithing Template",
+            "Spire Armor Trim Smithing Template",
+            "Tide Armor Trim Smithing Template",
+            "Vex Armor Trim Smithing Template",
+            "Ward Armor Trim Smithing Template",
+            "Wayfinder Armor Trim Smithing Template",
+            "Wild Armor Trim Smithing Template"
+          ]
+        }
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 2.52
+  },
+  {
+    "question": "How much iron does a Bedrock Edition hopper need?",
+    "answer": "To craft 5 Hopper you need 25 Iron Ingot, 5 Chest in total (5 crafts, each makes 1). [tool]",
+    "answer_mode": "calculator_fallback",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "hopper",
+          "count": 5
+        },
+        "result": {
+          "answer": "To craft 5 Hopper you need 25 Iron Ingot, 5 Chest in total (5 crafts, each makes 1).",
+          "item": "Hopper",
+          "count": 5,
+          "crafts": 5,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Iron Ingot": 25,
+            "Chest": 5
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        },
+        "via": "route"
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 6.69
+  }
+]

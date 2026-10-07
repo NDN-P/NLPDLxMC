@@ -1,0 +1,778 @@
+[
+  {
+    "question": "How many Smooth Quartz Block do I need to craft 15 Smooth Quartz Slab? Reply with the number only.",
+    "item": "minecraft:smooth_quartz_slab",
+    "ingredient": "minecraft:smooth_quartz",
+    "count": 15,
+    "gold": 9,
+    "recipe": {
+      "file": "smooth_quartz_slab",
+      "slots": [
+        "minecraft:smooth_quartz",
+        "minecraft:smooth_quartz",
+        "minecraft:smooth_quartz"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Blaze Rod do I need to craft 14 Brewing Stand? Reply with the number only.",
+    "item": "minecraft:brewing_stand",
+    "ingredient": "minecraft:blaze_rod",
+    "count": 14,
+    "gold": 14,
+    "recipe": {
+      "file": "brewing_stand",
+      "slots": [
+        "minecraft:blaze_rod",
+        "#minecraft:stone_crafting_materials",
+        "#minecraft:stone_crafting_materials",
+        "#minecraft:stone_crafting_materials"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Stick do I need to craft 10 Magenta Banner? Reply with the number only.",
+    "item": "minecraft:magenta_banner",
+    "ingredient": "minecraft:stick",
+    "count": 10,
+    "gold": 10,
+    "recipe": {
+      "file": "magenta_banner",
+      "slots": [
+        "minecraft:magenta_wool",
+        "minecraft:magenta_wool",
+        "minecraft:magenta_wool",
+        "minecraft:magenta_wool",
+        "minecraft:magenta_wool",
+        "minecraft:magenta_wool",
+        "minecraft:stick"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Stripped Pale Oak Log do I need to craft 14 Stripped Pale Oak Wood? Reply with the number only.",
+    "item": "minecraft:stripped_pale_oak_wood",
+    "ingredient": "minecraft:stripped_pale_oak_log",
+    "count": 14,
+    "gold": 20,
+    "recipe": {
+      "file": "stripped_pale_oak_wood",
+      "slots": [
+        "minecraft:stripped_pale_oak_log",
+        "minecraft:stripped_pale_oak_log",
+        "minecraft:stripped_pale_oak_log",
+        "minecraft:stripped_pale_oak_log"
+      ],
+      "makes": 3
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Sulfur do I need to craft 14 Sulfur Slab? Reply with the number only.",
+    "item": "minecraft:sulfur_slab",
+    "ingredient": "minecraft:sulfur",
+    "count": 14,
+    "gold": 9,
+    "recipe": {
+      "file": "sulfur_slab",
+      "slots": [
+        "minecraft:sulfur",
+        "minecraft:sulfur",
+        "minecraft:sulfur"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Iron Nugget do I need to craft 11 Iron Chain? Reply with the number only.",
+    "item": "minecraft:iron_chain",
+    "ingredient": "minecraft:iron_nugget",
+    "count": 11,
+    "gold": 22,
+    "recipe": {
+      "file": "iron_chain",
+      "slots": [
+        "minecraft:iron_nugget",
+        "minecraft:iron_ingot",
+        "minecraft:iron_nugget"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Terracotta do I need to craft 8 Brown Terracotta? Reply with the number only.",
+    "item": "minecraft:brown_terracotta",
+    "ingredient": "minecraft:terracotta",
+    "count": 8,
+    "gold": 8,
+    "recipe": {
+      "file": "brown_terracotta",
+      "slots": [
+        "minecraft:terracotta",
+        "minecraft:terracotta",
+        "minecraft:terracotta",
+        "minecraft:terracotta",
+        "minecraft:brown_dye",
+        "minecraft:terracotta",
+        "minecraft:terracotta",
+        "minecraft:terracotta",
+        "minecraft:terracotta"
+      ],
+      "makes": 8
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Red Concrete do I need to craft 13 Red Concrete Slab? Reply with the number only.",
+    "item": "minecraft:red_concrete_slab",
+    "ingredient": "minecraft:red_concrete",
+    "count": 13,
+    "gold": 9,
+    "recipe": {
+      "file": "red_concrete_slab",
+      "slots": [
+        "minecraft:red_concrete",
+        "minecraft:red_concrete",
+        "minecraft:red_concrete"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many String do I need to craft 15 Loom? Reply with the number only.",
+    "item": "minecraft:loom",
+    "ingredient": "minecraft:string",
+    "count": 15,
+    "gold": 30,
+    "recipe": {
+      "file": "loom",
+      "slots": [
+        "minecraft:string",
+        "minecraft:string",
+        "#minecraft:planks",
+        "#minecraft:planks"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Oak Planks do I need to craft 6 Oak Fence Gate? Reply with the number only.",
+    "item": "minecraft:oak_fence_gate",
+    "ingredient": "minecraft:oak_planks",
+    "count": 6,
+    "gold": 12,
+    "recipe": {
+      "file": "oak_fence_gate",
+      "slots": [
+        "minecraft:stick",
+        "minecraft:oak_planks",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:oak_planks",
+        "minecraft:stick"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Pale Oak Planks do I need to craft 13 Pale Oak Fence? Reply with the number only.",
+    "item": "minecraft:pale_oak_fence",
+    "ingredient": "minecraft:pale_oak_planks",
+    "count": 13,
+    "gold": 20,
+    "recipe": {
+      "file": "pale_oak_fence",
+      "slots": [
+        "minecraft:pale_oak_planks",
+        "minecraft:stick",
+        "minecraft:pale_oak_planks",
+        "minecraft:pale_oak_planks",
+        "minecraft:stick",
+        "minecraft:pale_oak_planks"
+      ],
+      "makes": 3
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Andesite do I need to craft 14 Andesite Wall? Reply with the number only.",
+    "item": "minecraft:andesite_wall",
+    "ingredient": "minecraft:andesite",
+    "count": 14,
+    "gold": 18,
+    "recipe": {
+      "file": "andesite_wall",
+      "slots": [
+        "minecraft:andesite",
+        "minecraft:andesite",
+        "minecraft:andesite",
+        "minecraft:andesite",
+        "minecraft:andesite",
+        "minecraft:andesite"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Block of Stripped Bamboo do I need to craft 10 Bamboo Shelf? Reply with the number only.",
+    "item": "minecraft:bamboo_shelf",
+    "ingredient": "minecraft:stripped_bamboo_block",
+    "count": 10,
+    "gold": 12,
+    "recipe": {
+      "file": "bamboo_shelf",
+      "slots": [
+        "minecraft:stripped_bamboo_block",
+        "minecraft:stripped_bamboo_block",
+        "minecraft:stripped_bamboo_block",
+        "minecraft:stripped_bamboo_block",
+        "minecraft:stripped_bamboo_block",
+        "minecraft:stripped_bamboo_block"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Stick do I need to craft 4 Cherry Sign? Reply with the number only.",
+    "item": "minecraft:cherry_sign",
+    "ingredient": "minecraft:stick",
+    "count": 4,
+    "gold": 2,
+    "recipe": {
+      "file": "cherry_sign",
+      "slots": [
+        "minecraft:cherry_planks",
+        "minecraft:cherry_planks",
+        "minecraft:cherry_planks",
+        "minecraft:cherry_planks",
+        "minecraft:cherry_planks",
+        "minecraft:cherry_planks",
+        "minecraft:stick"
+      ],
+      "makes": 3
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Polished Blackstone do I need to craft 12 Polished Blackstone Wall? Reply with the number only.",
+    "item": "minecraft:polished_blackstone_wall",
+    "ingredient": "minecraft:polished_blackstone",
+    "count": 12,
+    "gold": 12,
+    "recipe": {
+      "file": "polished_blackstone_wall",
+      "slots": [
+        "minecraft:polished_blackstone",
+        "minecraft:polished_blackstone",
+        "minecraft:polished_blackstone",
+        "minecraft:polished_blackstone",
+        "minecraft:polished_blackstone",
+        "minecraft:polished_blackstone"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Oxidized Copper Golem Statue do I need to craft 9 Waxed Oxidized Copper Golem Statue? Reply with the number only.",
+    "item": "minecraft:waxed_oxidized_copper_golem_statue",
+    "ingredient": "minecraft:oxidized_copper_golem_statue",
+    "count": 9,
+    "gold": 9,
+    "recipe": {
+      "file": "waxed_oxidized_copper_golem_statue_from_honeycomb",
+      "slots": [
+        "minecraft:oxidized_copper_golem_statue",
+        "minecraft:honeycomb"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Ghast Tear do I need to craft 16 End Crystal? Reply with the number only.",
+    "item": "minecraft:end_crystal",
+    "ingredient": "minecraft:ghast_tear",
+    "count": 16,
+    "gold": 16,
+    "recipe": {
+      "file": "end_crystal",
+      "slots": [
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:ender_eye",
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:ghast_tear",
+        "minecraft:glass"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Glass do I need to craft 7 Magenta Stained Glass? Reply with the number only.",
+    "item": "minecraft:magenta_stained_glass",
+    "ingredient": "minecraft:glass",
+    "count": 7,
+    "gold": 8,
+    "recipe": {
+      "file": "magenta_stained_glass",
+      "slots": [
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:magenta_dye",
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:glass"
+      ],
+      "makes": 8
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Cocoa Beans do I need to craft 12 Brown Dye? Reply with the number only.",
+    "item": "minecraft:brown_dye",
+    "ingredient": "minecraft:cocoa_beans",
+    "count": 12,
+    "gold": 12,
+    "recipe": {
+      "file": "brown_dye",
+      "slots": [
+        "minecraft:cocoa_beans"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Block of Quartz do I need to craft 2 Quartz Pillar? Reply with the number only.",
+    "item": "minecraft:quartz_pillar",
+    "ingredient": "minecraft:quartz_block",
+    "count": 2,
+    "gold": 2,
+    "recipe": {
+      "file": "quartz_pillar",
+      "slots": [
+        "minecraft:quartz_block",
+        "minecraft:quartz_block"
+      ],
+      "makes": 2
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Light Gray Concrete do I need to craft 8 Light Gray Concrete Slab? Reply with the number only.",
+    "item": "minecraft:light_gray_concrete_slab",
+    "ingredient": "minecraft:light_gray_concrete",
+    "count": 8,
+    "gold": 6,
+    "recipe": {
+      "file": "light_gray_concrete_slab",
+      "slots": [
+        "minecraft:light_gray_concrete",
+        "minecraft:light_gray_concrete",
+        "minecraft:light_gray_concrete"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Sulfur do I need to craft 16 Sulfur Wall? Reply with the number only.",
+    "item": "minecraft:sulfur_wall",
+    "ingredient": "minecraft:sulfur",
+    "count": 16,
+    "gold": 18,
+    "recipe": {
+      "file": "sulfur_wall",
+      "slots": [
+        "minecraft:sulfur",
+        "minecraft:sulfur",
+        "minecraft:sulfur",
+        "minecraft:sulfur",
+        "minecraft:sulfur",
+        "minecraft:sulfur"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Silence Armor Trim Smithing Template do I need to craft 4 Silence Armor Trim Smithing Template? Reply with the number only.",
+    "item": "minecraft:silence_armor_trim_smithing_template",
+    "ingredient": "minecraft:silence_armor_trim_smithing_template",
+    "count": 4,
+    "gold": 2,
+    "recipe": {
+      "file": "silence_armor_trim_smithing_template",
+      "slots": [
+        "minecraft:diamond",
+        "minecraft:silence_armor_trim_smithing_template",
+        "minecraft:diamond",
+        "minecraft:diamond",
+        "minecraft:cobbled_deepslate",
+        "minecraft:diamond",
+        "minecraft:diamond",
+        "minecraft:diamond",
+        "minecraft:diamond"
+      ],
+      "makes": 2
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Stripped Pale Oak Log do I need to craft 4 Pale Oak Shelf? Reply with the number only.",
+    "item": "minecraft:pale_oak_shelf",
+    "ingredient": "minecraft:stripped_pale_oak_log",
+    "count": 4,
+    "gold": 6,
+    "recipe": {
+      "file": "pale_oak_shelf",
+      "slots": [
+        "minecraft:stripped_pale_oak_log",
+        "minecraft:stripped_pale_oak_log",
+        "minecraft:stripped_pale_oak_log",
+        "minecraft:stripped_pale_oak_log",
+        "minecraft:stripped_pale_oak_log",
+        "minecraft:stripped_pale_oak_log"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Deepslate Tiles do I need to craft 16 Deepslate Tile Stairs? Reply with the number only.",
+    "item": "minecraft:deepslate_tile_stairs",
+    "ingredient": "minecraft:deepslate_tiles",
+    "count": 16,
+    "gold": 24,
+    "recipe": {
+      "file": "deepslate_tile_stairs",
+      "slots": [
+        "minecraft:deepslate_tiles",
+        "minecraft:deepslate_tiles",
+        "minecraft:deepslate_tiles",
+        "minecraft:deepslate_tiles",
+        "minecraft:deepslate_tiles",
+        "minecraft:deepslate_tiles"
+      ],
+      "makes": 4
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Polished Cinnabar do I need to craft 15 Polished Cinnabar Slab? Reply with the number only.",
+    "item": "minecraft:polished_cinnabar_slab",
+    "ingredient": "minecraft:polished_cinnabar",
+    "count": 15,
+    "gold": 9,
+    "recipe": {
+      "file": "polished_cinnabar_slab",
+      "slots": [
+        "minecraft:polished_cinnabar",
+        "minecraft:polished_cinnabar",
+        "minecraft:polished_cinnabar"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Cut Red Sandstone do I need to craft 13 Cut Red Sandstone Slab? Reply with the number only.",
+    "item": "minecraft:cut_red_sandstone_slab",
+    "ingredient": "minecraft:cut_red_sandstone",
+    "count": 13,
+    "gold": 9,
+    "recipe": {
+      "file": "cut_red_sandstone_slab",
+      "slots": [
+        "minecraft:cut_red_sandstone",
+        "minecraft:cut_red_sandstone",
+        "minecraft:cut_red_sandstone"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Dried Kelp do I need to craft 14 Dried Kelp Block? Reply with the number only.",
+    "item": "minecraft:dried_kelp_block",
+    "ingredient": "minecraft:dried_kelp",
+    "count": 14,
+    "gold": 126,
+    "recipe": {
+      "file": "dried_kelp_block",
+      "slots": [
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Polished Andesite do I need to craft 3 Polished Andesite Stairs? Reply with the number only.",
+    "item": "minecraft:polished_andesite_stairs",
+    "ingredient": "minecraft:polished_andesite",
+    "count": 3,
+    "gold": 6,
+    "recipe": {
+      "file": "polished_andesite_stairs",
+      "slots": [
+        "minecraft:polished_andesite",
+        "minecraft:polished_andesite",
+        "minecraft:polished_andesite",
+        "minecraft:polished_andesite",
+        "minecraft:polished_andesite",
+        "minecraft:polished_andesite"
+      ],
+      "makes": 4
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Ice do I need to craft 12 Packed Ice? Reply with the number only.",
+    "item": "minecraft:packed_ice",
+    "ingredient": "minecraft:ice",
+    "count": 12,
+    "gold": 108,
+    "recipe": {
+      "file": "packed_ice",
+      "slots": [
+        "minecraft:ice",
+        "minecraft:ice",
+        "minecraft:ice",
+        "minecraft:ice",
+        "minecraft:ice",
+        "minecraft:ice",
+        "minecraft:ice",
+        "minecraft:ice",
+        "minecraft:ice"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Wild Armor Trim Smithing Template do I need to craft 16 Wild Armor Trim Smithing Template? Reply with the number only.",
+    "item": "minecraft:wild_armor_trim_smithing_template",
+    "ingredient": "minecraft:wild_armor_trim_smithing_template",
+    "count": 16,
+    "gold": 8,
+    "recipe": {
+      "file": "wild_armor_trim_smithing_template",
+      "slots": [
+        "minecraft:diamond",
+        "minecraft:wild_armor_trim_smithing_template",
+        "minecraft:diamond",
+        "minecraft:diamond",
+        "minecraft:mossy_cobblestone",
+        "minecraft:diamond",
+        "minecraft:diamond",
+        "minecraft:diamond",
+        "minecraft:diamond"
+      ],
+      "makes": 2
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Gravel do I need to craft 2 Yellow Concrete Powder? Reply with the number only.",
+    "item": "minecraft:yellow_concrete_powder",
+    "ingredient": "minecraft:gravel",
+    "count": 2,
+    "gold": 4,
+    "recipe": {
+      "file": "yellow_concrete_powder",
+      "slots": [
+        "minecraft:yellow_dye",
+        "minecraft:sand",
+        "minecraft:sand",
+        "minecraft:sand",
+        "minecraft:sand",
+        "minecraft:gravel",
+        "minecraft:gravel",
+        "minecraft:gravel",
+        "minecraft:gravel"
+      ],
+      "makes": 8
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Spruce Planks do I need to craft 4 Spruce Button? Reply with the number only.",
+    "item": "minecraft:spruce_button",
+    "ingredient": "minecraft:spruce_planks",
+    "count": 4,
+    "gold": 4,
+    "recipe": {
+      "file": "spruce_button",
+      "slots": [
+        "minecraft:spruce_planks"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Resin Clump do I need to craft 13 Block of Resin? Reply with the number only.",
+    "item": "minecraft:resin_block",
+    "ingredient": "minecraft:resin_clump",
+    "count": 13,
+    "gold": 117,
+    "recipe": {
+      "file": "resin_block",
+      "slots": [
+        "minecraft:resin_clump",
+        "minecraft:resin_clump",
+        "minecraft:resin_clump",
+        "minecraft:resin_clump",
+        "minecraft:resin_clump",
+        "minecraft:resin_clump",
+        "minecraft:resin_clump",
+        "minecraft:resin_clump",
+        "minecraft:resin_clump"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Deepslate Bricks do I need to craft 7 Deepslate Brick Wall? Reply with the number only.",
+    "item": "minecraft:deepslate_brick_wall",
+    "ingredient": "minecraft:deepslate_bricks",
+    "count": 7,
+    "gold": 12,
+    "recipe": {
+      "file": "deepslate_brick_wall",
+      "slots": [
+        "minecraft:deepslate_bricks",
+        "minecraft:deepslate_bricks",
+        "minecraft:deepslate_bricks",
+        "minecraft:deepslate_bricks",
+        "minecraft:deepslate_bricks",
+        "minecraft:deepslate_bricks"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Paper do I need to craft 3 Skull Banner Pattern? Reply with the number only.",
+    "item": "minecraft:skull_banner_pattern",
+    "ingredient": "minecraft:paper",
+    "count": 3,
+    "gold": 3,
+    "recipe": {
+      "file": "skull_banner_pattern",
+      "slots": [
+        "minecraft:paper",
+        "minecraft:wither_skeleton_skull"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Pale Oak Planks do I need to craft 13 Pale Oak Stairs? Reply with the number only.",
+    "item": "minecraft:pale_oak_stairs",
+    "ingredient": "minecraft:pale_oak_planks",
+    "count": 13,
+    "gold": 24,
+    "recipe": {
+      "file": "pale_oak_stairs",
+      "slots": [
+        "minecraft:pale_oak_planks",
+        "minecraft:pale_oak_planks",
+        "minecraft:pale_oak_planks",
+        "minecraft:pale_oak_planks",
+        "minecraft:pale_oak_planks",
+        "minecraft:pale_oak_planks"
+      ],
+      "makes": 4
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Leather do I need to craft 6 Item Frame? Reply with the number only.",
+    "item": "minecraft:item_frame",
+    "ingredient": "minecraft:leather",
+    "count": 6,
+    "gold": 6,
+    "recipe": {
+      "file": "item_frame",
+      "slots": [
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:leather",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many White Wool do I need to craft 2 Green Wool? Reply with the number only.",
+    "item": "minecraft:green_wool",
+    "ingredient": "minecraft:white_wool",
+    "count": 2,
+    "gold": 2,
+    "recipe": {
+      "file": "dye_green_wool",
+      "slots": [
+        "minecraft:green_dye",
+        "minecraft:white_wool"
+      ],
+      "makes": 1
+    },
+    "game_version": "26.3"
+  },
+  {
+    "question": "How many Red Nether Bricks do I need to craft 5 Red Nether Brick Slab? Reply with the number only.",
+    "item": "minecraft:red_nether_brick_slab",
+    "ingredient": "minecraft:red_nether_bricks",
+    "count": 5,
+    "gold": 3,
+    "recipe": {
+      "file": "red_nether_brick_slab",
+      "slots": [
+        "minecraft:red_nether_bricks",
+        "minecraft:red_nether_bricks",
+        "minecraft:red_nether_bricks"
+      ],
+      "makes": 6
+    },
+    "game_version": "26.3"
+  }
+]

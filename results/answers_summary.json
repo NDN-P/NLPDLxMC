@@ -1,0 +1,132 @@
+{
+ "seed": 1,
+ "chunk_size": 256,
+ "generator": "qwen3:4b-instruct",
+ "judge_model": "qwen3:4b-instruct",
+ "bertscore_model": "distilroberta-base (rescaled with baseline)",
+ "score": "correct = 1, partial = 0.5, incorrect = 0, averaged over all questions",
+ "summary": {
+  "none": {
+   "n": 100,
+   "refused": 0,
+   "hedged": 0,
+   "correct": 16,
+   "partial": 18,
+   "incorrect": 66,
+   "unparsed": 0,
+   "correct_pct": 16.0,
+   "correct_ci": [
+    10.1,
+    24.4
+   ],
+   "score": 0.25,
+   "bertscore_f1": 0.359,
+   "answered": 100,
+   "correct_of_answered_pct": 16.0,
+   "bertscore_f1_answered": 0.359,
+   "faithful_attempted": 0,
+   "faithful_unparsed": 0,
+   "faithful_checked": 0,
+   "supported": 0,
+   "partly": 0,
+   "unsupported": 0,
+   "supported_pct": null
+  },
+  "dense": {
+   "n": 100,
+   "refused": 40,
+   "hedged": 2,
+   "correct": 32,
+   "partial": 16,
+   "incorrect": 52,
+   "unparsed": 0,
+   "correct_pct": 32.0,
+   "correct_ci": [
+    23.7,
+    41.7
+   ],
+   "score": 0.4,
+   "bertscore_f1": 0.236,
+   "answered": 60,
+   "correct_of_answered_pct": 53.3,
+   "bertscore_f1_answered": 0.478,
+   "faithful_attempted": 60,
+   "faithful_unparsed": 0,
+   "faithful_checked": 60,
+   "supported": 50,
+   "partly": 10,
+   "unsupported": 0,
+   "supported_pct": 83.3
+  },
+  "rerank": {
+   "n": 100,
+   "refused": 31,
+   "hedged": 4,
+   "correct": 34,
+   "partial": 20,
+   "incorrect": 46,
+   "unparsed": 0,
+   "correct_pct": 34.0,
+   "correct_ci": [
+    25.5,
+    43.7
+   ],
+   "score": 0.44,
+   "bertscore_f1": 0.279,
+   "answered": 69,
+   "correct_of_answered_pct": 49.3,
+   "bertscore_f1_answered": 0.466,
+   "faithful_attempted": 69,
+   "faithful_unparsed": 1,
+   "faithful_checked": 68,
+   "supported": 59,
+   "partly": 8,
+   "unsupported": 1,
+   "supported_pct": 86.8
+  }
+ },
+ "paired": {
+  "rerank - dense: score": {
+   "mean_difference": 0.04,
+   "ci95": [
+    -0.03,
+    0.11
+   ]
+  },
+  "rerank - dense: bertscore_f1": {
+   "mean_difference": 0.043,
+   "ci95": [
+    0.005,
+    0.083
+   ]
+  },
+  "rerank - none: score": {
+   "mean_difference": 0.19,
+   "ci95": [
+    0.085,
+    0.295
+   ]
+  },
+  "rerank - none: bertscore_f1": {
+   "mean_difference": -0.079,
+   "ci95": [
+    -0.146,
+    -0.011
+   ]
+  },
+  "dense - none: score": {
+   "mean_difference": 0.15,
+   "ci95": [
+    0.05,
+    0.255
+   ]
+  },
+  "dense - none: bertscore_f1": {
+   "mean_difference": -0.123,
+   "ci95": [
+    -0.195,
+    -0.052
+   ]
+  }
+ }
+}

@@ -1,0 +1,135 @@
+﻿.venv\Scripts\python : Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to 
+enable higher rate limits and faster downloads.
+At line:1 char:302
++ ... tch {} } }; .venv\Scripts\python -u eval.py answers *> results\answer ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: You ar...ster downloads.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2987.49it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3250.65it/s]
+1/100
+2/100
+3/100
+4/100
+5/100
+6/100
+7/100
+8/100
+9/100
+10/100
+11/100
+12/100
+13/100
+14/100
+15/100
+16/100
+17/100
+18/100
+19/100
+20/100
+21/100
+22/100
+23/100
+24/100
+25/100
+26/100
+27/100
+28/100
+29/100
+30/100
+31/100
+32/100
+33/100
+34/100
+35/100
+36/100
+37/100
+38/100
+39/100
+40/100
+41/100
+42/100
+43/100
+44/100
+45/100
+46/100
+47/100
+48/100
+49/100
+50/100
+51/100
+52/100
+53/100
+54/100
+55/100
+56/100
+57/100
+58/100
+59/100
+60/100
+61/100
+62/100
+63/100
+64/100
+65/100
+66/100
+67/100
+68/100
+69/100
+70/100
+71/100
+72/100
+73/100
+74/100
+75/100
+76/100
+77/100
+78/100
+79/100
+80/100
+81/100
+82/100
+83/100
+84/100
+85/100
+86/100
+87/100
+88/100
+89/100
+90/100
+91/100
+92/100
+93/100
+94/100
+95/100
+96/100
+97/100
+98/100
+99/100
+100/100
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights:  37%|███▋      | 38/103 [00:00<00:00, 340.54it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 835.60it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: distilroberta-base
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.dense.weight      | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+C:\Users\guymy\OneDrive\Desktop\NLP\NLPDL\.venv\Lib\site-packages\bert_score\score.py:149: UserWarning: The given 
+NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will 
+result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting 
+it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at 
+C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  baselines = torch.from_numpy(

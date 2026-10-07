@@ -1,0 +1,107 @@
+# Final technical validation — 2026-10-07
+
+The local implementation, saved evaluations, setup instructions and technical package are complete. This is a
+tested course project, with known model failures. Independent team checking and the personal audit remain necessary
+before submission. No paid API calls, model downloads or fine-tuning occurred during this correction session.
+
+## What changed
+
+- Distinguish a bare refusal from factual claims plus uncertainty; check all claimed answers for faithfulness.
+- Validate judge JSON/verdicts, retry malformed output once, and exclude failed verdicts from valid denominators.
+- Never award factual correctness to a pure refusal. Preserve the original judge output and record any override.
+- Reject ambiguous recipe names, invalid quantities and explicit other-edition requests; accept Java questions about
+  the bedrock block. Generic names ask for clarification instead of selecting a variant.
+- Give the planner matching official one-craft recipe context. Preserve explicit user quantities on matching calls
+  and record the original model arguments. Return a validated direct ingredient quantity for standalone queries;
+  compound requests still receive a generated answer. Successful recipes also survive a bare generator refusal.
+- Add source-backed, page-disjoint benchmark splits; checkpoint raw answers, passages, rankings and judgments;
+  keep expected refusals separate from factual metrics. Named output directories allow clean reruns.
+- Print UTF-8 on Windows and preserve existing human-check sheets. Improve demo/setup errors and keep an authentic
+  AI audit, original skeleton, prompts, work log and all historical experiments.
+
+## Source-grounded gameplay evaluation
+
+The frozen dataset contains 60 cases: 50 answerable facts across 25 pinned Wiki pages, 5 unavailable-world-state
+queries, and 5 scope refusals. Dev/test are 20/40 cases, with 8/17 disjoint answerable source pages. Every factual
+reference has an exact contiguous quote and revision; the quotes fit individual 128/256/512-token chunks.
+References never enter retrieval or training. They are AI-curated and source-checked, not independently human
+certified or tested inside Minecraft Java 26.3. The corpus itself includes historical and other-edition material.
+
+**Untouched test split:** 34 factual cases plus 6 expected refusals, 120 saved question/variant rows.
+
+| Variant | Correct | Partial | Factual refusals | BERTScore F1 (facts) | Supporting quote in top 5 | Strict negative refusal |
+|---|---:|---:|---:|---:|---:|---:|
+| No retrieval | 9/34 | 1 | 0 | 0.294 | — | 5/6 |
+| Dense | 27/34 | 4 | 3 | 0.493 | 31/34 | 5/6 |
+| Hybrid + reranker | 26/34 | 4 | 2 | 0.451 | 30/34 | 6/6 |
+
+Paired judge-score gain over no retrieval: dense +0.574, 95% bootstrap CI [0.368, 0.765]; rerank +0.544,
+CI [0.382, 0.706]. Rerank minus dense is −0.029, CI [−0.162, 0.103]; its BERTScore difference is −0.042,
+CI [−0.109, 0.012]. These observations support retrieval, without establishing a reranker advantage. The registered
+reranked default was retained; the test set was not used to select a new retriever or tune gameplay prompts.
+
+On dev's 16 factual cases, correctness is 9/16, 13/16, 12/16 and BERTScore .372/.491/.512. Dev's 4 negative cases
+have strict refusals 2/4,4/4,4/4. The raw answers and all comparisons remain under `results/verified/dev/` and `test/`.
+
+The same local model generates and judges. Its test verdict falsely credited a dense refusal on `java26.3-045`;
+the final aggregator scores it incorrect, reducing dense from the original 28 to 27. Original answer judgments
+and `summary_original_judge.json` are retained; aggregation hashes identify the correction. Other judgment errors
+remain for independent review. Faithfulness is automatic support classification, not factual truth. Strict negative
+refusal means a bare refusal; a useful explanatory refusal can miss this metric. See `failure_analysis.md`.
+
+## Crafting evaluation
+
+The seed-17 diagnostic test exposed changed product counts and rewritten calculator totals: 28/40 with tools versus
+2/40 without. Its inspected failures motivated the general quantity constraint and direct calculator renderer.
+That run is preserved under `results/verified/tool/` and is not treated as the final clean holdout.
+
+The frozen seed-29 final set contains 40 different product IDs, excluding prior saved dev/test products, explicit
+development/few-shot examples and every seed-17 product. Gold quantities use official Java 26.3 recipe slots and
+batch rounding; no LLM judge is used.
+
+| Variant | Correct | Accuracy | 95% Wilson CI | Tool called |
+|---|---:|---:|---|---:|
+| Without tool | 1/40 | 2.5% | [0.4, 12.9]% | 0/40 |
+| With tool | 37/40 | 92.5% | [80.1, 97.4]% | 37/40 |
+
+All 37 successes used `calculator_exact`; 24 calls came through structured routing. Three cases made no tool call
+(Wild Armor Trim Smithing Template, Item Frame and Green Wool). There were 0/20 false calls on fixed non-recipe
+**development** cases. This is a pipeline result on canonical quantity wording, with deterministic arithmetic; it
+does not show learned arithmetic or fine-tuning. Item-level exclusions do not prevent shared recipe structure.
+
+## Verification and source versions
+
+- 23 regression tests pass, including real cached recipe checks, ambiguity, invalid quantity inputs, batch rounding,
+  compound requests, refusal/judge/scorer safeguards, source evidence, and preservation of human annotations.
+- Application/evaluation/scripts compile; all 60 source cases validate; named output CLI options work; local
+  preflight reports ready with no missing data/models/service. Package dependencies have no broken requirements.
+  The extracted package also passes all 23 tests (using the existing recipe cache only for the real-recipe checks),
+  source validation and report regeneration. Starting its demo before rebuilding indexes reports the missing data clearly.
+- Prior independent verification reproduced all three chunk lists exactly and checked embedding dimensions,
+  finite values/unit norms. A 100-question retrieval reproduction and 36 BERTScores were saved in `codex_review/`.
+  The entire older 1,000-question retrieval experiment was not rerun after these tool/evaluation corrections.
+- Actual final demo traces are saved in `results/verified/demo_final.json`: exact 15 iron for 3 hoppers; natural
+  wording 5 iron for a hopper; compound request retained; explicit Bedrock Edition refused. The bedrock-block demo
+  also contains an unsupported generated assertion, recorded as a limitation rather than a successful fact check.
+- Gameplay raw generation uses `results/verified/source_v1/`; seed-29 crafting uses `source_v2/`. Config files record
+  actual source/dataset/chunk hashes and cached model revisions/digest. Later scope/compound/input/usability fixes
+  preserve positive canonical quantity behavior, verified by tests; scores remain labelled with their measured source.
+- Python 3.14.7, CPU retrieval/BERTScore, local Ollama `qwen3:4b-instruct` Q4_K_M. GPU inference can vary despite fixed
+  temperature/seed. Rebuilding the embedding index can also change floating-point details.
+
+See README for separate rerun directories and the exact v1 resume helper. The package includes pinned pages,
+benchmark references, code, saved results, source snapshots and logs; rebuildable indexes, models and full game
+recipe data are excluded. Build local data/index before inference. A clean-copy check validates the packaged code
+and benchmark; it is not a new internet installation on a second machine.
+
+## Remaining team work
+
+1. Supply real team names and actual contributions in `AI_AUDIT.md`.
+2. Write Section 6 unaided. The brief explicitly says **“Answer WITHOUT using AI”**; AI must not invent these answers.
+3. Check benchmark references and grade `results/verified/test/human_check.csv` independently, particularly conflicting
+   judge labels and examples in `failure_analysis.md`. Keep human judgments separate from original automatic outputs.
+4. Prepare the presentation and individual technical explanations. Slides were outside this work's scope.
+
+Fine-tuning is optional under the course brief. This session first corrected and measured pretrained RAG; no training
+experiment, improvement or student-authored decision is claimed. Any later adaptation needs its own objective,
+training data, untouched evaluation split and hardware plan.

@@ -1,0 +1,68 @@
+{
+ "judge_model": "qwen3:4b-instruct",
+ "results": {
+  "judge_labels_run1.jsonl": {
+   "judge": "correctness",
+   "n": 36,
+   "labelled_by": "Claude (to be checked by the team)",
+   "exact_agreement": 27,
+   "top_label": "correct",
+   "top_vs_not_agreement": 32,
+   "cohen_kappa": 0.509,
+   "per_variant": {
+    "none": "9/12",
+    "dense": "8/12",
+    "rerank": "10/12"
+   },
+   "confusion (label -> judge)": {
+    "incorrect -> incorrect": 21,
+    "partial -> incorrect": 4,
+    "partial -> correct": 3,
+    "correct -> correct": 5,
+    "incorrect -> partial": 1,
+    "partial -> partial": 1,
+    "correct -> incorrect": 1
+   }
+  },
+  "judge_labels_run2.jsonl": {
+   "judge": "correctness",
+   "n": 36,
+   "labelled_by": "Claude, blind to the judge (to be checked by the team)",
+   "exact_agreement": 28,
+   "top_label": "correct",
+   "top_vs_not_agreement": 28,
+   "cohen_kappa": 0.64,
+   "per_variant": {
+    "none": "9/12",
+    "dense": "9/12",
+    "rerank": "10/12"
+   },
+   "confusion (label -> judge)": {
+    "incorrect -> incorrect": 16,
+    "partial -> correct": 5,
+    "partial -> partial": 2,
+    "correct -> correct": 10,
+    "correct -> partial": 2,
+    "correct -> incorrect": 1
+   }
+  },
+  "faithful_labels_run2.jsonl": {
+   "judge": "faithfulness",
+   "n": 16,
+   "labelled_by": "Claude, blind to the judge (to be checked by the team)",
+   "exact_agreement": 12,
+   "top_label": "supported",
+   "top_vs_not_agreement": 12,
+   "cohen_kappa": 0.256,
+   "per_variant": {
+    "dense": "6/7",
+    "rerank": "6/9"
+   },
+   "confusion (label -> judge)": {
+    "partly -> partly": 1,
+    "supported -> supported": 11,
+    "partly -> supported": 4
+   }
+  }
+ }
+}

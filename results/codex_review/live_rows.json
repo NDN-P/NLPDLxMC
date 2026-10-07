@@ -1,0 +1,963 @@
+[
+  {
+    "question": "How many iron ingots do I need to craft 3 hoppers? Reply with the number only.",
+    "gold": 15,
+    "use_tool": false,
+    "answer": "I do not know.",
+    "tool_calls": [],
+    "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Achievement guide > On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started\nIt will take at least 192 iron ingots as well as 32 sticks to craft enough rails (512 or 8 stacks). Iron farms or iron veins are fast resources of iron. Craft rails like so:\nAlternatively, you can find and break them in mineshafts or woodland mansions. Then, build a continuous track so that a minecart can travel the full distance. Place the rails in relatively flat terrain and try to avoid rivers or oceans. Place some building blocks to cross water or waterlog the rails (not recommended because of the risk of drowning), and destroy or place blocks to cross steep hills.\nTo speed up the track and to pass hills, replace some rails with powered rails powered by a redstone torch. Craft powered rails with gold ingots and redstone dust, which can be mined most commonly below deepslate level, or farmed.\nCraft for each powered rail a redstone torch:\nCraft a minecart like so:\n\n[4] Tutorial:Achievement guide > Iron Man > Wear a full set of Iron Armor\nYou need 24 iron ingots to craft full set of iron armor:\nIron armor can also be obtained from chests in villages (armorer's house and blacksmiths), ancient cities, trial chambers, strongholds, and end cities, and it can also spawn on armor stands in taiga village outdoor armory. It can also be bought from armorer villagers, or dropped by vindicators or pillagers spawned in raids. Iron boots can also be obtained by bartering.\n\n[5] Tutorial:Achievement guide > Body Guard > Create an Iron Golem\nYou need 36 iron ingots and a carved pumpkin or a jack o'lantern. Iron ingots can easily be farmed. Pumpkins can be found anywhere in multiple biomes, and in some villages. Use a shears to turn it into a carved pumpkin. Craft 4 iron blocks like so:\nThen place it like this. Make sure the blocks below the 'arms' are air and the carved pumpkin is placed last.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "Iron Man > Wear a full set of Iron Armor"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Achievement guide",
+        "section": "Body Guard > Create an Iron Golem"
+      }
+    ],
+    "first_number_correct": false,
+    "seconds": 12.84
+  },
+  {
+    "question": "How many iron ingots do I need to craft 3 hoppers? Reply with the number only.",
+    "gold": 15,
+    "use_tool": true,
+    "answer": "15 [tool]",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "hopper",
+          "count": 3
+        },
+        "result": {
+          "answer": "To craft 3 Hopper you need 15 Iron Ingot, 3 Chest in total (3 crafts, each makes 1).",
+          "item": "Hopper",
+          "count": 3,
+          "crafts": 3,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Iron Ingot": 15,
+            "Chest": 3
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Achievement guide > On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started\nIt will take at least 192 iron ingots as well as 32 sticks to craft enough rails (512 or 8 stacks). Iron farms or iron veins are fast resources of iron. Craft rails like so:\nAlternatively, you can find and break them in mineshafts or woodland mansions. Then, build a continuous track so that a minecart can travel the full distance. Place the rails in relatively flat terrain and try to avoid rivers or oceans. Place some building blocks to cross water or waterlog the rails (not recommended because of the risk of drowning), and destroy or place blocks to cross steep hills.\nTo speed up the track and to pass hills, replace some rails with powered rails powered by a redstone torch. Craft powered rails with gold ingots and redstone dust, which can be mined most commonly below deepslate level, or farmed.\nCraft for each powered rail a redstone torch:\nCraft a minecart like so:\n\n[4] Tutorial:Achievement guide > Iron Man > Wear a full set of Iron Armor\nYou need 24 iron ingots to craft full set of iron armor:\nIron armor can also be obtained from chests in villages (armorer's house and blacksmiths), ancient cities, trial chambers, strongholds, and end cities, and it can also spawn on armor stands in taiga village outdoor armory. It can also be bought from armorer villagers, or dropped by vindicators or pillagers spawned in raids. Iron boots can also be obtained by bartering.\n\n[5] Tutorial:Achievement guide > Body Guard > Create an Iron Golem\nYou need 36 iron ingots and a carved pumpkin or a jack o'lantern. Iron ingots can easily be farmed. Pumpkins can be found anywhere in multiple biomes, and in some villages. Use a shears to turn it into a carved pumpkin. Craft 4 iron blocks like so:\nThen place it like this. Make sure the blocks below the 'arms' are air and the carved pumpkin is placed last.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "Iron Man > Wear a full set of Iron Armor"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Achievement guide",
+        "section": "Body Guard > Create an Iron Golem"
+      }
+    ],
+    "first_number_correct": true,
+    "seconds": 7.27
+  },
+  {
+    "question": "How many sticks do I need to craft 10 torches? Reply with the number only.",
+    "gold": 3,
+    "use_tool": false,
+    "answer": "10",
+    "tool_calls": [],
+    "passages": "[1] Tutorial:Time-saving tips > In-game tips > Crafting\nAnother crafting speedup is to always try to make round numbers of constantly-used items. For example, when making fences in, one log makes four planks, which makes eight sticks, which makes two fences with two sticks left over. It's usually better to make fences eight at a time (four recipes), which uses up exactly five logs without waste and without cluttering the inventory; or as an alternative, you could routinely make any spare planks or sticks into torches or any other frequently-used item. Similarly, make 24 ladders at a time, with seven logs. Even signs can be mass-produced with 13 logs (one goes to sticks, the rest to planks), but because signs stack to 16, this produces 1 1⁄2 stacks. Fence gates cost exactly one log apiece, and their crafting recipe lets you do any number up to a stack quickly (by moving half-stacks six times). Boats can be resourcefully crafted too: five logs make four boats.\n\n[2] Tutorial:Exploring a Nether fortress > Preparing the equipment > Torches\nTorches are good for navigation, marking explored areas, and extensively cutting down on mob spawns in areas you've already gone through. Try to bring three or more stacks, at least two, or bring a lot of coal or charcoal so you can craft more torches as you need them. Alternatively, collect wood from huge fungi for sticks and kill wither skeletons for coal to craft torches without leaving the Nether.\n\n[3] Tutorial:Achievement guide > MOAR Tools > Construct one type of each tool\nThis achievement is fairly simple. Collect 4 logs and then turn them all into planks. Use 4 of the planks to craft 8 sticks. Lastly, use the remaining planks and sticks to craft a wooden pickaxe, axe, shovel, and hoe. You should have 3 planks left over.\nCrafting wooden axe and shovel:\nNote: You can also use other materials such as stone, gold, iron, or diamonds to get the achievement.\n\n[4] Tutorial:Mining > Aesthetic mines > Vertical design > Design > Torch Placement\nTorch placement is simple in this design. The player will have 8 torches in each hub, on both sides of the bottom of the corners. If the player want, they may add a torch to the center floor to add more light, but it is enough to prevent mobs spawning as it is now.\nFor every push, put two torches on every other left and right hangs.\n\n[5] Banner > Obtaining > Crafting\nBanners can be crafted from six wool and a stick in a pattern resembling a sign.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Time-saving tips",
+        "section": "In-game tips > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Exploring a Nether fortress",
+        "section": "Preparing the equipment > Torches"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "MOAR Tools > Construct one type of each tool"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Mining",
+        "section": "Aesthetic mines > Vertical design > Design > Torch Placement"
+      },
+      {
+        "n": 5,
+        "title": "Banner",
+        "section": "Obtaining > Crafting"
+      }
+    ],
+    "first_number_correct": false,
+    "seconds": 2.68
+  },
+  {
+    "question": "How many sticks do I need to craft 10 torches? Reply with the number only.",
+    "gold": 3,
+    "use_tool": true,
+    "answer": "3",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "torch",
+          "count": 10
+        },
+        "result": {
+          "answer": "To craft 10 Torch you need 3 Coal, 3 Stick in total (3 crafts, each makes 4).",
+          "item": "Torch",
+          "count": 10,
+          "crafts": 3,
+          "makes_per_craft": 4,
+          "ingredients": {
+            "Coal": 3,
+            "Stick": 3
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Tutorial:Time-saving tips > In-game tips > Crafting\nAnother crafting speedup is to always try to make round numbers of constantly-used items. For example, when making fences in, one log makes four planks, which makes eight sticks, which makes two fences with two sticks left over. It's usually better to make fences eight at a time (four recipes), which uses up exactly five logs without waste and without cluttering the inventory; or as an alternative, you could routinely make any spare planks or sticks into torches or any other frequently-used item. Similarly, make 24 ladders at a time, with seven logs. Even signs can be mass-produced with 13 logs (one goes to sticks, the rest to planks), but because signs stack to 16, this produces 1 1⁄2 stacks. Fence gates cost exactly one log apiece, and their crafting recipe lets you do any number up to a stack quickly (by moving half-stacks six times). Boats can be resourcefully crafted too: five logs make four boats.\n\n[2] Tutorial:Exploring a Nether fortress > Preparing the equipment > Torches\nTorches are good for navigation, marking explored areas, and extensively cutting down on mob spawns in areas you've already gone through. Try to bring three or more stacks, at least two, or bring a lot of coal or charcoal so you can craft more torches as you need them. Alternatively, collect wood from huge fungi for sticks and kill wither skeletons for coal to craft torches without leaving the Nether.\n\n[3] Tutorial:Achievement guide > MOAR Tools > Construct one type of each tool\nThis achievement is fairly simple. Collect 4 logs and then turn them all into planks. Use 4 of the planks to craft 8 sticks. Lastly, use the remaining planks and sticks to craft a wooden pickaxe, axe, shovel, and hoe. You should have 3 planks left over.\nCrafting wooden axe and shovel:\nNote: You can also use other materials such as stone, gold, iron, or diamonds to get the achievement.\n\n[4] Tutorial:Mining > Aesthetic mines > Vertical design > Design > Torch Placement\nTorch placement is simple in this design. The player will have 8 torches in each hub, on both sides of the bottom of the corners. If the player want, they may add a torch to the center floor to add more light, but it is enough to prevent mobs spawning as it is now.\nFor every push, put two torches on every other left and right hangs.\n\n[5] Banner > Obtaining > Crafting\nBanners can be crafted from six wool and a stick in a pattern resembling a sign.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Time-saving tips",
+        "section": "In-game tips > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Exploring a Nether fortress",
+        "section": "Preparing the equipment > Torches"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "MOAR Tools > Construct one type of each tool"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Mining",
+        "section": "Aesthetic mines > Vertical design > Design > Torch Placement"
+      },
+      {
+        "n": 5,
+        "title": "Banner",
+        "section": "Obtaining > Crafting"
+      }
+    ],
+    "first_number_correct": true,
+    "seconds": 7.19
+  },
+  {
+    "question": "How many iron ingots do I need to craft 3 buckets? Reply with the number only.",
+    "gold": 9,
+    "use_tool": false,
+    "answer": "I do not know.",
+    "tool_calls": [],
+    "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Achievement guide > The Lie! > Bake a cake using: wheat, sugar, milk, and eggs\nThis achievement's name is a reference to the video game Portal which spawned the meme phrase \"The Cake Is A Lie\".\nCollect the following:\n1 egg (can be obtained from chicken)\n3 milk buckets (milk a cow using a bucket by using)\n2 sugar (from sugar cane)\n3 wheat\nCollect 9 iron ingots by mining or find them in loot chests. Put them in the crafting grid of a crafting table like so or use the recipe book to craft 3 buckets.\nBuckets can also be found in some loot chests.\nFind a cow, which are often spawning in middle biomes like the plains or the forest, or in villages. Use 3 buckets on the cow to turn them into milk buckets.\nNext, find a chicken, spawning in the same biomes as cows, and wait for it to lay an egg.\nThe easiest way to get sugar is by collecting 2 sugar cane, which can be found near water, and use it to craft sugar:\n\n[3] Tutorial:Achievement guide > Iron Man > Wear a full set of Iron Armor\nYou need 24 iron ingots to craft full set of iron armor:\nIron armor can also be obtained from chests in villages (armorer's house and blacksmiths), ancient cities, trial chambers, strongholds, and end cities, and it can also spawn on armor stands in taiga village outdoor armory. It can also be bought from armorer villagers, or dropped by vindicators or pillagers spawned in raids. Iron boots can also be obtained by bartering.\n\n[4] Tutorial:Achievement guide > On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started\nIt will take at least 192 iron ingots as well as 32 sticks to craft enough rails (512 or 8 stacks). Iron farms or iron veins are fast resources of iron. Craft rails like so:\nAlternatively, you can find and break them in mineshafts or woodland mansions. Then, build a continuous track so that a minecart can travel the full distance. Place the rails in relatively flat terrain and try to avoid rivers or oceans. Place some building blocks to cross water or waterlog the rails (not recommended because of the risk of drowning), and destroy or place blocks to cross steep hills.\nTo speed up the track and to pass hills, replace some rails with powered rails powered by a redstone torch. Craft powered rails with gold ingots and redstone dust, which can be mined most commonly below deepslate level, or farmed.\nCraft for each powered rail a redstone torch:\nCraft a minecart like so:\n\n[5] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Achievement guide",
+        "section": "The Lie! > Bake a cake using: wheat, sugar, milk, and eggs"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "Iron Man > Wear a full set of Iron Armor"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      }
+    ],
+    "first_number_correct": false,
+    "seconds": 2.78
+  },
+  {
+    "question": "How many iron ingots do I need to craft 3 buckets? Reply with the number only.",
+    "gold": 9,
+    "use_tool": true,
+    "answer": "9 [tool]",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "bucket",
+          "count": 3
+        },
+        "result": {
+          "answer": "To craft 3 Bucket you need 9 Iron Ingot in total (3 crafts, each makes 1).",
+          "item": "Bucket",
+          "count": 3,
+          "crafts": 3,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Iron Ingot": 9
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Achievement guide > The Lie! > Bake a cake using: wheat, sugar, milk, and eggs\nThis achievement's name is a reference to the video game Portal which spawned the meme phrase \"The Cake Is A Lie\".\nCollect the following:\n1 egg (can be obtained from chicken)\n3 milk buckets (milk a cow using a bucket by using)\n2 sugar (from sugar cane)\n3 wheat\nCollect 9 iron ingots by mining or find them in loot chests. Put them in the crafting grid of a crafting table like so or use the recipe book to craft 3 buckets.\nBuckets can also be found in some loot chests.\nFind a cow, which are often spawning in middle biomes like the plains or the forest, or in villages. Use 3 buckets on the cow to turn them into milk buckets.\nNext, find a chicken, spawning in the same biomes as cows, and wait for it to lay an egg.\nThe easiest way to get sugar is by collecting 2 sugar cane, which can be found near water, and use it to craft sugar:\n\n[3] Tutorial:Achievement guide > Iron Man > Wear a full set of Iron Armor\nYou need 24 iron ingots to craft full set of iron armor:\nIron armor can also be obtained from chests in villages (armorer's house and blacksmiths), ancient cities, trial chambers, strongholds, and end cities, and it can also spawn on armor stands in taiga village outdoor armory. It can also be bought from armorer villagers, or dropped by vindicators or pillagers spawned in raids. Iron boots can also be obtained by bartering.\n\n[4] Tutorial:Achievement guide > On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started\nIt will take at least 192 iron ingots as well as 32 sticks to craft enough rails (512 or 8 stacks). Iron farms or iron veins are fast resources of iron. Craft rails like so:\nAlternatively, you can find and break them in mineshafts or woodland mansions. Then, build a continuous track so that a minecart can travel the full distance. Place the rails in relatively flat terrain and try to avoid rivers or oceans. Place some building blocks to cross water or waterlog the rails (not recommended because of the risk of drowning), and destroy or place blocks to cross steep hills.\nTo speed up the track and to pass hills, replace some rails with powered rails powered by a redstone torch. Craft powered rails with gold ingots and redstone dust, which can be mined most commonly below deepslate level, or farmed.\nCraft for each powered rail a redstone torch:\nCraft a minecart like so:\n\n[5] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Achievement guide",
+        "section": "The Lie! > Bake a cake using: wheat, sugar, milk, and eggs"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "Iron Man > Wear a full set of Iron Armor"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      }
+    ],
+    "first_number_correct": true,
+    "seconds": 7.42
+  },
+  {
+    "question": "How many wooden planks do I need to craft 2 chests? Reply with the number only.",
+    "gold": 16,
+    "use_tool": false,
+    "answer": "I do not know.",
+    "tool_calls": [],
+    "passages": "[1] Tutorial:Achievement guide > Benchmaking > Craft a Crafting Table with four blocks of wooden planks\nGet a crafting table in your inventory to obtain this achievement. First, hold down attack on a log until it breaks, then collect the dropped block by walking over it. Logs are part of trees, which are very easy to find (as long as you didn't start out in a biome like ocean or desert). Just look around when you spawn.\nThen, open your inventory. You will see a 2×2 grid near the top right-hand corner; place your wood log in any of the slots. Click on the planks that appear to obtain them.\nIf you turned on a bonus chest when you created your world, there is a good chance that it contains logs, planks, or both. If you have these, you probably won't need to get any wood to create a crafting table.\nFinally, put one of the four planks you got into each container of your grid (a 2×2 square of planks). You can use to place a single plank into the grid, instead of all four.\nAlternatively, use the recipe book and click the crafting table to craft it.\n\n[2] Tutorial:Achievement guide > Time to Farm! > Make a Hoe\nWooden hoes are crafted with 2 sticks and 2 planks. Put them in the crafting grid of a crafting table like so:\nOnce you have the wooden hoe in your inventory, you will get the achievement.\n\n[3] Tutorial:Shelter types > Easy > Micro Mansion\nMaterials\n~40 wood planks\nSome wooden slabs\nBed\nDouble Chest\nGlowstone or Torches\n2 wooden stairs\nGlass\nWooden door or iron door\nFurnace\nCrafting Table\nDescription\nThe tiniest, yet most useful house.\nLocation\nThis \"Micro Mansion\" can be built anywhere, provided you have a minimum of 5×5 blocks of space.\nConstruction\nStep 1: Build a 5×5 perimeter with 2 blocks of height using the wood planks.\nStep 2: Use the wooden slabs to make the roof.\nStep 3: Place the door of your choice.\nStep 4: Place the double chest in any wall, place the wooden stairs above it.\nStep 5: Place your bed opposite of the double chest.\nStep 6: Use 1 glowstone in the wall anywhere.\nStep 7: Make a window near the door using your glass.\nStep 8: Place your crafting table and furnace together, opposite of where the door is.\nExtras\nA blast furnace will come useful, same with a smoker.\n\n[4] Tutorial:Achievement guide > MOAR Tools > Construct one type of each tool\nThis achievement is fairly simple. Collect 4 logs and then turn them all into planks. Use 4 of the planks to craft 8 sticks. Lastly, use the remaining planks and sticks to craft a wooden pickaxe, axe, shovel, and hoe. You should have 3 planks left over.\nCrafting wooden axe and shovel:\nNote: You can also use other materials such as stone, gold, iron, or diamonds to get the achievement.\n\n[5] Tutorial:Furniture > Bedroom furniture > Dressers\nA dresser is a stack of double chests. An idea for a more interesting home is to have themed chests with only certain things (e.x. Only store armor in the dresser). You can place item frames next to the dressers to show the items inside. Craftable clothing isn't available in vanilla Minecraft, so most players put armor in their dressers. If this is the case, place a few armor stands down to show off your newly crafted armor.\nIf you don't want to waste wood on chests/need dressers for a real purpose, but still want them for decoration, you can make a dresser that looks like real life, but is not functional in Minecraft, and does not cost much wood, as it is made of wood planks. Place two wood planks next to each other on the floor, and place two above that. Then, put trapdoors, buttons, or signs with the letter O on all 4 blocks.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Achievement guide",
+        "section": "Benchmaking > Craft a Crafting Table with four blocks of wooden planks"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Achievement guide",
+        "section": "Time to Farm! > Make a Hoe"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Shelter types",
+        "section": "Easy > Micro Mansion"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "MOAR Tools > Construct one type of each tool"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Furniture",
+        "section": "Bedroom furniture > Dressers"
+      }
+    ],
+    "first_number_correct": false,
+    "seconds": 2.78
+  },
+  {
+    "question": "How many wooden planks do I need to craft 2 chests? Reply with the number only.",
+    "gold": 16,
+    "use_tool": true,
+    "answer": "16",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "chest",
+          "count": 2
+        },
+        "result": {
+          "answer": "To craft 2 Chest you need 16 any Planks (e.g. Oak Planks) in total (2 crafts, each makes 1).",
+          "item": "Chest",
+          "count": 2,
+          "crafts": 2,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "any Planks (e.g. Oak Planks)": 16
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Tutorial:Achievement guide > Benchmaking > Craft a Crafting Table with four blocks of wooden planks\nGet a crafting table in your inventory to obtain this achievement. First, hold down attack on a log until it breaks, then collect the dropped block by walking over it. Logs are part of trees, which are very easy to find (as long as you didn't start out in a biome like ocean or desert). Just look around when you spawn.\nThen, open your inventory. You will see a 2×2 grid near the top right-hand corner; place your wood log in any of the slots. Click on the planks that appear to obtain them.\nIf you turned on a bonus chest when you created your world, there is a good chance that it contains logs, planks, or both. If you have these, you probably won't need to get any wood to create a crafting table.\nFinally, put one of the four planks you got into each container of your grid (a 2×2 square of planks). You can use to place a single plank into the grid, instead of all four.\nAlternatively, use the recipe book and click the crafting table to craft it.\n\n[2] Tutorial:Achievement guide > Time to Farm! > Make a Hoe\nWooden hoes are crafted with 2 sticks and 2 planks. Put them in the crafting grid of a crafting table like so:\nOnce you have the wooden hoe in your inventory, you will get the achievement.\n\n[3] Tutorial:Shelter types > Easy > Micro Mansion\nMaterials\n~40 wood planks\nSome wooden slabs\nBed\nDouble Chest\nGlowstone or Torches\n2 wooden stairs\nGlass\nWooden door or iron door\nFurnace\nCrafting Table\nDescription\nThe tiniest, yet most useful house.\nLocation\nThis \"Micro Mansion\" can be built anywhere, provided you have a minimum of 5×5 blocks of space.\nConstruction\nStep 1: Build a 5×5 perimeter with 2 blocks of height using the wood planks.\nStep 2: Use the wooden slabs to make the roof.\nStep 3: Place the door of your choice.\nStep 4: Place the double chest in any wall, place the wooden stairs above it.\nStep 5: Place your bed opposite of the double chest.\nStep 6: Use 1 glowstone in the wall anywhere.\nStep 7: Make a window near the door using your glass.\nStep 8: Place your crafting table and furnace together, opposite of where the door is.\nExtras\nA blast furnace will come useful, same with a smoker.\n\n[4] Tutorial:Achievement guide > MOAR Tools > Construct one type of each tool\nThis achievement is fairly simple. Collect 4 logs and then turn them all into planks. Use 4 of the planks to craft 8 sticks. Lastly, use the remaining planks and sticks to craft a wooden pickaxe, axe, shovel, and hoe. You should have 3 planks left over.\nCrafting wooden axe and shovel:\nNote: You can also use other materials such as stone, gold, iron, or diamonds to get the achievement.\n\n[5] Tutorial:Furniture > Bedroom furniture > Dressers\nA dresser is a stack of double chests. An idea for a more interesting home is to have themed chests with only certain things (e.x. Only store armor in the dresser). You can place item frames next to the dressers to show the items inside. Craftable clothing isn't available in vanilla Minecraft, so most players put armor in their dressers. If this is the case, place a few armor stands down to show off your newly crafted armor.\nIf you don't want to waste wood on chests/need dressers for a real purpose, but still want them for decoration, you can make a dresser that looks like real life, but is not functional in Minecraft, and does not cost much wood, as it is made of wood planks. Place two wood planks next to each other on the floor, and place two above that. Then, put trapdoors, buttons, or signs with the letter O on all 4 blocks.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Achievement guide",
+        "section": "Benchmaking > Craft a Crafting Table with four blocks of wooden planks"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Achievement guide",
+        "section": "Time to Farm! > Make a Hoe"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Shelter types",
+        "section": "Easy > Micro Mansion"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "MOAR Tools > Construct one type of each tool"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Furniture",
+        "section": "Bedroom furniture > Dressers"
+      }
+    ],
+    "first_number_correct": true,
+    "seconds": 7.43
+  },
+  {
+    "question": "How many milk buckets do I need to craft 2 cakes? Reply with the number only.",
+    "gold": 6,
+    "use_tool": false,
+    "answer": "I do not know.",
+    "tool_calls": [],
+    "passages": "[1] Tutorial:Achievement guide > The Lie! > Bake a cake using: wheat, sugar, milk, and eggs\nThis achievement's name is a reference to the video game Portal which spawned the meme phrase \"The Cake Is A Lie\".\nCollect the following:\n1 egg (can be obtained from chicken)\n3 milk buckets (milk a cow using a bucket by using)\n2 sugar (from sugar cane)\n3 wheat\nCollect 9 iron ingots by mining or find them in loot chests. Put them in the crafting grid of a crafting table like so or use the recipe book to craft 3 buckets.\nBuckets can also be found in some loot chests.\nFind a cow, which are often spawning in middle biomes like the plains or the forest, or in villages. Use 3 buckets on the cow to turn them into milk buckets.\nNext, find a chicken, spawning in the same biomes as cows, and wait for it to lay an egg.\nThe easiest way to get sugar is by collecting 2 sugar cane, which can be found near water, and use it to craft sugar:\n\n[2] Tutorial:Advancement guide/Husbandry tab > Birthday Song\nHave an Allay drop a Cake at a Note Block\nRequirements: An allay must drop a cake at a note block.\nFirst, get two cakes and a note block. You can craft them like so:\nAlternatively, cakes can be bought from some farmer villagers or found in trial chambers, and note blocks can be found in ancient cities.\nNext, you must find an allay (see You've Got a Friend in Me). Once you find the allay, give it a cake (use the allay with the cake). Place down the note block and use it; if the allay is close enough, small particle will travel from the note block to allay, indicating that the mob noticed its new destination block. When that happens, drop the other cake on the ground. Allay will fly to it, pick up the cake, then fly to note block and drop the cake. When the cake is dropped, you should get the advancement.\n\n[3] Tutorial:Achievement guide > The Lie! > Bake a cake using: wheat, sugar, milk, and eggs\nAlternatively, you can collect a honey bottle by using a glass bottle on a bee nest (place a campfire under the nest to prevent the bees from attacking) and craft it into sugar:\nSugar can also be dropped by witches, but they might be hard to fight.\nCollect 3 wheat by growing wheat seeds on farmland, or collect it from villages.\nArrange the ingredients like so to craft cake:\n\n[4] Tutorial:Time-saving tips > In-game tips > Crafting\nDon't forget the 2×2 crafting grid in your inventory can be used to craft any 2×2 recipes, not just a crafting table.\n\n[5] Tutorial:Shelters > Expansions > Kitchen\nThis is basically a crafting room, but you only craft food. The chest(s) should contain most basic foods, including wheat, milk, eggs, etc. Many people, instead of having a kitchen, just craft food in the crafting room, but a kitchen is a nice expansion, because it separates crafting materials so that you don't fill your crafting room's chests with wheat instead of wood. You could also add a smoker if you want.\nBakery\nThis is basically an expansion of a kitchen. You could build this and a kitchen, and just connect them. You would use this to make cakes, pumpkin pies and bread. Place a crafting table, chest, and, if you want, a display table for cakes. If you want to make a large amount of cakes, make a cake farm under or near the bakery.\nPantry\nThis is also an expansion of a kitchen. Make sure that they are categorized so you don't get mixed up. You can use a chest or dispenser to use everything in them. Put some cooked meat, bread, cookies, cakes and melons in them.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Achievement guide",
+        "section": "The Lie! > Bake a cake using: wheat, sugar, milk, and eggs"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Advancement guide/Husbandry tab",
+        "section": "Birthday Song"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "The Lie! > Bake a cake using: wheat, sugar, milk, and eggs"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Time-saving tips",
+        "section": "In-game tips > Crafting"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Shelters",
+        "section": "Expansions > Kitchen"
+      }
+    ],
+    "first_number_correct": false,
+    "seconds": 2.96
+  },
+  {
+    "question": "How many milk buckets do I need to craft 2 cakes? Reply with the number only.",
+    "gold": 6,
+    "use_tool": true,
+    "answer": "I do not know.",
+    "tool_calls": [],
+    "passages": "[1] Tutorial:Achievement guide > The Lie! > Bake a cake using: wheat, sugar, milk, and eggs\nThis achievement's name is a reference to the video game Portal which spawned the meme phrase \"The Cake Is A Lie\".\nCollect the following:\n1 egg (can be obtained from chicken)\n3 milk buckets (milk a cow using a bucket by using)\n2 sugar (from sugar cane)\n3 wheat\nCollect 9 iron ingots by mining or find them in loot chests. Put them in the crafting grid of a crafting table like so or use the recipe book to craft 3 buckets.\nBuckets can also be found in some loot chests.\nFind a cow, which are often spawning in middle biomes like the plains or the forest, or in villages. Use 3 buckets on the cow to turn them into milk buckets.\nNext, find a chicken, spawning in the same biomes as cows, and wait for it to lay an egg.\nThe easiest way to get sugar is by collecting 2 sugar cane, which can be found near water, and use it to craft sugar:\n\n[2] Tutorial:Advancement guide/Husbandry tab > Birthday Song\nHave an Allay drop a Cake at a Note Block\nRequirements: An allay must drop a cake at a note block.\nFirst, get two cakes and a note block. You can craft them like so:\nAlternatively, cakes can be bought from some farmer villagers or found in trial chambers, and note blocks can be found in ancient cities.\nNext, you must find an allay (see You've Got a Friend in Me). Once you find the allay, give it a cake (use the allay with the cake). Place down the note block and use it; if the allay is close enough, small particle will travel from the note block to allay, indicating that the mob noticed its new destination block. When that happens, drop the other cake on the ground. Allay will fly to it, pick up the cake, then fly to note block and drop the cake. When the cake is dropped, you should get the advancement.\n\n[3] Tutorial:Achievement guide > The Lie! > Bake a cake using: wheat, sugar, milk, and eggs\nAlternatively, you can collect a honey bottle by using a glass bottle on a bee nest (place a campfire under the nest to prevent the bees from attacking) and craft it into sugar:\nSugar can also be dropped by witches, but they might be hard to fight.\nCollect 3 wheat by growing wheat seeds on farmland, or collect it from villages.\nArrange the ingredients like so to craft cake:\n\n[4] Tutorial:Time-saving tips > In-game tips > Crafting\nDon't forget the 2×2 crafting grid in your inventory can be used to craft any 2×2 recipes, not just a crafting table.\n\n[5] Tutorial:Shelters > Expansions > Kitchen\nThis is basically a crafting room, but you only craft food. The chest(s) should contain most basic foods, including wheat, milk, eggs, etc. Many people, instead of having a kitchen, just craft food in the crafting room, but a kitchen is a nice expansion, because it separates crafting materials so that you don't fill your crafting room's chests with wheat instead of wood. You could also add a smoker if you want.\nBakery\nThis is basically an expansion of a kitchen. You could build this and a kitchen, and just connect them. You would use this to make cakes, pumpkin pies and bread. Place a crafting table, chest, and, if you want, a display table for cakes. If you want to make a large amount of cakes, make a cake farm under or near the bakery.\nPantry\nThis is also an expansion of a kitchen. Make sure that they are categorized so you don't get mixed up. You can use a chest or dispenser to use everything in them. Put some cooked meat, bread, cookies, cakes and melons in them.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Achievement guide",
+        "section": "The Lie! > Bake a cake using: wheat, sugar, milk, and eggs"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Advancement guide/Husbandry tab",
+        "section": "Birthday Song"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "The Lie! > Bake a cake using: wheat, sugar, milk, and eggs"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Time-saving tips",
+        "section": "In-game tips > Crafting"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Shelters",
+        "section": "Expansions > Kitchen"
+      }
+    ],
+    "first_number_correct": false,
+    "seconds": 7.6
+  },
+  {
+    "question": "How many iron ingots do I need to craft 2 iron pickaxes? Reply with the number only.",
+    "gold": 6,
+    "use_tool": false,
+    "answer": "16",
+    "tool_calls": [],
+    "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Achievement guide > Iron Man > Wear a full set of Iron Armor\nYou need 24 iron ingots to craft full set of iron armor:\nIron armor can also be obtained from chests in villages (armorer's house and blacksmiths), ancient cities, trial chambers, strongholds, and end cities, and it can also spawn on armor stands in taiga village outdoor armory. It can also be bought from armorer villagers, or dropped by vindicators or pillagers spawned in raids. Iron boots can also be obtained by bartering.\n\n[4] Tutorial:Achievement guide > Body Guard > Create an Iron Golem\nYou need 36 iron ingots and a carved pumpkin or a jack o'lantern. Iron ingots can easily be farmed. Pumpkins can be found anywhere in multiple biomes, and in some villages. Use a shears to turn it into a carved pumpkin. Craft 4 iron blocks like so:\nThen place it like this. Make sure the blocks below the 'arms' are air and the carved pumpkin is placed last.\n\n[5] Tutorial:Achievement guide > On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started\nIt will take at least 192 iron ingots as well as 32 sticks to craft enough rails (512 or 8 stacks). Iron farms or iron veins are fast resources of iron. Craft rails like so:\nAlternatively, you can find and break them in mineshafts or woodland mansions. Then, build a continuous track so that a minecart can travel the full distance. Place the rails in relatively flat terrain and try to avoid rivers or oceans. Place some building blocks to cross water or waterlog the rails (not recommended because of the risk of drowning), and destroy or place blocks to cross steep hills.\nTo speed up the track and to pass hills, replace some rails with powered rails powered by a redstone torch. Craft powered rails with gold ingots and redstone dust, which can be mined most commonly below deepslate level, or farmed.\nCraft for each powered rail a redstone torch:\nCraft a minecart like so:",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "Iron Man > Wear a full set of Iron Armor"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "Body Guard > Create an Iron Golem"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Achievement guide",
+        "section": "On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started"
+      }
+    ],
+    "first_number_correct": false,
+    "seconds": 2.8
+  },
+  {
+    "question": "How many iron ingots do I need to craft 2 iron pickaxes? Reply with the number only.",
+    "gold": 6,
+    "use_tool": true,
+    "answer": "6 [tool]",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "iron_pickaxe",
+          "count": 2
+        },
+        "result": {
+          "answer": "To craft 2 Iron Pickaxe you need 6 Iron Ingot, 4 Stick in total (2 crafts, each makes 1).",
+          "item": "Iron Pickaxe",
+          "count": 2,
+          "crafts": 2,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Iron Ingot": 6,
+            "Stick": 4
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Achievement guide > Iron Man > Wear a full set of Iron Armor\nYou need 24 iron ingots to craft full set of iron armor:\nIron armor can also be obtained from chests in villages (armorer's house and blacksmiths), ancient cities, trial chambers, strongholds, and end cities, and it can also spawn on armor stands in taiga village outdoor armory. It can also be bought from armorer villagers, or dropped by vindicators or pillagers spawned in raids. Iron boots can also be obtained by bartering.\n\n[4] Tutorial:Achievement guide > Body Guard > Create an Iron Golem\nYou need 36 iron ingots and a carved pumpkin or a jack o'lantern. Iron ingots can easily be farmed. Pumpkins can be found anywhere in multiple biomes, and in some villages. Use a shears to turn it into a carved pumpkin. Craft 4 iron blocks like so:\nThen place it like this. Make sure the blocks below the 'arms' are air and the carved pumpkin is placed last.\n\n[5] Tutorial:Achievement guide > On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started\nIt will take at least 192 iron ingots as well as 32 sticks to craft enough rails (512 or 8 stacks). Iron farms or iron veins are fast resources of iron. Craft rails like so:\nAlternatively, you can find and break them in mineshafts or woodland mansions. Then, build a continuous track so that a minecart can travel the full distance. Place the rails in relatively flat terrain and try to avoid rivers or oceans. Place some building blocks to cross water or waterlog the rails (not recommended because of the risk of drowning), and destroy or place blocks to cross steep hills.\nTo speed up the track and to pass hills, replace some rails with powered rails powered by a redstone torch. Craft powered rails with gold ingots and redstone dust, which can be mined most commonly below deepslate level, or farmed.\nCraft for each powered rail a redstone torch:\nCraft a minecart like so:",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "Iron Man > Wear a full set of Iron Armor"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "Body Guard > Create an Iron Golem"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Achievement guide",
+        "section": "On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started"
+      }
+    ],
+    "first_number_correct": true,
+    "seconds": 7.62
+  },
+  {
+    "question": "How many iron blocks do I need to craft 2 anvils? Reply with the number only.",
+    "gold": 6,
+    "use_tool": false,
+    "answer": "27",
+    "tool_calls": [],
+    "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Achievement guide > Body Guard > Create an Iron Golem\nYou need 36 iron ingots and a carved pumpkin or a jack o'lantern. Iron ingots can easily be farmed. Pumpkins can be found anywhere in multiple biomes, and in some villages. Use a shears to turn it into a carved pumpkin. Craft 4 iron blocks like so:\nThen place it like this. Make sure the blocks below the 'arms' are air and the carved pumpkin is placed last.\n\n[4] Java Edition 1.8/Development versions > 14w02a > Changes > Blocks\nMossy stone bricks\nNow can be crafted using 1 vine and 1 stone bricks.\nChiseled stone bricks\nCan now be crafted using 2 stone brick slabs on top of each other, similar to chiseled sandstone.\nAnvils\nThe cost of experience is now reduced.\nRenaming items now only costs 1 level, repairing now starts out with 2 to 5 levels and tools can be repaired longer and with better enchantments, repairing costs can no longer be kept down by renaming items.\nFurnaces\nWhen a furnace runs out of fuel, the smelting progress pauses instead of resetting.\nWill be changed in a later snapshot.\nDoors\nCan now stack to 64.\nCrafting recipe now gives 3 doors.\n\n[5] Tutorial:Achievement guide > On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started\nIt will take at least 192 iron ingots as well as 32 sticks to craft enough rails (512 or 8 stacks). Iron farms or iron veins are fast resources of iron. Craft rails like so:\nAlternatively, you can find and break them in mineshafts or woodland mansions. Then, build a continuous track so that a minecart can travel the full distance. Place the rails in relatively flat terrain and try to avoid rivers or oceans. Place some building blocks to cross water or waterlog the rails (not recommended because of the risk of drowning), and destroy or place blocks to cross steep hills.\nTo speed up the track and to pass hills, replace some rails with powered rails powered by a redstone torch. Craft powered rails with gold ingots and redstone dust, which can be mined most commonly below deepslate level, or farmed.\nCraft for each powered rail a redstone torch:\nCraft a minecart like so:",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "Body Guard > Create an Iron Golem"
+      },
+      {
+        "n": 4,
+        "title": "Java Edition 1.8/Development versions",
+        "section": "14w02a > Changes > Blocks"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Achievement guide",
+        "section": "On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started"
+      }
+    ],
+    "first_number_correct": false,
+    "seconds": 3.02
+  },
+  {
+    "question": "How many iron blocks do I need to craft 2 anvils? Reply with the number only.",
+    "gold": 6,
+    "use_tool": true,
+    "answer": "I do not know.",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "anvil",
+          "count": 2
+        },
+        "result": {
+          "answer": "To craft 2 Anvil you need 6 Block of Iron, 8 Iron Ingot in total (2 crafts, each makes 1).",
+          "item": "Anvil",
+          "count": 2,
+          "crafts": 2,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Block of Iron": 6,
+            "Iron Ingot": 8
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Achievement guide > Body Guard > Create an Iron Golem\nYou need 36 iron ingots and a carved pumpkin or a jack o'lantern. Iron ingots can easily be farmed. Pumpkins can be found anywhere in multiple biomes, and in some villages. Use a shears to turn it into a carved pumpkin. Craft 4 iron blocks like so:\nThen place it like this. Make sure the blocks below the 'arms' are air and the carved pumpkin is placed last.\n\n[4] Java Edition 1.8/Development versions > 14w02a > Changes > Blocks\nMossy stone bricks\nNow can be crafted using 1 vine and 1 stone bricks.\nChiseled stone bricks\nCan now be crafted using 2 stone brick slabs on top of each other, similar to chiseled sandstone.\nAnvils\nThe cost of experience is now reduced.\nRenaming items now only costs 1 level, repairing now starts out with 2 to 5 levels and tools can be repaired longer and with better enchantments, repairing costs can no longer be kept down by renaming items.\nFurnaces\nWhen a furnace runs out of fuel, the smelting progress pauses instead of resetting.\nWill be changed in a later snapshot.\nDoors\nCan now stack to 64.\nCrafting recipe now gives 3 doors.\n\n[5] Tutorial:Achievement guide > On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started\nIt will take at least 192 iron ingots as well as 32 sticks to craft enough rails (512 or 8 stacks). Iron farms or iron veins are fast resources of iron. Craft rails like so:\nAlternatively, you can find and break them in mineshafts or woodland mansions. Then, build a continuous track so that a minecart can travel the full distance. Place the rails in relatively flat terrain and try to avoid rivers or oceans. Place some building blocks to cross water or waterlog the rails (not recommended because of the risk of drowning), and destroy or place blocks to cross steep hills.\nTo speed up the track and to pass hills, replace some rails with powered rails powered by a redstone torch. Craft powered rails with gold ingots and redstone dust, which can be mined most commonly below deepslate level, or farmed.\nCraft for each powered rail a redstone torch:\nCraft a minecart like so:",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "Body Guard > Create an Iron Golem"
+      },
+      {
+        "n": 4,
+        "title": "Java Edition 1.8/Development versions",
+        "section": "14w02a > Changes > Blocks"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Achievement guide",
+        "section": "On a Rail > Travel by minecart to a point at least 500m in a single direction from where you started"
+      }
+    ],
+    "first_number_correct": false,
+    "seconds": 7.52
+  },
+  {
+    "question": "How many wooden planks do I need to craft 3 crafting tables? Reply with the number only.",
+    "gold": 12,
+    "use_tool": false,
+    "answer": "12",
+    "tool_calls": [],
+    "passages": "[1] Tutorial:Achievement guide > Benchmaking > Craft a Crafting Table with four blocks of wooden planks\nOnce you have the crafting table in your inventory, you will get the achievement.\n\n[2] Tutorial:Achievement guide > Benchmaking > Craft a Crafting Table with four blocks of wooden planks\nGet a crafting table in your inventory to obtain this achievement. First, hold down attack on a log until it breaks, then collect the dropped block by walking over it. Logs are part of trees, which are very easy to find (as long as you didn't start out in a biome like ocean or desert). Just look around when you spawn.\nThen, open your inventory. You will see a 2×2 grid near the top right-hand corner; place your wood log in any of the slots. Click on the planks that appear to obtain them.\nIf you turned on a bonus chest when you created your world, there is a good chance that it contains logs, planks, or both. If you have these, you probably won't need to get any wood to create a crafting table.\nFinally, put one of the four planks you got into each container of your grid (a 2×2 square of planks). You can use to place a single plank into the grid, instead of all four.\nAlternatively, use the recipe book and click the crafting table to craft it.\n\n[3] Tutorial:Achievement guide > MOAR Tools > Construct one type of each tool\nThis achievement is fairly simple. Collect 4 logs and then turn them all into planks. Use 4 of the planks to craft 8 sticks. Lastly, use the remaining planks and sticks to craft a wooden pickaxe, axe, shovel, and hoe. You should have 3 planks left over.\nCrafting wooden axe and shovel:\nNote: You can also use other materials such as stone, gold, iron, or diamonds to get the achievement.\n\n[4] Tutorial:Achievement guide > Time to Farm! > Make a Hoe\nWooden hoes are crafted with 2 sticks and 2 planks. Put them in the crafting grid of a crafting table like so:\nOnce you have the wooden hoe in your inventory, you will get the achievement.\n\n[5] How to Play > Preparing for the first night > The Crafting Table\nReady to take your crafting to the next level? Place four planks in a square in your crafting grid, and you'll get a crafting table  - a whole new way to craft.\nPlace your crafting table in the world, then right-click it to open it. The larger crafting grid will let you make bigger and better things, including tools, beds, and doors.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Achievement guide",
+        "section": "Benchmaking > Craft a Crafting Table with four blocks of wooden planks"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Achievement guide",
+        "section": "Benchmaking > Craft a Crafting Table with four blocks of wooden planks"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "MOAR Tools > Construct one type of each tool"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "Time to Farm! > Make a Hoe"
+      },
+      {
+        "n": 5,
+        "title": "How to Play",
+        "section": "Preparing for the first night > The Crafting Table"
+      }
+    ],
+    "first_number_correct": true,
+    "seconds": 2.87
+  },
+  {
+    "question": "How many wooden planks do I need to craft 3 crafting tables? Reply with the number only.",
+    "gold": 12,
+    "use_tool": true,
+    "answer": "12",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "crafting_table",
+          "count": 3
+        },
+        "result": {
+          "answer": "To craft 3 Crafting Table you need 12 any Planks (e.g. Oak Planks) in total (3 crafts, each makes 1).",
+          "item": "Crafting Table",
+          "count": 3,
+          "crafts": 3,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "any Planks (e.g. Oak Planks)": 12
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Tutorial:Achievement guide > Benchmaking > Craft a Crafting Table with four blocks of wooden planks\nOnce you have the crafting table in your inventory, you will get the achievement.\n\n[2] Tutorial:Achievement guide > Benchmaking > Craft a Crafting Table with four blocks of wooden planks\nGet a crafting table in your inventory to obtain this achievement. First, hold down attack on a log until it breaks, then collect the dropped block by walking over it. Logs are part of trees, which are very easy to find (as long as you didn't start out in a biome like ocean or desert). Just look around when you spawn.\nThen, open your inventory. You will see a 2×2 grid near the top right-hand corner; place your wood log in any of the slots. Click on the planks that appear to obtain them.\nIf you turned on a bonus chest when you created your world, there is a good chance that it contains logs, planks, or both. If you have these, you probably won't need to get any wood to create a crafting table.\nFinally, put one of the four planks you got into each container of your grid (a 2×2 square of planks). You can use to place a single plank into the grid, instead of all four.\nAlternatively, use the recipe book and click the crafting table to craft it.\n\n[3] Tutorial:Achievement guide > MOAR Tools > Construct one type of each tool\nThis achievement is fairly simple. Collect 4 logs and then turn them all into planks. Use 4 of the planks to craft 8 sticks. Lastly, use the remaining planks and sticks to craft a wooden pickaxe, axe, shovel, and hoe. You should have 3 planks left over.\nCrafting wooden axe and shovel:\nNote: You can also use other materials such as stone, gold, iron, or diamonds to get the achievement.\n\n[4] Tutorial:Achievement guide > Time to Farm! > Make a Hoe\nWooden hoes are crafted with 2 sticks and 2 planks. Put them in the crafting grid of a crafting table like so:\nOnce you have the wooden hoe in your inventory, you will get the achievement.\n\n[5] How to Play > Preparing for the first night > The Crafting Table\nReady to take your crafting to the next level? Place four planks in a square in your crafting grid, and you'll get a crafting table  - a whole new way to craft.\nPlace your crafting table in the world, then right-click it to open it. The larger crafting grid will let you make bigger and better things, including tools, beds, and doors.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Achievement guide",
+        "section": "Benchmaking > Craft a Crafting Table with four blocks of wooden planks"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Achievement guide",
+        "section": "Benchmaking > Craft a Crafting Table with four blocks of wooden planks"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "MOAR Tools > Construct one type of each tool"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Achievement guide",
+        "section": "Time to Farm! > Make a Hoe"
+      },
+      {
+        "n": 5,
+        "title": "How to Play",
+        "section": "Preparing for the first night > The Crafting Table"
+      }
+    ],
+    "first_number_correct": true,
+    "seconds": 7.68
+  },
+  {
+    "question": "How much iron does a hopper need?",
+    "kind": "qualitative_spot_check",
+    "answer": "I do not know.",
+    "tool_calls": [],
+    "passages": "[1] Tutorial:Mechanisms > Mechanisms > Vending machine\nThis is a customizable vending machine that is relatively easy to make. Unfortunately, it does require a lot of iron.\nNotes:\nThe leftmost top hopper in the side view is the \"input/output\" hopper. Put items into this hopper and get items out.\nThe droppers hold the \"purchase\" items.\nThe chest at the bottom collects the \"payment\" items.\nFill the leftmost bottom hopper with 19-<price> items in the first slot, and 1 in each remaining slot. These items are payment items.\nRepeat the upper-right 2 tall by 4 wide section upwards to add more items to the number purchased. (The number of droppers is this number.)\nDelay the signal from the redstone torch to the hopper by 4*(price)-5 ticks (if the price is 1, simply don't delay it). The repeater here is showing 1 tick as an example.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Hopper > Item sorter > Item transportation\nThere are multiple methods that can be used to carry items across the input hopper to potentially be picked up. The methods most frequently used are hopper pipes, item streams, and minecarts with chests or minecarts with hoppers.\nA hopper pipe is simply a chain of hoppers all pointing at each other in a continuous line. This requires extra iron and may cause consistent lag on large scale. Another limitation in Bedrock Edition is that hopper pipes transferring a full load at full speed (for example, continuously moving items that have been stacked in an input chest) pushes a small percentage of items past filters without allowing them to be sorted.\n\n[4] Tutorial:Furniture > Kitchen > Fridge\nNote: this looks best with counters on the sides.\nDesign 13\nMaterials\n1 hopper\n1 button\n2 blocks of iron\n1 dispenser or dropper\nWherever you want a fridge, dig a 2-block-across hole (1 block down). On the far end of the hole, put a dispenser/dropper facing you. On the inside of the hole, put a hopper that goes into the dispenser/dropper. Next, put 2 blocks of iron on top of the dispenser/dropper and put a button on the lower iron block. The finished fridge should look like this:\nTo get some food from the fridge, press the button and the dispenser/dropper will drop food at your feet.\nTo put food in your fridge, put the food in the hopper using whatever method.\nDesign 14\n1 Redstone\n2 of any block, quartz looks the best\n1 button\n1 iron door\n2 dispensers\n\n[5] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Mechanisms",
+        "section": "Mechanisms > Vending machine"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Nether survival",
+        "section": "Farming > Iron production"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Hopper",
+        "section": "Item sorter > Item transportation"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Furniture",
+        "section": "Kitchen > Fridge"
+      },
+      {
+        "n": 5,
+        "title": "Anvil",
+        "section": "Obtaining > Crafting"
+      }
+    ],
+    "seconds": 7.42
+  },
+  {
+    "question": "How do I craft a cake in Java Edition 26.3?",
+    "kind": "qualitative_spot_check",
+    "answer": "To craft a cake in Java Edition 26.3, you need 3 milk buckets, 2 sugar, 1 egg, and 3 wheat in total [tool]. Arrange these ingredients in a crafting grid to produce 1 cake [tool].",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "cake",
+          "count": 1
+        },
+        "result": {
+          "answer": "To craft 1 Cake you need 3 Milk Bucket, 2 Sugar, 1 any Eggs (e.g. Egg), 3 Wheat in total (1 craft, each makes 1).",
+          "item": "Cake",
+          "count": 1,
+          "crafts": 1,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Milk Bucket": 3,
+            "Sugar": 2,
+            "any Eggs (e.g. Egg)": 1,
+            "Wheat": 3
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "[1] Easter eggs > References to other franchises\nPortal\nIn Bedrock Edition, the achievement for crafting a cake is called The Lie, likely in reference to the phrase \"the cake is a lie\" from the video game Portal.\nThe April Fools snapshot 24w14potato contains the splash \"Oh hi! So, how are you holding up? BECAUSE I'M A POTATO!\", a line said by GLaDOS in the video game Portal 2.\nHalf-Life\nIn Bedrock Edition, the achievement for traveling 500 meters by minecart is called \"On A Rail\", likely in reference to the chapter of the same name in the video game Half-Life.\nTeam Fortress 2\nJava Edition Beta 1.4, released for April Fools' Day 2011, introduced the locked chest which when opened displayed the name \"Steve Co. Supply Crate\", a reference to the Mann Co. Supply Crates found in the video game Team Fortress 2.\nThe splash text \"The creeper is a spy!\" is a reference to the Spy class in Team Fortress 2, and the various voice lines that other characters say to alert others of his presence.\nCounter-Strike\n\n[2] Tutorial:Achievement guide > The Lie! > Bake a cake using: wheat, sugar, milk, and eggs\nAlternatively, you can collect a honey bottle by using a glass bottle on a bee nest (place a campfire under the nest to prevent the bees from attacking) and craft it into sugar:\nSugar can also be dropped by witches, but they might be hard to fight.\nCollect 3 wheat by growing wheat seeds on farmland, or collect it from villages.\nArrange the ingredients like so to craft cake:\n\n[3] Tutorial:Advancement guide/Husbandry tab > Birthday Song\nHave an Allay drop a Cake at a Note Block\nRequirements: An allay must drop a cake at a note block.\nFirst, get two cakes and a note block. You can craft them like so:\nAlternatively, cakes can be bought from some farmer villagers or found in trial chambers, and note blocks can be found in ancient cities.\nNext, you must find an allay (see You've Got a Friend in Me). Once you find the allay, give it a cake (use the allay with the cake). Place down the note block and use it; if the allay is close enough, small particle will travel from the note block to allay, indicating that the mob noticed its new destination block. When that happens, drop the other cake on the ground. Allay will fly to it, pick up the cake, then fly to note block and drop the cake. When the cake is dropped, you should get the advancement.\n\n[4] Mentioned features > Technical > Java Edition > Phasing out of NBT-based crafting recipes\nIn Java Edition 1.14, numerous new blocks were implemented as replacements for certain \"complex\" crafting recipes, with the replaced crafting recipes relying on NBT data. This included moving inventory tool repair to the grindstone, banner modification to the loom, and map modification to the cartography table. However, several more NBT based crafting recipes still exist (such as fireworks, dyeing leather armor and tipped arrows), and these are planned to be phased out. Certain blocks that may be added in the future to further this goal include a dedicated fireworks customization block.\nIn Java Edition 1.14.3, tool repair crafting recipes were reimplemented.\nJava Edition 1.20.5 adds data components to replace the non-strict item NBT format, all item data is still stored in NBT but uses a stricter way to access the data to keep the data structure consistent.\n\n[5] Tutorial:Achievement guide > The Lie! > Bake a cake using: wheat, sugar, milk, and eggs\nThis achievement's name is a reference to the video game Portal which spawned the meme phrase \"The Cake Is A Lie\".\nCollect the following:\n1 egg (can be obtained from chicken)\n3 milk buckets (milk a cow using a bucket by using)\n2 sugar (from sugar cane)\n3 wheat\nCollect 9 iron ingots by mining or find them in loot chests. Put them in the crafting grid of a crafting table like so or use the recipe book to craft 3 buckets.\nBuckets can also be found in some loot chests.\nFind a cow, which are often spawning in middle biomes like the plains or the forest, or in villages. Use 3 buckets on the cow to turn them into milk buckets.\nNext, find a chicken, spawning in the same biomes as cows, and wait for it to lay an egg.\nThe easiest way to get sugar is by collecting 2 sugar cane, which can be found near water, and use it to craft sugar:",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Easter eggs",
+        "section": "References to other franchises"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Achievement guide",
+        "section": "The Lie! > Bake a cake using: wheat, sugar, milk, and eggs"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Advancement guide/Husbandry tab",
+        "section": "Birthday Song"
+      },
+      {
+        "n": 4,
+        "title": "Mentioned features",
+        "section": "Technical > Java Edition > Phasing out of NBT-based crafting recipes"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Achievement guide",
+        "section": "The Lie! > Bake a cake using: wheat, sugar, milk, and eggs"
+      }
+    ],
+    "seconds": 8.85
+  },
+  {
+    "question": "What happens if I sleep in a bed in the Nether?",
+    "kind": "qualitative_spot_check",
+    "answer": "If you sleep in a bed in the Nether, the bed explodes. The explosion has a power of 5, centers on the head part of the bed, and sets fire to surrounding blocks and the player. [2]",
+    "tool_calls": [],
+    "passages": "[1] Tutorial:Advancement guide/Adventure tab > Sweet Dreams\nSleep in a bed to change your respawn point\nRequirements: Sleep in a bed.\nOnly perform this while in the Overworld. If you try to sleep in the Nether or the End, the bed explodes.\nFirst, get a bed. It can be crafted like so:\nYou can also find beds in villages, igloos, and trial chambers, or buy them from shepherd villagers.\nPlace the bed down and sleep in it by using it. 4 criteria must be met to do that:\nthere are no monsters near the bed;\nbed is not obstructed, meaning that two spaces above it are empty;\nyou are within 2 blocks of the bed;\nit is either night or a thunderstorm.\nSleeping in a bed will grant you the advancement and reset your spawn point, so that when you die, you respawn next to your bed.\nParent of: Adventuring Time | Sound of Music | Light as a Rabbit\n\n[2] Bed > Usage > Sleeping\nSleeping in a bed is possible only in the Overworld. Attempting to sleep in a bed in the Nether, the End, and custom dimensions‌[JE  only] in which they are disabled causes it to explode and set fire to surrounding blocks and to the player. The explosion has power 5, which is stronger than TNT (4), but not as strong as a charged creeper or end crystal (6). The explosion centers on the head part of the bed. Villagers can sleep normally in any dimension without the bed being blown up. Upon death from a bed explosion, the message \"(Player) was killed by [Intentional Game Design]\" appears. In Bedrock Edition, bed explosions can be disabled by setting /gamerule respawnBlocksExplode to false; this still prevents beds from being used in invalid dimensions.\n\n[3] Bed > Trivia\nBeds explode in the Nether and the End because Notch found it was the easiest solution to dimension-unique respawning.\nJeb is \"not a fan\" of the mechanic, and removing it was discussed during the Nether Update.\nIf the player quits the game while sleeping, upon return the player wakes up beside the bed.\nUsing the /teleport command while another player is sleeping still teleports the sleeping player, but the player wakes immediately.‌[Java Edition  only]\nIf the player places a bed on ice, running over the bed acts like running over ice, similar to slabs.\nWhen placed using the /setblock command, only one half of a bed is placed, because beds are two blocks long. A single half can be slept in like a whole bed.\nVillagers can sleep in the Nether and the End without causing the bed to explode.\nWhile the block state used to determine the half of a two-block block such as doors and double-tall flowers is called half, in the case of beds this is called part.\n\n[4] Villager > Schedules > Sleeping\nA villager who has no bed continues wandering in search of a bed to claim.\nVillagers follow their Overworld schedules regardless of which dimension they are in. They can sleep in the Nether or the End, without causing the usual consequences of the bed exploding (See Bed § Sleeping), if the Overworld's time is correct. This is because the daylight cycle continues in these dimensions, even though it is not normally apparent to the player.\nSometimes when a villager gets in a bed from another direction they turn their body until their head is on the pillow of the bed. Villagers also sleep with their eyes open.\n\n[5] Tutorial:Nether survival > Nether fortresses > Living in a Nether fortress\nDO NOT make a bed; beds explode in the Nether if you try to sleep on them. Otherwise, crafting tables are needed, and an ender chest might be useful (if one leaves the Nether in a hurry, they can get their items via another chest). Use a respawn anchor instead.\nYou should disable blaze spawners, so you can use them for mob grinding purposes later on, but also prevent blazes from overrunning the Nether fortress, as they are extremely hazardous.\nSome parts of a Nether fortress have been filled in with netherrack and it can be a pain to dig it out. TNT is useful, though this risks damaging the fort, creating more hassle for the user. However, digging netherrack can give you a good source of Nether bricks——a good source of building material back home in the Overworld.\nNether wart plantations are in most Nether fortresses, with many warts in one plantation. They usually generate behind staircases, so keep an eye out when hunting for them.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Advancement guide/Adventure tab",
+        "section": "Sweet Dreams"
+      },
+      {
+        "n": 2,
+        "title": "Bed",
+        "section": "Usage > Sleeping"
+      },
+      {
+        "n": 3,
+        "title": "Bed",
+        "section": "Trivia"
+      },
+      {
+        "n": 4,
+        "title": "Villager",
+        "section": "Schedules > Sleeping"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Nether survival",
+        "section": "Nether fortresses > Living in a Nether fortress"
+      }
+    ],
+    "seconds": 9.38
+  },
+  {
+    "question": "Does every mob drop experience when killed?",
+    "kind": "qualitative_spot_check",
+    "answer": "No, every mob does not drop experience when killed. Some mobs, such as baby animals, bats, golems, and villagers, give no experience orbs at all [2]. Additionally, mobs only drop experience orbs if they die within five seconds of being attacked by a player or their tamed wolf [1].",
+    "tool_calls": [],
+    "passages": "[1] Experience > Sources\nExperience can be gained from several different sources. Most sources drop experience in the form of orbs, which can be claimed by any player, while a few methods directly award the player experience upon completing the action.\nFrom killing most mobs, which drop experience orbs along with any other items. However, mobs will only drop experience points if they are killed by a player or their tamed wolf, and not, for example, falling off a cliff.\nA mob does not drop experience orbs unless it dies within five seconds (100 game ticks) of an attack registered as a player hit (including tamed wolves, player-thrown fireballs, and TNT). This allows gaining experience orbs from, say, knocking a monster off a cliff, lighting a mob on fire, etc. (fetching the orbs might be another question). The player can also try to \"claim\" a burning monster by hitting or shooting it once—even if the blow doesn't kill it, if the mob dies within 5 seconds, it drops experience orbs.\n\n[2] Experience > Sources\nMobs killed by TNT activated by a player using flint and steel or a flaming arrow drop XP as usual; however, mobs killed by TNT that was activated by fire, redstone, or an explosion that wasn't player activated does not drop any experience orbs.\nMobs drop a random number of experience orbs, which can have different values. However, the total value always remains within the values given below, regardless of difficulty setting.\nHostile mobs give more experience orbs than passive ones. Baby animals, bats, golems, and villagers give no experience orbs at all. The ender dragon gives experience orbs totaling 12,000 XP the first time a player kills it—12 times more than anything else in the game—and 500 XP in subsequent defeats.\nSome hostile mobs spawn with weapons, or can spawn with weapons and/or armor. These mobs give an extra 1–3 points (randomly) per piece of equipment that they spawned with if the piece is not dropped. Equipment picked up after spawning doesn't count.\nMining a monster spawner block gives 15–43 points of experience orbs.\nMining a naturally-generated creaking heart drops 20–24 experience.\n\n[3] Experience > Experience orbs > Experience amounts by source\nThe following mobs and similar entities do not drop experience when killed:\n\n[4] Drops > Types of drops > Common drops\nCommon drops may appear at the location of a mob at the moment it receives fatal damage. Most mobs have certain items that they may drop when killed. Some common drops, such as leather, don't always drop, but have a large chance (at least 50%, depending on the drop range) to do so. Some common drops, such as blaze rods, don't drop at all if the mob was not killed by the player.\nEach of these items has a drop range, which is a random uniform distribution of numbers of items that drop. For example, a cow drops 0–2 leather items and 1–3 raw beef items. Because the range for leather includes 0, there is a 1⁄3 chance of no leather being dropped.\nA baby animal does not drop any common drops upon death.\n\n[5] Drops > Types of drops > Experience orbs\nExperience orbs drop only if a mob dies less than five seconds (100 game ticks) after being attacked (melee, bow, snowballs, eggs, and potions causing instant damage) by a player or by a player's pet wolf, though not by a player-activated dispenser. Their total value is the specific amount of experience granted by killing that mob. They are also dropped from a thrown bottle o' enchanting. Collected experience accumulates into levels which can be used for enchanting or repairing, or is split equally between accumulating levels and repairing the held tool if said tool is enchanted with Mending.\nUnlike other drops, such as items, experience orbs appear at the location of the mob's corpse at the moment it disappears in a puff of smoke.‌[BE  only] Experience orbs move toward any nearby players.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Experience",
+        "section": "Sources"
+      },
+      {
+        "n": 2,
+        "title": "Experience",
+        "section": "Sources"
+      },
+      {
+        "n": 3,
+        "title": "Experience",
+        "section": "Experience orbs > Experience amounts by source"
+      },
+      {
+        "n": 4,
+        "title": "Drops",
+        "section": "Types of drops > Common drops"
+      },
+      {
+        "n": 5,
+        "title": "Drops",
+        "section": "Types of drops > Experience orbs"
+      }
+    ],
+    "seconds": 7.9
+  },
+  {
+    "question": "What happens to a Totem of Undying after it saves me?",
+    "kind": "qualitative_spot_check",
+    "answer": "After using a Totem of Undying to save you from death, the totem is consumed and disappears. This happens when you take fatal damage while holding the totem, and it is then used up, meaning you can no longer use it again until you obtain another one [1].",
+    "tool_calls": [],
+    "passages": "[1] Tutorial:Advancement guide/Adventure tab > Postmortal\nUse a Totem of Undying to cheat death\nRequirements: Take fatal damage while holding a totem of undying.\nYou need a totem of undying. These drop from evokers, which spawn only in woodland mansions or during a raid. Then, if you take fatal damage while holding the totem of undying in either hand (switch between hands by pressing F, better for dual wielding), you will not actually die; instead, you will use up your totem. Your health will regenerate (from Absorption and you gaining 1HP) and you will get the advancement. Any source of damage counts except for void damage, because totems can't save you from dying in the void.\n\n[2] Tutorial:Defeating the ender dragon > Equipment checklist > Optional items\nTridents are good weapons for the fight as well, but they should have Loyalty. You can also use Riptide to boost yourself up with the help of a water bucket. Note: If your trident goes into the void, it does not return even if it is enchanted with Loyalty.‌[Java Edition  only]\nHaving a totem of undying in your offhand saves you from death once. This can be helpful if things go wrong, but note that totems don't protect from falling into the void. You can get totems of undying from killing an evoker in a woodland mansion or during a village raid.\nHaving wood can allow you to craft chests, which can ultimately allow you to craft shulker boxes from the shulker shells that you get from End cities.\n\n[3] Tutorial:Achievement guide > Cheating Death > Use the Totem of Undying to cheat death\nWhen you have the totem of undying, die while holding it in your hand or offhand. An easy way to die is by drowning or fall damage. Make sure to take off all your armor.\n\n[4] Tutorial:Exploring a Nether fortress > Preparing the equipment > Fire Resistance\nTotems of undying can give you Fire Resistance. However, totems of undying are rare and can only be found by killing an evoker, a rare and powerful mob. You will also have to die for the totem to activate and give you Fire Resistance. You will likely not have Fire Resistance on your first time through, but once you get blaze rods (see 'Potions' below), make Fire Resistance potions as quickly as possible.\n\n[5] Tutorial:Achievement guide > Cheating Death > Use the Totem of Undying to cheat death\nTotems of undying can be dropped by evokers. There are 2 ways to find evokers:\nFind a woodland mansion (this can be done easily by buying a woodland explorer map from a master-level cartographer). On the second and third floor, some evokers can spawn.\nIf you are on Normal or Hard difficulty, you can start a raid. This can be done by drinking an ominous bottle while in a village. Ominous bottles are dropped by pillager captains, which can rarely spawn near you, or spawn in a pillager outpost. Ominous bottles can also be ejected by vaults in trial chambers. When the raid has started, some evokers will spawn on waves 5 and beyond.\nKill an evoker to get a totem of undying. Be aware, evokers are tough enemies. Attack them with enchanted diamond or netherite armor and an enchanted diamond or netherite sword. Kill them as fast as possible, to prevent them from spawning vexes.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "Tutorial:Advancement guide/Adventure tab",
+        "section": "Postmortal"
+      },
+      {
+        "n": 2,
+        "title": "Tutorial:Defeating the ender dragon",
+        "section": "Equipment checklist > Optional items"
+      },
+      {
+        "n": 3,
+        "title": "Tutorial:Achievement guide",
+        "section": "Cheating Death > Use the Totem of Undying to cheat death"
+      },
+      {
+        "n": 4,
+        "title": "Tutorial:Exploring a Nether fortress",
+        "section": "Preparing the equipment > Fire Resistance"
+      },
+      {
+        "n": 5,
+        "title": "Tutorial:Achievement guide",
+        "section": "Cheating Death > Use the Totem of Undying to cheat death"
+      }
+    ],
+    "seconds": 9.08
+  },
+  {
+    "question": "Who won the 2022 FIFA World Cup?",
+    "kind": "qualitative_spot_check",
+    "answer": "I do not know.",
+    "tool_calls": [],
+    "passages": "[1] 2023 Mob Vote Event\nThe 2023 Mob Vote Event was an event server that was hosted as part of Minecraft Live 2023, where players could participate in the yearly mob vote. There were two islands on the mob vote server. Players could travel the two islands by taking the boat found in the right side of the map. Each parkour had multiple checkpoints and level of difficulty. To complete the parkour the player had to ring the bell that was placed on top of the mob statues.\n\n[2] Mentioned features > Brief mentions > Mentioned in 2022\nRevamped combat.\nWither-proof moveable blocks.\nSnails.\nMaking red mushrooms poisonous, to reflect the real-life mushroom they're based on.\nStacked cakes.\nSloths.\n\n[3] April Fools' Day jokes > List of April Fools' jokes > 2022\nFor April Fools 2022, Mojang Studios released a \"One Block At A Time\" snapshot (22w13oneBlockAtATime), which replaces the inventory with holding blocks, items or mobs function directly, hence the name \"One Block at a Time\".\n\n[4] Mentioned features/Red Dragon > History\nOn October 22, 2013, Nathan Adams tweeted that the red dragon is shelved and not in development. After being asked about it again on December 15, 2013, he replied on Reddit that the red dragon would be added at some point, but not \"right now\".\nIn November 2022, Brandon Pearce joked about the red dragon by pointing out that the ender dragon looks red when being damaged.\nOn February 24, 2026, Jens Bergensten was asked when the last time anyone at Mojang Studios seriously discussed the red dragon, where he said that they still do occasionally, but not from a development perspective.\n\n[5] Bedrock Edition > Development > Beta and Preview test versions\nStarting on January 31, 2022, the beta program was expanded to other platforms, starting with iOS and iPadOS, with Minecraft Preview. The previous beta program through Xbox Insider Hub has been phased out and replaced by Minecraft Preview.\nPlayers can also test unfinished or work-in-progress features using Experimental Gameplay in release versions, features that can be turned on through world settings, but once on, it cannot be turned off again in that world.",
+    "sources": [
+      {
+        "n": 1,
+        "title": "2023 Mob Vote Event",
+        "section": ""
+      },
+      {
+        "n": 2,
+        "title": "Mentioned features",
+        "section": "Brief mentions > Mentioned in 2022"
+      },
+      {
+        "n": 3,
+        "title": "April Fools' Day jokes",
+        "section": "List of April Fools' jokes > 2022"
+      },
+      {
+        "n": 4,
+        "title": "Mentioned features/Red Dragon",
+        "section": "History"
+      },
+      {
+        "n": 5,
+        "title": "Bedrock Edition",
+        "section": "Development > Beta and Preview test versions"
+      }
+    ],
+    "seconds": 8.13
+  }
+]

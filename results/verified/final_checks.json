@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-07",
+  "root_tests": {
+    "passed": 23,
+    "failed": 0,
+    "skipped": 0
+  },
+  "clean_copy_tests": {
+    "passed": 23,
+    "failed": 0,
+    "skipped": 0,
+    "recipe_cache_added_only_for_check": true
+  },
+  "source_validation_cases": 60,
+  "compilation": "passed",
+  "dependency_check": "no broken requirements",
+  "local_preflight": "ready, no problems",
+  "saved_source_config_hashes": {
+    "dev": "match source_v1",
+    "test": "match source_v1",
+    "tool": "match source_v1",
+    "tool_final": "match source_v2"
+  },
+  "historical_resume": "passed, zero new generated answers",
+  "clean_copy_report": "reproduced corrected test metrics",
+  "clean_copy_demo_without_index": "expected missing-data message, exit 1",
+  "archive_crc_manifest": "passed initial package; final package rechecks hashes",
+  "training_performed": false,
+  "new_model_downloads": false,
+  "paid_api_calls": false,
+  "human_validation_complete": false,
+  "source_sha256": {
+    "mcqa.py": "9eea81c00c9aed677c005e263aa039fdd4bf5aa6b61159ab1edd8fa7c1afa6be",
+    "eval.py": "a875711e4e4eae9ae87c2c719f69c81d292df20a19af926aa64e047224f1cfcc",
+    "demo.py": "2e12563b838b1f7ab459bd9fceb20461ab90c6df77f2f4e012ba30ec798b34bc",
+    "test_mcqa.py": "b179dcaadf7c7629256a7b46d14569945de9a026f5699745d5f3f6dae9399eec",
+    "test_eval.py": "1bf7131e93ece462658327bcf0b8ebbd7d2674832979a37ee6cbaf510a5667b7",
+    "scripts\\benchmark_eval.py": "aa13610ba362ebe2b3c0d1c1d9704ed9099e8abe09a1935d7c0da5d0cb4f4053",
+    "scripts\\tool_benchmark.py": "609b97c8650e3a6a62cab7b44807f56721134a855a6e0f308fdb0da71639b568",
+    "scripts\\resume_gameplay.py": "e7a42b82752e267237914be2216487e25bf7a9e5e9fd390168bfa7be9ea16a3c",
+    "data\\java_benchmark.jsonl": "5a9b8743462d255b2babb29b724b5bb70daa6d673fac9333c2875c0442179795"
+  }
+}

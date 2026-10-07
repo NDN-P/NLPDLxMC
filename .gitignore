@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+# rebuilt by `python mcqa.py fetch` / `python mcqa.py index N`
+data/*.parquet
+data/*.npy
+data/chunks_*.jsonl
+data/crafting.json
+data/fetch.log
+# course materials and personal folders that are not part of the project code
+Class NLP with DL/
+Test/
+claudetodo.md
+dist/

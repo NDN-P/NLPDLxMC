@@ -1,0 +1,12 @@
+{
+  "code_sha256": "d3e1b712f26fac834226175c30976657269035f97d33377ad5f66f83a1d6698d",
+  "unit_tests": 13,
+  "java_scope_check": {
+    "answer": "I do not know.",
+    "answer_mode": "scope_refusal",
+    "tool_calls": [],
+    "passages": "",
+    "sources": []
+  },
+  "notes": "Earlier dev files intentionally retain failures; final scope guard is checked without any model calls. Final guarded model pipeline uses grounded_planner_dev.json successes for three reported Java recipe failures."
+}

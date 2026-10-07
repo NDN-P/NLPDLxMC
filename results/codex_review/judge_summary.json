@@ -1,0 +1,8 @@
+{
+  "scope": "12 saved correctness verdicts regenerated; six mixed uncertainty answers checked for faithfulness. Automatic diagnostics, no human validation.",
+  "n_correctness": 12,
+  "same_verdict": 12,
+  "omitted_claims_verdicts": {
+    "partly": 6
+  }
+}

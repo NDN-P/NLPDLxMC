@@ -1,0 +1,76 @@
+[
+  {
+    "question": "How much iron does a hopper need?",
+    "calls": [],
+    "seconds": 4.71
+  },
+  {
+    "question": "How many milk buckets do I need for 2 cakes?",
+    "calls": [],
+    "seconds": 4.46
+  },
+  {
+    "question": "How many iron blocks do I need to craft 2 anvils? Reply with the number only.",
+    "calls": [
+      {
+        "args": {
+          "item": "anvil",
+          "count": 2
+        },
+        "result": {
+          "answer": "To craft 2 Anvil you need 6 Block of Iron, 8 Iron Ingot in total (2 crafts, each makes 1).",
+          "item": "Anvil",
+          "count": 2,
+          "crafts": 2,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Block of Iron": 6,
+            "Iron Ingot": 8
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "seconds": 4.45
+  },
+  {
+    "question": "How many planks do I need for 3 chests?",
+    "calls": [
+      {
+        "args": {
+          "item": "chest",
+          "count": 3
+        },
+        "result": {
+          "answer": "To craft 3 Chest you need 24 any Planks (e.g. Oak Planks) in total (3 crafts, each makes 1).",
+          "item": "Chest",
+          "count": 3,
+          "crafts": 3,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "any Planks (e.g. Oak Planks)": 24
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "seconds": 4.94
+  },
+  {
+    "question": "How do I breed cows?",
+    "calls": [],
+    "seconds": 6.01
+  },
+  {
+    "question": "How many diamonds does a diamond ore drop?",
+    "calls": [],
+    "seconds": 4.48
+  },
+  {
+    "question": "What is the recipe for a smithing template?",
+    "calls": [],
+    "seconds": 4.54
+  }
+]

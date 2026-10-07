@@ -1,0 +1,102 @@
+[
+  {
+    "id": "java26.3-001",
+    "question": "In which dimension can a player sleep in a bed?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-002",
+    "question": "Does sleeping through the night make crops grow or furnaces smelt faster?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-003",
+    "question": "Do campfires need fuel to cook food?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-004",
+    "question": "Can a hopper load raw food into a campfire?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-005",
+    "question": "What boots let a player walk on top of powder snow without falling through?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-006",
+    "question": "How can I collect placed powder snow to move it somewhere else?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-007",
+    "question": "Which block creates an upward bubble elevator under source water?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-008",
+    "question": "Why does my bubble column stop when it reaches flowing water?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-009",
+    "question": "Which villager profession uses a composter as its job site block?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-010",
+    "question": "Where should I put a hopper to automatically collect bone meal from a composter?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-011",
+    "question": "Can I keep water in a cauldron in the Nether?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-012",
+    "question": "How can I wash dye off leather armor?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-013",
+    "question": "Can a blast furnace cook food as well as smelt metal?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-014",
+    "question": "Does a blast furnace smelt more items per fuel than a normal furnace?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-015",
+    "question": "Is an item frame treated as an entity in Java Edition?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-016",
+    "question": "How do I place an item frame on a chest without opening the chest?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-051",
+    "question": "What exact items are in my single-player inventory right now?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-052",
+    "question": "What are the exact coordinates of my current bed respawn point?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-053",
+    "question": "In Bedrock Edition, how do I use cauldron potions to make tipped arrows?",
+    "calls": []
+  },
+  {
+    "id": "java26.3-054",
+    "question": "In Minecraft Education, how do I synthesize cobalt in the element constructor?",
+    "calls": []
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "method": "Strict numeric answer with optional [tool] citation; historical verbose true answers require separate semantic review.",
+  "summary": {
+    "tool_run1_before_fix.json": {
+      "False": {
+        "n": 40,
+        "saved_correct": 2,
+        "strict_correct": 2
+      },
+      "True": {
+        "n": 40,
+        "saved_correct": 15,
+        "strict_correct": 11
+      }
+    },
+    "tool.json": {
+      "False": {
+        "n": 40,
+        "saved_correct": 1,
+        "strict_correct": 1
+      },
+      "True": {
+        "n": 40,
+        "saved_correct": 35,
+        "strict_correct": 35
+      }
+    },
+    "tool_dev.json": {
+      "False": {
+        "n": 40,
+        "saved_correct": 0,
+        "strict_correct": 0
+      },
+      "True": {
+        "n": 40,
+        "saved_correct": 38,
+        "strict_correct": 38
+      }
+    }
+  },
+  "changed_rows": [
+    {
+      "file": "tool_run1_before_fix.json",
+      "question": "How many Mangrove Boat do I need to craft 2 Mangrove Boat with Chest? Reply with the number only.",
+      "answer": "I do not know how many Mangrove Boats are needed to craft 2 Mangrove Boats with Chest, as there is no information in the provided passages about crafting Mangrove Boats or Mangrove Boats with Chest. Additionally, the craft tool is not available for this specific query. Therefore, I cannot provide a valid number based on the given data.\n\nAnswer: I do not know.",
+      "gold": 2,
+      "saved_correct": true,
+      "strict_correct": false
+    },
+    {
+      "file": "tool_run1_before_fix.json",
+      "question": "How many Cinnabar do I need to craft 3 Cinnabar Slab? Reply with the number only.",
+      "answer": "I do not know how many Cinnabar are needed to craft 3 Cinnabar Slab, as there is no relevant passage or recipe provided in the given information. [craft tool] is not applicable here because the query involves an item (Cinnabar) not present in the provided passages or recipe files. Therefore, I cannot determine the required amount.",
+      "gold": 3,
+      "saved_correct": true,
+      "strict_correct": false
+    },
+    {
+      "file": "tool_run1_before_fix.json",
+      "question": "How many Jungle Planks do I need to craft 10 Jungle Button? Reply with the number only.",
+      "answer": "I do not know how many Jungle Planks are needed to craft 10 Jungle Buttons based on the provided passages. The passages do not contain information about crafting Jungle Buttons or their ingredient requirements. \n\n[craft tool] is not applicable here because there is no recipe for Jungle Buttons in the provided data. Therefore, I cannot determine the required number of Jungle Planks. \n\nAnswer: I do not know.",
+      "gold": 10,
+      "saved_correct": true,
+      "strict_correct": false
+    },
+    {
+      "file": "tool_run1_before_fix.json",
+      "question": "How many Melon Slice do I need to craft 15 Melon Seeds? Reply with the number only.",
+      "answer": "I do not know how many melon slices are needed to craft melon seeds, as the provided passages do not specify a crafting recipe for melon seeds from melon slices. The passages mention that melon slices yield one seed each when placed in a crafting grid, but do not state how many melon slices are required to produce 15 melon seeds. Therefore, I cannot determine the number based on the given information.\n\nAnswer: I do not know.",
+      "gold": 15,
+      "saved_correct": true,
+      "strict_correct": false
+    }
+  ]
+}

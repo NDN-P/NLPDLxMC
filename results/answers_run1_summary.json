@@ -1,0 +1,29 @@
+{
+ "seed": 1,
+ "chunk_size": 256,
+ "judge_model": "qwen3:4b-instruct",
+ "bertscore_model": "distilroberta-base (rescaled with baseline)",
+ "summary": {
+  "none": {
+   "n": 100,
+   "bertscore_f1": 0.014,
+   "judge_correct": 4.5,
+   "judge_faithful": 5.0,
+   "judge_unparsed": 0
+  },
+  "dense": {
+   "n": 100,
+   "bertscore_f1": 0.329,
+   "judge_correct": 3.52,
+   "judge_faithful": 4.515,
+   "judge_unparsed": 0
+  },
+  "rerank": {
+   "n": 100,
+   "bertscore_f1": 0.32,
+   "judge_correct": 3.66,
+   "judge_faithful": 4.216,
+   "judge_unparsed": 0
+  }
+ }
+}

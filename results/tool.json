@@ -1,0 +1,1417 @@
+{
+ "seed": 0,
+ "dev": false,
+ "game_version": "26.3",
+ "scorer": "the number only, or the number right before the ingredient's name; refusals never count",
+ "summary": {
+  "without_tool": {
+   "n": 40,
+   "correct": 1,
+   "accuracy": 2.5,
+   "ci": [
+    0.4,
+    12.9
+   ],
+   "called_tool": 0,
+   "called_by_fallback": 0
+  },
+  "with_tool": {
+   "n": 40,
+   "correct": 33,
+   "accuracy": 82.5,
+   "ci": [
+    68.0,
+    91.3
+   ],
+   "called_tool": 33,
+   "called_by_fallback": 10
+  },
+  "false_calls_on_other_questions": {
+   "n": 40,
+   "called": 0
+  }
+ },
+ "false_calls": [],
+ "rows": [
+  {
+   "question": "How many Light Blue Dye do I need to craft 10 Light Blue Terracotta? Reply with the number only.",
+   "gold": 2,
+   "item": "minecraft:light_blue_terracotta",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Light Blue Dye do I need to craft 10 Light Blue Terracotta? Reply with the number only.",
+   "gold": 2,
+   "item": "minecraft:light_blue_terracotta",
+   "use_tool": true,
+   "answer": "2",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "light_blue_terracotta",
+      "count": 10
+     },
+     "result": {
+      "answer": "To craft 10 Light Blue Terracotta you need 16 Terracotta, 2 Light Blue Dye in total (2 crafts, each makes 8).",
+      "item": "Light Blue Terracotta",
+      "count": 10,
+      "crafts": 2,
+      "makes_per_craft": 8,
+      "ingredients": {
+       "Terracotta": 16,
+       "Light Blue Dye": 2
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Honeycomb do I need to craft 9 Waxed Exposed Copper Trapdoor? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:waxed_exposed_copper_trapdoor",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Honeycomb do I need to craft 9 Waxed Exposed Copper Trapdoor? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:waxed_exposed_copper_trapdoor",
+   "use_tool": true,
+   "answer": "9",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "waxed_exposed_copper_trapdoor",
+      "count": 9
+     },
+     "result": {
+      "answer": "To craft 9 Waxed Exposed Copper Trapdoor you need 9 Exposed Copper Trapdoor, 9 Honeycomb in total (9 crafts, each makes 1).",
+      "item": "Waxed Exposed Copper Trapdoor",
+      "count": 9,
+      "crafts": 9,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Exposed Copper Trapdoor": 9,
+       "Honeycomb": 9
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Mangrove Boat do I need to craft 2 Mangrove Boat with Chest? Reply with the number only.",
+   "gold": 2,
+   "item": "minecraft:mangrove_chest_boat",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Mangrove Boat do I need to craft 2 Mangrove Boat with Chest? Reply with the number only.",
+   "gold": 2,
+   "item": "minecraft:mangrove_chest_boat",
+   "use_tool": true,
+   "answer": "2",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "mangrove boat with chest",
+      "count": 2
+     },
+     "result": {
+      "answer": "To craft 2 Mangrove Boat with Chest you need 2 Chest, 2 Mangrove Boat in total (2 crafts, each makes 1).",
+      "item": "Mangrove Boat with Chest",
+      "count": 2,
+      "crafts": 2,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Chest": 2,
+       "Mangrove Boat": 2
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Honeycomb do I need to craft 3 Beehive? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:beehive",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Honeycomb do I need to craft 3 Beehive? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:beehive",
+   "use_tool": true,
+   "answer": "9",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "beehive",
+      "count": 3
+     },
+     "result": {
+      "answer": "To craft 3 Beehive you need 18 any Planks (e.g. Oak Planks), 9 Honeycomb in total (3 crafts, each makes 1).",
+      "item": "Beehive",
+      "count": 3,
+      "crafts": 3,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "any Planks (e.g. Oak Planks)": 18,
+       "Honeycomb": 9
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Emerald do I need to craft 13 Block of Emerald? Reply with the number only.",
+   "gold": 117,
+   "item": "minecraft:emerald_block",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Emerald do I need to craft 13 Block of Emerald? Reply with the number only.",
+   "gold": 117,
+   "item": "minecraft:emerald_block",
+   "use_tool": true,
+   "answer": "117",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "emerald_block",
+      "count": 13
+     },
+     "result": {
+      "answer": "To craft 13 Block of Emerald you need 117 Emerald in total (13 crafts, each makes 1).",
+      "item": "Block of Emerald",
+      "count": 13,
+      "crafts": 13,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Emerald": 117
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Pink Concrete do I need to craft 11 Pink Concrete Stairs? Reply with the number only.",
+   "gold": 18,
+   "item": "minecraft:pink_concrete_stairs",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Pink Concrete do I need to craft 11 Pink Concrete Stairs? Reply with the number only.",
+   "gold": 18,
+   "item": "minecraft:pink_concrete_stairs",
+   "use_tool": true,
+   "answer": "18",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "pink_concrete_stairs",
+      "count": 11
+     },
+     "result": {
+      "answer": "To craft 11 Pink Concrete Stairs you need 18 Pink Concrete in total (3 crafts, each makes 4).",
+      "item": "Pink Concrete Stairs",
+      "count": 11,
+      "crafts": 3,
+      "makes_per_craft": 4,
+      "ingredients": {
+       "Pink Concrete": 18
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Oxidized Copper do I need to craft 15 Oxidized Cut Copper? Reply with the number only.",
+   "gold": 16,
+   "item": "minecraft:oxidized_cut_copper",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Oxidized Copper do I need to craft 15 Oxidized Cut Copper? Reply with the number only.",
+   "gold": 16,
+   "item": "minecraft:oxidized_cut_copper",
+   "use_tool": true,
+   "answer": "16",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "oxidized cut copper",
+      "count": 15
+     },
+     "result": {
+      "answer": "To craft 15 Oxidized Cut Copper you need 16 Oxidized Copper in total (4 crafts, each makes 4).",
+      "item": "Oxidized Cut Copper",
+      "count": 15,
+      "crafts": 4,
+      "makes_per_craft": 4,
+      "ingredients": {
+       "Oxidized Copper": 16
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many White Wool do I need to craft 5 Lime Wool? Reply with the number only.",
+   "gold": 5,
+   "item": "minecraft:lime_wool",
+   "use_tool": false,
+   "answer": "1",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many White Wool do I need to craft 5 Lime Wool? Reply with the number only.",
+   "gold": 5,
+   "item": "minecraft:lime_wool",
+   "use_tool": true,
+   "answer": "5",
+   "tool_calls": [],
+   "correct": true
+  },
+  {
+   "question": "How many Weathered Cut Copper do I need to craft 13 Weathered Cut Copper Slab? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:weathered_cut_copper_slab",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Weathered Cut Copper do I need to craft 13 Weathered Cut Copper Slab? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:weathered_cut_copper_slab",
+   "use_tool": true,
+   "answer": "9",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "Weathered Cut Copper Slab",
+      "count": 13
+     },
+     "result": {
+      "answer": "To craft 13 Weathered Cut Copper Slab you need 9 Weathered Cut Copper in total (3 crafts, each makes 6).",
+      "item": "Weathered Cut Copper Slab",
+      "count": 13,
+      "crafts": 3,
+      "makes_per_craft": 6,
+      "ingredients": {
+       "Weathered Cut Copper": 9
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Stick do I need to craft 5 Golden Shovel? Reply with the number only.",
+   "gold": 10,
+   "item": "minecraft:golden_shovel",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Stick do I need to craft 5 Golden Shovel? Reply with the number only.",
+   "gold": 10,
+   "item": "minecraft:golden_shovel",
+   "use_tool": true,
+   "answer": "10 [tool]",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "golden_shovel",
+      "count": 5
+     },
+     "result": {
+      "answer": "To craft 5 Golden Shovel you need 5 Gold Ingot, 10 Stick in total (5 crafts, each makes 1).",
+      "item": "Golden Shovel",
+      "count": 5,
+      "crafts": 5,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Gold Ingot": 5,
+       "Stick": 10
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Sand do I need to craft 5 Orange Concrete Powder? Reply with the number only.",
+   "gold": 4,
+   "item": "minecraft:orange_concrete_powder",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Sand do I need to craft 5 Orange Concrete Powder? Reply with the number only.",
+   "gold": 4,
+   "item": "minecraft:orange_concrete_powder",
+   "use_tool": true,
+   "answer": "4",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "orange_concrete_powder",
+      "count": 5
+     },
+     "result": {
+      "answer": "To craft 5 Orange Concrete Powder you need 1 Orange Dye, 4 Sand, 4 Gravel in total (1 craft, each makes 8).",
+      "item": "Orange Concrete Powder",
+      "count": 5,
+      "crafts": 1,
+      "makes_per_craft": 8,
+      "ingredients": {
+       "Orange Dye": 1,
+       "Sand": 4,
+       "Gravel": 4
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Jungle Planks do I need to craft 14 Jungle Fence Gate? Reply with the number only.",
+   "gold": 28,
+   "item": "minecraft:jungle_fence_gate",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Jungle Planks do I need to craft 14 Jungle Fence Gate? Reply with the number only.",
+   "gold": 28,
+   "item": "minecraft:jungle_fence_gate",
+   "use_tool": true,
+   "answer": "28",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "jungle_fence_gate",
+      "count": 14
+     },
+     "result": {
+      "answer": "To craft 14 Jungle Fence Gate you need 56 Stick, 28 Jungle Planks in total (14 crafts, each makes 1).",
+      "item": "Jungle Fence Gate",
+      "count": 14,
+      "crafts": 14,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Stick": 56,
+       "Jungle Planks": 28
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Purple Dye do I need to craft 14 Purple Wool? Reply with the number only.",
+   "gold": 14,
+   "item": "minecraft:purple_wool",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Purple Dye do I need to craft 14 Purple Wool? Reply with the number only.",
+   "gold": 14,
+   "item": "minecraft:purple_wool",
+   "use_tool": true,
+   "answer": "14",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "purple_wool",
+      "count": 14
+     },
+     "result": {
+      "answer": "To craft 14 Purple Wool you need 14 Purple Dye, 14 White Wool in total (14 crafts, each makes 1).",
+      "item": "Purple Wool",
+      "count": 14,
+      "crafts": 14,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Purple Dye": 14,
+       "White Wool": 14
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Dark Oak Planks do I need to craft 3 Dark Oak Slab? Reply with the number only.",
+   "gold": 3,
+   "item": "minecraft:dark_oak_slab",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Dark Oak Planks do I need to craft 3 Dark Oak Slab? Reply with the number only.",
+   "gold": 3,
+   "item": "minecraft:dark_oak_slab",
+   "use_tool": true,
+   "answer": "3",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "dark_oak_slab",
+      "count": 3
+     },
+     "result": {
+      "answer": "To craft 3 Dark Oak Slab you need 3 Dark Oak Planks in total (1 craft, each makes 6).",
+      "item": "Dark Oak Slab",
+      "count": 3,
+      "crafts": 1,
+      "makes_per_craft": 6,
+      "ingredients": {
+       "Dark Oak Planks": 3
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Pale Oak Planks do I need to craft 7 Pale Oak Trapdoor? Reply with the number only.",
+   "gold": 24,
+   "item": "minecraft:pale_oak_trapdoor",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Pale Oak Planks do I need to craft 7 Pale Oak Trapdoor? Reply with the number only.",
+   "gold": 24,
+   "item": "minecraft:pale_oak_trapdoor",
+   "use_tool": true,
+   "answer": "24",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "Pale Oak Trapdoor",
+      "count": 7
+     },
+     "result": {
+      "answer": "To craft 7 Pale Oak Trapdoor you need 24 Pale Oak Planks in total (4 crafts, each makes 2).",
+      "item": "Pale Oak Trapdoor",
+      "count": 7,
+      "crafts": 4,
+      "makes_per_craft": 2,
+      "ingredients": {
+       "Pale Oak Planks": 24
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Cinnabar do I need to craft 3 Cinnabar Slab? Reply with the number only.",
+   "gold": 3,
+   "item": "minecraft:cinnabar_slab",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Cinnabar do I need to craft 3 Cinnabar Slab? Reply with the number only.",
+   "gold": 3,
+   "item": "minecraft:cinnabar_slab",
+   "use_tool": true,
+   "answer": "3",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "cinnabar slab",
+      "count": 3
+     },
+     "result": {
+      "answer": "To craft 3 Cinnabar Slab you need 3 Cinnabar in total (1 craft, each makes 6).",
+      "item": "Cinnabar Slab",
+      "count": 3,
+      "crafts": 1,
+      "makes_per_craft": 6,
+      "ingredients": {
+       "Cinnabar": 3
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Iron Ingot do I need to craft 10 Flint and Steel? Reply with the number only.",
+   "gold": 10,
+   "item": "minecraft:flint_and_steel",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Iron Ingot do I need to craft 10 Flint and Steel? Reply with the number only.",
+   "gold": 10,
+   "item": "minecraft:flint_and_steel",
+   "use_tool": true,
+   "answer": "10",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "flint_and_steel",
+      "count": 10
+     },
+     "result": {
+      "answer": "To craft 10 Flint and Steel you need 10 Iron Ingot, 10 Flint in total (10 crafts, each makes 1).",
+      "item": "Flint and Steel",
+      "count": 10,
+      "crafts": 10,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Iron Ingot": 10,
+       "Flint": 10
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Cinnabar do I need to craft 13 Cinnabar Stairs? Reply with the number only.",
+   "gold": 24,
+   "item": "minecraft:cinnabar_stairs",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Cinnabar do I need to craft 13 Cinnabar Stairs? Reply with the number only.",
+   "gold": 24,
+   "item": "minecraft:cinnabar_stairs",
+   "use_tool": true,
+   "answer": "24",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "cinnabar_stairs",
+      "count": 13
+     },
+     "result": {
+      "answer": "To craft 13 Cinnabar Stairs you need 24 Cinnabar in total (4 crafts, each makes 4).",
+      "item": "Cinnabar Stairs",
+      "count": 13,
+      "crafts": 4,
+      "makes_per_craft": 4,
+      "ingredients": {
+       "Cinnabar": 24
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Exposed Copper Door do I need to craft 10 Waxed Exposed Copper Door? Reply with the number only.",
+   "gold": 10,
+   "item": "minecraft:waxed_exposed_copper_door",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Exposed Copper Door do I need to craft 10 Waxed Exposed Copper Door? Reply with the number only.",
+   "gold": 10,
+   "item": "minecraft:waxed_exposed_copper_door",
+   "use_tool": true,
+   "answer": "10",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "Waxed Exposed Copper Door",
+      "count": 10
+     },
+     "result": {
+      "answer": "To craft 10 Waxed Exposed Copper Door you need 10 Exposed Copper Door, 10 Honeycomb in total (10 crafts, each makes 1).",
+      "item": "Waxed Exposed Copper Door",
+      "count": 10,
+      "crafts": 10,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Exposed Copper Door": 10,
+       "Honeycomb": 10
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Glass do I need to craft 15 Brown Stained Glass? Reply with the number only.",
+   "gold": 16,
+   "item": "minecraft:brown_stained_glass",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Glass do I need to craft 15 Brown Stained Glass? Reply with the number only.",
+   "gold": 16,
+   "item": "minecraft:brown_stained_glass",
+   "use_tool": true,
+   "answer": "16",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "brown_stained_glass",
+      "count": 15
+     },
+     "result": {
+      "answer": "To craft 15 Brown Stained Glass you need 16 Glass, 2 Brown Dye in total (2 crafts, each makes 8).",
+      "item": "Brown Stained Glass",
+      "count": 15,
+      "crafts": 2,
+      "makes_per_craft": 8,
+      "ingredients": {
+       "Glass": 16,
+       "Brown Dye": 2
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Redstone Dust do I need to craft 14 Block of Redstone? Reply with the number only.",
+   "gold": 126,
+   "item": "minecraft:redstone_block",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Redstone Dust do I need to craft 14 Block of Redstone? Reply with the number only.",
+   "gold": 126,
+   "item": "minecraft:redstone_block",
+   "use_tool": true,
+   "answer": "126 [tool]",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "redstone_block",
+      "count": 14
+     },
+     "result": {
+      "answer": "To craft 14 Block of Redstone you need 126 Redstone Dust in total (14 crafts, each makes 1).",
+      "item": "Block of Redstone",
+      "count": 14,
+      "crafts": 14,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Redstone Dust": 126
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Stick do I need to craft 9 Wooden Shovel? Reply with the number only.",
+   "gold": 18,
+   "item": "minecraft:wooden_shovel",
+   "use_tool": false,
+   "answer": "9",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Stick do I need to craft 9 Wooden Shovel? Reply with the number only.",
+   "gold": 18,
+   "item": "minecraft:wooden_shovel",
+   "use_tool": true,
+   "answer": "18",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "wooden_shovel",
+      "count": 9
+     },
+     "result": {
+      "answer": "To craft 9 Wooden Shovel you need 9 any Planks (e.g. Oak Planks), 18 Stick in total (9 crafts, each makes 1).",
+      "item": "Wooden Shovel",
+      "count": 9,
+      "crafts": 9,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "any Planks (e.g. Oak Planks)": 9,
+       "Stick": 18
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Diorite do I need to craft 11 Diorite Wall? Reply with the number only.",
+   "gold": 12,
+   "item": "minecraft:diorite_wall",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Diorite do I need to craft 11 Diorite Wall? Reply with the number only.",
+   "gold": 12,
+   "item": "minecraft:diorite_wall",
+   "use_tool": true,
+   "answer": "12",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "diorite wall",
+      "count": 11
+     },
+     "result": {
+      "answer": "To craft 11 Diorite Wall you need 12 Diorite in total (2 crafts, each makes 6).",
+      "item": "Diorite Wall",
+      "count": 11,
+      "crafts": 2,
+      "makes_per_craft": 6,
+      "ingredients": {
+       "Diorite": 12
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Polished Cinnabar do I need to craft 7 Polished Cinnabar Wall? Reply with the number only.",
+   "gold": 12,
+   "item": "minecraft:polished_cinnabar_wall",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Polished Cinnabar do I need to craft 7 Polished Cinnabar Wall? Reply with the number only.",
+   "gold": 12,
+   "item": "minecraft:polished_cinnabar_wall",
+   "use_tool": true,
+   "answer": "12",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "Polished Cinnabar Wall",
+      "count": 7
+     },
+     "result": {
+      "answer": "To craft 7 Polished Cinnabar Wall you need 12 Polished Cinnabar in total (2 crafts, each makes 6).",
+      "item": "Polished Cinnabar Wall",
+      "count": 7,
+      "crafts": 2,
+      "makes_per_craft": 6,
+      "ingredients": {
+       "Polished Cinnabar": 12
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Sulfur Spike do I need to craft 6 Sulfur? Reply with the number only.",
+   "gold": 24,
+   "item": "minecraft:sulfur",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Sulfur Spike do I need to craft 6 Sulfur? Reply with the number only.",
+   "gold": 24,
+   "item": "minecraft:sulfur",
+   "use_tool": true,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many White Wool do I need to craft 5 Yellow Wool? Reply with the number only.",
+   "gold": 5,
+   "item": "minecraft:yellow_wool",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many White Wool do I need to craft 5 Yellow Wool? Reply with the number only.",
+   "gold": 5,
+   "item": "minecraft:yellow_wool",
+   "use_tool": true,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Red Wool do I need to craft 2 Red Banner? Reply with the number only.",
+   "gold": 12,
+   "item": "minecraft:red_banner",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Red Wool do I need to craft 2 Red Banner? Reply with the number only.",
+   "gold": 12,
+   "item": "minecraft:red_banner",
+   "use_tool": true,
+   "answer": "12",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "red_banner",
+      "count": 2
+     },
+     "result": {
+      "answer": "To craft 2 Red Banner you need 12 Red Wool, 2 Stick in total (2 crafts, each makes 1).",
+      "item": "Red Banner",
+      "count": 2,
+      "crafts": 2,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Red Wool": 12,
+       "Stick": 2
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Diamond do I need to craft 12 Coast Armor Trim Smithing Template? Reply with the number only.",
+   "gold": 42,
+   "item": "minecraft:coast_armor_trim_smithing_template",
+   "use_tool": false,
+   "answer": "84",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Diamond do I need to craft 12 Coast Armor Trim Smithing Template? Reply with the number only.",
+   "gold": 42,
+   "item": "minecraft:coast_armor_trim_smithing_template",
+   "use_tool": true,
+   "answer": "84",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Stick do I need to craft 9 Gray Banner? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:gray_banner",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Stick do I need to craft 9 Gray Banner? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:gray_banner",
+   "use_tool": true,
+   "answer": "9",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "gray_banner",
+      "count": 9
+     },
+     "result": {
+      "answer": "To craft 9 Gray Banner you need 54 Gray Wool, 9 Stick in total (9 crafts, each makes 1).",
+      "item": "Gray Banner",
+      "count": 9,
+      "crafts": 9,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Gray Wool": 54,
+       "Stick": 9
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Iron Ingot do I need to craft 3 Bucket? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:bucket",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Iron Ingot do I need to craft 3 Bucket? Reply with the number only.",
+   "gold": 9,
+   "item": "minecraft:bucket",
+   "use_tool": true,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Ward Armor Trim Smithing Template do I need to craft 14 Ward Armor Trim Smithing Template? Reply with the number only.",
+   "gold": 7,
+   "item": "minecraft:ward_armor_trim_smithing_template",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Ward Armor Trim Smithing Template do I need to craft 14 Ward Armor Trim Smithing Template? Reply with the number only.",
+   "gold": 7,
+   "item": "minecraft:ward_armor_trim_smithing_template",
+   "use_tool": true,
+   "answer": "7",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "Ward Armor Trim Smithing Template",
+      "count": 14
+     },
+     "result": {
+      "answer": "To craft 14 Ward Armor Trim Smithing Template you need 49 Diamond, 7 Ward Armor Trim Smithing Template, 7 Cobbled Deepslate in total (7 crafts, each makes 2).",
+      "item": "Ward Armor Trim Smithing Template",
+      "count": 14,
+      "crafts": 7,
+      "makes_per_craft": 2,
+      "ingredients": {
+       "Diamond": 49,
+       "Ward Armor Trim Smithing Template": 7,
+       "Cobbled Deepslate": 7
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Packed Ice do I need to craft 16 Blue Ice? Reply with the number only.",
+   "gold": 144,
+   "item": "minecraft:blue_ice",
+   "use_tool": false,
+   "answer": "16",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Packed Ice do I need to craft 16 Blue Ice? Reply with the number only.",
+   "gold": 144,
+   "item": "minecraft:blue_ice",
+   "use_tool": true,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Stick do I need to craft 16 Stone Hoe? Reply with the number only.",
+   "gold": 32,
+   "item": "minecraft:stone_hoe",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Stick do I need to craft 16 Stone Hoe? Reply with the number only.",
+   "gold": 32,
+   "item": "minecraft:stone_hoe",
+   "use_tool": true,
+   "answer": "32",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "stone_hoe",
+      "count": 16
+     },
+     "result": {
+      "answer": "To craft 16 Stone Hoe you need 32 any Stone Tool Materials (e.g. Cobblestone), 32 Stick in total (16 crafts, each makes 1).",
+      "item": "Stone Hoe",
+      "count": 16,
+      "crafts": 16,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "any Stone Tool Materials (e.g. Cobblestone)": 32,
+       "Stick": 32
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Honeycomb do I need to craft 15 Honeycomb Block? Reply with the number only.",
+   "gold": 60,
+   "item": "minecraft:honeycomb_block",
+   "use_tool": false,
+   "answer": "15",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Honeycomb do I need to craft 15 Honeycomb Block? Reply with the number only.",
+   "gold": 60,
+   "item": "minecraft:honeycomb_block",
+   "use_tool": true,
+   "answer": "45",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "honeycomb block",
+      "count": 90
+     },
+     "result": {
+      "answer": "To craft 90 Honeycomb Block you need 360 Honeycomb in total (90 crafts, each makes 1).",
+      "item": "Honeycomb Block",
+      "count": 90,
+      "crafts": 90,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Honeycomb": 360
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     },
+     "via": "route"
+    }
+   ],
+   "correct": false
+  },
+  {
+   "question": "How many Oak Planks do I need to craft 16 Oak Trapdoor? Reply with the number only.",
+   "gold": 48,
+   "item": "minecraft:oak_trapdoor",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Oak Planks do I need to craft 16 Oak Trapdoor? Reply with the number only.",
+   "gold": 48,
+   "item": "minecraft:oak_trapdoor",
+   "use_tool": true,
+   "answer": "48",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "oak_trapdoor",
+      "count": 16
+     },
+     "result": {
+      "answer": "To craft 16 Oak Trapdoor you need 48 Oak Planks in total (8 crafts, each makes 2).",
+      "item": "Oak Trapdoor",
+      "count": 16,
+      "crafts": 8,
+      "makes_per_craft": 2,
+      "ingredients": {
+       "Oak Planks": 48
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Stick do I need to craft 15 Poplar Sign? Reply with the number only.",
+   "gold": 5,
+   "item": "minecraft:poplar_sign",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Stick do I need to craft 15 Poplar Sign? Reply with the number only.",
+   "gold": 5,
+   "item": "minecraft:poplar_sign",
+   "use_tool": true,
+   "answer": "5",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "poplar_sign",
+      "count": 15
+     },
+     "result": {
+      "answer": "To craft 15 Poplar Sign you need 30 Poplar Planks, 5 Stick in total (5 crafts, each makes 3).",
+      "item": "Poplar Sign",
+      "count": 15,
+      "crafts": 5,
+      "makes_per_craft": 3,
+      "ingredients": {
+       "Poplar Planks": 30,
+       "Stick": 5
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Wheat do I need to craft 10 Cake? Reply with the number only.",
+   "gold": 30,
+   "item": "minecraft:cake",
+   "use_tool": false,
+   "answer": "3",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Wheat do I need to craft 10 Cake? Reply with the number only.",
+   "gold": 30,
+   "item": "minecraft:cake",
+   "use_tool": true,
+   "answer": "30",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "cake",
+      "count": 10
+     },
+     "result": {
+      "answer": "To craft 10 Cake you need 30 Milk Bucket, 20 Sugar, 10 any Eggs (e.g. Egg), 30 Wheat in total (10 crafts, each makes 1).",
+      "item": "Cake",
+      "count": 10,
+      "crafts": 10,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Milk Bucket": 30,
+       "Sugar": 20,
+       "any Eggs (e.g. Egg)": 10,
+       "Wheat": 30
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Jungle Planks do I need to craft 10 Jungle Button? Reply with the number only.",
+   "gold": 10,
+   "item": "minecraft:jungle_button",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Jungle Planks do I need to craft 10 Jungle Button? Reply with the number only.",
+   "gold": 10,
+   "item": "minecraft:jungle_button",
+   "use_tool": true,
+   "answer": "10",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "jungle_button",
+      "count": 10
+     },
+     "result": {
+      "answer": "To craft 10 Jungle Button you need 10 Jungle Planks in total (10 crafts, each makes 1).",
+      "item": "Jungle Button",
+      "count": 10,
+      "crafts": 10,
+      "makes_per_craft": 1,
+      "ingredients": {
+       "Jungle Planks": 10
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  },
+  {
+   "question": "How many Melon Slice do I need to craft 15 Melon Seeds? Reply with the number only.",
+   "gold": 15,
+   "item": "minecraft:melon_seeds",
+   "use_tool": false,
+   "answer": "15",
+   "tool_calls": [],
+   "correct": true
+  },
+  {
+   "question": "How many Melon Slice do I need to craft 15 Melon Seeds? Reply with the number only.",
+   "gold": 15,
+   "item": "minecraft:melon_seeds",
+   "use_tool": true,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Gray Dye do I need to craft 16 Gray Terracotta? Reply with the number only.",
+   "gold": 2,
+   "item": "minecraft:gray_terracotta",
+   "use_tool": false,
+   "answer": "I do not know.",
+   "tool_calls": [],
+   "correct": false
+  },
+  {
+   "question": "How many Gray Dye do I need to craft 16 Gray Terracotta? Reply with the number only.",
+   "gold": 2,
+   "item": "minecraft:gray_terracotta",
+   "use_tool": true,
+   "answer": "2",
+   "tool_calls": [
+    {
+     "args": {
+      "item": "gray_terracotta",
+      "count": 16
+     },
+     "result": {
+      "answer": "To craft 16 Gray Terracotta you need 16 Terracotta, 2 Gray Dye in total (2 crafts, each makes 8).",
+      "item": "Gray Terracotta",
+      "count": 16,
+      "crafts": 2,
+      "makes_per_craft": 8,
+      "ingredients": {
+       "Terracotta": 16,
+       "Gray Dye": 2
+      },
+      "recipe_variants": 1,
+      "game_version": "26.3"
+     }
+    }
+   ],
+   "correct": true
+  }
+ ]
+}

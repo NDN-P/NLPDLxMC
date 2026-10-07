@@ -1,0 +1,99 @@
+{
+  "scope": "Independent artifact checks; saved metrics are recomputed, not regenerated.",
+  "corpus": {
+    "stored_rows": 400,
+    "missing_rows": 14,
+    "distinct_pages": 312,
+    "words": 816730
+  },
+  "question_counts": {
+    "retrieval": 1000,
+    "answers": 100,
+    "tool": 40,
+    "tool_dev": 40
+  },
+  "retrieval_answers_question_overlap": 0,
+  "tool_dev_test_item_overlap": 0,
+  "answer_summary_matches": true,
+  "tool_saved_scoring_matches": true,
+  "answers_by_variant": {
+    "none": 100,
+    "dense": 100,
+    "rerank": 100
+  },
+  "mixed_uncertainty_candidates": [
+    {
+      "question": "What is the maximum damage reduction a player can achieve with a combination of armor and toughness, given that they have 2 pieces of diamond armor and 1 toughness?",
+      "variant": "rerank",
+      "answer": "The maximum damage reduction a player can achieve with a combination of armor and toughness depends on the incoming damage type and the total armor and armor toughness values. According to passage [1], armor does not protect in a linear fashion, and damage reduction drops off as incoming damage increases, with a minimum of 20% damage reduction. However, passage [2] states that enchantments can provide a maximum damage reduction of 80% (4/5) when the total EPF reaches 20. Since the question specifies only 1 toughness (from diamond armor), and diamond armor has armor toughness (passage [4]), but does not specify the exact value of that toughness, and no specific damage type is given, we cannot calculate a precise maximum reduction. Therefore, based on the information provided, the maximum damage reduction achievable with 2 pieces of diamond armor and 1 toughness is not explicitly defined in the passages. I do not know.",
+      "correct": {
+        "answer_claim": "nothing",
+        "reference_fact": "Maximum damage reduction is 72%.",
+        "verdict": "incorrect"
+      },
+      "faithful": null
+    },
+    {
+      "question": "What is the recommended method for reporting spawn-related issues in the Bedrock Edition of Minecraft?",
+      "variant": "rerank",
+      "answer": "Issues relating to \"Trial Spawner\" are maintained on the bug tracker. Issues should be reported and viewed there. [4] However, the passages do not specify whether the bug tracker is the recommended method for reporting spawn-related issues in Bedrock Edition specifically. I do not know.",
+      "correct": {
+        "answer_claim": "The bug tracker is the recommended method for reporting spawn-related issues in Bedrock Edition.",
+        "reference_fact": "The recommended method for reporting spawn-related issues in the Bedrock Edition of Minecraft is to submit a report to the bug tracker.",
+        "verdict": "correct"
+      },
+      "faithful": null
+    },
+    {
+      "question": "What is the difference between the Bedrock and Java Editions of Minecraft when it comes to sound effects, and how does this affect the overall audio experience in the game?",
+      "variant": "dense",
+      "answer": "The passages do not specify the differences between Bedrock and Java Editions regarding sound effects or how these differences affect the overall audio experience. [1] and [2] mention sound categories but do not compare the two editions. I do not know.",
+      "correct": {
+        "answer_claim": "nothing",
+        "reference_fact": "Bedrock uses a proprietary algorithm, Java uses OpenAL for sound effects, leading to different audio experiences.",
+        "verdict": "incorrect"
+      },
+      "faithful": null
+    },
+    {
+      "question": "What is the difference between the Bedrock and Java Editions of Minecraft when it comes to sound effects, and how does this affect the overall audio experience in the game?",
+      "variant": "rerank",
+      "answer": "The provided passages do not specify differences between Bedrock and Java Editions regarding sound effects or how these differences affect the overall audio experience. While [3] mentions loops in Java Edition, it does not compare them to Bedrock Edition or discuss their impact on audio experience. Therefore, I do not know.",
+      "correct": {
+        "answer_claim": "nothing",
+        "reference_fact": "Bedrock uses a proprietary algorithm, Java uses OpenAL for sound effects",
+        "verdict": "incorrect"
+      },
+      "faithful": null
+    },
+    {
+      "question": "What is the maximum level number for enchantments that have multiple levels, and how can a player combine mutually exclusive enchantments in Minecraft?",
+      "variant": "rerank",
+      "answer": "The maximum level number for enchantments that have multiple levels is 30, as level 30 is the maximum for enchantments in Java Edition [3]. I do not know how a player can combine mutually exclusive enchantments in Minecraft based on the provided passages.",
+      "correct": {
+        "answer_claim": "The maximum level number for enchantments is 30.",
+        "reference_fact": "Enchantments have a maximum level of 10, and mutually exclusive enchantments can be combined using the /give command with Enchantments parameter.",
+        "verdict": "incorrect"
+      },
+      "faithful": null
+    },
+    {
+      "question": "What is the difference in terrain height between the Snowy Taiga Hills and the Snowy Taiga Mountains biomes in Minecraft?",
+      "variant": "dense",
+      "answer": "The passage does not specify the difference in terrain height between the Snowy Taiga Hills and the Snowy Taiga Mountains biomes. [4] mentions that snowy taiga mountains have much steeper terrain than snowy taiga hills, but no exact height difference is provided. Therefore, I do not know.",
+      "correct": {
+        "answer_claim": "The Snowy Taiga Mountains have much steeper terrain than the Snowy Taiga Hills.",
+        "reference_fact": "Snowy Taiga Mountains have much steeper terrain than Snowy Taiga Hills.",
+        "verdict": "correct"
+      },
+      "faithful": null
+    }
+  ],
+  "recipe_version": "26.3",
+  "recipe_counts": {
+    "recipes": 1010,
+    "tags": 236,
+    "names": 1841
+  },
+  "question_pool_sha256": "564e47059f4d9eabda2cd98992fb6663013fcdf3eb059906ae9d3b031a9c3268"
+}

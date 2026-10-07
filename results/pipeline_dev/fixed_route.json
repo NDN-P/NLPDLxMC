@@ -1,0 +1,167 @@
+[
+  {
+    "question": "How much iron does a hopper need?",
+    "answer": "Hoppers do not require iron to be crafted. Iron is not a component of hopper recipes in Minecraft.",
+    "tool_calls": [],
+    "passages": "",
+    "sources": [],
+    "seconds": 7.0
+  },
+  {
+    "question": "How many milk buckets do I need for 2 cakes?",
+    "answer": "I do not know.",
+    "tool_calls": [],
+    "passages": "",
+    "sources": [],
+    "seconds": 6.64
+  },
+  {
+    "question": "How many iron blocks do I need to craft 2 anvils? Reply with the number only.",
+    "answer": "6",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "anvil",
+          "count": 2
+        },
+        "result": {
+          "answer": "To craft 2 Anvil you need 6 Block of Iron, 8 Iron Ingot in total (2 crafts, each makes 1).",
+          "item": "Anvil",
+          "count": 2,
+          "crafts": 2,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "Block of Iron": 6,
+            "Iron Ingot": 8
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 6.58
+  },
+  {
+    "question": "How many planks do I need for 3 chests?",
+    "answer": "You need 24 planks (e.g. Oak Planks) to craft 3 chests. Each chest requires 8 planks, so 3 chests require 3 \u00d7 8 = 24 planks.",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "chest",
+          "count": 3
+        },
+        "result": {
+          "answer": "To craft 3 Chest you need 24 any Planks (e.g. Oak Planks) in total (3 crafts, each makes 1).",
+          "item": "Chest",
+          "count": 3,
+          "crafts": 3,
+          "makes_per_craft": 1,
+          "ingredients": {
+            "any Planks (e.g. Oak Planks)": 24
+          },
+          "recipe_variants": 1,
+          "game_version": "26.3"
+        }
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 7.49
+  },
+  {
+    "question": "How do I breed cows?",
+    "answer": "To breed cows in Minecraft (Java Edition), you need to place two cows next to each other and feed them a bucket of milk. When both cows are within a 1-block radius of each other and have been fed milk, they will spawn an egg, which can then be collected. After collecting the egg, the cows will spawn a baby cow.",
+    "tool_calls": [],
+    "passages": "",
+    "sources": [],
+    "seconds": 7.54
+  },
+  {
+    "question": "How many diamonds does a diamond ore drop?",
+    "answer": "In Minecraft (Java Edition 26.3), a diamond ore drop has a 10% chance to drop a diamond, and the maximum number of diamonds that can be dropped from a single diamond ore block is 1. Therefore, a diamond ore block can drop up to 1 diamond.",
+    "tool_calls": [],
+    "passages": "",
+    "sources": [],
+    "seconds": 7.42
+  },
+  {
+    "question": "What is the recipe for a smithing template?",
+    "answer": "Which specific item do you mean? Choices include Bolt Armor Trim Smithing Template, Coast Armor Trim Smithing Template, Dune Armor Trim Smithing Template, Eye Armor Trim Smithing Template, Flow Armor Trim Smithing Template. Please give its full name or Minecraft item ID. [tool]",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "smithing template",
+          "count": 1
+        },
+        "result": {
+          "error": "'smithing template' is ambiguous: please specify which item you mean.",
+          "error_code": "ambiguous_item",
+          "options": [
+            "Bolt Armor Trim Smithing Template",
+            "Coast Armor Trim Smithing Template",
+            "Dune Armor Trim Smithing Template",
+            "Eye Armor Trim Smithing Template",
+            "Flow Armor Trim Smithing Template",
+            "Host Armor Trim Smithing Template",
+            "Netherite Upgrade Smithing Template",
+            "Raiser Armor Trim Smithing Template",
+            "Rib Armor Trim Smithing Template",
+            "Sentry Armor Trim Smithing Template",
+            "Shaper Armor Trim Smithing Template",
+            "Silence Armor Trim Smithing Template",
+            "Smithing Template",
+            "Snout Armor Trim Smithing Template",
+            "Spire Armor Trim Smithing Template",
+            "Tide Armor Trim Smithing Template",
+            "Vex Armor Trim Smithing Template",
+            "Ward Armor Trim Smithing Template",
+            "Wayfinder Armor Trim Smithing Template",
+            "Wild Armor Trim Smithing Template"
+          ]
+        }
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 2.46
+  },
+  {
+    "question": "What ingredients make a Banner Pattern?",
+    "answer": "Which specific item do you mean? Choices include Creeper Banner Pattern, Flow Banner Pattern, Flower Banner Pattern, Globe Banner Pattern, Guster Banner Pattern. Please give its full name or Minecraft item ID. [tool]",
+    "tool_calls": [
+      {
+        "args": {
+          "item": "banner pattern",
+          "count": 1
+        },
+        "result": {
+          "error": "'banner pattern' is ambiguous: please specify which item you mean.",
+          "error_code": "ambiguous_item",
+          "options": [
+            "Creeper Banner Pattern",
+            "Flow Banner Pattern",
+            "Flower Banner Pattern",
+            "Globe Banner Pattern",
+            "Guster Banner Pattern",
+            "Mojang Banner Pattern",
+            "Piglin Banner Pattern",
+            "Skull Banner Pattern"
+          ]
+        }
+      }
+    ],
+    "passages": "",
+    "sources": [],
+    "seconds": 2.44
+  },
+  {
+    "question": "How much iron does a Bedrock Edition hopper need?",
+    "answer": "I do not know.",
+    "tool_calls": [],
+    "passages": "",
+    "sources": [],
+    "seconds": 6.65
+  }
+]

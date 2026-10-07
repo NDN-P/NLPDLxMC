@@ -1,0 +1,502 @@
+[
+  {
+    "question": "How can I maximize my chances of finding a Nether Fortress in the Nether Update?",
+    "reference": "In the Nether Update, you can increase your chances of finding a Nether Fortress by exploring the Nether's new cave systems, which are now more frequent and larger. Additionally, you can look out for the new Nether-specific structures such as Bastion Remnants, which can sometimes spawn near Nether Fortresses. It's also a good idea to explore the Nether's upper levels, as Fortresses are more likely to spawn there. Finally, consider using a Minecraft map that highlights Nether Fortress locations, or use a mod that provides additional features for Nether exploration.",
+    "title": "Bedrock Edition version history/Development versions"
+  },
+  {
+    "question": "What is a valid type for a RelativeFloat value in Bedrock Edition?",
+    "reference": "In Bedrock Edition, a valid type for a RelativeFloat value is a float or a tilde and caret notation, also known as an ID.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What types of biomes can generate in cold biome clusters in Minecraft?",
+    "reference": "In addition to normal temperature clusters, forest and mountain biomes can also generate in cold biome clusters in Minecraft.",
+    "title": "Swamp Hills"
+  },
+  {
+    "question": "What type of block can be broken instantly in Bedrock Edition and Minecraft Education using any item?",
+    "reference": "An element can be broken instantly using any item.",
+    "title": "Element"
+  },
+  {
+    "question": "What is the purpose of the \"mining_fatigue\" effect in Minecraft?",
+    "reference": "The \"mining_fatigue\" effect reduces the player's mining speed.",
+    "title": "Potion of Night Vision"
+  },
+  {
+    "question": "How do I get started with crafting in Minecraft?",
+    "reference": "You can start crafting by opening the crafting table and selecting the items you want to combine.",
+    "title": "Tutorial:Survival in an infinite desert"
+  },
+  {
+    "question": "What types of mobs do villagers avoid in the latest version of Minecraft?",
+    "reference": "In the latest version of Minecraft, villagers avoid only zombie variants and illagers, unlike in earlier versions where they would also avoid neutral mobs such as endermen and spiders.",
+    "title": "Bedrock Edition removed features"
+  },
+  {
+    "question": "What is the best way to report issues with the Blast Furnace in Minecraft?",
+    "reference": "Issues relating to \"Blast Furnace\" are maintained on the bug tracker. Report issues there.",
+    "title": "Blast Furnace"
+  },
+  {
+    "question": "What is the minimum and maximum range of a long argument type in Minecraft's brigadier system?",
+    "reference": "In Minecraft's brigadier system, the minimum range of a long argument type is -2,63 and the maximum range is 9,223,372,036,854,775,807.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What is the primary characteristic that distinguishes frozen oceans in the Java Edition from those in the Bedrock Edition?",
+    "reference": "In the Java Edition, frozen oceans have varying temperatures across their landscapes, whereas in the Bedrock Edition, they have a consistent temperature of 0.5.",
+    "title": "Ocean"
+  },
+  {
+    "question": "What is the material reducer that can be used to reduce the quantity of certain elements in a Minecraft world?",
+    "reference": "In Minecraft, the material reducer can be used to reduce the quantity of certain elements, such as diamonds or obsidian, by breaking or smelting them. This process can be used to create a more efficient way of collecting resources in a Minecraft world.",
+    "title": "Element"
+  },
+  {
+    "question": "Why were the helmet, chestplate, leggings, and boots textures removed from Minecraft in early 2010?",
+    "reference": "The textures were removed to prepare for the implementation of armor and its mechanics in the game.",
+    "title": "Unused textures"
+  },
+  {
+    "question": "What is the purpose of the Enum class in Bedrock Edition, and how does it affect the data type of a variable?",
+    "reference": "In Bedrock Edition, the Enum class is used to define a set of named values that can be used as a type-safe alternative to integers or strings. When an Enum is used as a data type for a variable, it allows for more readable and maintainable code, as well as improved error handling. For example, if you have an Enum called \"Direction\" with values \"NORTH\", \"SOUTH\", \"EAST\", and \"WEST\", you can use it to define a variable that can only take on one of those values, making it easier to understand and debug your code.",
+    "title": "Argument types"
+  },
+  {
+    "question": "Question about resource locations in Minecraft",
+    "reference": "Answer about resource locations in Minecraft",
+    "title": "Identifier"
+  },
+  {
+    "question": "What is an official example of a scoreboard objective criterion in Minecraft: Java Edition?",
+    "reference": "In Minecraft: Java Edition, an official example of a scoreboard objective criterion is the \"points\" objective, which requires players to collect a certain number of points to achieve the objective.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What is the most common use for actinide elements in Minecraft's crafting system, besides as decorative blocks?",
+    "reference": "In addition to being used as decorative blocks, actinide elements can also be combined into compounds using the compound creator in Minecraft's crafting system.",
+    "title": "Element"
+  },
+  {
+    "question": "What biome contains all the other non-custom dimensions biomes and generates all mobs, blocks, particles and structures in vanilla Minecraft?",
+    "reference": "This \"biome\" generates all the other non-custom dimensions biomes. It isn't a biome, it's all the biomes that generate in those non-custom dimensions. All mobs, blocks, particles and structures in 20w14a (vanilla) can generate in this biome.",
+    "title": "Biome"
+  },
+  {
+    "question": "What is the only noble gas that has an isotope with a half-life of over 100 million years, and which isotope of this noble gas has a half-life of approximately 4.5 billion years?",
+    "reference": "The answer is Radon (Rn). The isotope with a half-life of approximately 4.5 billion years is Radon-222.",
+    "title": "Element"
+  },
+  {
+    "question": "What is the purpose of Chunk generators in Minecraft?",
+    "reference": "Chunk generators are used for creating custom dimension, Single Biome world type, and internally when generating any world.",
+    "title": "Java Edition data values"
+  },
+  {
+    "question": " Why does hitting an undead mob with a Regeneration Potion always register as Regeneration I in Bedrock Edition, regardless of the potion's level?",
+    "reference": " In Bedrock Edition, the potion's level is not taken into account when hitting an undead mob with a Regeneration Potion, resulting in the potion always registering as Regeneration I. This is a specific behavior unique to Bedrock Edition, and not present in other versions of Minecraft.",
+    "title": "Potion"
+  },
+  {
+    "question": "What happens to a skeleton horse's rider if the rider's head enters a non-transparent block with a clearance of less than 2.75 blocks?",
+    "reference": "The rider will take suffocation damage if the clearance is less than 2.75 blocks.",
+    "title": "Skeleton Horse"
+  },
+  {
+    "question": "What type of aquatic mobs in Minecraft take extra damage when attacked with Bane of Arthropods?",
+    "reference": "The group of aquatic mobs in Minecraft that take extra damage when attacked with Bane of Arthropods are bees, cave spiders, endermites, silverfish, and spiders.",
+    "title": "Mob"
+  },
+  {
+    "question": "What is a lesser-known fact about the sounds in Minecraft that is not commonly discussed?",
+    "reference": "In the Nether Update Official Trailer, a sound known as the \"affectionate scream\" can be heard at 1:03-1:04, which is not typically discussed by players or developers.",
+    "title": "Java Edition unused features"
+  },
+  {
+    "question": "What type of string is used to specify a scoreboard objective in the Minecraft Java Edition?",
+    "reference": "A single word string.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What will happen to the map when you create a new copy of it using a glass pane in a cartography table while it's already locked?",
+    "reference": "In this scenario, all new copies of the map will also be locked, and the original map will remain unchanged, even if the depicted terrain changes.",
+    "title": "Map"
+  },
+  {
+    "question": "What is a rare bug that can occur in Minecraft?",
+    "reference": "In a 0.01% chance, the title screen may display \"Minceraft\" instead of \"Minecraft\", and the crash logs may mention trying the sister game \"Minceraft\".",
+    "title": "Easter eggs"
+  },
+  {
+    "question": "How can I access the lowest two rows of items in Minecraft: Pi Edition when using the gamepad in creative mode on my Xperia Play?",
+    "reference": "In Minecraft: Pi Edition, when using the gamepad in creative mode on your Xperia Play, you can access the lowest two rows of items by turning on the option to use touch controls in the options menu. Alternatively, you can use trial-and-error or remember how many times you need to press the directional buttons to access them.",
+    "title": "Controls"
+  },
+  {
+    "question": "How many advancements are currently available in Minecraft, including upcoming updates?",
+    "reference": "According to the information provided, there are 110 advancements available in Minecraft, with 122 advancements expected to be added in a future update.",
+    "title": "Advancement"
+  },
+  {
+    "question": "What type of fungal growths can be found on a cherry tree in Minecraft?",
+    "reference": "The answer is: Nether wart blocks or warped wart blocks.",
+    "title": "Tree"
+  },
+  {
+    "question": "What is the minimum space requirement for a slime to spawn in Minecraft?",
+    "reference": "A slime needs a space of 2.04×2.04×2.04 blocks to spawn, which must be clear of solid and liquid obstructions.",
+    "title": "Slime"
+  },
+  {
+    "question": "What is a common strategy to create a fake water pitfall in Minecraft, and how can it be used to effectively trap enemies or other players?",
+    "reference": "Some text that explains how to use a fake water pitfall in Minecraft",
+    "title": "Tutorial:Traps"
+  },
+  {
+    "question": "What was the first biome to appear in Minecraft, which was randomly occurring in Alpha and added in Alpha v1.0.4?",
+    "reference": "In Minecraft, the first biome to appear was \"Winter Mode\", which was randomly occurring in Alpha and added in Alpha v1.0.4.",
+    "title": "Java Edition removed features"
+  },
+  {
+    "question": "What is the best way to store valuables in a Minecraft base?",
+    "reference": "One effective method is to hide chests with many valuables in a hard-to-reach location, such as on top of a tall pillar or in a hidden underground chamber.",
+    "title": "Tutorial:Shelters"
+  },
+  {
+    "question": "What is the probability of finding a decorated pot in a chamber dispenser in the Java Edition?",
+    "reference": "In the Java Edition, each trial chamber dispenser contains 1 item stack, with the following distribution: a decorated pot has a chance of 0.4% to appear, making it a rare and exciting find among the chamber's loot.",
+    "title": "Trial Chambers"
+  },
+  {
+    "question": "What is the primary purpose of IDs in Minecraft's world generation?",
+    "reference": "In Minecraft, IDs are used for creating custom dimension, Single Biome world type, and internally when generating any world. This allows for a wide range of customization options and flexibility in world creation.",
+    "title": "Java Edition data values"
+  },
+  {
+    "question": "What is a common use of a minecart with a chest in a Minecraft world?",
+    "reference": "A minecart with a chest is typically used to store and transport items over rails in a Minecraft world.",
+    "title": "Redstone components"
+  },
+  {
+    "question": "What is the only nonmetal element in the periodic table that is liquid at room temperature?",
+    "reference": "The element bromine is the only nonmetal element in the periodic table that is liquid at room temperature, with a melting point of -7.2°C and a boiling point of 58.8°C. This is due to its unique molecular structure and bonding properties.",
+    "title": "Element"
+  },
+  {
+    "question": "What is the minimum number of eyes of ender needed to activate a portal?",
+    "reference": "In most cases, 12 eyes of ender are needed to activate a portal, but there is a 10% chance that some of the frames will already contain an eye, so the player may not need to use 12 eyes.",
+    "title": "The End"
+  },
+  {
+    "question": "What is the purpose of the Data Value ID in Minecraft's Bedrock Edition, and how does it differ from the equivalent value in Java Edition?",
+    "reference": "In Minecraft's Bedrock Edition, the Data Value ID is used to identify and store specific data values for blocks, items, and entities. This ID is unique for each data value and is used to determine the behavior and properties of the corresponding block, item, or entity. In contrast, the Java Edition uses a different system, where data values are stored as integers and are not explicitly identified by a unique ID. While both systems serve the same purpose, the Bedrock Edition's Data Value ID provides a more explicit and structured way of handling data values, making it easier to manage and manipulate them in game logic.",
+    "title": "Woodland Mansion"
+  },
+  {
+    "question": "How can I manage the settings for a Minecraft Realms server in the Java Edition?",
+    "reference": "In the Java Edition of Minecraft, you can manage the settings for a Minecraft Realms server by clicking the \"Minecraft Realms\" button on the main menu, which will take you to the main screen. From there, you can access the configuration screen, where you can make changes to the Realm's settings, view backups, and reset the Realm with new conditions.",
+    "title": "Realms"
+  },
+  {
+    "question": "What type of resource location must be used to resolve a function or function tag during command execution in the Java Edition of Minecraft?",
+    "reference": "It must be a resource location or one prefixed with a #, which is resolved into a function or a function tag during command execution.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What is the default data value for the \"id\" field in the Bedrock Edition's level format?",
+    "reference": "In the Bedrock Edition's level format, the default data value for the \"id\" field is 0, which represents the default or unknown value.",
+    "title": "Woodland Mansion"
+  },
+  {
+    "question": "What is the purpose of an anvil in Minecraft, and what happens to its durability when it is used extensively?",
+    "reference": "In Minecraft, an anvil is a utility block used to rename items, combine enchantments, and repair items without losing their enchantments. The anvil's durability gradually decreases as it is used or dropped from a great height, eventually becoming damaged or breaking and vanishing. However, in the Bedrock Edition, the anvil's durability decreases more rapidly than in the Java Edition, and it can become a \"very damaged anvil\" before breaking.",
+    "title": "Anvil"
+  },
+  {
+    "question": "What type of values can be used as the target for a dimension in Minecraft's Java Edition?",
+    "reference": "In Minecraft's Java Edition, the target for a dimension can be either a player name, a target selector, or a UUID.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What is the relationship between the Bedrock and Java Editions of Minecraft in regards to sound rendering?",
+    "reference": "In the Bedrock Edition, sounds are rendered as audio files stored in the game's assets folder, whereas in the Java Edition, sounds are generated using a combination of audio files and procedural generation. This difference in approach affects the overall sound design and immersion in each edition.",
+    "title": "Leatherworker"
+  },
+  {
+    "question": "What is a common mistake to avoid when using dispensers in Minecraft, and what is a creative use for Nether Portals?",
+    "reference": "In Minecraft, it is a common mistake to avoid putting diamonds in a dispenser, unless you are intentionally trying to lure someone or others into a trap. On the other hand, Nether Portals can be used to create traps by pausing chunk generation in the Overworld and then lighting TNT upon entering The Nether, which can cause an explosion.",
+    "title": "Tutorial:Traps"
+  },
+  {
+    "question": "How do you teleport in Minecraft?",
+    "reference": "In Minecraft, you can teleport by using the \"/teleport\" command followed by the coordinates of the location you want to teleport to.",
+    "title": "Bedrock Edition version history"
+  },
+  {
+    "question": "What is the type of string that can be used as a command in Bedrock Edition?",
+    "reference": "The type of string that can be used as a command in Bedrock Edition is a single word with no space or a double-quoted string.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What is the main difference between Pocket Edition Alpha 0.3 and its previous version 0.2 in terms of block rendering?",
+    "reference": "In Pocket Edition Alpha 0.3, the block rendering was significantly improved, allowing for more detailed and accurate block textures, especially for distant blocks. This was achieved through the implementation of a new rendering technique that combines the use of normal maps and detailed block models. In contrast, the previous version 0.2 used a simpler rendering approach that resulted in less detailed block textures, especially at distance.",
+    "title": "Bedrock Edition version history"
+  },
+  {
+    "question": "What type of mechanism component is typically used to propel a minecart in Minecraft?",
+    "reference": "A powered rail is used to propel a minecart.",
+    "title": "Redstone components"
+  },
+  {
+    "question": "What are some common enchantments found on swords in the Gallery renders, and are there any notable pixel art depictions of sword fights in Minecraft?",
+    "reference": "In the Gallery renders, common enchantments found on swords include Sharpness, Smite, and Unbreaking. One notable pixel art depiction of a sword fight in Minecraft is the image of Alex fighting with a diamond sword in the Nether.",
+    "title": "Sword"
+  },
+  {
+    "question": "How can I maintain a consistent signal in a rapid pulsar design when torches burn out, and what are some potential issues I might encounter?",
+    "reference": "In a rapid pulsar design, redundancy can be used to maintain a 1-clock, even as the torches burn out. However, the signal may not be consistent. One potential issue is that device R creates energy in an irregular sequence, which can result in irregular pulsing patterns. Additionally, torches may occasionally burn out for a few seconds, causing the signal to fluctuate. To mitigate this, it's recommended to reset the circuit by updating the block periodically. Furthermore, the traditional spelling of a clock circuit created from short-circuited redstone torches is \"Rapid Pulsar\", not \"pulser\".",
+    "title": "Redstone circuits/Clock"
+  },
+  {
+    "question": "How do I resolve the issue of not being able to trade for chainmail armor with a villager in Minecraft?",
+    "reference": "One possible solution is to check if the villager you are trying to trade with has the chainmail armor available in their inventory. You can do this by opening the villager's trading menu and scrolling through their available items. If the chainmail armor is not listed, you may need to find a different villager or try trading for it with a different item.",
+    "title": "Netherite Armor"
+  },
+  {
+    "question": "What is the phrase string argument that takes the rest of the command as the string argument in the Bedrock Edition's CommandRawText?",
+    "reference": "In the Bedrock Edition's CommandRawText, the phrase string argument that takes the rest of the command as the string argument is known as SELECTION, also referred to as greedy phrase string argument.",
+    "title": "Argument types"
+  },
+  {
+    "question": "How does the villager's profession level affect the trades it offers to the player?",
+    "reference": "When a villager advances through its profession, it unlocks new trades, offering additional items and potentially higher levels of enchantments. The villager's profession level can also affect the types of items it accepts as trade, allowing players to acquire specific resources or items that would be difficult to obtain otherwise.",
+    "title": "Leatherworker"
+  },
+  {
+    "question": "How can I ensure that I'm safe from zombies and skeletons while sleeping on top of a pillar in Minecraft?",
+    "reference": "Going 10 or 12 blocks up is usually enough, 16 is safer, and 20 or 30 is more certain. You can also use sneaking to lean over the edge and place extra blocks as a ledge, and retrieve your crafting table and furnace before coming down.",
+    "title": "Tutorial:Shelters"
+  },
+  {
+    "question": "What is the probability of finding melon stems in farm plots in savanna villages in Minecraft?",
+    "reference": "Melon stems generate in 20% of the farm plots in savanna villages, as stated in the game's documentation.",
+    "title": "Melon Seeds"
+  },
+  {
+    "question": "What type of coordinates does Minecraft's Vec2 class accept, and how can they be represented in code?",
+    "reference": "In Minecraft's Java Edition, the Vec2 class accepts three-dimensional coordinates with double-precision floating-point number elements. These coordinates can be represented in code using tilde (~) and caret (^) notations.",
+    "title": "Argument types"
+  },
+  {
+    "question": "When",
+    "reference": "A potion of healing is used on a skeleton, what effect will it have?",
+    "title": "Potion"
+  },
+  {
+    "question": "What is the optimal harvesting time for wheat in a micro farm?",
+    "reference": "Harvesting wheat in a micro farm when 80% of the plants have matured, which is at least acceptable for carrots and potatoes, results in the greatest overall rate of production, along with a surplus of seeds.",
+    "title": "Tutorial:Crop farming"
+  },
+  {
+    "question": "Can witches drop potions of all types, including those with effects like Decay and Luck, in addition to Healing, Fire Resistance, Swiftness, and Water Breathing?",
+    "reference": "Yes, witches can drop potions of all types, including those with effects like Decay and Luck, in addition to Healing, Fire Resistance, Swiftness, and Water Breathing, if they die while drinking that potion.",
+    "title": "Potion"
+  },
+  {
+    "question": "What is the term for a greedy phrase string argument in the Bedrock Edition, taking the rest of the command as the string argument?",
+    "reference": "In the Bedrock Edition, this type of argument is known as SELECTION or CommandRawText.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What is the probability that adding pumpkin seeds to a composter will increase its level by one?",
+    "reference": "In Minecraft, the probability of adding pumpkin seeds to a composter and increasing its level by one is 30%. This is based on the game's built-in mechanics, where placing pumpkin seeds has a 30% chance of raising the compost level by 1.",
+    "title": "Pumpkin Seeds"
+  },
+  {
+    "question": "Can achievements earned in a specific world be tracked separately per user account, or do they apply to all worlds using that edition and user account?",
+    "reference": "In Minecraft, every achievement is tracked per user account, and they are not tracked separately per world. Achievements earned in one world apply to all worlds using that edition and that user account.",
+    "title": "Achievement"
+  },
+  {
+    "question": "What are some features in Minecraft that have no actual use in Survival or Creative mode, and how do they come to be?",
+    "reference": "In Minecraft, there are several features that have been added to the game but do not have any practical use in Survival or Creative mode. These features can originate from a variety of sources, including leftover code from removed features, placeholders for new features, or even bugs and glitches. Some of these features may only be accessible through the use of commands, debug tools, or specific game versions, making them difficult to encounter in normal gameplay. Despite their lack of practical use, these features can still be useful for mapmakers and content creators who are looking to add unique elements to their custom maps and projects.",
+    "title": "Java Edition unused features"
+  },
+  {
+    "question": "What is the primary difference between the Java Edition and the Bedrock Edition of Minecraft when it comes to using looms in crafting recipes?",
+    "reference": "In the Java Edition, looms can be used to craft a wide variety of items, including banners, shulker boxes, and more. In contrast, the Bedrock Edition only allows looms to be used for crafting simple items like banners. This means that Java Edition players have access to a more extensive range of loom-based crafting recipes, making it a more versatile tool in their inventory.",
+    "title": "Ominous Banner"
+  },
+  {
+    "question": "What should you do as soon as you see the end portal room in a stronghold?",
+    "reference": "Run in as quick as you can and kill all the silverfish in the room, then destroy the silverfish spawner and consider completing the staircase with stone brick stairs.",
+    "title": "Tutorial:Defeating the ender dragon"
+  },
+  {
+    "question": "What is the significance of an end city in the official Java Edition 1.9 poster?",
+    "reference": "In the official Java Edition 1.9 poster, an end city appears in the background, which is a significant inclusion as it represents the culmination of the game's main storyline. End cities are structures that generate naturally in the game's Overworld, typically near End Portals, and are inhabited by Endermen. Their appearance in the poster symbolizes the game's focus on exploration, adventure, and the journey to the End dimension, which is a central aspect of the Minecraft experience.",
+    "title": "End City"
+  },
+  {
+    "question": "What are the possible limits that can be placed on the number of entities selected in a Minecraft command using entity arguments?",
+    "reference": "In Minecraft, each entity argument can place limits on the number of entities selected or the type of entities selected. For example, a single player entity can be selected, or any entity type can be selected. Additionally, limits can be placed on the number of entities selected, such as selecting a single entity or multiple entities.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What is the primary function of a logic gate in Minecraft?",
+    "reference": "A logic gate is a fundamental component in Minecraft that serves as a basic logic circuit, allowing players to create complex digital circuits and automate tasks by manipulating input signals and output responses.",
+    "title": "Redstone circuits/Logic"
+  },
+  {
+    "question": "What is the primary difference in how lava is obtained in Java Edition versus Bedrock Edition of Minecraft?",
+    "reference": "In Bedrock Edition, lava can be obtained as an item via inventory editing or add-ons, whereas in Java Edition, lava does not have a direct item form.",
+    "title": "Lava"
+  },
+  {
+    "question": "What is the purpose of the \"eyes\" or \"feet\" property when specifying the type of entities to be selected in a Minecraft command?",
+    "reference": "In Minecraft commands, the \"eyes\" or \"feet\" property is used to specify the type of entities that can be selected. It must be either \"eyes\" or \"feet\", and is used to place limits on the number of entities (single/multiple) selected or the type of entities (player/any entity) selected.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What was the last update version of the Bedrock Edition of Minecraft before the release of the Better Together Update?",
+    "reference": "The last update version of the Bedrock Edition of Minecraft before the release of the Better Together Update was 1.2.0.",
+    "title": "Bedrock Edition version history"
+  },
+  {
+    "question": "How can you efficiently grow a variety of crops in a Minecraft enchanting room?",
+    "reference": "You can start by planting wheat seeds, which are easily accessible, and later move on to other crops like potatoes and carrots. You can also breed passive mobs for more effective food sources. Additionally, you can grow pumpkins, which can be obtained from dungeon chests or found in the wilderness.",
+    "title": "Tutorial:Shelters"
+  },
+  {
+    "question": "Why were the potion textures for certain effects unused in Bedrock Edition?",
+    "reference": "These effects are: Absorption, Blindness, Haste, Health Boost, Hunger, Mining Fatigue, Nausea, Resistance, Saturation, and Levitation, as well as the Luck potion textures also present in Java Edition.",
+    "title": "Potion"
+  },
+  {
+    "question": "What is the purpose of calculating the value per 4×4 column in Minecraft, and how is it related to interpolated maker functions?",
+    "reference": "In Minecraft, calculating the value per 4×4 column is a technique used to optimize performance by reducing the number of calculations required for interpolated maker functions. This process is used to determine the value at each block in a column, which is then used to generate the interpolated values. The calculation is performed only once per column, at the Y=0 level, and is often used in combination with interpolated maker functions to generate smooth and accurate block values.",
+    "title": "Density function"
+  },
+  {
+    "question": "When encountering a baby mob with an adult-like sound, what factors influence the spread of burning attacks in Minecraft Pocket Edition?",
+    "reference": "In Minecraft Pocket Edition, the spread of burning attacks by baby mobs with adult-like sounds is influenced by regional difficulty, which was introduced in an unknown update, and can affect the burning effect of mob projectiles, such as those fired by Snow Golems.",
+    "title": "Bedrock Edition removed features"
+  },
+  {
+    "question": "What is the unique identifier used to store data values in the Bedrock Edition of Minecraft?",
+    "reference": "In the Bedrock Edition, the unique identifier used to store data values is an ID, which is a numerical value that is used to store and retrieve data in the game's data storage system.",
+    "title": "Redstone Comparator"
+  },
+  {
+    "question": "What is the purpose of the clock in Design A of the basic level-triggered gated D latch?",
+    "reference": "The clock in Design A sets the output to D as long as it is set to OFF, and ignores changes in D as long as it is ON, but pulses the output high for 1 tick on a rising clock edge if D is low, before latching low.",
+    "title": "Redstone circuits/Memory"
+  },
+  {
+    "question": "How does a 3-input AND gate work in Minecraft Redstone circuits, and what is its typical use case?",
+    "reference": "In Minecraft Redstone circuits, a 3-input AND gate is implemented using a NOR gate with inverted inputs. The inputs A and B are first inverted, then an OR gate is applied to the inverted inputs, and finally a NOT gate is applied to the result. This implementation can be used to create a locking mechanism for a door, requiring both the activating button and the lock to be on.",
+    "title": "Redstone circuits/Logic"
+  },
+  {
+    "question": "What is the definition of an element in Minecraft Bedrock Edition and Minecraft Education?",
+    "reference": "Elements and isotopes are blocks that are essential to chemistry in Bedrock Edition and Minecraft Education, and an element can be broken instantly using any item, always dropping itself.",
+    "title": "Element"
+  },
+  {
+    "question": "Can a player with a free Minecraft account create a private Realms server with access to custom minigames and pre-made world templates, or is this feature only available to Java Edition players with a subscription?",
+    "reference": "In Minecraft Realms, the ability to create a private server with access to custom minigames and pre-made world templates is only available to Java Edition players with a subscription. However, players with a free Minecraft account can still create a Realms server, but it will only have limited features and access to pre-made world templates, without the option to add custom minigames. Additionally, Realms servers created by free account holders will not receive updates as frequently as those created by subscribed players, as updates are typically pushed to subscribed servers first.",
+    "title": "Realms"
+  },
+  {
+    "question": "Can a trial spawner activate in Peaceful difficulty if the gamerule doMobSpawning is set to false?",
+    "reference": "According to the game rules, a trial spawner will not activate in Peaceful difficulty, regardless of the gamerule doMobSpawning setting, as it is governed by the Peaceful difficulty rule.",
+    "title": "Trial Spawner"
+  },
+  {
+    "question": "What is the name of the Minecraft concept art featuring a blaze, which was used to promote the Minecraft movie?",
+    "reference": "The concept art featuring a blaze was named \"Minecraft Movie Blaze Concept Art\".",
+    "title": "Blaze"
+  },
+  {
+    "question": "What is the specific effect of an enchanted book containing the \"Sound Amplification\" enchantment on the volume of sounds played in the game when the book is used to amplify the sound of a nearby mob?",
+    "reference": "In the Bedrock Edition of Minecraft, an enchanted book containing the \"Sound Amplification\" enchantment will increase the volume of sounds played in the game by a factor of 2, when used to amplify the sound of a nearby mob. This means that if the original sound volume is 10, it will be amplified to 20. However, it's important to note that this enchantment does not affect the pitch or frequency of the sound, only its amplitude.",
+    "title": "Enchantment"
+  },
+  {
+    "question": "What were the key developments in {subtopic} during the {topic} of the ancient Mesopotamians?",
+    "reference": "{generator.generate(prompt, max_length=200, num_return_sequences=1)[0]['generated_text']}",
+    "title": "Advancement"
+  },
+  {
+    "question": "Can achievements in Minecraft be reset or earned in Creative mode?",
+    "reference": "In Minecraft, achievements cannot be reset and are only earned in Survival mode, independent of the world or game edition being used.",
+    "title": "Achievement"
+  },
+  {
+    "question": "What are the two capes that were featured in a poll where MINECON 2011 attendees could vote for their cape of choice?",
+    "reference": "The red creeper cape and the blue cape with the pickaxe were the two capes that were featured in a poll where MINECON 2011 attendees could vote for their cape of choice.",
+    "title": "Cape"
+  },
+  {
+    "question": "What are the main differences between the default crafting table and the Weaponsmith crafting table in Bedrock Edition?",
+    "reference": "In Bedrock Edition, the Weaponsmith crafting table is a specialized crafting table that allows players to craft a wide variety of high-damage weapons, including swords, bows, and shields. Unlike the default crafting table, the Weaponsmith table has a unique set of recipes and ingredients, and is specifically designed for crafting weapons and armor. Additionally, the Weaponsmith table has a higher crafting speed and a larger inventory capacity, making it a more efficient option for players who focus on combat and PvP.",
+    "title": "Trading"
+  },
+  {
+    "question": "How do you assign options to stations in Minecraft?",
+    "reference": "In Minecraft, you can assign options to stations using the /assign option command. This command allows you to specify the station, the option, and the value for the option. For example, you can use the command `/assign station: mining option: auto-value: 5` to assign the auto-value option to the mining station with a value of 5.",
+    "title": "Teacher Menu"
+  },
+  {
+    "question": "What is the correct syntax for the CommandCompareOperator in the Bedrock Edition of Minecraft, and what is it also known as?",
+    "reference": "Must be one of <, <=, =, >=, and >. Also known as PATHCOMMAND.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What is the correct value for the \"direction\" parameter in a Minecraft team command in Java Edition?",
+    "reference": "According to the official Minecraft documentation, the \"direction\" parameter must be one of \"none\", \"front_back\", and \"left_right\".",
+    "title": "Argument types"
+  },
+  {
+    "question": "What type of edge detector is triggered when its input turns on, producing a pulse signal?",
+    "reference": "A rising edge detector (RED) outputs a pulse when its input turns on, which is the rising edge of the input.",
+    "title": "Redstone circuits/Pulse"
+  },
+  {
+    "question": "How can I optimize the layout of my trench farm to maximize egg production while minimizing space usage?",
+    "reference": "One efficient way to set up a compact egg farm is to create a trench farm with a volume of 12 blocks, using hoppers to collect eggs from the bottom chest. This design allows for a high density of chicken hatching and egg collection, while keeping the farm area small. To support the chickens, you can use water and signs or ladders to prevent it from flowing into the collection area.",
+    "title": "Tutorial:Egg farming"
+  },
+  {
+    "question": "What happens when a strider is ridden by a zombified piglin in a vanilla Minecraft game?",
+    "reference": "In a vanilla Minecraft game, a zombified piglin can ride a strider, but this is not the only possible combination, as ravagers generated in raids may generate with a pillager, evoker, or vindicator riding on it.",
+    "title": "Riding"
+  },
+  {
+    "question": "What is the significance of the Creative mode item selection screen change in Java Edition 12w21b?",
+    "reference": "Minecraft developers made a change to the Creative mode item selection screen in Java Edition 12w21b, which affected how players interacted with the game's creative inventory. Prior to this update, players would see the entire creative inventory upfront, but after the update, the screen only displayed a subset of the available items. This change was aimed at improving the overall creative experience by reducing clutter and allowing players to focus on building and crafting without being overwhelmed by the sheer number of items available. The update also introduced a new way for players to access the full creative inventory, making it more accessible and user-friendly.",
+    "title": "Creative"
+  },
+  {
+    "question": "What type of NBT format is required for the Minecraft message in the Java Edition?",
+    "reference": "SNBT format, which is a compound NBT format.",
+    "title": "Argument types"
+  },
+  {
+    "question": "What are the additional fields that can be specified for the Endermite entity type in Minecraft?",
+    "reference": "When creating an Endermite entity in Minecraft, you can specify additional fields such as the Endermite's health, damage taken, and more. This allows for more detailed and realistic simulations of Endermite behavior, especially in custom maps and game modes.",
+    "title": "Bedrock Edition level format/Entity format"
+  },
+  {
+    "question": "How many copies of Minecraft's Pocket Edition were sold as of December 2013, and what was the comparison to Java Edition and Legacy Console Edition?",
+    "reference": "As of December 2013, Pocket Edition had sold 16.5 million copies, which was a significant success and even outsold both Java Edition and Legacy Console Edition, despite being considered the least-developed at the time, with Java Edition selling 13 million copies.",
+    "title": "Bedrock Edition"
+  },
+  {
+    "question": "What is the primary difference between CommandSelector&lt;Actor&gt; and CommandSelector&lt;Player&gt; in Bedrock Edition, and what type of target selector should be used with CommandSelector&lt;Player&gt;?",
+    "reference": "CommandSelector&lt;Actor&gt; is used to specify entities, whereas CommandSelector&lt;Player&gt; is used to specify players. The primary difference is that CommandSelector&lt;Player&gt; requires a target selector of player type, whereas CommandSelector&lt;Actor&gt; can use a player name or a target selector. Additionally, the target selector used with CommandSelector&lt;Player&gt; should be of player type, which is also known as WILDCARDINT.",
+    "title": "Argument types"
+  }
+]
