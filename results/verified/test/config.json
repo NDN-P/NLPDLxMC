@@ -1,0 +1,26 @@
+{
+  "dataset_sha256": "5a9b8743462d255b2babb29b724b5bb70daa6d673fac9333c2875c0442179795",
+  "mcqa_sha256": "d3e1b712f26fac834226175c30976657269035f97d33377ad5f66f83a1d6698d",
+  "eval_sha256": "ffb38d61fe4ed1ee156ec312ae1f5504bf87b20472c30a123aad19c27034add7",
+  "evaluator_sha256": "ffeee3b5c20655b5e10fb5f77b5a1a73af31281787a1b087d94bb8ab2624404e",
+  "chunks_sha256": "3e69757cdd3eb231ac1f2acbcc99953ebd8e26e72e384533bb6d4fd040dfa252",
+  "generator": "qwen3:4b-instruct",
+  "generator_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "judge": "qwen3:4b-instruct",
+  "embedding": "BAAI/bge-small-en-v1.5",
+  "reranker": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "chunk_size": 256,
+  "hf_model_revisions": {
+    "BAAI/bge-small-en-v1.5": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "cross-encoder/ms-marco-MiniLM-L6-v2": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "distilroberta-base": "fb53ab8802853c8e4fbdbcd0529f21fc6f459b2b"
+  },
+  "python": "3.14.7",
+  "variants": [
+    "none",
+    "dense",
+    "rerank"
+  ],
+  "use_tool": false,
+  "provenance": "AI-curated questions with exact pinned source quotes; not independent human validation"
+}

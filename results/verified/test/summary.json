@@ -1,0 +1,128 @@
+{
+  "variants": {
+    "none": {
+      "answerable_n": 34,
+      "correct": 9,
+      "partial": 1,
+      "pure_refusal_judge_overrides": 0,
+      "incorrect": 24,
+      "judge_unparsed": 0,
+      "judge_correct_ci_percent": [
+        14.6,
+        43.1
+      ],
+      "score": 0.279,
+      "bertscore_f1_answerable": 0.294,
+      "answerable_refused": 0,
+      "hedged": 0,
+      "negative_n": 6,
+      "negative_correct_refusal": 5,
+      "faithful_attempted": 0,
+      "faithful_valid": 0,
+      "faithful_unparsed": 0,
+      "supported": 0,
+      "evidence_hit_at_5": 0
+    },
+    "dense": {
+      "answerable_n": 34,
+      "correct": 27,
+      "partial": 4,
+      "pure_refusal_judge_overrides": 1,
+      "incorrect": 3,
+      "judge_unparsed": 0,
+      "judge_correct_ci_percent": [
+        63.2,
+        89.7
+      ],
+      "score": 0.853,
+      "bertscore_f1_answerable": 0.493,
+      "answerable_refused": 3,
+      "hedged": 0,
+      "negative_n": 6,
+      "negative_correct_refusal": 5,
+      "faithful_attempted": 32,
+      "faithful_valid": 32,
+      "faithful_unparsed": 0,
+      "supported": 31,
+      "evidence_hit_at_5": 31
+    },
+    "rerank": {
+      "answerable_n": 34,
+      "correct": 26,
+      "partial": 4,
+      "pure_refusal_judge_overrides": 0,
+      "incorrect": 4,
+      "judge_unparsed": 0,
+      "judge_correct_ci_percent": [
+        60.0,
+        87.6
+      ],
+      "score": 0.824,
+      "bertscore_f1_answerable": 0.451,
+      "answerable_refused": 2,
+      "hedged": 0,
+      "negative_n": 6,
+      "negative_correct_refusal": 6,
+      "faithful_attempted": 32,
+      "faithful_valid": 32,
+      "faithful_unparsed": 0,
+      "supported": 30,
+      "evidence_hit_at_5": 30
+    }
+  },
+  "paired_answerable": {
+    "rerank - dense: score": {
+      "mean_difference": -0.029,
+      "ci95": [
+        -0.162,
+        0.103
+      ]
+    },
+    "rerank - dense: bertscore_f1": {
+      "mean_difference": -0.042,
+      "ci95": [
+        -0.109,
+        0.012
+      ]
+    },
+    "rerank - none: score": {
+      "mean_difference": 0.544,
+      "ci95": [
+        0.382,
+        0.706
+      ]
+    },
+    "rerank - none: bertscore_f1": {
+      "mean_difference": 0.158,
+      "ci95": [
+        0.096,
+        0.218
+      ]
+    },
+    "dense - none: score": {
+      "mean_difference": 0.574,
+      "ci95": [
+        0.368,
+        0.765
+      ]
+    },
+    "dense - none: bertscore_f1": {
+      "mean_difference": 0.199,
+      "ci95": [
+        0.136,
+        0.259
+      ]
+    }
+  },
+  "correctness_rule": "Pure factual refusals score incorrect; original automatic judgments remain in raw answers.",
+  "aggregation_sha256": {
+    "eval": "a875711e4e4eae9ae87c2c719f69c81d292df20a19af926aa64e047224f1cfcc",
+    "benchmark_eval": "aa13610ba362ebe2b3c0d1c1d9704ed9099e8abe09a1935d7c0da5d0cb4f4053"
+  },
+  "common_answered_n": 29,
+  "common_answered_bertscore": {
+    "none": 0.299,
+    "dense": 0.524,
+    "rerank": 0.501
+  }
+}

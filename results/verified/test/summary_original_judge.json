@@ -1,0 +1,120 @@
+{
+  "variants": {
+    "none": {
+      "answerable_n": 34,
+      "correct": 9,
+      "partial": 1,
+      "incorrect": 24,
+      "judge_unparsed": 0,
+      "judge_correct_ci_percent": [
+        14.6,
+        43.1
+      ],
+      "score": 0.279,
+      "bertscore_f1_answerable": 0.294,
+      "answerable_refused": 0,
+      "hedged": 0,
+      "negative_n": 6,
+      "negative_correct_refusal": 5,
+      "faithful_attempted": 0,
+      "faithful_valid": 0,
+      "faithful_unparsed": 0,
+      "supported": 0,
+      "evidence_hit_at_5": 0
+    },
+    "dense": {
+      "answerable_n": 34,
+      "correct": 28,
+      "partial": 4,
+      "incorrect": 2,
+      "judge_unparsed": 0,
+      "judge_correct_ci_percent": [
+        66.5,
+        91.7
+      ],
+      "score": 0.882,
+      "bertscore_f1_answerable": 0.493,
+      "answerable_refused": 3,
+      "hedged": 0,
+      "negative_n": 6,
+      "negative_correct_refusal": 5,
+      "faithful_attempted": 32,
+      "faithful_valid": 32,
+      "faithful_unparsed": 0,
+      "supported": 31,
+      "evidence_hit_at_5": 31
+    },
+    "rerank": {
+      "answerable_n": 34,
+      "correct": 26,
+      "partial": 4,
+      "incorrect": 4,
+      "judge_unparsed": 0,
+      "judge_correct_ci_percent": [
+        60.0,
+        87.6
+      ],
+      "score": 0.824,
+      "bertscore_f1_answerable": 0.451,
+      "answerable_refused": 2,
+      "hedged": 0,
+      "negative_n": 6,
+      "negative_correct_refusal": 6,
+      "faithful_attempted": 32,
+      "faithful_valid": 32,
+      "faithful_unparsed": 0,
+      "supported": 30,
+      "evidence_hit_at_5": 30
+    }
+  },
+  "paired_answerable": {
+    "rerank - dense: score": {
+      "mean_difference": -0.059,
+      "ci95": [
+        -0.176,
+        0.059
+      ]
+    },
+    "rerank - dense: bertscore_f1": {
+      "mean_difference": -0.042,
+      "ci95": [
+        -0.109,
+        0.012
+      ]
+    },
+    "rerank - none: score": {
+      "mean_difference": 0.544,
+      "ci95": [
+        0.382,
+        0.706
+      ]
+    },
+    "rerank - none: bertscore_f1": {
+      "mean_difference": 0.158,
+      "ci95": [
+        0.096,
+        0.218
+      ]
+    },
+    "dense - none: score": {
+      "mean_difference": 0.603,
+      "ci95": [
+        0.426,
+        0.765
+      ]
+    },
+    "dense - none: bertscore_f1": {
+      "mean_difference": 0.199,
+      "ci95": [
+        0.136,
+        0.259
+      ]
+    }
+  },
+  "common_answered_n": 29,
+  "common_answered_bertscore": {
+    "none": 0.299,
+    "dense": 0.524,
+    "rerank": 0.501
+  }
+}

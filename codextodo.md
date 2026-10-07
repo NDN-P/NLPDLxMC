@@ -280,3 +280,9 @@ Source: `Class NLP with DL/Term Project/PROJECT_INSTRUCTION.pdf` (all eight page
 - Local automated source/results snapshot commit completed successfully; Git history records its exact identity. No remote or publication was configured. Authorship is explicitly 'MCQA automated build', not a fabricated student contribution.
 - Git reported automatic LF/CRLF conversion during staging. Added .gitattributes to disable text conversion so experimental source/data hash records survive checkout on Windows and other platforms; stage the exact existing bytes again and verify frozen source blobs against recorded hashes. This configuration fix changes no Python behavior.
 - Final package metadata/log refresh uses the already tested source. No further model or full benchmark reruns are needed for documentation/byte-preservation changes.
+
+**Final package exclusion correction:**
+
+- Git-blob verification confirmed byte preservation and all source snapshot hashes. Building from tracked files then revealed only 115 files instead of the expected full set: on Windows, unanchored Test/ also ignored results/verified/test/ (8 evaluation files). The preliminary final ZIP was superseded before delivery.
+- Anchored personal/course exclusions to the project root (/Test/ and /Class NLP with DL/), so saved test results are tracked and included. Add explicit required-artifact checks before the final rebuild, including test answers/config/summary/report/human sheet, pinned pages/benchmark, source snapshots, audit and work log. This affects packaging only; the initial extracted copy had contained these files and already passed 23 tests/source validation/report checks.
+- Rebuild from the corrected tracked set, check all archive member hashes/CRC and required artifacts, and verify report regeneration from this final extracted ZIP. The final ZIP digest belongs in its SHA-256 sidecar; obsolete preliminary digests do not identify the delivered package.
