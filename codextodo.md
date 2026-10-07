@@ -446,3 +446,22 @@ sidecar; the private verification report also records the result. No remote publ
   working-copy ZIP remained valid; no source or experimental result changed. Retrying with an explicit per-command
   Codex automation identity, without changing global settings or attributing the deck to a human student. The final
   archive refresh checks the resulting snapshot and records its actual identity in the manifest/sidecar.
+
+### 2026-10-07 — Requested GitHub push
+
+- User explicitly authorized pushing the completed project to GitHub. Existing origin is
+  https://github.com/G9YzNDN/NLPDLxMC.git; local master tracks origin/main and initially has five unpushed commits.
+- Confirmed the clean local snapshot and independently checked outgoing deliverables: implementation improvements,
+  launchers, frozen evaluation evidence, documentation/audit, ten-slide deck/PDF/preview and Thai notes. Models,
+  environments, rebuildable indexes, the full recipe cache, submission ZIP and course/personal folders are excluded.
+- Attempted fetch before normal HEAD-to-main push. The GitHub sign-in helper stalled; stopped only that helper and
+  retried a noninteractive read-only remote check. Git reported it could not authenticate or prompt for credentials.
+  No remote branch has been changed, and this was not an automatic-approval rejection.
+- Preparing the installed Git credential manager's sign-in flow. Authentication requires the user's GitHub login;
+  do not read or print stored tokens, invent credentials, force-push, change global Git identity or create a new repository.
+  Push/remote verification remain pending until authentication succeeds. Record the actual outcome here.
+
+- The user supplied https://github.com/G9YzNDN/NLPDLxMC, confirming the existing destination. Device sign-in
+  returned a GitHub OAuth server-error page and produced no authorization code. Started the installed credential
+  manager's normal browser sign-in instead and requested the user's sign-in status. No password/token is requested
+  in chat. The login helper remains pending; authentication is the only current blocker to fetch/push.
