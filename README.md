@@ -7,12 +7,16 @@ from Mojang's official **Java Edition 26.3** recipe files when a question asks h
 Term project for *Natural Language Processing with Deep Learning*. Everything runs locally on one laptop: retrieval on
 the CPU, the language model in Ollama (tested on a laptop RTX 5070 GPU).
 
+**Team:** Natdanai Phurintanachot (67070230) and Nattapong Suphawirojlert (67070051).
+The user confirmed that the professor accepted this two-person team despite the brief's original 3-4-member requirement.
+
 The reviewed source/results package is `dist/MCQA_submission_2026-10-08.zip`, with a SHA-256 sidecar and an internal
 file manifest. It includes this README, source, tests, pinned pages, benchmark data, audit/work records and results.
 Models and rebuildable runtime data are excluded; follow setup below before running inference on another machine.
 
-**Before submission:** fill the real team names/contributions and the unaided answers in `AI_AUDIT.md`, add names
-to the title slide, update the PDF, and package those final edits. See [the final submission review](docs/submission_review.md).
+**Before submission:** fill each member's actual contributions/tools and the unaided answers in `AI_AUDIT.md`,
+rehearse the demo and individual Q&A, and package those final edits. The supplied names/IDs are recorded in the
+audit and title slide. See [the final submission review](docs/submission_review.md).
 The October 8 review fixed map item-ID lookup and a cold-start timeout; saved benchmark scores still refer to
 their frozen source versions. The selected live checks include a partly unsupported cow-breeding answer.
 
@@ -365,7 +369,7 @@ planner skipped one of them. Answers are scored by the number given for the aske
 The pitch deck is in [presentation/MCQA_pitch_ready.pptx](presentation/MCQA_pitch_ready.pptx):
 10 English slides in the instructor's required order, with Thai speaker notes and editable results/pipeline.
 [PDF copy](presentation/MCQA_pitch.pdf) and [Thai presenter notes/demo timing](presentation/Thai_presenter_notes.md)
-are included. Add authentic team names on the cover before submission. The planned live demo follows slide 5
+are included, with the supplied team names and IDs on the cover. The planned live demo follows slide 5
 at minute 4–7; use demo.bat after setup and wait for its ready prompt. Team contributions and AI_AUDIT Section 6
 remain human work; the notes are AI-authored presentation assistance.
 
@@ -394,7 +398,7 @@ remain human work; the notes are AI-authored presentation assistance.
 | `scripts/preflight.py`, `test_eval.py` | local readiness check and evaluation regressions |
 | `scripts/improvement_eval.py`, `data/improvement_benchmark.jsonl`, `results/improvement_review/` | separately frozen before/after evaluation on new source pages and recipe products |
 | `docs/final_validation.md` | final observed metrics, fixes, source versions, remaining failures and submission requirements |
-| `AI_AUDIT.md` | authentic AI activity; team names/contributions and explicitly unaided responses remain for the team |
+| `AI_AUDIT.md` | authentic AI activity and supplied team names/IDs; individual contributions/tools and explicitly unaided responses remain for the team |
 | `docs/AI_AUDIT_skeleton.md` | preserved original output of the standardized skeleton prompt |
 
 ## Licences

@@ -539,3 +539,25 @@ sidecar; the private verification report also records the result. No remote publ
   dist/slides_build/package_verification.json records its final exact hash/source commit. It remains a draft
   submission until the required human fields are completed. No remaining code defect was identified in scope;
   unsupported generated claims and same-model judging remain disclosed quality limitations.
+
+### 2026-10-08 — Supplied team roster and approved two-person exception
+
+- User supplied Natdanai Phurintanachot (67070230) and Nattapong Suphawirojlert (67070051), then confirmed
+  "just two people. professor accepted". Recorded the exception as user-confirmed professor acceptance of two
+  members despite the brief's original 3-4-member wording. No additional member is required by the known approval.
+- Added the exact roster to AI_AUDIT, README, current readiness documents, title slide and companion notes.
+  Kept both members' contributions/personally used tools pending because none were supplied. Anonymous prompt
+  actions remain separate; all three unaided Section 6 fields remain untouched. Independent read-only review agrees.
+- Applied a targeted ArtifactTool edit to the existing deck. All ten slides rendered; package/layout/font/import
+  checks pass with zero findings/warnings, five editable native tables retained. Slides 2-10 match their previous
+  renders pixel-for-pixel; slide text and all ten speaker notes are preserved. Visually checked the new cover/montage.
+- Regenerated the PDF with both names in its author metadata. All ten embedded page images match the final PPTX
+  renders exactly; Poppler-rendered cover inspected. Updated preview/Thai-note introduction and preserved originals
+  privately. Final PPTX SHA-256: 94ac0dfafa8b23bccfcfdda7e3498f093ebc61a53d27e7180057a927aa2e25f0;
+  PDF SHA-256: 5c6723df50a10d9ac4cd0af75cab1bcc2bcaf5612a2fcd4e5269ba800064ad4c.
+- Retained the prior reviewed ZIP as dist/MCQA_submission_before_team_names_1680730.zip plus its hash sidecar.
+  The refreshed 168-member archive passes CRC, every member hash and required-file checks. Saving these edits
+  in a local checkpoint, then rebuilding the archive from that clean snapshot and synchronizing the previously
+  authorized GitHub main branch. Exact final source/hash checks are in dist/slides_build/package_verification.json.
+- This roster/artifact change needs no new inference, training, dependency or code regression run. Prior 36-test
+  evidence remains unchanged. Native PowerPoint playback and human contribution/unaided completion remain unverified.

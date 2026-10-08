@@ -2,8 +2,10 @@
 
 **2026-10-08 follow-up:** see [submission_review.md](submission_review.md) for the final requirements audit,
 two small fixes, 36 passing tests, successful local startup and the newly recorded grounding failure in a live
-cow-breeding answer. The historical measurements below retain their original source versions. Team names,
-contributions, unaided Section 6 and the title-slide names still need completion.
+cow-breeding answer. The historical measurements below retain their original source versions. Natdanai
+Phurintanachot (67070230) and Nattapong Suphawirojlert (67070051) are recorded in the audit and title slide.
+The user confirmed that the professor accepted this two-person team despite the original 3-4-member brief.
+Individual contributions/tools, unaided Section 6 and rehearsal still need completion.
 
 The local implementation, saved evaluations, setup instructions and technical package are complete. This is a
 tested course project, with known model failures. Independent team checking is recommended; the personal audit
@@ -167,11 +169,11 @@ same-model judge bias or certify population behavior.
 
 ## Remaining team work
 
-1. Supply real team names and actual contributions in `AI_AUDIT.md`.
+1. Supply both named members' actual contributions and personally used tools in `AI_AUDIT.md`; names and IDs are supplied.
 2. Write Section 6 unaided. The brief explicitly says **“Answer WITHOUT using AI”**; AI must not invent these answers.
 3. Check benchmark references and grade `results/verified/test/human_check.csv` independently, particularly conflicting
    judge labels and examples in `failure_analysis.md`. Keep human judgments separate from original automatic outputs.
-4. Add authentic names to the supplied ten-slide deck and rehearse the live demo/individual technical explanations.
+4. Rehearse the supplied ten-slide deck, live demo and individual technical explanations.
    `presentation/MCQA_pitch_ready.pptx` has English slides, Thai speaker notes, editable architecture/results and the
    instructor's exact slide order. `presentation/MCQA_pitch.pdf` is the shareable rendered copy; the companion Thai
    notes include the 4–7-minute demo break. The notes are AI-authored, not unaided Section 6 responses.
@@ -180,7 +182,7 @@ The deck uses historical frozen v1 gameplay, frozen v2 tool and current small-st
 claim a consistent reranker benefit, human-certified accuracy or general accuracy improvement. All ten final
 PowerPoint renders and all ten PDF pages were visually inspected. Package/layout/font/import checks pass with
 zero final warnings; five native result/model tables and the pipeline remain editable in the PowerPoint. Native
-PowerPoint execution was not tested. The team-name field is the only intentional cover placeholder.
+PowerPoint execution was not tested. The cover now records both supplied names and student IDs.
 
 Fine-tuning is optional under the course brief. This session first corrected and measured pretrained RAG; no training
 experiment, improvement or student-authored decision is claimed. Any later adaptation needs its own objective,

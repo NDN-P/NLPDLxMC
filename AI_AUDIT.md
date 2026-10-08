@@ -1,8 +1,9 @@
 # AI Audit — MCQA: Minecraft Wiki Q&A
-**Team:** [NAME 1], [NAME 2], [NAME 3], [NAME 4]
+**Team:** Natdanai Phurintanachot (67070230), Nattapong Suphawirojlert (67070051)
+**Team-size exception:** The user confirmed that the professor accepted this two-person team. The original brief specifies 3-4 members.
 **AI Tools Used:** Claude Code, Codex
 
-Recorded AI work is filled from the actual chat and files. No student implementation or independent human labels are invented. The original generated skeleton is preserved in `docs/AI_AUDIT_skeleton.md`. Team members must provide their names/contributions and write Section 6 without AI.
+Recorded AI work is filled from the actual chat and files. No student implementation or independent human labels are invented. The original generated skeleton is preserved in `docs/AI_AUDIT_skeleton.md`. Names and IDs were supplied by the user; team members must provide their actual contributions and write Section 6 without AI.
 
 ---
 
@@ -74,7 +75,7 @@ The user later authorized corrections. Claude also received the review and fixed
 Further fixes/regression tests, safer calculator handling, 60 new source-grounded Java cases with exact pinned quotes, resumable evaluation and setup checks. Observed results are saved; perfection is not claimed.
 
 **What you changed or rejected:**
-The user confirmed Claude had finished editing, enabling safe continuation. Team names, contributions and independent labels have not yet been supplied.
+The user confirmed Claude had finished editing, enabling safe continuation. At that time, team names, contributions and independent labels had not yet been supplied.
 
 ---
 
@@ -105,8 +106,9 @@ editable pipeline/result tables, a rendered PDF and timed demo guidance. The use
 Thai speaker notes". Historical and current experiments are labelled separately; universal accuracy is not claimed.
 
 **What you changed or rejected:**
-The user specified the presentation language. Names, actual contributions, rehearsal, individual explanations and
-the explicitly unaided Section 6 remain the real team's responsibility. The deck and notes are AI-authored assistance.
+The user specified the presentation language and later supplied both members' names and IDs. Actual contributions,
+rehearsal, individual explanations and the explicitly unaided Section 6 remain the real team's responsibility.
+The deck and notes are AI-authored assistance.
 
 ---
 
@@ -160,10 +162,12 @@ Generic “Smithing Template,” “Banner Pattern” and “Music Disc” silen
 
 | Team Member | Human Contribution | AI Tools Used |
 |---|---|---|
-| [NAME 1: user who sent the recorded prompts] | Selected Minecraft and local inference; required logging/review; controlled work scope and authorized fixes. Additional work requires the person's own account. | Claude Code, Codex |
-| [NAME 2] | [FILL IN: ...] | [FILL IN: ...] |
-| [NAME 3] | [FILL IN: ...] | [FILL IN: ...] |
-| [NAME 4] | [FILL IN: ...] | [FILL IN: ...] |
+| Natdanai Phurintanachot (67070230) | [FILL IN: actual human contribution] | [FILL IN: tools personally used] |
+| Nattapong Suphawirojlert (67070051) | [FILL IN: actual human contribution] | [FILL IN: tools personally used] |
+
+**Observed prompt actions, not attributed to a named member:** The user selected Minecraft and local inference,
+required logging/review, controlled work scope and authorized fixes using Claude Code and Codex. The conversation
+does not identify which named member performed these actions; each member must supply their own contribution record.
 
 ---
 

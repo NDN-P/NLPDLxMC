@@ -1,7 +1,12 @@
 # Final submission review - 2026-10-08
 
 **Verdict: the technical project is ready with documented model limitations, but do not submit the current files unchanged.**
-The final audit and title slide still contain required human fields. Complete these before uploading.
+The team names/IDs are now supplied in the audit and title slide; individual contributions/tools and unaided
+Section 6 answers still require the team's own input. Complete these before uploading.
+
+**Roster update:** Natdanai Phurintanachot (67070230) and Nattapong Suphawirojlert (67070051).
+The user confirmed that the professor accepted this two-person team; this is a user-confirmed exception to the
+brief's original 3-4-member requirement, not a missing-member blocker.
 
 This is a local Minecraft Java RAG assistant with a recipe calculator. The review assumes one presenter using
 the prepared laptop. All eight pages of `Class NLP with DL/Term Project/PROJECT_INSTRUCTION.pdf` were checked,
@@ -9,9 +14,9 @@ along with the implementation, tests, evaluation evidence, audit, slides and exi
 
 ## Required before submission
 
-1. **Add the real 3-4 team members and their actual contributions.** `AI_AUDIT.md` still has name placeholders
-   and incomplete contribution rows. Remove the fourth row if there are only three members. Add the same real
-   names to slide 1 in the PowerPoint and export an updated PDF. Invented contributions must not replace these fields.
+1. **Fill both members' actual contributions and personally used tools.** Names/IDs have been supplied, but
+   the contribution rows in `AI_AUDIT.md` remain incomplete. Recorded prompt actions are kept anonymous until
+   a member identifies their own work. Invented contributions must not replace these fields.
 2. **Write all three answers in AI_AUDIT Section 6 without AI.** All three are blank. The brief explicitly
    requires unaided answers and says an unfilled section scores zero. Other final-audit placeholders must also
    be filled; placeholders in the preserved original skeleton are historical evidence, not the final submission.
@@ -32,8 +37,9 @@ along with the implementation, tests, evaluation evidence, audit, slides and exi
 | Ablation with at least two variants and interpretation | No-retrieval/dense/rerank, chunk/retrieval comparisons, tools on/off | Pass |
 | Runnable source, setup instructions, demo and evaluation files | README, requirements, launchers, demo.py, eval.py and saved outputs | Pass on this laptop |
 | Optional technical extensions | BM25/RRF, cross-encoder reranking, bounded calculator tool loop | Implemented |
-| Ten slides in required order | All 10 inspected; Thai notes on all 10; editable pipeline and five native tables | Pass except cover names |
-| Complete six-section AI audit | 7 prompt entries, 7 labelled AI-owned decisions, 3 error catches; names/contributions/Section 6 incomplete | Must complete |
+| Ten slides in required order | All 10 inspected; Thai notes on all 10; editable pipeline and five native tables; supplied names/IDs on cover | Pass |
+| Team roster | Two real names/IDs supplied; professor's acceptance of two members confirmed by the user | User-confirmed exception |
+| Complete six-section AI audit | 7 prompt entries, 7 labelled AI-owned decisions, 3 error catches; names/IDs supplied, contributions/tools/Section 6 incomplete | Must complete |
 
 The brief sets no minimum accuracy score, generator runtime requirement, or mandatory fine-tuning experiment.
 Ollama serves the existing local model. The presence of extensions does not guarantee a particular grade.

@@ -13,7 +13,7 @@ The user answered **“Fully local — no API charges”** to the question about
 
 Full process evidence is in `codextodo.md`. `docs/codex_review.md` and `results/codex_review/` preserve the earlier pre-correction review. `results/pipeline_dev/` contains development probes, including failures. New source-backed experiments are under `results/verified/`.
 
-Team members must supply authentic names/contributions and the assignment's unaided answers. Independent labels are recommended for evaluation rigor. Codex has not supplied those on their behalf.
+Team names and IDs have now been supplied. Members must still supply their actual contributions/tools and the assignment's unaided answers. Independent labels are recommended for evaluation rigor. Codex has not supplied those on their behalf.
 
 | Later prompt | Observed work |
 |---|---|
@@ -22,3 +22,4 @@ Team members must supply authentic names/contributions and the assignment's unai
 | `claude code hit limit for too long so i need you to continue. You can do everything to make improvement . and create demo bash for me i am lazy` | Authorized the current continuation: easy Windows/Bash launchers, source/evidence and crafting improvements, a separately frozen comparison and verification. See codextodo.md for actual outcomes rather than assuming every plan succeeded. |
 | `does this match all the instruction provided in term project? If yes can you render me a slide that is easy to pitch` | Rechecked the brief and built/rendered the exact ten-slide pitch deck, with honest study provenance and remaining human submission requirements. The user selected English slides with Thai speaker notes. |
 | `review everything one last time is it ready to summit?` / `limit hit continue` | Final requirements/code/evaluation/package review; corrected map alias precedence and an observed Ollama startup timeout, added regressions, reran 36 tests, checked the actual launcher and preserved selected live outputs including a grounding failure. Human names/contributions and unaided answers remain incomplete. |
+| `team member are Natdanai Phurintanachot (67070230) and Nattapong Suphawirojlert (67070051)` / `just two people. professor accepted` | Supplied authentic names/IDs and confirmed the professor-approved two-person exception. Added the roster to the audit, cover and current submission documents; updated PDF/package. Individual contributions/tools and Section 6 remain pending rather than invented. |

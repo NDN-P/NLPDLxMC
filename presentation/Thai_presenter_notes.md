@@ -1,6 +1,6 @@
 # MCQA — Thai presenter notes
 
-English deck with Thai speaker notes. These are AI-authored presentation assistance. Add authentic names and contributions before submitting. The team must write AI_AUDIT Section 6 unaided.
+English deck with Thai speaker notes. These are AI-authored presentation assistance. Team: Natdanai Phurintanachot (67070230) and Nattapong Suphawirojlert (67070051). The user confirmed that the professor accepted this two-person team. Add actual contributions before submitting; the team must write AI_AUDIT Section 6 unaided.
 
 ## Timing
 
