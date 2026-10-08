@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-08",
+  "purpose": "Selected final-demo smoke checks, not an accuracy benchmark",
+  "source_sha256": {
+    "mcqa.py": "26a2264059c991f43fd3e75794285d8a901c86dd14cba971c1fe793ea6cbc79e",
+    "demo.py": "8ab356c436f3c2804637b46918e2b08d8f7227617bfa576b1b88ff6b4db848f1"
+  },
+  "generator": "qwen3:4b-instruct",
+  "rows": [
+    {
+      "kind": "recipe",
+      "question": "How many Iron Ingots do I need for 3 Hoppers?",
+      "seconds": 15.447,
+      "result": {
+        "answer": "You need 15 Iron Ingots for 3 Hoppers [tool].",
+        "answer_mode": "llm",
+        "tool_calls": [
+          {
+            "args": {
+              "item": "hopper",
+              "count": 3
+            },
+            "model_args": {
+              "item": "hopper",
+              "count": 3
+            },
+            "result": {
+              "answer": "To craft 3 Hopper you need 15 Iron Ingot, 3 Chest in total (3 crafts, each makes 1).",
+              "item": "Hopper",
+              "item_id": "minecraft:hopper",
+              "ingredient_ids": {
+                "minecraft:iron_ingot": 15,
+                "minecraft:chest": 3
+              },
+              "count": 3,
+              "crafts": 3,
+              "makes_per_craft": 1,
+              "ingredients": {
+                "Iron Ingot": 15,
+                "Chest": 3
+              },
+              "recipe_variants": 1,
+              "game_version": "26.3"
+            }
+          }
+        ],
+        "passages": "[1] Anvil > Obtaining > Crafting\nA total of 31 iron ingots (including 27 for three blocks of iron) are required to craft an anvil.\n\n[2] Tutorial:Nether survival > Farming > Iron production\nYou are looking for several items in particular:\nIron. There is a 2.18% chance of piglins giving you 10-36 iron nuggets, which you can craft into ingots. Since you cannot afford the luxury of making iron tools, your first priority would be to make a shield. Next you need to make an iron pickaxe. The reason for this is that gold blocks generate in bastion remnants, and you cannot obtain them with a stone pickaxe. You cannot afford to make any other tools, but if you have enough you can make a hopper. That makes your total iron to explore a bastion remnant 9 iron.\nString. Piglins have a 4.36% chance of giving you 3-9 string. Striders drop string as well, dropping 2-5 string, without Looting on a sword. You need string to craft a bow, which you need for taking down a bastion. You also need it to craft wool for beds for Netherite mining, however that is late-game.\n\n[3] Tutorial:Advancement guide/Minecraft tab > Acquire Hardware\nIron golems can spawn in villages and pillager outposts. When killed, the golem drops 3-5 iron ingots. Note that an iron golem on any difficulty beyond Peaceful fight back if you try to kill it, and it deals lots of damage, so this method is not recommended for inexperienced players. If you still want to kill the iron golem, it's better to build 3 blocks higher, so it definitely won't reach you and you'll get the iron ingots.\nZombies, husks and zombie villagers also have a small chance to drop 1 iron ingot. Iron nuggets also can be obtained by smelting iron tools, swords, armor, horse armor, or chainmail armor, and by bartering.\nYou will get the advancement once you transfer the iron ingot to your inventory. Iron ingots can further be made into many useful tools, weapons, and armor.\nParent of: Suit Up | Hot Stuff | Isn't It Iron Pick\n\n[4] Tutorial:Hopper > Item sorter\nThis design relies on the fact that, inside of Minecraft's code, hoppers search for an item to be taken from the input side before outputting an item to another container. This results in the bottom hoppers taking the filtered item(s) before the items currently running through the storage system are passed over to the next hopper. However, because hoppers have a 0.4 second cooldown after transferring an item, bear in mind that both the input and output activate should there be more than 1 item available to pass. For example, if 2 iron ingots were in the same hopper, 1 of them would get taken by the hopper beneath, while the second one would get outputted to the side and continue along the sorting chain.\nIt is also possible to have double speed hoppers. Instead of the regular 2.5 ips, it is possible to have 5 ips. To have this mechanism we need to understand that every hopper tries to take items and push items at the same time. By having two hoppers (Top one should point to the bottom) the top hopper pushes items into the bottom one and the bottom one pulls items from the top simultaneously.\n\n[5] Tutorial:Achievement guide > Acquire Hardware > Smelt an iron ingot\nIron golems can spawn in villages and pillager outposts. When killed, the golem drops 3-5 iron ingots. Note that an iron golem on any difficulty beyond Peaceful fight back if you try to kill it, and it deals lots of damage, so this method is not recommended for inexperienced players.\nZombies, husks and zombie villagers also have a small chance to drop 1 iron ingot. Iron nuggets also can be obtained by smelting iron tools, swords, armor, horse armor, or chainmail armor, and by bartering.\nYou will get the achievement once you transfer the iron ingot to your inventory. Iron ingots can further be made into many useful tools, weapons, and armor.",
+        "sources": [
+          {
+            "n": 1,
+            "title": "Anvil",
+            "section": "Obtaining > Crafting",
+            "chunk_id": 3481,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": false,
+            "revid": 3822941,
+            "timestamp": "2026-10-06T09:04:26Z",
+            "url": "https://minecraft.wiki/?oldid=3822941"
+          },
+          {
+            "n": 2,
+            "title": "Tutorial:Nether survival",
+            "section": "Farming > Iron production",
+            "chunk_id": 9759,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": false,
+            "revid": 3820443,
+            "timestamp": "2026-10-04T22:36:09Z",
+            "url": "https://minecraft.wiki/?oldid=3820443"
+          },
+          {
+            "n": 3,
+            "title": "Tutorial:Advancement guide/Minecraft tab",
+            "section": "Acquire Hardware",
+            "chunk_id": 9181,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": false,
+            "revid": 3819125,
+            "timestamp": "2026-10-04T13:44:39Z",
+            "url": "https://minecraft.wiki/?oldid=3819125"
+          },
+          {
+            "n": 4,
+            "title": "Tutorial:Hopper",
+            "section": "Item sorter",
+            "chunk_id": 3022,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": true,
+            "revid": 3789833,
+            "timestamp": "2026-09-23T02:12:06Z",
+            "url": "https://minecraft.wiki/?oldid=3789833"
+          },
+          {
+            "n": 5,
+            "title": "Tutorial:Achievement guide",
+            "section": "Acquire Hardware > Smelt an iron ingot",
+            "chunk_id": 8690,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": false,
+            "revid": 3800377,
+            "timestamp": "2026-09-28T04:43:27Z",
+            "url": "https://minecraft.wiki/?oldid=3800377"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "gameplay",
+      "question": "How do you breed cows in Minecraft?",
+      "seconds": 8.058,
+      "result": {
+        "answer": "To breed cows in Minecraft, you need to use wheat on two cows [1]. The cows must be of the same type and placed in a lighted, enclosed area to successfully breed [2]. Cows breed with wheat, as stated in the advancement guide [3].",
+        "answer_mode": "llm",
+        "tool_calls": [],
+        "passages": "[1] Tutorial:Achievement guide > Repopulation > Breed two cows with wheat\nUse wheat on 2 cows or 2 mooshrooms to make them breed.\n\n[2] Tutorial:Shelters > Expansions > Indoor animal farm\nLight up a large enclosed area and then put two of the same kind of passive mobs (i.e., two pigs or two cows) inside. You can then breed them together and you can gather wool, leather, raw porkchop, beef and raw chicken safely. You might want to put a grass block floor so that sheep can regrow wool, trees inside so the animals feel more comfortable, or, if you're really ambitious, build a man-made forest.\n\n[3] Tutorial:Advancement guide/Husbandry tab > The Parrots and the Bats\nBreed two animals together\nRequirements: Breed two breedable mobs together.\nUse one breedable mob with the item that they can breed with, and then use the same type of mob nearby with that item. They will come together and make a baby (or in some cases, lay an egg). As soon as the breeding is done, you will be granted the advancement.\nThere are 25 types of breedable mobs: for a complete list, see Two by Two below. Cows, sheep and chickens are probably the easiest animals to breed in early-game, as they are common and don't require very expensive items. Cows and sheep breed with wheat, while chickens breed with seeds. You can also, for example, breed tamed wolves with any type of meat and tamed cats with a raw cod or raw salmon.\nNote that, despite the name of this advancement, you can't actually breed parrots or bats.\nParent of: Two by Two\n\n[4] Tutorial:Advancement guide/Husbandry tab > Two by Two\nNote that any two mobs of the same species can breed with each other, as all Minecraft mobs are single-sex. Also, different variant of the same mob species can breed just fine (e.g. brown mooshroom and red mushroom, aggressive panda and playful panda, etc.). In case of mobs that lay eggs (sniffers, frogs and turtles), note that you do not have to wait until the egg that they laid hatches.\nAdditional notes:\nAs trader llamas don't count as llamas, they are not required to breed for this advancement. However, they can be bred for The Parrots and the Bats.\nBreeding villagers is also not required, as that is not an event that the player can cause directly.\nOther mobs with baby variants, such as polar bears or piglins, can't breed in the first place.\nAllay and shulker duplication is not counted as breeding.\n\n[5] Tutorial:Egg farming\nEgg farming is the process of collecting a large number of chicken eggs from chickens. From an automated source of eggs, a chicken farm, which produces additional end products like raw or cooked chicken and feathers, can be constructed with the addition of egg-dispensing and chicken-killing systems.\nThe chicken is the most farmable animal in Minecraft. Unlike cows and sheep, it does not require any food to reproduce. No matter where the chicken is kept, everything just happens automatically. In addition, cooked chicken is almost as good as other cooked meats for restoring hunger.",
+        "sources": [
+          {
+            "n": 1,
+            "title": "Tutorial:Achievement guide",
+            "section": "Repopulation > Breed two cows with wheat",
+            "chunk_id": 8726,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": false,
+            "revid": 3800377,
+            "timestamp": "2026-09-28T04:43:27Z",
+            "url": "https://minecraft.wiki/?oldid=3800377"
+          },
+          {
+            "n": 2,
+            "title": "Tutorial:Shelters",
+            "section": "Expansions > Indoor animal farm",
+            "chunk_id": 303,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": false,
+            "revid": 3789824,
+            "timestamp": "2026-09-23T01:58:26Z",
+            "url": "https://minecraft.wiki/?oldid=3789824"
+          },
+          {
+            "n": 3,
+            "title": "Tutorial:Advancement guide/Husbandry tab",
+            "section": "The Parrots and the Bats",
+            "chunk_id": 9597,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": false,
+            "revid": 3814472,
+            "timestamp": "2026-10-02T16:49:30Z",
+            "url": "https://minecraft.wiki/?oldid=3814472"
+          },
+          {
+            "n": 4,
+            "title": "Tutorial:Advancement guide/Husbandry tab",
+            "section": "Two by Two",
+            "chunk_id": 9616,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": false,
+            "revid": 3814472,
+            "timestamp": "2026-10-02T16:49:30Z",
+            "url": "https://minecraft.wiki/?oldid=3814472"
+          },
+          {
+            "n": 5,
+            "title": "Tutorial:Egg farming",
+            "section": "",
+            "chunk_id": 4637,
+            "source_scope": "current-Java heuristic passage view",
+            "passage_filtered": false,
+            "revid": 3798641,
+            "timestamp": "2026-09-27T14:53:41Z",
+            "url": "https://minecraft.wiki/?oldid=3798641"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "scope",
+      "question": "How do you breed cows in Bedrock Edition?",
+      "seconds": 0.0,
+      "result": {
+        "answer": "I do not know.",
+        "answer_mode": "scope_refusal",
+        "tool_calls": [],
+        "passages": "",
+        "sources": []
+      }
+    },
+    {
+      "kind": "map_regression",
+      "question": "Craft a map?",
+      "seconds": 0.003,
+      "result": {
+        "answer": "To craft 1 Empty Map you need 8 Paper, 1 Compass in total (1 craft, each makes 1). [tool]",
+        "answer_mode": "calculator_recipe",
+        "tool_calls": [
+          {
+            "args": {
+              "item": "map",
+              "count": 1
+            },
+            "result": {
+              "answer": "To craft 1 Empty Map you need 8 Paper, 1 Compass in total (1 craft, each makes 1).",
+              "item": "Empty Map",
+              "item_id": "minecraft:map",
+              "ingredient_ids": {
+                "minecraft:paper": 8,
+                "minecraft:compass": 1
+              },
+              "count": 1,
+              "crafts": 1,
+              "makes_per_craft": 1,
+              "ingredients": {
+                "Paper": 8,
+                "Compass": 1
+              },
+              "recipe_variants": 1,
+              "game_version": "26.3"
+            },
+            "via": "deterministic"
+          }
+        ],
+        "passages": "",
+        "sources": []
+      }
+    }
+  ],
+  "checks": {
+    "recipe_quantity": true,
+    "gameplay_answer_and_citations": true,
+    "scope_refusal": true,
+    "map_recipe": true
+  },
+  "review": {
+    "reviewer": "Codex (AI; not independent human grading)",
+    "functional_checks_only": true,
+    "recipe": "15 iron ingots for 3 hoppers agrees with the calculator trace.",
+    "gameplay": "Core wheat fact is supported. The answer promotes the optional indoor-farm setup in passage [2] into a necessary condition (must be in a lighted, enclosed area). Do not treat this entire answer as factually correct.",
+    "scope": "Explicit Bedrock Edition question refused as designed.",
+    "map_regression": "8 Paper + 1 Compass agrees with the pinned recipe."
+  }
+}

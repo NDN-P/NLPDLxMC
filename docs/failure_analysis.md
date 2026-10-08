@@ -281,4 +281,14 @@ two useful follow-up quotes from mixed paragraphs. Dense embeddings still contai
 BM25/reranking/generation see the filtered view. These limitations remain explicit rather than being hidden by
 a claim that filtering makes every answer current or correct.
 
+## Final submission smoke check - 2026-10-08
+
+The current model answered "How do you breed cows in Minecraft?" with the supported wheat fact, then said
+the cows must be in a lighted, enclosed area. Retrieved passage [2] gives instructions for an indoor animal
+farm; it does not establish that setup as a universal breeding requirement. This is a failure to preserve the
+source's scope and modality, despite supplying a citation. The full response and passages are preserved in
+`results/submission_review/live_smoke_2026-10-08.json`. Its keyword/citation smoke check is only functional;
+the answer is not recorded as entirely correct or independently human-validated. This diagnostic was not used
+to tune generation or revise historical benchmark scores.
+
 ---

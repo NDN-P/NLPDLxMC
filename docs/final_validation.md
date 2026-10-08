@@ -1,5 +1,10 @@
 # Final technical validation — 2026-10-07
 
+**2026-10-08 follow-up:** see [submission_review.md](submission_review.md) for the final requirements audit,
+two small fixes, 36 passing tests, successful local startup and the newly recorded grounding failure in a live
+cow-breeding answer. The historical measurements below retain their original source versions. Team names,
+contributions, unaided Section 6 and the title-slide names still need completion.
+
 The local implementation, saved evaluations, setup instructions and technical package are complete. This is a
 tested course project, with known model failures. Independent team checking is recommended; the personal audit
 and presentation remain submission work. No paid API calls, model downloads or fine-tuning occurred during this correction session.

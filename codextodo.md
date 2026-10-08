@@ -484,3 +484,58 @@ sidecar; the private verification report also records the result. No remote publ
   The project code, frozen evaluation evidence, launchers and all four presentation artifacts are on GitHub.
 - Recording this checkpoint in a local automation-authored commit, then synchronizing it to the same main branch
   and verifying the final remote hash. No force push, new repository, model restart, inference or training is needed.
+
+### 2026-10-08 — Ollama suitability check
+
+- User asked whether using Ollama is acceptable. Independently rechecked the original eight-page
+  Class NLP with DL/Term Project/PROJECT_INSTRUCTION.pdf: pages 1–2 require corpus/chunking,
+  SentenceTransformers dense retrieval, at least two course evaluation metrics and an ablation. The brief
+  specifies no generator runtime or direct Transformers/Hugging Face loading requirement; LoRA is optional.
+- Checked production mcqa.py: qwen3:4b-instruct is the model, Ollama serves it through localhost:11434/api/chat.
+  Official Ollama API/FAQ documentation confirms local inference. Keeping this local generator satisfies the
+  user's no-paid-API preference; using a runtime does not constitute fine-tuning or replace the RAG pipeline.
+- Only this work record changed. No model/server restart, new inference, benchmark, installation, commit or push.
+
+### 2026-10-08 — Final submission review
+
+- User requested a last complete readiness review and then said "limit hit continue". Used independent reviews
+  for the original eight-page brief/deliverables, implementation, and evaluation integrity; root checked tests,
+  dependencies, actual demo startup, archive contents, and integrated findings. Assumed one local presenter.
+- Required human fields remain: real 3-4 team names/contributions, all three explicitly unaided AI_AUDIT Section 6
+  answers, and title-slide names. Nine FILL IN fields remain in the final audit in addition to name placeholders.
+  The original audit skeleton is historical evidence and is not meant to be filled in instead of the final audit.
+- Verified the mandatory corpus/chunking/CPU SentenceTransformers stack, two course metrics and ablations,
+  three optional extensions, ten-slide order, Thai notes and editable tables/pipeline. All ten existing final
+  slide renders were inspected and matched to the PDF pixels; no new visual defect found. Native PowerPoint was not run.
+- All frozen main/tool/improvement summaries, counts and inspected source/data/config hashes reproduce. Human
+  grading sheets remain blank; no human validation, team contribution or unaided answer was invented.
+- Initial 34 tests and dependency checks passed. Exhaustive item-ID review then found the map alias collision:
+  the filled map's display name overwrote the empty-map ID. Reversed lookup precedence and added a focused test.
+  All 1,010 actual recipe product IDs now resolve correctly; arithmetic was checked at counts 1, 3 and 10.
+- Actual demo cold start exposed a socket TimeoutError while polling the newly started Ollama server. Retried
+  read timeouts within the existing startup deadline and tested both recovery and expiry with one launch.
+  No larger runtime rewrite or new dependency was introduced. Only the review's own server was stopped for the rerun.
+- Integrated suite now passes 36 tests. Pip reports no broken requirements; all 30 tracked Python files parse.
+  A limited known-token/private-key pattern scan found no matches in tracked text. Full local preflight passes
+  on the real host; sandbox Python prints a base-location warning, while real-host execution works normally.
+- Real demo.bat ran from outside the repo, restarted Ollama, warmed models in 12.7 seconds and answered the
+  hopper question correctly in 7.7 seconds. Four later smoke outputs are in results/submission_review/
+  live_smoke_2026-10-08.json with source hashes, passages, traces and timings. Functional checks pass, but the cow
+  answer adds an unsupported necessary lighting/enclosure condition from an optional indoor-farm tutorial.
+  Explicitly marked that whole answer as not verified correct; the smoke sample is not a new accuracy benchmark.
+- Published the full readiness report in docs/submission_review.md and linked it from README/final_validation;
+  documented the live grounding failure and actual user prompts. The two fixes postdate frozen benchmark code;
+  no historical snapshot, automatic judgment, reference, score or slide number was overwritten or relabelled.
+- The old 166-member ZIP passes CRC/member hashes/sidecar and originally differed only in codextodo.md.
+  Preparing a new dated archive containing the reviewed fixes and evidence; required human fields remain visible.
+  Existing October 7 archives are retained. No fresh-machine installation, native slide playback, full benchmark
+  regeneration, model download, fine-tuning or paid API call was performed.
+- New 168-member October 8 archive passes CRC, every manifest member hash and required-file checks. Fresh
+  extraction passes all 36 tests using the existing installed environment plus a copied excluded recipe cache;
+  missing indexes produce the expected readable demo setup error. No fresh-machine compatibility is claimed.
+  Private package evidence is in dist/final_submission_review_2026-10-08/package_check.json and package_tests.txt.
+- Saving the reviewed files in a local checkpoint and refreshing the archive from that clean snapshot before
+  the previously authorized GitHub synchronization. The new archive keeps a manifest and .zip.sha256 sidecar;
+  dist/slides_build/package_verification.json records its final exact hash/source commit. It remains a draft
+  submission until the required human fields are completed. No remaining code defect was identified in scope;
+  unsupported generated claims and same-model judging remain disclosed quality limitations.

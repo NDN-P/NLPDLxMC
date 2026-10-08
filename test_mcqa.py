@@ -172,6 +172,20 @@ class TestMcqa(unittest.TestCase):
         self.assertEqual(mcqa.find_item("minecraft:DIAMOND_BOOTS", names), "minecraft:diamond_boots")
         self.assertEqual(mcqa.find_item("DiamondBoots", names), "minecraft:diamond_boots")
 
+    def test_item_id_wins_a_colliding_display_name(self):
+        data = {**FAKE,
+                "names": {"minecraft:map": "Empty Map", "minecraft:filled_map": "Map",
+                          "minecraft:paper": "Paper", "minecraft:compass": "Compass"},
+                "recipes": {"minecraft:map": [{"file": "map", "slots": ["minecraft:paper"] * 8
+                                              + ["minecraft:compass"], "makes": 1}]}}
+        with mock.patch.object(mcqa, "crafting_data", return_value=data), \
+                mock.patch.object(mcqa, "chat", side_effect=AssertionError("explicit recipe needs no model")):
+            for name in ("map", "maps", "minecraft:map", "empty map"):
+                self.assertEqual(mcqa.craft(name)["ingredients"], {"Paper": 8, "Compass": 1})
+            self.assertEqual(mcqa.find_item("minecraft:filled_map", data["names"]), "minecraft:filled_map")
+            self.assertIn("error", mcqa.craft("filled map"))
+            self.assertEqual(mcqa.answer("Craft a map?")["answer_mode"], "calculator_recipe")
+
     def test_invalid_quantities_are_not_silently_changed_to_one(self):
         with mock.patch.object(mcqa, "crafting_data", lambda: FAKE):
             for count in (0, -2, "-2", "0", 1.5, True, None, "2.5"):

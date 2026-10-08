@@ -43,7 +43,7 @@ def ensure_ollama():
             try:
                 available = models()
                 break
-            except urllib.error.URLError:
+            except (urllib.error.URLError, TimeoutError):
                 if time.monotonic() >= deadline:
                     raise RuntimeError("Ollama did not start. Open the Ollama app and try again.")
                 time.sleep(0.5)

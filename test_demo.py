@@ -34,6 +34,22 @@ class TestDemo(unittest.TestCase):
         self.assertEqual(start.call_count, 1)
         self.assertEqual(start.call_args.args[0], ["ollama.exe", "serve"])
 
+    def test_startup_read_timeout_retries_within_the_deadline(self):
+        for expired in (False, True):
+            with self.subTest(expired=expired), \
+                    mock.patch.object(demo.urllib.request, "urlopen", side_effect=[
+                        urllib.error.URLError("not running"), TimeoutError("starting"), self.response()]), \
+                    mock.patch.object(demo.shutil, "which", return_value="ollama.exe"), \
+                    mock.patch.object(demo.subprocess, "Popen") as start, \
+                    mock.patch.object(demo.time, "sleep"), \
+                    mock.patch.object(demo.time, "monotonic", side_effect=[0, 16 if expired else 1]):
+                if expired:
+                    with self.assertRaisesRegex(RuntimeError, "Ollama did not start"):
+                        demo.ensure_ollama()
+                else:
+                    demo.ensure_ollama()
+                start.assert_called_once()
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -405,7 +405,8 @@ def item_keys(name):
 
 
 def find_item(name, names):
-    lookup = {**{i.split(":")[1].replace("_", " "): i for i in names}, **{n.lower(): i for i, n in names.items()}}
+    # Item IDs win collisions such as map (empty map) versus the filled map's display name "Map".
+    lookup = {**{n.lower(): i for i, n in names.items()}, **{i.split(":")[1].replace("_", " "): i for i in names}}
     for k in item_keys(name):
         if k in lookup:
             return lookup[k]

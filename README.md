@@ -7,9 +7,14 @@ from Mojang's official **Java Edition 26.3** recipe files when a question asks h
 Term project for *Natural Language Processing with Deep Learning*. Everything runs locally on one laptop: retrieval on
 the CPU, the language model in Ollama (tested on a laptop RTX 5070 GPU).
 
-The verified source/results package is `dist/MCQA_submission_2026-10-07.zip`, with a SHA-256 sidecar and an internal
+The reviewed source/results package is `dist/MCQA_submission_2026-10-08.zip`, with a SHA-256 sidecar and an internal
 file manifest. It includes this README, source, tests, pinned pages, benchmark data, audit/work records and results.
 Models and rebuildable runtime data are excluded; follow setup below before running inference on another machine.
+
+**Before submission:** fill the real team names/contributions and the unaided answers in `AI_AUDIT.md`, add names
+to the title slide, update the PDF, and package those final edits. See [the final submission review](docs/submission_review.md).
+The October 8 review fixed map item-ID lookup and a cold-start timeout; saved benchmark scores still refer to
+their frozen source versions. The selected live checks include a partly unsupported cow-breeding answer.
 
 ```
 explicit standalone recipe ─► validated craft(item, count) ─► calculator answer [tool], no model call
