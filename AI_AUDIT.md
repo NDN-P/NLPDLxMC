@@ -180,15 +180,15 @@ The assignment explicitly requires unaided answers. These fields are intentional
 **a)** If you removed the cross-encoder reranker (cross-encoder/ms-marco-MiniLM-L6-v2, which reranks the top 20
 hybrid RRF results to the top 5) from your pipeline, what specifically changes in output quality and why?
 
-[FILL IN: ...]
+The ranking would get worse, because the reranker reads the question and the document together. Removing the reranker means the best document is often not ranked first: hit@1 drops to 55%. However, the final answer would not be much different.
 
 **b)** Why did you chunk your documents at 256 tokens? What would happen to retrieval quality if you used 2× (512)
 or ½ (128) that size?
 
-[FILL IN: ...]
+We chose 256 tokens because chunk size has little effect: each section in the wiki is already short, so most chunks are only about 90 tokens. If we used 2× (512), the prompt would be twice as long (5 chunks × 512) and the reranker would run slower. If we used ½ (128), retrieval would be almost the same because wiki sections are already short, but the LLM would get less context.
 
 **c)** Your ablation compares Variant A: dense-only (BAAI/bge-small-en-v1.5) vs. Variant B: BM25 + dense hybrid with
 RRF + cross-encoder reranker. Pick the result that surprised you most and explain the mechanism behind it — not
 just "variant A scored higher" but why technically.
 
-[FILL IN: ...]
+Dense-only answered 27/34 correctly, while hybrid + reranker answered 26/34. BM25 only counts matching words, and in the wiki these words appear repeatedly on almost every page, so a word match does not mean the passage contains the answer. The reranker can only change the order, and a better order did not make the answers better. The reranker was trained for general web search, so it does not know game-specific terms.
