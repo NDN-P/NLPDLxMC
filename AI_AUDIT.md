@@ -180,15 +180,15 @@ The assignment explicitly requires unaided answers. These fields are intentional
 **a)** If you removed the cross-encoder reranker (cross-encoder/ms-marco-MiniLM-L6-v2, which reranks the top 20
 hybrid RRF results to the top 5) from your pipeline, what specifically changes in output quality and why?
 
-[FILL IN: ...]
+The top 20 is the fusion step, which takes the results from both dense and BM25, combines them, and picks the best 20. Choosing the top 5 means using another model to go through the top 20 and cut it down to the top 5, then reading the information in the top 5 to answer. This is divided into crafting items (crafting tools) and general information search (tricks & tips). If we remove the cross-encoder reranker, we remove the paired reading, which makes dense read the documents separately. This makes reading the information faster, because dense reads the documents in advance and remembers them, while the reranker reads the documents from the wiki together with the question, so it is more accurate. Removing the reranker makes the ranking more off and causes the accuracy to drop.
 
 **b)** Why did you chunk your documents at 256 tokens? What would happen to retrieval quality if you used 2× (512)
 or ½ (128) that size?
 
-[FILL IN: ...]
+For chunking, we have to consider the tokens of the wiki, the range of each article, and how worthwhile the number of tokens is, in order to save our cost. We use the embedding model’s tokenizer, including [CLS] and [SEP], which gives no more than 256 tokens. We tested 128, 256 and 512 and found that the accuracy was not very different, because in the Minecraft wiki most sections are about 90 tokens long, which does not exceed 256 or 128. However, we did not choose 128 because 128 tokens would cut the text until it loses its original meaning, so the question we ask can get cut off, which leads to incomplete answers and more cut-off answers. As for 512 tokens, we would get more text than necessary: ask one thing and get two, or the answer becomes too long so the cost goes up, and it may not answer the question directly. So we chose the cost that is most worthwhile and gives the answer the user wants.
 
 **c)** Your ablation compares Variant A: dense-only (BAAI/bge-small-en-v1.5) vs. Variant B: BM25 + dense hybrid with
 RRF + cross-encoder reranker. Pick the result that surprised you most and explain the mechanism behind it — not
 just "variant A scored higher" but why technically.
 
-[FILL IN: ...]
+We choose Variant A. From all the results, Dense gets 1. 27/34 correct answers while Hybrid gets 26/34, 2. a BERTScore of 0.493 vs 0.451, and 3. 31/34 vs 30/34 for picking the top 5. However, Variant B has 4. better expected-refusal results. In order: 1. The top-5 selection is close because both receive similar information. 2. For BERTScore, using different passages makes the LLM use different words, which can affect the score, and answering “I don’t know” gets a low score, which pulls BERTScore down. 3. Measured with the benchmark’s reference sentences from the wiki, Variant B having a reranker changes the order and passes it on to BM25, so the top 20 of Hybrid is not better than Dense in this respect because the chunks are short. Finally, the refusal choice: whether the question is outside Java Edition, the expected answer is a refusal because we only accept Java Edition content. This makes Hybrid with a reranker give lower scores because the questions are unrelated, so the LLM refuses because there is no information in the database.
