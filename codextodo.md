@@ -561,3 +561,22 @@ sidecar; the private verification report also records the result. No remote publ
   authorized GitHub main branch. Exact final source/hash checks are in dist/slides_build/package_verification.json.
 - This roster/artifact change needs no new inference, training, dependency or code regression run. Prior 36-test
   evidence remains unchanged. Native PowerPoint playback and human contribution/unaided completion remain unverified.
+
+### 2026-10-23 — Deliverables check against the pasted instructor requirements
+
+- Read the current README, audit, required source/evaluation files, all ten PPTX slide texts and the rendered ten-page PDF. Used presentation/PDF review guidance; no deck, application, audit answer or measured result was edited.
+- Ran unittest discovery: 36 tests passed. Local read-only preflight reported ready=true with no problems. Source benchmark validation passed all 60 questions and disjoint dev/test source pages.
+- Confirmed slides 1–10 follow the requested title/motivation/architecture/technical decisions/ablations/two metrics/failure analysis/audit order; inspected the current PDF render and found no obvious clipping or code dumps.
+- Current AI_AUDIT has six sections, seven prompt entries, seven decision rows, two fully structured errors plus a third prose-only error, supplied contributions and nonblank Section 6; zero FILL IN placeholders. Recommended matching Error 3's labels to the required format and checking the contribution wording against AI authorship records. Section 6 still misdescribes RRF as averaging lists and contains unsupported generalizations; unaided authorship cannot be certified by this review.
+- Verified the existing October 8 ZIP passes CRC but contains the old audit with seven placeholders and older PPTX/PDF bytes. It must be rebuilt after final human edits. README's pending-field notice is stale relative to the current audit.
+- Not run: fresh-machine installation, live generation benchmarks, the instructor's private automated checker or native PowerPoint playback. No package was rebuilt or pushed during this check. PDF review images are temporary files under ignored dist/slides_check_2026-10-23/.
+
+### 2026-10-23 — Professional Minecraft presentation theme
+
+- User request: "i want slide to be minecraft theme but not childish slide make it professional".
+- Used the presentation/PDF skills. Restyled a copy of the current ten-slide PPTX with deepslate charcoal, moss/grass accents and two AI-generated voxel landscape backgrounds. Kept technical typography, native diagram connectors and five editable data tables. Preserved the existing original deck/PDF.
+- Delivered presentation/MCQA_minecraft_professional.pptx and presentation/MCQA_minecraft_professional.pdf, plus presentation/MCQA_minecraft_preview.png. All ten slides' exact text, figures and Thai speaker-note text match the source, verified by XML comparison. Source slide dimensions and native table counts are unchanged.
+- Finalization structural/layout/font/import checks pass with zero findings/warnings; inspected every slide render and the exported PDF's metric slide. Corrected retained imported table run colors after the first render exposed insufficient contrast. Evidence is in ignored dist/minecraft_theme_2026-10-23/validation_v2.json and content_validation.json.
+- Artifact Session reported an invalid transaction, so used the bundled local Artifact Tool workflow. Native PDF export failed on bundled #standard-fonts/Helvetica resolution; used ReportLab to embed the inspected 1920x1080 slide renders. The PDF is a viewing copy; editable text/tables/diagram and notes remain in PowerPoint.
+- Backgrounds came from ImageGen and are decorative AI-generated scenes, not screenshots or experiment evidence. Originals remain in the session's generated_images folder; embedded bytes are in the final PPTX.
+- No application/evaluation/audit answers changed, no experiments rerun, no submission ZIP rebuilt and no GitHub push. Native PowerPoint playback/projector appearance remain untested. Temporary build scripts and images remain under ignored dist/.
