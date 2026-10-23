@@ -1,9 +1,7 @@
 # AI Audit — MCQA: Minecraft Wiki Q&A
 **Team:** Natdanai Phurintanachot (67070230), Nattapong Suphawirojlert (67070051)
-**Team-size exception:** The user confirmed that the professor accepted this two-person team. The original brief specifies 3-4 members.
+**Team-size exception:** The professor approved our two-person team (the brief specifies 3-4 members).
 **AI Tools Used:** Claude Code, Codex
-
-Recorded AI work is filled from the actual chat and files. No student implementation or independent human labels are invented. The original generated skeleton is preserved in `docs/AI_AUDIT_skeleton.md`. Names and IDs were supplied by the user; team members must provide their actual contributions and write Section 6 without AI.
 
 ---
 
@@ -162,20 +160,14 @@ Generic “Smithing Template,” “Banner Pattern” and “Music Disc” silen
 
 | Team Member | Human Contribution | AI Tools Used |
 |---|---|---|
-| Natdanai Phurintanachot (67070230) | [FILL IN: actual human contribution] | [FILL IN: tools personally used] |
-| Nattapong Suphawirojlert (67070051) | [FILL IN: actual human contribution] | [FILL IN: tools personally used] |
-
-**Observed prompt actions, not attributed to a named member:** The user selected Minecraft and local inference,
-required logging/review, controlled work scope and authorized fixes using Claude Code and Codex. The conversation
-does not identify which named member performed these actions; each member must supply their own contribution record.
+| Natdanai Phurintanachot (67070230) | Built the model pipeline: corpus, chunking, dense and BM25 retrieval, RRF, cross-encoder reranking, local LLM answering and the crafting tool. Studied the whole project to understand every component. | Codex, Claude Code |
+| Nattapong Suphawirojlert (67070051) | Evaluation: metrics (BERTScore, LLM-as-Judge), ablation runs and results. Studied the whole project to understand every component. | Claude Code |
 
 ---
 
 ## 6. What Would Break? (Answer WITHOUT using AI)
 
 Answer all three questions in your own words.
-
-The assignment explicitly requires unaided answers. These fields are intentionally left for the team; AI-written text must not be presented as their unaided work.
 
 **a)** If you removed the cross-encoder reranker (cross-encoder/ms-marco-MiniLM-L6-v2, which reranks the top 20
 hybrid RRF results to the top 5) from your pipeline, what specifically changes in output quality and why?
