@@ -74,7 +74,7 @@ Quantity questions with a number computed from Minecraft 26.3 recipe files; answ
 
 Tool called for 0 of 40 ordinary (non-crafting) questions.
 
-## Crafting tool, held-out test questions (final system)
+## Crafting tool, held-out test questions (earlier experiment; current: results/verified/tool_final)
 
 Quantity questions with a number computed from Minecraft 26.3 recipe files; answers go through the full pipeline (hybrid + reranker retrieval, 5 passages).
 

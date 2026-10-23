@@ -8,17 +8,11 @@ Term project for *Natural Language Processing with Deep Learning*. Everything ru
 the CPU, the language model in Ollama (tested on a laptop RTX 5070 GPU).
 
 **Team:** Natdanai Phurintanachot (67070230) and Nattapong Suphawirojlert (67070051).
-The user confirmed that the professor accepted this two-person team despite the brief's original 3-4-member requirement.
+The professor approved our two-person team (the brief specifies 3-4 members).
 
-The reviewed source/results package is `dist/MCQA_submission_2026-10-08.zip`, with a SHA-256 sidecar and an internal
-file manifest. It includes this README, source, tests, pinned pages, benchmark data, audit/work records and results.
-Models and rebuildable runtime data are excluded; follow setup below before running inference on another machine.
-
-**Before submission:** fill each member's actual contributions/tools and the unaided answers in `AI_AUDIT.md`,
-rehearse the demo and individual Q&A, and package those final edits. The supplied names/IDs are recorded in the
-audit and title slide. See [the final submission review](docs/submission_review.md).
-The October 8 review fixed map item-ID lookup and a cold-start timeout; saved benchmark scores still refer to
-their frozen source versions. The selected live checks include a partly unsupported cow-breeding answer.
+Models and rebuildable runtime data (indexes, recipe file, question pool) are not in the repository; follow the setup
+below before running the system on another machine. Saved benchmark scores refer to their frozen source versions
+(see [the final submission review](docs/submission_review.md)).
 
 ```
 explicit standalone recipe ─► validated craft(item, count) ─► calculator answer [tool], no model call
@@ -210,7 +204,7 @@ the tested two-clause wording 7.601 → 0.005 seconds; these small timing sample
 Compound queries remained around 11 seconds and their explanatory claims can still be unsupported.
 Automatic test facts were dense 7/8 → 6/8 and rerank 7/8 → 7/8, so this study does not establish a factual accuracy
 gain. References/judgments are AI-curated/automatic; see the saved analysis notes and human-check sheet. Final
-source snapshots, hashes and supplemental cached-model revisions are included. All 34 integrated tests pass.
+source snapshots, hashes and supplemental cached-model revisions are included. All 36 tests pass.
 The larger results below remain labelled with their original frozen source versions.
 
 The current source-grounded benchmark is in `data/java_benchmark.jsonl`: 60 new questions, including 50 answerable
@@ -325,9 +319,10 @@ the same questions, not a measured accuracy on current Java gameplay. See `docs/
 |---|---|---|---|
 | Hybrid + reranker, no tool | 1/40 | 2.5 % [0.4, 12.9] | — |
 | First design: tool offered alongside the passages | 11/40 | 27.5 % | 14/40 |
-| **Final two-step agent** | **33/40** | **82.5 % [68.0, 91.3]** | 33/40 (10 by the fallback) |
+| **Two-step agent (this experiment)** | **33/40** | **82.5 % [68.0, 91.3]** | 33/40 (10 by the fallback) |
 
-The final agent called the tool for none of 40 ordinary questions. The prompts were tuned on 40 separate dev
+This is the earlier tool experiment; the current result (37/40) is above, under `results/verified/tool_final/`.
+This agent called the tool for none of 40 ordinary questions. The prompts were tuned on 40 separate dev
 questions (38/40). An earlier test run gave 35/40, but two of its questions used the shared name "Smithing
 Template", which the tool resolved to the wrong template (with the same amounts); with the names made specific the
 planner skipped one of them. Answers are scored by the number given for the asked ingredient; refusals never count. Without the tool the model almost never knows exact recipe amounts, and several test items
@@ -370,8 +365,8 @@ The pitch deck is in [presentation/MCQA_pitch_ready.pptx](presentation/MCQA_pitc
 10 English slides in the instructor's required order, with Thai speaker notes and editable results/pipeline.
 [PDF copy](presentation/MCQA_pitch.pdf) and [Thai presenter notes/demo timing](presentation/Thai_presenter_notes.md)
 are included, with the supplied team names and IDs on the cover. The planned live demo follows slide 5
-at minute 4–7; use demo.bat after setup and wait for its ready prompt. Team contributions and AI_AUDIT Section 6
-remain human work; the notes are AI-authored presentation assistance.
+at minute 4–7; use demo.bat after setup and wait for its ready prompt. The Thai speaker notes were drafted with AI
+assistance.
 
 | File | What it is |
 |---|---|
@@ -381,7 +376,7 @@ remain human work; the notes are AI-authored presentation assistance.
 | `demo.bat`, `demo-fast.bat`, `demo.sh` | easy local launchers; fast Windows mode disables crafting planning |
 | `test_mcqa.py` | unit tests |
 | `scripts/judge_selection.py` | how the LLM judge was chosen: five judge set-ups against hand labels → `results/judge_selection.json` |
-| `results/RESULTS.md` | every result table, generated by `eval.py report` |
+| `results/RESULTS.md` | the historical synthetic-pool result tables, generated by `eval.py report` (current results: `results/verified/`) |
 | `results/*.json`, `*.jsonl` | raw results: per-question answers, verdicts, tool calls; `*_run1*` and `*_before_*` files are earlier runs kept for the record |
 | `results/questions_*.jsonl` | the exact evaluation questions of each experiment |
 | `results/*_labels_*.jsonl`, `retrieval_miss_sample.csv` | hand labels (made by Claude Code, to be checked by the team) |
@@ -398,7 +393,7 @@ remain human work; the notes are AI-authored presentation assistance.
 | `scripts/preflight.py`, `test_eval.py` | local readiness check and evaluation regressions |
 | `scripts/improvement_eval.py`, `data/improvement_benchmark.jsonl`, `results/improvement_review/` | separately frozen before/after evaluation on new source pages and recipe products |
 | `docs/final_validation.md` | final observed metrics, fixes, source versions, remaining failures and submission requirements |
-| `AI_AUDIT.md` | authentic AI activity and supplied team names/IDs; individual contributions/tools and explicitly unaided responses remain for the team |
+| `AI_AUDIT.md` | the AI audit: AI tools, prompts, decisions, error catches, team contributions and our unaided "What Would Break?" answers |
 | `docs/AI_AUDIT_skeleton.md` | preserved original output of the standardized skeleton prompt |
 
 ## Licences

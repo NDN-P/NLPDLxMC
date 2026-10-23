@@ -507,7 +507,7 @@ def report():
                          f"| {dis} |")
         lines.append("")
     for name, title in (("tool_dev.json", "Crafting tool, dev questions (used to tune the prompts)"),
-                        ("tool.json", "Crafting tool, held-out test questions (final system)")):
+                        ("tool.json", "Crafting tool, held-out test questions (earlier experiment; current: results/verified/tool_final)")):
         if (OUT / name).exists():
             t = load(name)
             s = t["summary"]
