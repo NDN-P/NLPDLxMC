@@ -101,17 +101,15 @@ Sources:
 - results/verified/tool_final/answers.jsonl
 - docs/sources.md
 
-## Slide 8: Current quality needs two kinds of checks
+## Slide 8: Both metrics favour retrieval
 
 8:10–8:45
 
-ผลของระบบปัจจุบันใช้ชุดทดสอบใหม่ที่มีข้อเท็จจริง 8 ข้อครับ Dense ตอบถูก 6 ข้อ และได้ BERTScore จุดหกห้าสี่ ส่วน reranker ถูก 7 ข้อ แต่ได้ BERTScore จุดหกศูนย์ศูนย์ คะแนนสองแบบวัดคนละเรื่อง การตัดสินความถูกต้องเทียบกับข้อมูลอ้างอิง ส่วน BERTScore วัดความคล้ายของข้อความ จึงอาจให้ลำดับต่างกันได้ ชุดนี้ยังเล็ก และยังไม่มีการตรวจโดยคนอย่างอิสระครับ
+ผลประเมินด้วยสองตัวชี้วัด บนชุดทดสอบเดียวกับสไลด์ 6 คือข้อเท็จจริง 34 ข้อครับ ถ้าไม่ใช้การค้นคืน ตอบถูกแค่ 9 ข้อ และได้ BERTScore จุดสองเก้าสี่ Dense ตอบถูก 27 ข้อ ได้ BERTScore จุดสี่เก้าสาม ส่วน hybrid กับ reranker ตอบถูก 26 ข้อ ได้ BERTScore จุดสี่ห้าหนึ่ง ทั้งสองตัวชี้วัดบอกตรงกันว่าการค้นคืนช่วยให้คำตอบดีขึ้นมาก แต่ reranker ไม่ได้ดีกว่า dense การตัดสินความถูกต้องเทียบข้อเท็จจริงในคำตอบกับคำตอบอ้างอิง ส่วน BERTScore วัดความคล้ายของข้อความ ผู้ตัดสินเป็นโมเดลเดียวกับที่ตอบ และยังไม่มีการตรวจโดยคนครับ
 
 Sources:
-- results/improvement_review/summary.json
-- results/improvement_review/RESULTS.md
-- results/improvement_review/after_config.json
-- results/improvement_review/paired_stats.json
+- results/verified/test/summary.json
+- results/verified/test/RESULTS.md
 
 ## Slide 9: Correct numbers can still hide wrong claims
 
